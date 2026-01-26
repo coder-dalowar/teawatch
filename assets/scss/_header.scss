@@ -1,0 +1,705 @@
+.header_section {
+    max-width: 143.8rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #0D0D0D;
+    background-image: url(../img/header-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    padding: 2rem 0rem 3rem;
+
+    .navbar-brand {
+        img {
+            width: 16.1rem;
+        }
+    }
+
+    .navbar-nav {
+        align-items: center;
+
+        li {
+            padding: 0 0.8rem;
+
+            a {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #B2B2B6;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.6rem;
+                transition: 0.2s all ease;
+
+                &:hover {
+                    color: #FFF;
+                }
+
+                img {   
+                    width: 2.2rem;
+                }
+            }
+
+            .premium_btn {
+                width: 11rem;
+                height: 3.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(to bottom, #F02D33);
+                color: #F9F9FF;
+                margin-right: 0.3rem;
+                margin-left: 2rem;
+                position: relative;
+
+                .border_topLeft {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #FFF;
+                    border-left: 1px solid #FFF;
+                    position: absolute;
+                    left: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_topRight {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #FFF;
+                    border-right: 1px solid #FFF;
+                    position: absolute;
+                    right: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bottomLeft {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #FFF;
+                    border-left: 1px solid #FFF;
+                    position: absolute;
+                    left: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bottomRight {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #FFF;
+                    border-right: 1px solid #FFF;
+                    position: absolute;
+                    right: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                &:hover {
+                    span {
+                        transform: scale(1.2);
+                    }
+                }
+
+                img {
+                    width: 1.8rem;
+                }
+            }
+        }
+    }
+
+    .header_left {
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+    }
+
+    .navbar-toggler {
+        width: 4rem;
+        height: 3.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        outline: none!important;
+        box-shadow: none!important;
+        padding: 0.2rem;
+        transition: 0.2s all ease;
+        position: relative;
+
+        .border_tl {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-top: 1px solid #8C8681;
+            border-left: 1px solid #8C8681;
+            position: absolute;
+            left: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tr {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-top: 1px solid #8C8681;
+            border-right: 1px solid #8C8681;
+            position: absolute;
+            right: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bl {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #8C8681;
+            border-left: 1px solid #8C8681;
+            position: absolute;
+            left: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_br {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #8C8681;
+            border-right: 1px solid #8C8681;
+            position: absolute;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            span {
+                border-color: #FFF;
+            }
+        }
+    }
+
+
+    /*hamburger*/
+    .hamburger-box {
+        width: 2.5rem;
+        height: 2.4rem;
+        display: inline-block;
+        position: relative;
+
+        .hamburger-inner {
+            width: 2.5rem;
+            height: 0.2rem;
+            display: block;
+            background-color: #FFF;
+            margin-top: -0.2rem;
+            border-radius: 0.4rem;
+            position: absolute;
+            top: 50%;
+
+            &::before {
+                content: "";
+                width: 2.5rem;
+                height: 0.2rem;
+                display: block;
+                background-color: #FFF;
+                border-radius: 0.4rem;
+                position: absolute;
+                top: -0.9rem;
+                outline: none; 
+            }
+
+            &::after {
+                content: "";
+                width: 2.5rem;
+                height: 0.2rem;
+                display: block;
+                background-color: #FFF;
+                border-radius: 0.4rem;
+                position: absolute;
+                bottom: -0.9rem;
+                outline: none; 
+            }
+        }
+    }
+
+}
+
+
+// admin_btn ----------
+.admin_btn {
+    a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        .admin_profile {
+            flex-shrink: 0;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+            }
+        }
+
+        .admin_text {
+            h4 {
+                font-size: 1.4rem;
+                font-weight: 700;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+
+                img {
+                    width: 1.2rem;
+                }
+            }
+
+            span {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: #EAEAEA;
+                background: #323232;
+                width: 4.4rem;
+                display: block;
+                text-align: center;
+                border-radius: 0.2rem;
+                margin-top: 0.4rem;
+            }
+        }
+    }
+}
+
+.button_border {
+    padding: 0.5rem 1.2rem;
+    position: relative;
+    height: 5.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s all ease;
+
+    .border_topLeft {
+        width: 1.6rem;
+        height: 0.8rem;
+        border-top: 1px solid #6E6E6E;
+        border-left: 1px solid #6E6E6E;
+        position: absolute;
+        left: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_topRight {
+        width: 1.6rem;
+        height: 0.8rem;
+        border-top: 1px solid #6E6E6E;
+        border-right: 1px solid #6E6E6E;
+        position: absolute;
+        right: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bottomLeft {
+        width: 1.6rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #6E6E6E;
+        border-left: 1px solid #6E6E6E;
+        position: absolute;
+        left: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bottomRight {
+        width: 1.6rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #6E6E6E;
+        border-right: 1px solid #6E6E6E;
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    &:hover {
+        background: #323232;
+        span {
+            border-color: #FFF;
+        }
+    }
+}
+
+.add_btn {
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        img {
+            width: 3.4rem;
+        }
+
+        span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.icon_btn {
+    a {
+        width: 5rem;
+        height: 5.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        position: relative;
+        transition: 0.2s all ease;
+
+        img {
+            width: 2.4rem;
+        }
+
+        .notify_red {
+            width: 1rem;
+            height: 1rem;
+            display: block;
+            background: #F02731;
+            border-radius: 50%;
+            position: absolute;
+            left: 1.3rem;
+            top: 1.3rem;
+        }
+
+        .border_topLeft {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-top: 1px solid #6E6E6E;
+            border-left: 1px solid #6E6E6E;
+            position: absolute;
+            left: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_topRight {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-top: 1px solid #6E6E6E;
+            border-right: 1px solid #6E6E6E;
+            position: absolute;
+            right: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bottomLeft {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #6E6E6E;
+            border-left: 1px solid #6E6E6E;
+            position: absolute;
+            left: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bottomRight {
+            width: 0.8rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #6E6E6E;
+            border-right: 1px solid #6E6E6E;
+            position: absolute;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            background: #323232;
+            span {
+                border-color: #FFF;
+            }
+        }
+    }
+}
+
+
+// offcanvas -----------------
+
+.offcanvas {
+    background: #0E0E0E;
+    width: 32rem!important;
+    border-left: 1px solid #460C0F!important;
+
+    .offcanvas-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.6rem 2rem;
+        position: relative;
+        border-bottom: 1px solid #460C0F;
+
+        a {
+            img {
+                width: 16rem;
+            }
+        }
+
+        button {
+            width: 3rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 0;
+            position: absolute;
+            left: 1.5rem;
+
+            img {
+                width: 2rem;
+            }
+
+            .border_tl {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-top: 1px solid #8C8681;
+                border-left: 1px solid #8C8681;
+                position: absolute;
+                left: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_tr {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-top: 1px solid #8C8681;
+                border-right: 1px solid #8C8681;
+                position: absolute;
+                right: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-bottom: 1px solid #8C8681;
+                border-left: 1px solid #8C8681;
+                position: absolute;
+                left: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-bottom: 1px solid #8C8681;
+                border-right: 1px solid #8C8681;
+                position: absolute;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            &:hover {
+                span {
+                    border-color: #FFF;
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+
+    .offcanvas-body {
+        padding: 0rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .offcanvas_menu {
+        padding: 2rem 2rem 2.5rem;
+        
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            letter-spacing: 0.06rem;
+            color: #B2B2B6;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 1px solid #6F6F6F;
+            padding: 1.4rem 0.5rem;
+
+            &:hover {
+                color: #FFF;
+                border-color: #FFF;
+            }
+
+            img {
+                width: 2.2rem;
+            }
+        }
+    }
+
+    .offcanvas_btn {
+        text-align: center;
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #FFF;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            background: radial-gradient(#E14638, #DA232D, #E14638);
+            padding: 1.2rem 3rem;
+            position: relative;
+
+            img {
+                width: 1.8rem;
+                margin-top: -0.1rem;
+            }
+
+            .border_tl {
+                width: 1rem;
+                height: 1rem;
+                border-top: 1px solid #FFF;
+                border-left: 1px solid #FFF;
+                position: absolute;
+                left: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_tr {
+                width: 1rem;
+                height: 1rem;
+                border-top: 1px solid #FFF;
+                border-right: 1px solid #FFF;
+                position: absolute;
+                right: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 1rem;
+                height: 1rem;
+                border-bottom: 1px solid #FFF;
+                border-left: 1px solid #FFF;
+                position: absolute;
+                left: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 1rem;
+                height: 1rem;
+                border-bottom: 1px solid #FFF;
+                border-right: 1px solid #FFF;
+                position: absolute;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            &:hover {
+                background: linear-gradient(to right, #E14638, #DA232D);
+
+                span {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-backdrop.show {
+    opacity: 0.7;
+    filter: blur(5rem);
+}
+
+.admin_wraper {
+    background: #202020;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 1.6rem;
+    padding: 1.6rem 2rem;
+
+    .button_border {
+        background: #0E0E0E;
+    }
+}
+
+.icon_wraper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 3rem 2rem 3.2rem;
+    margin-top: auto;
+}
+
+
+
+// chat_bot ---------------
+.chat_bot {
+    position: fixed;
+    left: 4rem;
+    bottom: 18rem;
+    z-index: 1024;
+
+    @media #{$sm} {
+        bottom: 12rem;
+        left: 2rem;
+    }
+
+    a {
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #DA232D;
+        border-radius: 50%;
+
+        &:hover {
+            opacity: 0.9;
+        }
+
+        img {
+            width: 2.8rem;
+
+            @media #{$sm} {
+                width: 2.4rem;
+            }
+        }
+
+        @media #{$sm} {
+            width: 4rem;
+            height: 4rem;
+        }
+        
+    }
+}
+
