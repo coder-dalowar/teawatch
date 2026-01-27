@@ -703,3 +703,113 @@
     }
 }
 
+
+
+// before login header ---------------
+.before_index_header {
+    max-width: 100%;
+    background-image: none;
+    border-bottom: 1px solid #2B1111;
+
+    .navbar-brand {
+        img {
+            @media #{$sm} {
+                width: 14.5rem;
+            }
+        }
+    }
+}
+
+.header_wraper {
+    max-width: 115.8rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header_button {
+    display: flex;
+    align-items: center;
+    gap: 2.1rem;
+
+    @media #{$sm} {
+        gap: 1.2rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #F9F9FF;
+        background: #212121;
+        display: inline-block;
+        padding: 1.3rem 3rem;
+        position: relative;
+        transition: 0.2s all ease;
+
+        @media #{$sm} {
+            font-size: 1.45rem;
+            padding: 1rem 2rem;
+        }
+
+        .border_tl {
+			width: 0.6rem;
+			height: 0.6rem;
+			border-top: 1px solid #FFFFFF;
+			border-left: 1px solid #FFFFFF;
+			position: absolute;
+			left: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_tr {
+			width: 0.6rem;
+			height: 0.6rem;
+			border-top: 1px solid #FFFFFF;
+			border-right: 1px solid #FFFFFF;
+			position: absolute;
+			right: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_bl {
+			width: 0.6rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #FFFFFF;
+			border-left: 1px solid #FFFFFF;
+			position: absolute;
+			left: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_br {
+			width: 0.6rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #FFFFFF;
+			border-right: 1px solid #FFFFFF;
+			position: absolute;
+			right: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+        &:hover {
+            background: radial-gradient(rgb(225, 70, 56), rgb(218, 35, 45), rgb(225, 70, 56));
+            opacity: 0.85;
+
+            span {
+                border-color: #FDEABD;
+            }
+        }
+
+        &.active {
+            background: radial-gradient(rgb(225, 70, 56), rgb(218, 35, 45), rgb(225, 70, 56));
+
+            span {
+                border-color: #FDEABD;
+            }
+        }
+    }
+}
+

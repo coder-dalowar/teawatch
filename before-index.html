@@ -20,340 +20,139 @@
 <body>
 
     <!-- header_section start -->
-    <header class="header_section">
+    <header class="header_section before_index_header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#">
-                    <img src="assets/img/logo.svg" alt="">
-                </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                    <span class="border_tl"></span>
-                    <span class="border_tr"></span>
-                    <span class="border_bl"></span>
-                    <span class="border_br"></span>
-                </button>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
-                        <li>
-                            <a href="#">
-                                <img src="assets/img/trofy.svg" alt="icon">
-                                <span> טורנירים </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/img/play.svg" alt="icon">
-                                <span> גאטרים אונליין </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/img/document.svg" alt="icon">
-                                <span> לוח תוצאות </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/img/store.svg" alt="icon">
-                                <span> חנות </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="premium_btn">
-                                <img src="assets/img/crown.svg" alt="icon">
-                                שדרוג
-                                <span class="border_topLeft"></span>
-                                <span class="border_topRight"></span>
-                                <span class="border_bottomLeft"></span>
-                                <span class="border_bottomRight"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="assets/img/chat.svg" alt="icon">
-                                <span> צ׳אט </span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="header_left ms-auto">
-                        <div class="admin_btn button_border">
-                            <a href="#">
-                                <span class="admin_profile">
-                                    <img src="assets/img/admin.png" alt="">
-                                </span>
-                                <span class="admin_text">
-                                    <h4><img src="assets/img/star.svg" alt=""> admin </h4>
-                                    <span> חינמי </span>
-                                </span>
-                            </a>
-                            <span class="border_topLeft"></span>
-                            <span class="border_topRight"></span>
-                            <span class="border_bottomLeft"></span>
-                            <span class="border_bottomRight"></span>
-                        </div>
-
-                        <div class="add_btn button_border">
-                            <a href="#">
-                                <img src="assets/img/add-circle.svg" alt="">
-                                <span>הארנק שלי <br> ₪4988.00 </span>
-                            </a>
-                            <span class="border_topLeft"></span>
-                            <span class="border_topRight"></span>
-                            <span class="border_bottomLeft"></span>
-                            <span class="border_bottomRight"></span>
-                        </div>
-
-                        <div class="icon_btn">
-                            <a href="#">
-                                <img src="assets/img/shopping-bag.svg" alt="">
-                                <span class="border_topLeft"></span>
-                                <span class="border_topRight"></span>
-                                <span class="border_bottomLeft"></span>
-                                <span class="border_bottomRight"></span>
-                            </a>
-                        </div>
-                        <div class="icon_btn">
-                            <a href="#">
-                                <img src="assets/img/notification.svg" alt="">
-                                <!-- <span class="notify_red"></span> -->
-                                <span class="border_topLeft"></span>
-                                <span class="border_topRight"></span>
-                                <span class="border_bottomLeft"></span>
-                                <span class="border_bottomRight"></span>
-                            </a>
-                        </div>
-                        <div class="icon_btn">
-                            <a href="#">
-                                <img src="assets/img/logout.svg" alt="">
-                                <span class="border_topLeft"></span>
-                                <span class="border_topRight"></span>
-                                <span class="border_bottomLeft"></span>
-                                <span class="border_bottomRight"></span>
-                            </a>
-                        </div>
+            <div class="header_wraper">
+                <nav class="d-flex align-items-center">
+                    <div>
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo.svg" alt="">
+                        </a>
                     </div>
-                </div>
-            </nav>
+                    <div class="ms-auto header_button">
+                        <a href="index.html">
+                            התחברות
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                        <a href="#" class="active">
+                            הרשמה
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
         </div>
     </header>
     <!-- header_section end -->
-
-    <!-- offcanvas menu start -->
-    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
-        aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
-                <a href="#">
-                    <img src="assets/img/logo.svg" alt="">
-                </a>
-            </h5>
-            <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-                <img src="assets/img/close.svg" alt="">
-                <span class="border_tl"></span>
-                <span class="border_tr"></span>
-                <span class="border_bl"></span>
-                <span class="border_br"></span>
-            </button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="admin_wraper">
-                <div class="admin_btn button_border">
-                    <a href="#">
-                        <span class="admin_profile">
-                            <img src="assets/img/admin.png" alt="">
-                        </span>
-                        <span class="admin_text">
-                            <h4><img src="assets/img/star.svg" alt=""> admin </h4>
-                            <span> חינמי </span>
-                        </span>
-                    </a>
-                    <span class="border_topLeft"></span>
-                    <span class="border_topRight"></span>
-                    <span class="border_bottomLeft"></span>
-                    <span class="border_bottomRight"></span>
-                </div>
-
-                <div class="add_btn button_border">
-                    <a href="#">
-                        <img src="assets/img/add-circle.svg" alt="">
-                        <span>הארנק שלי <br> ₪4988.00 </span>
-                    </a>
-                    <span class="border_topLeft"></span>
-                    <span class="border_topRight"></span>
-                    <span class="border_bottomLeft"></span>
-                    <span class="border_bottomRight"></span>
-                </div>                
-            </div>
-
-            <div class="offcanvas_menu">
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img src="assets/img/trofy.svg" alt="icon">
-                            <span> טורנירים </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="assets/img/play.svg" alt="icon">
-                            <span> גאטרים אונליין </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="assets/img/document.svg" alt="icon">
-                            <span> לוח תוצאות </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src="assets/img/store.svg" alt="icon">
-                            <span> חנות </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="offcanvas_btn">
-                <a href="#" class="premium_btn">
-                    <img src="assets/img/crown.svg" alt="icon">
-                    שדרוג
-                    <span class="border_tl"></span>
-                    <span class="border_tr"></span>
-                    <span class="border_bl"></span>
-                    <span class="border_br"></span>
-                </a>
-            </div>
-            
-            <div class="icon_wraper">
-                <div class="icon_btn">
-                    <a href="#">
-                        <img src="assets/img/shopping-bag.svg" alt="">
-                        <span class="border_topLeft"></span>
-                        <span class="border_topRight"></span>
-                        <span class="border_bottomLeft"></span>
-                        <span class="border_bottomRight"></span>
-                    </a>
-                </div>
-                <div class="icon_btn">
-                    <a href="#">
-                        <img src="assets/img/notification.svg" alt="">
-                        <!-- <span class="notify_red"></span> -->
-                        <span class="border_topLeft"></span>
-                        <span class="border_topRight"></span>
-                        <span class="border_bottomLeft"></span>
-                        <span class="border_bottomRight"></span>
-                    </a>
-                </div>
-                <div class="icon_btn">
-                    <a href="#">
-                        <img src="assets/img/logout.svg" alt="">
-                        <span class="border_topLeft"></span>
-                        <span class="border_topRight"></span>
-                        <span class="border_bottomLeft"></span>
-                        <span class="border_bottomRight"></span>
-                    </a>
-                </div>
-            </div> 
-
-        </div>
-    </div>
-    <!-- offcanvas menu end -->
-
-    <!-- chat_bot -->
-    <div class="chat_bot d-lg-none">
-        <a href="#">
-            <img src="assets/img/chat.svg" alt="icon">
-        </a>
-    </div> 
 
 
     <main>
 
         <div class="container">
-            <div class="main_wrapper">
-
-                <!-- sidebar -->
-                <div class="sidebar">
-                    <div class="side_item">
-                        <button type="button" class="side_btn active">
-                            <img src="assets/img/home.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </button>
-
-                        <button type="button" class="side_btn">
-                            <img src="assets/img/trofy.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </button>
-
-                        <button type="button" class="side_btn">
-                            <img src="assets/img/play.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </button>
-
-                        <button type="button" class="side_btn">
-                            <img src="assets/img/crown.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </button>
-
-                        <button type="button" class="side_btn">
-                            <img src="assets/img/settings.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- main content -->
-                <div class="main_content">
+            <div class="main_wrapper mainwrap_before_login d-block">
+                <div class="main_content w-100">
 
                     <!-- hero section -->
-                    <div class="hero_section">
-                        <div class="hero_text">
-                            <h1>ברוכים הבאים לTeaMatch</h1>
-                            <p>פלטפורמת הטורנירים המובילה לקהילת הגיימינג. התחרה, צור קלאנים, וזכה בפרסים מדהימים.</p>
-                            <ul>
-                                <li>
-                                    <a href="#" class="active">
-                                        הירשם עכשיו
-                                        <img src="assets/img/left.svg" alt="">
-                                        <span class="border_tl"></span>
-                                        <span class="border_tr"></span>
-                                        <span class="border_bl"></span>
-                                        <span class="border_br"></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        צור קבוצה
-                                        <img src="assets/img/plus-sign.svg" alt="">
-                                        <span class="border_tl"></span>
-                                        <span class="border_tr"></span>
-                                        <span class="border_bl"></span>
-                                        <span class="border_br"></span>
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="swiper hero_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="hero_section">
+                                    <div class="hero_text">
+                                        <h1>ברוכים הבאים לTeaMatch</h1>
+                                        <p>פלטפורמת הטורנירים המובילה לקהילת הגיימינג. התחרה, צור קלאנים, וזכה בפרסים מדהימים.</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="active">
+                                                    הירשם עכשיו
+                                                    <img src="assets/img/left.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    צור קבוצה
+                                                    <img src="assets/img/plus-sign.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hero_section">
+                                    <div class="hero_text">
+                                        <h1>ברוכים הבאים לTeaMatch</h1>
+                                        <p>פלטפורמת הטורנירים המובילה לקהילת הגיימינג. התחרה, צור קלאנים, וזכה בפרסים מדהימים.</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="active">
+                                                    הירשם עכשיו
+                                                    <img src="assets/img/left.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    צור קבוצה
+                                                    <img src="assets/img/plus-sign.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="hero_section">
+                                    <div class="hero_text">
+                                        <h1>ברוכים הבאים לTeaMatch</h1>
+                                        <p>פלטפורמת הטורנירים המובילה לקהילת הגיימינג. התחרה, צור קלאנים, וזכה בפרסים מדהימים.</p>
+                                        <ul>
+                                            <li>
+                                                <a href="#" class="active">
+                                                    הירשם עכשיו
+                                                    <img src="assets/img/left.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    צור קבוצה
+                                                    <img src="assets/img/plus-sign.svg" alt="">
+                                                    <span class="border_tl"></span>
+                                                    <span class="border_tr"></span>
+                                                    <span class="border_bl"></span>
+                                                    <span class="border_br"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="swiper-pagination"></div>
                     </div>
 
                     <!-- game section -->

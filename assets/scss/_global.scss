@@ -521,3 +521,21 @@ body {
 		}
 	}
 }
+
+
+
+// swiper pagination -----------
+.swiper-pagination-bullet {
+	width: 1.2rem;
+	height: 0.6rem;
+	background: #818081;
+	border-radius: 3rem;
+	margin: 0rem 0.3rem!important;
+	opacity: 1;
+
+	&.swiper-pagination-bullet-active {
+		width: 4rem;
+		background: #A91B23;
+	}
+}
+

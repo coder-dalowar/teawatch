@@ -1,3 +1,22 @@
+// ================= hero_slider =================
+{
+  var swiper = new Swiper(".hero_slider", {
+    slidesPerView: 1,
+    loop: true,
+    speed: 800,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,      
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+}
+
+
+
 // ================= game_slider =================
 {
   document.querySelectorAll(".game_wraper").forEach((wrap) => {
@@ -145,16 +164,19 @@
     const input = document.querySelector(".search_userbar .form_field");
     const friendList = document.querySelector(".friend_list");
 
+    // if there is no element → code stop
+    if (!input || !friendList) return;
+
     // focus show
     input.addEventListener("focus", () => {
       friendList.classList.add("show");
     });
 
-    // click anywhere on document
+    // click outside hide
     document.addEventListener("click", (e) => {
       if (
-        !friendList.contains(e.target) && 
-        e.target !== input 
+        !friendList.contains(e.target) &&
+        e.target !== input
       ) {
         friendList.classList.remove("show");
       }

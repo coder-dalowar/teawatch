@@ -188,10 +188,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 6rem 5.6rem;
+    padding: 4.4rem 5.6rem 8.2rem;
 
     @media #{$sm} {
-        padding: 5rem 2rem;
+        padding: 3.5rem 2rem 7rem;
     }
 
     .hero_text {
@@ -318,6 +318,22 @@
         }
     }
 
+}
+
+
+.hero_slider {
+	.swiper-pagination {
+		width: 100%;
+		text-align: right;
+		padding: 0rem 5.6rem;
+        position: absolute;
+        bottom: 3.6rem;
+		
+		@media #{$sm} {
+			padding: 0rem 2rem;
+            bottom: 2.6rem;
+		}
+	}
 }
 
 
@@ -1845,4 +1861,13 @@
             }
         }
     }
+}
+
+
+
+// before login home ----------------------
+.mainwrap_before_login {
+    max-width: 115.8rem;
+    width: 100%;
+    margin: 0 auto;
 }
