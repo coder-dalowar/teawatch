@@ -291,6 +291,10 @@ body {
 	background: #F02731;
 	border: 1px solid #F23D46;
 
+	@media #{$sm} {
+		width: 14rem;
+	}
+
 	.border_tl {
 		top: -0.1rem;
 		left: -0.1rem;
@@ -453,4 +457,67 @@ body {
 		}
 	}
 
+}
+
+
+
+// Modal -----------
+.modal-dialog {
+	max-width: 83rem;
+
+	@media #{$md} {
+		max-width: 65rem;
+	}
+
+	@media #{$sm} {
+		max-width: 50rem;
+	}
+
+	.modal-content {
+		background: #080808;
+		border-radius: 0rem;
+
+		.modal_body {
+			padding: 6rem 6rem;
+
+			@media #{$md} {
+				padding: 4rem 3rem;
+			}
+
+			@media #{$sm} {
+				padding: 3rem 1.5rem;
+			}
+
+			.modal_title {
+				h3 {
+					color: #F5F5F5;
+					letter-spacing: 0.05rem;
+				}
+			}
+
+			.modal_text {
+				padding-top: 4.5rem;
+
+				@media #{$sm} {
+					padding-top: 3rem;
+				}
+
+				.input_item {
+					margin-bottom: 1.6rem;
+
+					label {
+						margin-bottom: 0.8rem;
+					}
+				}
+			}
+
+			.done_btn {
+				padding-top: 2.6rem;
+
+				@media #{$sm} {
+					padding-top: 1.6rem;
+				}
+			}
+		}
+	}
 }

@@ -87,8 +87,10 @@
                                         <img src="../assets/img/link.svg" alt="">
                                     </div>
                                     <div class="invite_text">
-                                        <h4>invite.cm/xO8SOA</h4>
-                                        <p>פג תוקף מחר, 21:53. <a href="#">  ערוך קישור הזמנה. </a></p>
+                                        <h4>
+                                            <a href="#">invite.cm/xO8SOA</a>
+                                        </h4>
+                                        <p>פג תוקף מחר, 21:53. <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">  ערוך קישור הזמנה. </a></p>
                                     </div>
                                 </div>
                                 <div class="copy_btn">
@@ -116,7 +118,98 @@
                                 </div>
                             </div>
 
+                            <div class="friend_list">
+                                <div class="friend_item">
+                                    <div class="friend_text">
+                                        <img src="../assets/img/friend-1.png" alt="">
+                                        <p> עמית </p>
+                                    </div>
+                                    <div class="invite_btn">
+                                        <button type="button" class="button button_red">
+                                            הזמנה
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </button>
+                                    </div>
+                                </div>
 
+                                <div class="friend_item">
+                                    <div class="friend_text">
+                                        <img src="../assets/img/friend-2.png" alt="">
+                                       <p> אייל </p>
+                                    </div>
+                                    <div class="invite_btn">
+                                        <button type="button" class="button button_red">
+                                            הזמנה
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="friend_item">
+                                    <div class="friend_text">
+                                        <img src="../assets/img/friend-3.png" alt="">
+                                        <p> תמר </p>
+                                    </div>
+                                    <div class="invite_btn">
+                                        <button type="button" class="button button_red">
+                                            הזמנה
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="friend_item">
+                                    <div class="friend_text">
+                                        <img src="../assets/img/friend-3.png" alt="">
+                                        <p> תמר </p>
+                                    </div>
+                                    <div class="invite_btn">
+                                        <button type="button" class="button button_red">
+                                            הזמנה
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="friend_item">
+                                    <div class="friend_text">
+                                        <img src="../assets/img/friend-4.png" alt="">
+                                       <p> רותם </p>
+                                    </div>
+                                    <div class="invite_btn">
+                                        <button type="button" class="button button_red">
+                                            הזמנה
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- continue button -->
+                        <div class="continue_btn">
+                            <a href="complete.html" class="button button_red">
+                                המשך
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -125,6 +218,71 @@
         <!-- invite section end -->
 
     </main>
+
+
+    <!-- Modal start -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal_body">
+                    <div class="modal_title">
+                        <h3 class="title_xl"> צור קישור הזמנה </h3>
+                    </div>
+                    <div class="modal_text">
+                        <form action="#" method="post">
+                            <div class="input_item">
+                                <label> פג תוקף אחרי </label>
+                                <div class="input_wrap">
+                                    <select class="form_field select_field" required>
+                                        <option value=""> לעולם לא </option>
+                                        <option value=""> 30 דקות </option>
+                                        <option value=""> שעה אחת </option>
+                                        <option value=""> 6 שעות </option>
+                                        <option value=""> 12 שעות </option>
+                                        <option value=""> יום אחד" </option>
+                                    </select>
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                </div>
+                            </div>
+
+                            <div class="input_item">
+                                <label> "מספר השימושים המקסימלי </label>
+                                <div class="input_wrap">
+                                    <select class="form_field select_field" required>
+                                        <option value=""> ללא הגבלה </option>
+                                        <option value=""> שימוש אחד </option>
+                                        <option value=""> 5 שימושים </option>
+                                        <option value=""> 10 שימושים </option>
+                                        <option value=""> 25 שימושים </option>
+                                        <option value=""> 50 שימושים </option>
+                                        <option value="">100 שימושים"  </option>
+                                    </select>
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                </div>
+                            </div>
+
+                            <div class="done_btn">
+                                <a href="#" class="button button_red" data-bs-dismiss="modal" aria-label="Close">
+                                    בוצע
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal end -->
 
 
     <!-- all js here -->
