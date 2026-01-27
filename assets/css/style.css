@@ -289,10 +289,10 @@ body {
 }
 .button_red:hover {
   background: #281415;
-  border-color: #3E2B2C;
+  border-color: #651418;
 }
 .button_red:hover span {
-  border-color: #FFFFFF;
+  border-color: #DA232D;
 }
 
 .input_item {
@@ -340,7 +340,12 @@ body {
 }
 .input_item .input_wrap textarea {
   padding: 1.2rem 1.2rem !important;
-  height: 148px !important;
+  height: 14.8rem !important;
+}
+@media (max-width: 767px) {
+  .input_item .input_wrap textarea {
+    height: 12rem !important;
+  }
 }
 .input_item .input_wrap .date_input {
   direction: ltr;
@@ -3879,6 +3884,11 @@ body {
 .team_section .team_title a img {
   width: 2.4rem;
 }
+@media (max-width: 767px) {
+  .team_section .team_title a {
+    font-size: 1.9rem;
+  }
+}
 .team_section .team_title h2 {
   font-size: 4.8rem;
   font-weight: 700;
@@ -3887,12 +3897,31 @@ body {
   margin-top: 2.4rem;
   margin-bottom: 1.6rem;
 }
+@media (max-width: 991px) {
+  .team_section .team_title h2 {
+    font-size: 3.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .team_section .team_title h2 {
+    font-size: 3rem;
+    margin-top: 1.6rem;
+    margin-bottom: 0.8rem;
+  }
+}
 .team_section .team_title p {
   font-family: "Heebo", sans-serif;
   font-size: 2rem;
   font-weight: 400;
   line-height: 150%;
   color: #CFCFCF;
+}
+@media (max-width: 767px) {
+  .team_section .team_title p {
+    font-size: 1.8rem;
+  }
 }
 .team_section .team_wrapper {
   background: #080808;
@@ -3901,10 +3930,72 @@ body {
 .team_section .upload_wrapper {
   background: #150B0B;
   box-shadow: -4.5rem -1.4rem 5.4rem rgba(255, 26, 26, 0.12) inset;
-  height: 16.4rem;
+}
+.team_section .upload_wrapper .upload-content {
+  width: 100%;
+  padding: 3.2rem 2.4rem 3.8rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .team_section .upload_wrapper .upload-content {
+    padding: 3rem 1.6rem;
+    gap: 1.5rem;
+  }
+}
+.team_section .upload_wrapper .upload-content img {
+  max-height: 8rem;
+}
+.team_section .upload_wrapper .upload-content .logo_upload span {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: #D9D9D9;
+  border: 1px solid #F60606;
+  margin-bottom: 1.2rem;
+}
+.team_section .upload_wrapper .upload-content .logo_upload span img {
+  width: 2.4rem;
+}
+.team_section .upload_wrapper .upload-content .logo_upload p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #D2CECE;
+}
+.team_section .upload_wrapper .upload-content .cover_photo_upload {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 20rem;
+}
+.team_section .upload_wrapper .upload-content .cover_photo_upload p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #D0CECE;
+}
+.team_section .upload_wrapper .upload-content .cover_photo_upload img {
+  width: 2.4rem;
+}
+@media (max-width: 767px) {
+  .team_section .upload_wrapper .upload-content .cover_photo_upload {
+    padding-left: 1rem;
+  }
 }
 .team_section .team_content {
   padding: 4.8rem 2.4rem 3.2rem;
+}
+@media (max-width: 767px) {
+  .team_section .team_content {
+    padding: 3rem 1.6rem;
+  }
 }
 .team_section .team_content .row {
   --bs-gutter-x: 2rem;
@@ -3999,11 +4090,26 @@ body {
   background: #212121;
   position: relative;
 }
+@media (max-width: 767px) {
+  .team_section .team_item .sponsor_item a {
+    height: 5rem;
+  }
+}
 .team_section .team_item .sponsor_item a img {
   width: 7.8rem;
 }
+@media (max-width: 767px) {
+  .team_section .team_item .sponsor_item a img {
+    width: 5.5rem;
+  }
+}
 .team_section .team_item .sponsor_item a .sponsor1 {
   width: 14.1rem;
+}
+@media (max-width: 767px) {
+  .team_section .team_item .sponsor_item a .sponsor1 {
+    width: 8.5rem;
+  }
 }
 .team_section .team_item .sponsor_item a .border_tl {
   width: 2.2rem;
@@ -4047,6 +4153,16 @@ body {
 }
 .team_section .team_item .sponsor_item a:hover span {
   border-color: #F02731;
+}
+@media (max-width: 991px) {
+  .team_section {
+    padding: 5rem 0rem 0rem;
+  }
+}
+@media (max-width: 767px) {
+  .team_section {
+    padding: 3rem 0rem 0rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

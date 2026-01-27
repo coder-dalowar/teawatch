@@ -313,10 +313,10 @@ body {
 
 	&:hover {
 		background: #281415;
-		border-color: #3E2B2C;
+		border-color: #651418;
 
 		span {
-			border-color: #FFFFFF;
+			border-color: #DA232D;
 		}
 	}
 }
@@ -375,7 +375,11 @@ body {
 
 		textarea {
 			padding: 1.2rem 1.2rem!important;
-			height: 148px!important;
+			height: 14.8rem!important;
+
+			@media #{$sm} {
+				height: 12rem!important;
+			}
 		}
 
 		.date_input {
