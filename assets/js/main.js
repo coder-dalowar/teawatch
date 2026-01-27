@@ -2,6 +2,7 @@
 {
   var swiper = new Swiper(".hero_slider", {
     slidesPerView: 1,
+    spaceBetween: 20,
     loop: true,
     speed: 800,
     autoplay: {

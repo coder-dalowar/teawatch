@@ -1871,3 +1871,131 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.alert_bar {
+    background: #231312;
+    border: 1px solid #4F1414;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1.6rem;
+    margin-bottom: 3.2rem;
+
+    @media #{$md} {
+        margin-bottom: 2.4rem;
+    }
+
+    p {
+        font-family: $heeboFont;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #D3D0D0;
+        letter-spacing: initial;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        @media #{$md} {
+            font-size: 1.6rem;
+            gap: 1rem;
+        }
+
+        @media #{$sm} {
+            font-size: 1.5rem;
+            width: 85%;
+        }
+    }
+
+    img {
+        width: 3rem;
+
+        @media #{$md} {
+            width: 2.5rem;
+        }
+    }
+}
+
+
+.roadmap_section {
+    padding: 5.8rem 0rem 2.2rem;
+
+    .roadmap_wraper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 4rem;
+
+        @media #{$md} {
+            flex-wrap: wrap;
+            gap: 5rem;
+        }
+
+        .roadmap_item {
+            max-width: 20rem;
+            width: 100%;
+            text-align: center;
+            position: relative;
+
+            @media #{$md} {
+                max-width: 45%;
+            }
+
+            @media #{$sm} {
+                max-width: 100%;
+            }
+
+            h4 {
+                font-size: 2.4rem;
+                font-weight: 400;
+                line-height: 140%;
+                letter-spacing: 0.1rem;
+                color: #FFFFFF;
+                margin: 2.4rem 0rem 1.6rem;
+            }
+
+            p {
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 400;
+                letter-spacing: initial;
+                color: #CFCFCF;
+            }
+
+            .user_icon {
+                img {
+                    width: 3.6rem;
+                }
+            }
+
+            .group_icon {
+                img {
+                    width: 5.4rem;
+                }
+            }
+
+            .trofy_icon {
+                img {
+                    width: 4rem;
+                }
+            }
+
+            .document_icon {
+                img {
+                    width: 5.4rem;
+                }
+            }
+
+            .gradient_line {
+                width: 14.5rem;
+                position: absolute;
+                right: 94%;
+                top: 50%;
+                transform: translateY(-50%);
+
+                @media #{$md} {
+                    display: none;
+                }
+            }
+        }
+    }
+}

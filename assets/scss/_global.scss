@@ -536,6 +536,10 @@ body {
 	&.swiper-pagination-bullet-active {
 		width: 4rem;
 		background: #A91B23;
+
+		@media #{$sm} {
+			width: 3rem;
+		}
 	}
 }
 
