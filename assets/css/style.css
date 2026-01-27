@@ -1016,6 +1016,7 @@ body {
 
 .footer_section {
   background: #080808;
+  background: blue;
   margin-top: 5rem;
   position: relative;
   padding: 6rem 6rem 0.6rem;
