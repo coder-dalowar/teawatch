@@ -184,34 +184,31 @@
                 --bs-gutter-y: 1.5rem;
             }
         }
+    }
+}
 
-        .skip_button {
-            a {
-                font-size: 2rem;
-                font-family: $heeboFont;
-                font-weight: 500;
-                line-height: 1.50;
-                color: #F9F9FF;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                gap: 0.6rem;
+.skip_button {
+    a {
+        font-size: 2rem;
+        font-family: $heeboFont;
+        font-weight: 500;
+        line-height: 1.50;
+        color: #F9F9FF;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.6rem;
 
-                img {
-                    width: 2.4rem;
-                }
-
-                &:hover {
-                    opacity: 0.85;
-                }
-
-                @media #{$sm} {
-                    justify-content: center;
-                }
-            }
-
+        img {
+            width: 2.4rem;
         }
 
+        &:hover {
+            opacity: 0.85;
+        }
 
+        @media #{$sm} {
+            justify-content: center;
+        }
     }
 }

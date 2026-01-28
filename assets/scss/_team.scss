@@ -1,6 +1,6 @@
 // team page ------------------
 .team_section {
-    padding: 10rem 0rem;
+    padding: 1rem 0rem;
 
     .team_title {
         margin-bottom: 2.4rem;
@@ -319,14 +319,6 @@
                 }
             }
         }
-    }
-
-    @media #{$md} {
-        padding: 5rem 0rem 0rem;
-    }
-
-    @media #{$sm} {
-        padding: 3rem 0rem 0rem;
     }
 
 }

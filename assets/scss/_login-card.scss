@@ -253,10 +253,25 @@
             }
         }
 
+        .button_wraper {
+            display: flex;
+            align-items: center;
+            padding-top: 4.6rem;
+
+            @media #{$sm} {
+                justify-content: space-between;
+            }
+        }
+
         .login_card_buttton {
             max-width: 35rem;
+            width: 100%;
             margin: 0 auto;
-            margin-top: 4.6rem;
+
+            @media #{$sm} {
+                max-width: 20rem;
+                margin: 0;
+            }
 
             .form_submit_button {
                 width: 100%;

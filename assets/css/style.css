@@ -3866,7 +3866,8 @@ body {
     --bs-gutter-y: 1.5rem;
   }
 }
-.signup_team_section .signup_team_wrapper .skip_button a {
+
+.skip_button a {
   font-size: 2rem;
   font-family: "Heebo", sans-serif;
   font-weight: 500;
@@ -3877,14 +3878,14 @@ body {
   justify-content: flex-end;
   gap: 0.6rem;
 }
-.signup_team_section .signup_team_wrapper .skip_button a img {
+.skip_button a img {
   width: 2.4rem;
 }
-.signup_team_section .signup_team_wrapper .skip_button a:hover {
+.skip_button a:hover {
   opacity: 0.85;
 }
 @media (max-width: 767px) {
-  .signup_team_section .signup_team_wrapper .skip_button a {
+  .skip_button a {
     justify-content: center;
   }
 }
@@ -4114,10 +4115,26 @@ body {
 .loginCard_section .login_card_warpper .row .login_card.active .card_text {
   color: #F02731;
 }
+.loginCard_section .login_card_warpper .button_wraper {
+  display: flex;
+  align-items: center;
+  padding-top: 4.6rem;
+}
+@media (max-width: 767px) {
+  .loginCard_section .login_card_warpper .button_wraper {
+    justify-content: space-between;
+  }
+}
 .loginCard_section .login_card_warpper .login_card_buttton {
   max-width: 35rem;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 4.6rem;
+}
+@media (max-width: 767px) {
+  .loginCard_section .login_card_warpper .login_card_buttton {
+    max-width: 20rem;
+    margin: 0;
+  }
 }
 .loginCard_section .login_card_warpper .login_card_buttton .form_submit_button {
   width: 100%;
@@ -4184,7 +4201,7 @@ body {
 }
 
 .team_section {
-  padding: 10rem 0rem;
+  padding: 1rem 0rem;
 }
 .team_section .team_title {
   margin-bottom: 2.4rem;
@@ -4470,16 +4487,6 @@ body {
 }
 .team_section .team_item .sponsor_item a:hover span {
   border-color: #F02731;
-}
-@media (max-width: 991px) {
-  .team_section {
-    padding: 5rem 0rem 0rem;
-  }
-}
-@media (max-width: 767px) {
-  .team_section {
-    padding: 3rem 0rem 0rem;
-  }
 }
 
 .invite_box {
