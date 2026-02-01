@@ -109,8 +109,9 @@
 
                 &:hover,
                 &.active {
-                    background: radial-gradient(#E14638, #DA232D, #E14638);
+                    background: #F02731;
                     border-color: #E76A4C;
+                    box-shadow: 0rem 0.5rem 1.7rem rgba(249, 204, 97, 0.45) inset;
 
                     span {
                         border-color: #FFFFFF;
@@ -241,7 +242,7 @@
                 display: inline-flex;
                 align-items: center;
                 gap: 0.8rem;
-                padding: 1.1rem 2rem;
+                padding: 1.2rem 2rem;
                 transition: 0.2s all ease;
                 position: relative;
 
@@ -294,24 +295,23 @@
                 }
 
                 &:hover {
-                    background: radial-gradient(#E14638, #DA232D, #E14638);
+                    background: #F02731;
                     border-color: #E76A4C;
+                    box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
 
                     span {
                         border-color: #FDE9BB;
+                        transform: scale(1.25);
                     }
                 }
 
                 &.active {
-                    background: radial-gradient(#E14638, #DA232D, #E14638);
+                    background: #F02731;
                     border-color: #E76A4C;
+                    box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
 
                     span {
                         border-color: #FDE9BB;
-                    }
-
-                    &:hover {
-                        background: linear-gradient(to right, #DA232D, #E4573D, #DA232D);
                     }
                 }
             }

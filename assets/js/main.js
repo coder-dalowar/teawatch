@@ -208,3 +208,190 @@
     });
   });
 }
+
+
+
+// =================== custom select dropdown ================
+{
+  document.querySelectorAll(".custom_select").forEach(select => {
+    const btn = select.querySelector(".select_btn");
+    const dropdown = select.querySelector(".select_dropdown");
+    const selected = select.querySelector(".selected");
+
+    btn.addEventListener("click", () => {
+      select.classList.toggle("open");
+    });
+
+    dropdown.querySelectorAll("li").forEach(option => {
+      option.addEventListener("click", () => {
+        selected.textContent = option.textContent;
+        dropdown.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+        option.classList.add("active");
+        select.classList.remove("open");
+      });
+    });
+
+    document.addEventListener("click", e => {
+      if (!select.contains(e.target)) {
+        select.classList.remove("open");
+      }
+    });
+  });
+}
+
+
+
+// =================== search_game_dropdown toggle ================
+{
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const wrappers = document.querySelectorAll('.serachBar_wraper');
+
+    // If no search bar exists on the page, exit safely
+    if (!wrappers.length) return;
+
+    wrappers.forEach(wrapper => {
+
+        const input = wrapper.querySelector('.search_field');
+        const dropdown = wrapper.querySelector('.search_game_dropdown');
+        const items = dropdown ? dropdown.querySelectorAll('li') : [];
+
+        // Safety check to prevent errors on other pages
+        if (!input || !dropdown) return;
+
+        // Function to show dropdown
+        const showDropdown = () => {
+            dropdown.classList.add('show');
+        };
+
+        // Function to hide dropdown
+        const hideDropdown = () => {
+            dropdown.classList.remove('show');
+        };
+
+        // Show dropdown when input is focused
+        input.addEventListener('focus', showDropdown);
+
+        // Show dropdown when input is clicked
+        input.addEventListener('click', showDropdown);
+
+        // Handle dropdown item click
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                // Set clicked item text into input field
+                input.value = item.textContent.trim();
+
+                // Hide dropdown after selection
+                hideDropdown();
+            });
+        });
+
+        // Hide dropdown when clicking outside the search wrapper
+        document.addEventListener('click', (event) => {
+            if (!wrapper.contains(event.target)) {
+                hideDropdown();
+            }
+        });
+    });
+
+  });
+}
+
+
+
+// =================== game change custom slider ================
+{
+  document.addEventListener('DOMContentLoaded', function () {
+
+    const wrappers = document.querySelectorAll('.gameChange_wrap');
+    if (!wrappers.length) return;
+
+    wrappers.forEach(wrapper => {
+
+        const downBtn = wrapper.querySelector('.up_arrow');
+        const upBtn = wrapper.querySelector('.down_arrow');
+        const itemBox = wrapper.querySelector('.gameChange_item');
+        const track = wrapper.querySelector('.gameChange_track');
+
+        if (!upBtn || !downBtn || !itemBox || !track) return;
+
+        const slides = Array.from(track.children);
+        const slideHeight = itemBox.offsetHeight;
+
+        let index = 1;
+        let autoplayTimer = null;
+
+        // Clone first and last for infinite loop
+        const firstClone = slides[0].cloneNode(true);
+        const lastClone = slides[slides.length - 1].cloneNode(true);
+
+        track.appendChild(firstClone);
+        track.insertBefore(lastClone, slides[0]);
+
+        const totalSlides = track.children.length;
+
+        // Initial position
+        track.style.transform = `translateY(-${slideHeight}px)`;
+
+        // Move to index
+        const moveTo = (i, animate = true) => {
+            track.style.transition = animate ? 'transform 0.4s ease' : 'none';
+            track.style.transform = `translateY(-${i * slideHeight}px)`;
+        };
+
+        // Move down (next image)
+        const moveDown = () => {
+            index++;
+            moveTo(index);
+
+            // Loop to first real slide
+            if (index === totalSlides - 1) {
+                setTimeout(() => {
+                    index = 1;
+                    moveTo(index, false);
+                }, 400);
+            }
+        };
+
+        // Move up (previous image)
+        const moveUp = () => {
+            index--;
+            moveTo(index);
+
+            // Loop to last real slide
+            if (index === 0) {
+                setTimeout(() => {
+                    index = totalSlides - 2;
+                    moveTo(index, false);
+                }, 400);
+            }
+        };
+
+        // Arrow events
+        upBtn.addEventListener('click', moveUp);
+        downBtn.addEventListener('click', moveDown);
+
+        // Autoplay every 3 seconds
+        const startAutoplay = () => {
+            stopAutoplay();
+            autoplayTimer = setInterval(moveDown, 3000);
+        };
+
+        const stopAutoplay = () => {
+            if (autoplayTimer) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        };
+
+        // Pause autoplay on hover
+        wrapper.addEventListener('mouseenter', stopAutoplay);
+        wrapper.addEventListener('mouseleave', startAutoplay);
+
+        // Initial autoplay start
+        startAutoplay();
+
+    });
+
+  });
+}

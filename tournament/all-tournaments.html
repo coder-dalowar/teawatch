@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>teawatch</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/img/favicon.png" />
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- header_section start -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/trofy.svg" alt="icon">
+                                <span> טורנירים </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/play.svg" alt="icon">
+                                <span> גאטרים אונליין </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/document.svg" alt="icon">
+                                <span> לוח תוצאות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/store.svg" alt="icon">
+                                <span> חנות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="premium_btn">
+                                <img src="../assets/img/crown.svg" alt="icon">
+                                שדרוג
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/chat.svg" alt="icon">
+                                <span> צ׳אט </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header_left ms-auto">
+                        <div class="admin_btn button_border">
+                            <a href="#">
+                                <span class="admin_profile">
+                                    <img src="../assets/img/admin.png" alt="">
+                                </span>
+                                <span class="admin_text">
+                                    <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                                    <span> חינמי </span>
+                                </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="add_btn button_border">
+                            <a href="#">
+                                <img src="../assets/img/add-circle.svg" alt="">
+                                <span>הארנק שלי <br> ₪4988.00 </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/shopping-bag.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/notification.svg" alt="">
+                                <span class="notify_red"></span>
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/logout.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+    <!-- offcanvas menu start -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <a href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+            </h5>
+            <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="../assets/img/close.svg" alt="">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="admin_wraper">
+                <div class="admin_btn button_border">
+                    <a href="#">
+                        <span class="admin_profile">
+                            <img src="../assets/img/admin.png" alt="">
+                        </span>
+                        <span class="admin_text">
+                            <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                            <span> חינמי </span>
+                        </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>
+
+                <div class="add_btn button_border">
+                    <a href="#">
+                        <img src="../assets/img/add-circle.svg" alt="">
+                        <span>הארנק שלי <br> ₪4988.00 </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>                
+            </div>
+
+            <div class="offcanvas_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/trofy.svg" alt="icon">
+                            <span> טורנירים </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/play.svg" alt="icon">
+                            <span> גאטרים אונליין </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/document.svg" alt="icon">
+                            <span> לוח תוצאות </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/store.svg" alt="icon">
+                            <span> חנות </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas_btn">
+                <a href="#" class="premium_btn">
+                    <img src="../assets/img/crown.svg" alt="icon">
+                    שדרוג
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </a>
+            </div>
+            
+            <div class="icon_wraper">
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/shopping-bag.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/notification.svg" alt="">
+                        <span class="notify_red"></span>
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/logout.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+    <!-- offcanvas menu end -->
+
+    <!-- chat_bot -->
+    <div class="chat_bot d-lg-none">
+        <a href="#">
+            <img src="../assets/img/chat.svg" alt="icon">
+        </a>
+    </div> 
+
+
+    <main>
+
+        <div class="container">
+            <div class="main_wrapper">
+
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <div class="side_item">
+                        <a href="../index.html" class="side_btn">
+                            <img src="../assets/img/home.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="../tournament/tournament.html" class="side_btn active">
+                            <img src="../assets/img/trofy.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../assets/img/play.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../assets/img/crown.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../assets/img/settings.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- main content -->
+                <div class="main_content">
+                    <!-- menu wraper -->
+                    <div class="tabMenu_wrap">
+                        <div class="tab_links main_menuLinks">
+                            <a href="tournament.html" class="active"> כללי </a>
+                            <a href="my-tournaments.html"> הזירה התחרותית שלי </a>
+                        </div>
+                        <div class="add_btn">
+                            <a href="#">
+                                הוספת חשבון
+                                <img src="../assets/img/plus-sign.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tabMenu_wrap menu_wraper2">
+                        <div class="tab_links">
+                            <ul>
+                                <li>
+                                    <a href="tournament.html">
+                                        <img src="../assets/img/news.svg" alt="">
+                                        <span> חדשות ועידכונים </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="all-tournaments.html" class="active">
+                                        <img src="../assets/img/trofy.svg" alt="">
+                                        <span> טורנירים </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="upcoming-games.html">
+                                        <img src="../assets/img/knif-cross.svg" alt="">
+                                        <span> משחקים קרובים </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="recent-games.html">
+                                        <img src="../assets/img/scoreboard.svg.svg" alt="">
+                                        <span> לוח תוצאות </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="rating.html">
+                                        <img src="../assets/img/ranking.svg" alt="">
+                                        <span> דירוג </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search_game_wraper">
+                            <div class="gameChange_wrap">
+                                <div class="gameChange_arrow">
+                                    <button type="button" class="up_arrow">
+                                        <img src="../assets/img/up-arrow.svg" alt="">
+                                    </button>
+                                    <button type="button" class="down_arrow">
+                                        <img src="../assets/img/down-arrow.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="gameChange_item">
+                                    <div class="gameChange_track">
+                                        <img src="../assets/img/search-game-1.png" alt="">
+                                        <img src="../assets/img/search-game-2.png" alt="">
+                                        <img src="../assets/img/search-game-1.png" alt="">
+                                        <img src="../assets/img/search-game-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="serachBar_wraper">
+                                <div class="search_bar">
+                                    <button type="button">
+                                        <img src="../assets/img/search.svg" alt="">
+                                    </button>
+                                    <input class="search_field" type="text" placeholder=" חפש משחק ">
+                                </div>
+
+                                <div class="search_game_dropdown">
+                                    <ul>
+                                        <li>
+                                            <img src="../assets/img/search-game-2.png" alt="">
+                                            VALORANT
+                                        </li>
+                                        <li>
+                                            <img src="../assets/img/search-game-1.png" alt="">
+                                            FREE FIRE
+                                        </li>
+                                        <li>
+                                            <img src="../assets/img/search-game-2.png" alt="">
+                                            VALORANT
+                                        </li>
+                                        <li>
+                                            <img src="../assets/img/search-game-1.png" alt="">
+                                            FREE FIRE
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- hero section -->
+                    <div class="hero_section">
+                        <div class="hero_text">
+                            <h1>ברוכים הבאים לTeaMatch</h1>
+                            <p>פלטפורמת הטורנירים המובילה לקהילת הגיימינג. התחרה, צור קלאנים, וזכה בפרסים מדהימים.</p>
+                            <ul>
+                                <li>
+                                    <a href="#" class="active">
+                                        הירשם עכשיו
+                                        <img src="../assets/img/left.svg" alt="">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        הירשם עכשיו
+                                        <img src="../assets/img/left.svg" alt="">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- pagination -->
+                    <div class="pagination_wraper">
+                        <div class="pagination">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="../assets/img/arrow-right-double.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../assets/img/arrow-right-single.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="active">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+                                <li>
+                                    <a href="#">4</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../assets/img/arrow-left-single.svg" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../assets/img/arrow-left-double.svg" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="custom_select page_select">
+                            <button type="button" class="select_btn">
+                                <span class="arrow">
+                                    <img src="../assets/img/down.svg" alt="">
+                                </span>
+                                <span class="selected">50</span>                               
+                            </button>
+                            <ul class="select_dropdown">
+                                <li data-value="10">10</li>
+                                <li data-value="20">20</li>
+                                <li data-value="50" class="active">50</li>
+                                <li data-value="100">100</li>
+                            </ul>
+                        </div>
+                    </div> 
+
+                    <!-- join_section -->
+                    <div class="join_section">
+                        <div class="join_text">
+                            <h3>
+                                <img src="../assets/img/red-rborder.png" alt="">
+                                מוכן לשחק?
+                                <img src="../assets/img/red-lborder.png" alt="">
+                            </h3>
+                            <p> צור קבוצה והצטרף לטורניר הבא </p>
+                            <a href="#">
+                                התחל עכשיו
+                                <img src="../assets/img/left.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- footer_section -->
+                    <div class="footer_section">
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+
+                        <div class="footer_wrapper">
+                            <div class="footer_item">
+                                <div class="footer_logo">
+                                    <a href="#">
+                                        <img src="../assets/img/logo.svg" alt="">
+                                    </a>
+                                </div>
+                                <p> פלטפורמת טורנירים מקצועית לקהילת הגיימינג </p>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/tiktok.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/youtube.svg" alt="youtube">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/instagram.svg" alt="instagram">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/discord.svg" alt="discord">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/twitter.svg" alt="twitter">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../assets/img/facebook.svg" alt="facebook">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum2">
+                                <h4> קישורים מהירים </h4>
+                                <ul>
+                                    <li><a href="#"> טורנירים </a></li>
+                                    <li><a href="#"> קבוצות </a></li>
+                                    <li><a href="#"> לוח תוצאות </a></li>
+                                    <li><a href="#"> בלוג </a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum3">
+                                <h4> מידע </h4>
+                                <ul>
+                                    <li><a href="#"> צור קשר </a></li>
+                                    <li><a href="#"> תנאי שימוש </a></li>
+                                    <li><a href="#"> מדיניות פרטיות </a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum4">
+                                <h4> קהילה </h4>
+                                <ul>
+                                    <li><a href="#"> חומרי קהילה </a></li>
+                                    <li><a href="#"> Discord </a></li>
+                                    <li><a href="#"> Twitch </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="copyright_item text-center">
+                            <p>&copy; 2025 TeaMatch. כל הזכויות שמורות.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- all js here -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

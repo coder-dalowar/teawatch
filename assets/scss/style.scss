@@ -1,14 +1,33 @@
-// All scss file import here
+// All scss file import here ------------
+
+//======================== 
+// Utilities
+//======================== 
 
 @import '_variables';
 
 @import '_global';
 
+
+//======================== 
+// Commponents
+//======================== 
+
 @import '_header';
 
 @import '_footer';
 
+
+//======================== 
+// pages
+//======================== 
+
+// Home ---------
+
 @import '_index';
+
+
+// Login ----------
 
 @import '_signup';
 
@@ -16,5 +35,15 @@
 
 @import '_login-card';
 
-@import '_team';
+
+// Create Team -----------
+
+@import '_create-team';
+
+
+// Tournament -----------
+
+@import 'tournament/_tournament';
+
+@import 'tournament/_all-tournament';
 
