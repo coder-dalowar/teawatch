@@ -1,0 +1,532 @@
+// upcoming-games page ------------
+.upcoming_banner {
+    background-image: url('../img/upcoming-banner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 6.5rem 3.4rem 9.2rem;
+    position: relative;
+
+    .title_box {
+        position: absolute;
+        right: 3.4rem;
+        top: 4.2rem;
+        padding-bottom: 0;
+    }
+
+    .details_btn {
+        position: absolute;
+        left: 6rem;
+        bottom: 6rem;
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            background: #F02731;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 1.2rem 2rem;
+            box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
+            position: relative;
+            transition: 0.2s all ease;
+
+            @media #{$sm} {
+                font-size: 1.4rem;
+                padding: 1.1rem 1.6rem 1.1rem 1.3rem;
+            }
+
+            img {
+                width: 2rem;
+
+                @media #{$sm} {
+                    width: 1.8rem;
+                }
+            }
+
+            .border_tl {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-top: 1px solid #FDEBC2;
+                border-left: 1px solid #FDEBC2;
+                position: absolute;
+                left: -0.05rem;
+                top: -0.05rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_tr {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-top: 1px solid #FDEBC2;
+                border-right: 1px solid #FDEBC2;
+                position: absolute;
+                right: -0.05rem;
+                top: -0.05rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-bottom: 1px solid #FDEBC2;
+                border-left: 1px solid #FDEBC2;
+                position: absolute;
+                left: -0.05rem;
+                bottom: -0.05rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 0.6rem;
+                height: 0.6rem;
+                border-bottom: 1px solid #FDEBC2;
+                border-right: 1px solid #FDEBC2;
+                position: absolute;
+                right: -0.05rem;
+                bottom: -0.05rem;
+                transition: 0.2s all ease;
+            }
+
+            &:hover {
+                span {
+                    transform: scale(1.25);
+                    border-color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    .tournament_box {
+        position: relative;
+
+        .tournament_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            h3 {
+                font-size: 2.4rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-transform: uppercase;
+            }
+
+            img {
+                width: 5.4rem;
+            }
+        }
+
+        .tournament_wraper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3.2rem;
+            padding: 1.2rem 0rem 2.4rem;
+
+            p {
+                font-size: 4rem;
+                font-weight: 700;
+                line-height: 125%;
+                color: #D3CFD3;
+                display: flex;
+                align-items: center;
+                gap: 1.3rem;
+
+                img {
+                    width: 7.8rem;
+                }
+            }
+
+            h2 {
+                font-size: 5.3rem;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0.2rem;
+                color: #FFF;
+            }
+        }
+
+        .tournament_schedule {
+            text-align: center;
+
+            p {
+                font-size: 3rem;
+                font-weight: 400;
+                color: #B4B3B4;
+                line-height: 130%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.3rem;
+
+                span {
+                    width: 0.2rem;
+                    height: 2.6rem;
+                    display: block;
+                    background: #C5212B;
+                }
+            }
+        }
+    }
+}
+
+
+
+// game schedule section ------------
+
+.game_schedule {
+    padding-top: 6rem;
+
+    .title_box {
+        padding-bottom: 3.2rem;
+    }
+
+    .row {
+        --bs-gutter-x: 2.4rem;
+        --bs-gutter-y: 2rem;
+    }
+
+    .tournament_box {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 4rem 1.5rem;
+        position: relative;
+
+        .tournament_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-transform: uppercase;
+            }
+
+            img {
+                width: 3.6rem;
+            }
+        }
+
+        .tournament_wraper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.4rem;
+            padding: 1.2rem 0rem 2rem;
+
+            p {
+                font-size: 3.2rem;
+                font-weight: 700;
+                line-height: 125%;
+                color: #D1D1CD;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 5.8rem;
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #FFF;
+            }
+        }
+
+        .tournament_schedule {
+            text-align: center;
+
+            p {
+                font-size: 2.4rem;
+                font-weight: 400;
+                line-height: 130%;
+                color: #B6B6B6;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 3.2rem;
+
+                span {
+                    width: 0.2rem;
+                    height: 2rem;
+                    display: block;
+                    background: #C01F27;
+                }
+            }
+
+            a {
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 120%;
+                color: #F5F6FF;
+                background: #080808;
+                border: 1px solid #212121;
+                display: inline-block;
+                padding: 0.8rem 4.7rem;
+                position: relative;
+
+                .border_tl {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #8D1616;
+                    border-left: 1px solid #8D1616;
+                    position: absolute;
+                    left: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_tr {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #8D1616;
+                    border-right: 1px solid #8D1616;
+                    position: absolute;
+                    right: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bl {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #8D1616;
+                    border-left: 1px solid #8D1616;
+                    position: absolute;
+                    left: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_br {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #8D1616;
+                    border-right: 1px solid #8D1616;
+                    position: absolute;
+                    right: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                &:hover {
+                    span {
+                        border-color: #DA232D;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// game_schedule2_section -----------------
+
+.game_schedule2_section {
+    padding-top: 4rem;
+
+    .title_box {
+        padding-bottom: 3.2rem;
+    }
+
+    .row {
+        --bs-gutter-x: 2.4rem;
+        --bs-gutter-y: 2rem;
+    }
+
+    .tournament_box {
+        background: #121212;
+        padding: 2rem 1.5rem;
+        position: relative;
+
+        .shape_tl {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            img {
+                width: 5.6rem;
+            }
+        }
+
+        .shape_tr {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            img {
+                width: 4.5rem;
+            }
+        }
+
+        .shape_bl {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            img {
+                width: 5.6rem;
+            }
+        }
+
+        .shape_br {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            img {
+                width: 4.5rem;
+            }
+        }
+
+        .tournament_title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+
+            h3 {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                text-transform: uppercase;
+            }
+
+            img {
+                width: 3.6rem;
+            }
+        }
+
+        .tournament_wraper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.4rem;
+            padding: 1.2rem 0rem 2.4rem;
+
+            p {
+                font-size: 2rem;
+                font-weight: 700;
+                color: #D0D0D0;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                img {
+                    width: 2.4rem;
+                }
+            }
+
+            h2 {
+                font-size: 3rem;
+                font-weight: 700;
+                color: #FFF;
+            }
+        }
+
+        .tournament_schedule {
+            text-align: center;
+
+            p {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #B8B8B8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 2.4rem;
+
+                span {
+                    width: 0.2rem;
+                    height: 1.2rem;
+                    display: block;
+                    background: #C4232B;
+                }
+            }
+
+            a {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #F5F6FF;
+                background: #080808;
+                border: 1px solid #212121;
+                display: inline-block;
+                padding: 0.9rem 5rem;
+                position: relative;
+
+                .border_tl {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #8D1616;
+                    border-left: 1px solid #8D1616;
+                    position: absolute;
+                    left: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_tr {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #8D1616;
+                    border-right: 1px solid #8D1616;
+                    position: absolute;
+                    right: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bl {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #8D1616;
+                    border-left: 1px solid #8D1616;
+                    position: absolute;
+                    left: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_br {
+                    width: 1.2rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #8D1616;
+                    border-right: 1px solid #8D1616;
+                    position: absolute;
+                    right: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                &:hover {
+                    span {
+                        border-color: #DA232D;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+
+    .more_btn {
+        padding: 4rem 0rem 8rem;
+        text-align: center;
+
+        @media #{$sm} {
+            padding-bottom: 6rem;
+        }
+    }
+}
