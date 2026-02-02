@@ -4792,7 +4792,7 @@ body {
   border: 1px solid #62171B;
   margin-top: 0.5rem;
   display: none;
-  z-index: 10;
+  z-index: 2026;
 }
 .pagination_wraper .page_select .select_dropdown li {
   font-family: "Heebo", sans-serif;
@@ -6107,6 +6107,238 @@ body {
   }
   .recent_game_section .recent_table .recent_item::after {
     left: -3.5rem;
+  }
+}
+
+.ratingsTab_wraper .tab_links ul {
+  gap: 0rem;
+}
+.ratingsTab_wraper .tab_links ul::before {
+  display: none;
+}
+.ratingsTab_wraper .tab_links ul li::before, .ratingsTab_wraper .tab_links ul li::after {
+  display: none;
+}
+.ratingsTab_wraper .tab_links ul li a {
+  min-width: 11.5rem;
+}
+@media (max-width: 767px) {
+  .ratingsTab_wraper .tab_links ul li a {
+    min-width: 10.6rem;
+  }
+}
+.ratingsTab_wraper .pagination_wraper {
+  padding: 0;
+}
+.ratingsTab_wraper .pagination_wraper .custom_select {
+  width: 17rem;
+}
+.ratingsTab_wraper .pagination_wraper .custom_select .select_btn {
+  height: 5.4rem;
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+}
+.ratingsTab_wraper .pagination_wraper .custom_select .select_dropdown li {
+  text-align: right;
+}
+@media (max-width: 991px) {
+  .ratingsTab_wraper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .ratingsTab_wraper .tab_links {
+    order: 1;
+  }
+  .ratingsTab_wraper .pagination_wraper {
+    order: 2;
+  }
+  .ratingsTab_wraper .search_game_wraper {
+    width: 100%;
+    order: 3;
+  }
+}
+@media (max-width: 767px) {
+  .ratingsTab_wraper {
+    column-gap: 1rem;
+    row-gap: 3.5rem;
+  }
+  .ratingsTab_wraper .tab_links {
+    width: auto;
+  }
+  .ratingsTab_wraper .tab_links ul {
+    display: flex;
+  }
+  .ratingsTab_wraper .pagination_wraper .custom_select {
+    width: 12.4rem;
+  }
+  .ratingsTab_wraper .pagination_wraper .custom_select .select_btn {
+    font-size: 1.5rem;
+    height: 4.8rem;
+    padding-left: 0.85rem;
+  }
+}
+
+.ratings_title h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+}
+@media (max-width: 991px) {
+  .ratings_title h2 {
+    font-size: 3.5rem;
+  }
+}
+
+.ratings_table_section {
+  padding-top: 6rem;
+}
+@media (max-width: 991px) {
+  .ratings_table_section {
+    padding-top: 5rem;
+    overflow: auto;
+  }
+}
+@media (max-width: 991px) {
+  .ratings_table_section .ratings_table {
+    width: 100rem;
+  }
+}
+.ratings_table_section .ratings_table .table_row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #0E0E0E;
+  border-bottom: 1px solid #260F0F;
+  padding: 1.5rem 1.5rem;
+  transition: 0.2s all ease;
+}
+.ratings_table_section .ratings_table .table_row:hover {
+  background: #141414;
+}
+.ratings_table_section .ratings_table .table_row:hover .table_data:first-child {
+  background: linear-gradient(to right bottom, #FDAC33, #DE5709);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ratings_table_section .ratings_table .table_row:first-child {
+  background: #260F0F;
+  padding: 2rem 1.5rem;
+}
+.ratings_table_section .ratings_table .table_row .table_heading {
+  width: 15.6%;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  text-align: center;
+  padding: 1.5rem 0rem;
+  border-right: 0.2rem solid #291717;
+}
+.ratings_table_section .ratings_table .table_row .table_heading:first-child {
+  border-right: none;
+  width: 8%;
+}
+.ratings_table_section .ratings_table .table_row .table_heading:last-child {
+  width: 12%;
+}
+.ratings_table_section .ratings_table .table_row .table_heading:nth-child(2) {
+  width: 17.6%;
+  text-align: right;
+  padding-right: 1.7rem;
+}
+@media (max-width: 991px) {
+  .ratings_table_section .ratings_table .table_row .table_heading {
+    font-size: 1.5rem;
+  }
+}
+.ratings_table_section .ratings_table .table_row .table_data {
+  width: 15.6%;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 160%;
+  color: #CFCFCF;
+  text-align: center;
+}
+.ratings_table_section .ratings_table .table_row .table_data:first-child {
+  font-family: "Cooperative";
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 140%;
+  background: linear-gradient(to right bottom, #F5F6FF, #808080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 8%;
+  transition: 0.2s all ease;
+}
+.ratings_table_section .ratings_table .table_row .table_data:last-child {
+  width: 12%;
+}
+.ratings_table_section .ratings_table .table_row .table_data:nth-child(2) {
+  width: 17.6%;
+  text-align: right;
+  padding-right: 1.7rem;
+}
+@media (max-width: 991px) {
+  .ratings_table_section .ratings_table .table_row .table_data {
+    font-size: 1.5rem;
+  }
+  .ratings_table_section .ratings_table .table_row .table_data:first-child {
+    font-size: 1.85rem;
+  }
+}
+.ratings_table_section .ratings_table .table_row .player_item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-align: right;
+}
+.ratings_table_section .ratings_table .table_row .player_img {
+  flex-shrink: 0;
+}
+.ratings_table_section .ratings_table .table_row .player_img img {
+  width: 5rem;
+  height: 5rem;
+  display: block;
+  object-fit: cover;
+}
+.ratings_table_section .ratings_table .table_row .player_details {
+  text-align: right;
+}
+.ratings_table_section .ratings_table .table_row .player_details h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #F9F9FF;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.ratings_table_section .ratings_table .table_row .player_details h4 img {
+  width: 1.6rem;
+}
+@media (max-width: 991px) {
+  .ratings_table_section .ratings_table .table_row .player_details h4 {
+    font-size: 1.85rem;
+  }
+}
+.ratings_table_section .ratings_table .table_row .player_details span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #F02731;
+  border: 1px solid #431515;
+  display: inline-block;
+  padding: 0rem 0.7rem;
+  border-radius: 5rem;
+}
+@media (max-width: 991px) {
+  .ratings_table_section .group_table {
+    width: 80rem;
   }
 }
 

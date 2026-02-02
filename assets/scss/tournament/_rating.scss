@@ -1,2 +1,281 @@
 // rating page ------------
 
+.ratingsTab_wraper {
+    .tab_links {
+        ul {
+            gap: 0rem;
+
+            &::before {
+                display: none;
+            }
+
+            li {
+                &::before,
+                &::after {
+                    display: none;
+                }
+
+                a {
+                    min-width: 11.5rem;
+
+                    @media #{$sm} {
+                        min-width: 10.6rem;
+                    }
+                }
+            }
+        }
+    }  
+    
+    .pagination_wraper {
+        padding: 0;
+
+        .custom_select {
+            width: 17rem;
+
+            .select_btn {
+                height: 5.4rem;
+                padding-left: 1rem;
+                padding-right: 1.2rem;
+            }
+
+            .select_dropdown {
+                li {
+                    text-align: right;
+                }
+            }
+        }
+    }
+
+    @media #{$md} {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .tab_links {
+            order: 1;
+        }
+
+        .pagination_wraper {
+            order: 2;
+        }
+
+        .search_game_wraper {
+            width: 100%;
+            order: 3;
+        }
+    }
+
+    @media #{$sm} {
+        column-gap: 1rem;
+        row-gap: 3.5rem;
+
+        .tab_links {
+            width: auto;
+
+            ul {
+                display: flex;
+            }
+        }
+
+        .pagination_wraper {
+            .custom_select {
+                width: 12.4rem;
+
+                .select_btn {
+                    font-size: 1.5rem;
+                    height: 4.8rem;
+                    padding-left: 0.85rem;
+                }
+            }
+        }
+    }
+}
+
+
+//  ratings_title
+.ratings_title {
+    h2 {
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: #F5F6FF;
+
+        @media #{$md} {
+            font-size: 3.5rem;
+        }
+    }
+}
+
+
+// ratings_table -----------
+
+.ratings_table_section {
+    padding-top: 6rem;
+
+    @media #{$md} {
+        padding-top: 5rem;
+        overflow: auto;
+    }
+
+    .ratings_table {
+        @media #{$md} {
+            width: 100rem;
+        }
+
+        .table_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #0E0E0E;
+            border-bottom: 1px solid #260F0F;
+            padding: 1.5rem 1.5rem;
+            transition: 0.2s all ease;
+
+            &:hover {
+                background: #141414;
+
+                .table_data {
+                    &:first-child {
+                        background: linear-gradient(to right bottom, #FDAC33, #DE5709);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            &:first-child {
+                background: #260F0F;
+                padding: 2rem 1.5rem;
+            }
+
+            .table_heading {
+                width: 15.6%;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 120%;
+                color: #F5F6FF;
+                text-align: center;
+                padding: 1.5rem 0rem;
+                border-right: 0.2rem solid #291717;
+
+                &:first-child {
+                    border-right: none;
+                    width: 8%;
+                }
+
+                &:last-child {
+                    width: 12%;
+                }
+
+                &:nth-child(2) {
+                    width: 17.6%;
+                    text-align: right;
+                    padding-right: 1.7rem;
+                }
+
+                @media #{$md} {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .table_data {
+                width: 15.6%;
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 160%;
+                color: #CFCFCF;
+                text-align: center;
+
+                &:first-child {
+                    font-family: $primaryFont;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    line-height: 140%;
+                    background: linear-gradient(to right bottom, #F5F6FF, #808080);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    width: 8%;
+                    transition: 0.2s all ease;
+                }
+
+                &:last-child {
+                    width: 12%;
+                }
+
+                &:nth-child(2) {
+                    width: 17.6%;
+                    text-align: right;
+                    padding-right: 1.7rem;
+                }
+
+                @media #{$md} {
+                    font-size: 1.5rem;
+
+                    &:first-child {
+                        font-size: 1.85rem;
+                    }
+                }
+            }
+
+            .player_item {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+                text-align: right;
+            }
+
+            .player_img {
+                flex-shrink: 0;
+
+                img {
+                    width: 5rem;
+                    height: 5rem;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+
+            .player_details {
+                text-align: right;
+                
+                h4 {
+                    font-family: $heeboFont;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    line-height: 100%;
+                    color: #F9F9FF;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.4rem;
+                    margin-bottom: 0.2rem;
+
+                    img {
+                        width: 1.6rem;
+                    }
+
+                    @media #{$md} {
+                        font-size: 1.85rem;
+                    }
+                }
+
+                span {
+                    font-family: $heeboFont;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    line-height: 140%;
+                    color: #F02731;
+                    border: 1px solid #431515;
+                    display: inline-block;
+                    padding: 0rem 0.7rem;
+                    border-radius: 5rem;
+                }
+            }
+        }
+    }
+
+    .group_table {
+        @media #{$md} {
+            width: 80rem;
+        }
+    }
+}
