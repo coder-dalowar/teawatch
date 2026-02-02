@@ -5151,9 +5151,10 @@ body {
   height: 5.6rem;
   border: 1px solid #353535;
   overflow: hidden;
-  cursor: grab;
 }
 .gameChange_wrap .gameChange_item .gameChange_track {
+  display: flex;
+  flex-direction: column;
   height: 100%;
   transition: transform 0.4s ease;
 }
@@ -5161,10 +5162,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-}
-.gameChange_wrap .gameChange_item.active {
-  cursor: grabbing;
+  flex-shrink: 0;
 }
 
 .serachBar_wraper {
@@ -5222,12 +5220,12 @@ body {
   width: 100%;
   background: #666666;
   border: 1px solid #7E7E7E;
-  padding: 1.1rem 1rem;
   max-height: 30rem;
   overflow: auto;
   visibility: hidden;
   opacity: 0;
   transition: 0.2s all ease;
+  z-index: 2026;
 }
 .serachBar_wraper .search_game_dropdown ul li {
   font-family: "Heebo", sans-serif;
@@ -5238,7 +5236,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  margin-bottom: 1rem;
+  padding: 1.2rem 1.2rem;
+  border-bottom: 1px solid #7E7E7E;
   cursor: pointer;
   transition: 0.2s all ease;
 }
@@ -5249,6 +5248,10 @@ body {
 }
 .serachBar_wraper .search_game_dropdown ul li:hover {
   color: #FFF;
+  background: #F02731;
+}
+.serachBar_wraper .search_game_dropdown ul li:last-child {
+  border-bottom: none;
 }
 .serachBar_wraper .search_game_dropdown.show {
   visibility: visible;
@@ -5263,16 +5266,45 @@ body {
   padding: 6.5rem 3.4rem 9.2rem;
   position: relative;
 }
+@media (max-width: 767px) {
+  .upcoming_banner {
+    padding: 8rem 1.5rem 9.5rem;
+  }
+}
 .upcoming_banner .title_box {
   position: absolute;
   right: 3.4rem;
   top: 4.2rem;
   padding-bottom: 0;
 }
+@media (max-width: 991px) {
+  .upcoming_banner .title_box {
+    top: 2.4rem;
+    right: 2.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .title_box {
+    top: 2rem;
+    right: 1.5rem;
+  }
+}
 .upcoming_banner .details_btn {
   position: absolute;
   left: 6rem;
   bottom: 6rem;
+}
+@media (max-width: 991px) {
+  .upcoming_banner .details_btn {
+    bottom: 3rem;
+    left: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .details_btn {
+    bottom: 1.6rem;
+    left: 1.6rem;
+  }
 }
 .upcoming_banner .details_btn a {
   font-size: 1.6rem;
@@ -5360,8 +5392,18 @@ body {
   color: #FFFFFF;
   text-transform: uppercase;
 }
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_title h3 {
+    font-size: 1.8rem;
+  }
+}
 .upcoming_banner .tournament_box .tournament_title img {
   width: 5.4rem;
+}
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_title img {
+    width: 4.5rem;
+  }
 }
 .upcoming_banner .tournament_box .tournament_wraper {
   display: flex;
@@ -5369,6 +5411,18 @@ body {
   justify-content: center;
   gap: 3.2rem;
   padding: 1.2rem 0rem 2.4rem;
+}
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_wraper {
+    gap: 2.5rem;
+    padding: 1rem 0rem 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_wraper {
+    gap: 2rem;
+    padding: 1rem 0rem 1.6rem;
+  }
 }
 .upcoming_banner .tournament_box .tournament_wraper p {
   font-size: 4rem;
@@ -5379,8 +5433,29 @@ body {
   align-items: center;
   gap: 1.3rem;
 }
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_wraper p {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_wraper p {
+    font-size: 2.4rem;
+    gap: 1rem;
+  }
+}
 .upcoming_banner .tournament_box .tournament_wraper p img {
   width: 7.8rem;
+}
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_wraper p img {
+    width: 5.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_wraper p img {
+    width: 4.5rem;
+  }
 }
 .upcoming_banner .tournament_box .tournament_wraper h2 {
   font-size: 5.3rem;
@@ -5388,6 +5463,16 @@ body {
   line-height: 100%;
   letter-spacing: 0.2rem;
   color: #FFF;
+}
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_wraper h2 {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_wraper h2 {
+    font-size: 3.2rem;
+  }
 }
 .upcoming_banner .tournament_box .tournament_schedule {
   text-align: center;
@@ -5402,22 +5487,59 @@ body {
   justify-content: center;
   gap: 1.3rem;
 }
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_schedule p {
+    font-size: 2.4rem;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_schedule p {
+    font-size: 2rem;
+    gap: 1rem;
+  }
+}
 .upcoming_banner .tournament_box .tournament_schedule p span {
   width: 0.2rem;
   height: 2.6rem;
   display: block;
   background: #C5212B;
 }
+@media (max-width: 991px) {
+  .upcoming_banner .tournament_box .tournament_schedule p span {
+    height: 2.2rem;
+  }
+}
+@media (max-width: 767px) {
+  .upcoming_banner .tournament_box .tournament_schedule p span {
+    height: 2rem;
+  }
+}
 
 .game_schedule {
   padding-top: 6rem;
 }
+@media (max-width: 767px) {
+  .game_schedule {
+    padding-top: 4.6rem;
+  }
+}
 .game_schedule .title_box {
   padding-bottom: 3.2rem;
+}
+@media (max-width: 767px) {
+  .game_schedule .title_box {
+    padding-bottom: 2.5rem;
+  }
 }
 .game_schedule .row {
   --bs-gutter-x: 2.4rem;
   --bs-gutter-y: 2rem;
+}
+@media (max-width: 767px) {
+  .game_schedule .row {
+    --bs-gutter-x: 1.5rem;
+  }
 }
 .game_schedule .tournament_box {
   background-repeat: no-repeat;
@@ -5448,6 +5570,12 @@ body {
   gap: 2.4rem;
   padding: 1.2rem 0rem 2rem;
 }
+@media (max-width: 767px) {
+  .game_schedule .tournament_box .tournament_wraper {
+    gap: 2rem;
+    padding: 1rem 0rem 1.6rem;
+  }
+}
 .game_schedule .tournament_box .tournament_wraper p {
   font-size: 3.2rem;
   font-weight: 700;
@@ -5460,10 +5588,23 @@ body {
 .game_schedule .tournament_box .tournament_wraper p img {
   width: 5.8rem;
 }
+@media (max-width: 767px) {
+  .game_schedule .tournament_box .tournament_wraper p {
+    font-size: 2.4rem;
+  }
+  .game_schedule .tournament_box .tournament_wraper p img {
+    width: 4.4rem;
+  }
+}
 .game_schedule .tournament_box .tournament_wraper h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   color: #FFF;
+}
+@media (max-width: 767px) {
+  .game_schedule .tournament_box .tournament_wraper h2 {
+    font-size: 3.2rem;
+  }
 }
 .game_schedule .tournament_box .tournament_schedule {
   text-align: center;
@@ -5485,6 +5626,12 @@ body {
   display: block;
   background: #C01F27;
 }
+@media (max-width: 767px) {
+  .game_schedule .tournament_box .tournament_schedule p {
+    font-size: 2rem;
+    margin-bottom: 2.6rem;
+  }
+}
 .game_schedule .tournament_box .tournament_schedule a {
   font-size: 2rem;
   font-weight: 400;
@@ -5495,6 +5642,11 @@ body {
   display: inline-block;
   padding: 0.8rem 4.7rem;
   position: relative;
+}
+@media (max-width: 767px) {
+  .game_schedule .tournament_box .tournament_schedule a {
+    font-size: 1.8rem;
+  }
 }
 .game_schedule .tournament_box .tournament_schedule a .border_tl {
   width: 1.2rem;
@@ -5547,9 +5699,19 @@ body {
 .game_schedule2_section .title_box {
   padding-bottom: 3.2rem;
 }
+@media (max-width: 767px) {
+  .game_schedule2_section .title_box {
+    padding-bottom: 2.5rem;
+  }
+}
 .game_schedule2_section .row {
   --bs-gutter-x: 2.4rem;
   --bs-gutter-y: 2rem;
+}
+@media (max-width: 767px) {
+  .game_schedule2_section .row {
+    --bs-gutter-x: 1.5rem;
+  }
 }
 .game_schedule2_section .tournament_box {
   background: #121212;
@@ -5706,6 +5868,245 @@ body {
 @media (max-width: 767px) {
   .game_schedule2_section .more_btn {
     padding-bottom: 6rem;
+  }
+}
+
+.recent_games_hero {
+  height: 33.2rem;
+}
+@media (max-width: 767px) {
+  .recent_games_hero {
+    height: 25.4rem;
+  }
+}
+
+.recent_table {
+  padding-top: 6rem;
+}
+@media (max-width: 767px) {
+  .recent_table {
+    padding-top: 4.6rem;
+  }
+}
+.recent_table .recent_box {
+  background: #121212;
+  padding: 2rem 2.4rem;
+  border: 1px solid #1F1F1F;
+  margin-bottom: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box:last-child {
+  margin-bottom: 0rem;
+}
+.recent_table .recent_box .recent_details {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.recent_table .recent_box .recent_details .recent_game_img {
+  flex-shrink: 0;
+  border: 1px solid #353535;
+}
+.recent_table .recent_box .recent_details .recent_game_img img {
+  width: 12.5rem;
+  height: 9.8rem;
+  display: block;
+  object-fit: cover;
+}
+.recent_table .recent_box .recent_details .recent_details_text p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 160%;
+  color: #BBB8B8;
+}
+.recent_table .recent_box .recent_details .recent_details_text h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.recent_table .recent_box .recent_details .recent_details_text h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #BBB8B8;
+}
+.recent_table .recent_box .recent_details .recent_details_text ul {
+  padding-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.recent_table .recent_box .recent_details .recent_details_text ul a {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #84151B;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box .recent_details .recent_details_text ul a:hover {
+  opacity: 0.85;
+}
+.recent_table .recent_box .recent_details .recent_details_text ul a.premium {
+  background: #FFFFFF;
+  color: #84151B;
+}
+.recent_table .recent_box .recent_trofy {
+  text-align: center;
+  position: relative;
+}
+.recent_table .recent_box .recent_trofy::before {
+  content: "";
+  width: 1px;
+  height: 9.8rem;
+  display: block;
+  background: #2A2A2A;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -7.5rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box .recent_trofy::after {
+  content: "";
+  width: 1px;
+  height: 9.8rem;
+  display: block;
+  background: #2A2A2A;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -7.5rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box .recent_trofy h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.6rem;
+}
+.recent_table .recent_box .recent_trofy h4 span {
+  direction: ltr;
+}
+.recent_table .recent_box .recent_trofy h4 img {
+  width: 2.8rem;
+}
+.recent_table .recent_box .recent_trofy p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 140%;
+  color: #BBB8B8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.recent_table .recent_box .recent_trofy p span {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  background: #BBB8B8;
+  border-radius: 50%;
+}
+.recent_table .recent_box .recent_item {
+  position: relative;
+}
+.recent_table .recent_box .recent_item::after {
+  content: "";
+  width: 1px;
+  height: 9.8rem;
+  display: block;
+  background: #2A2A2A;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -7.5rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box .recent_item .point_box {
+  width: 21.6rem;
+  height: 4.6rem;
+  background: #0F0F0F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  margin-bottom: 0.4rem;
+  transition: 0.2s all ease;
+}
+.recent_table .recent_box .recent_item .point_box:last-child {
+  margin-bottom: 0rem;
+}
+.recent_table .recent_box .recent_item .point_box p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #E0CDCE;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.recent_table .recent_box .recent_item .point_box p img {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+}
+.recent_table .recent_box .recent_item .point_box span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #E0CDCE;
+}
+.recent_table .recent_box .arrow_button img {
+  width: 2.4rem;
+}
+.recent_table .recent_box:hover, .recent_table .recent_box.active {
+  background: #1E1212;
+  border-color: #3B1315;
+}
+.recent_table .recent_box:hover .point_box, .recent_table .recent_box.active .point_box {
+  background: #281415;
+}
+.recent_table .recent_box:hover .recent_item::after, .recent_table .recent_box.active .recent_item::after {
+  background: #481618;
+}
+.recent_table .recent_box:hover .recent_trofy::before, .recent_table .recent_box:hover .recent_trofy::after, .recent_table .recent_box.active .recent_trofy::before, .recent_table .recent_box.active .recent_trofy::after {
+  background: #481618;
+}
+
+@media (max-width: 991px) {
+  .recent_game_section {
+    overflow: auto;
+    padding-bottom: 1rem;
+  }
+  .recent_game_section .recent_table {
+    width: 90rem;
+  }
+  .recent_game_section .recent_table .recent_box {
+    padding-right: 2rem;
+  }
+  .recent_game_section .recent_table .recent_trofy::before {
+    right: -3.5rem;
+  }
+  .recent_game_section .recent_table .recent_trofy::after {
+    left: -3.6rem;
+  }
+  .recent_game_section .recent_table .recent_item::after {
+    left: -3.5rem;
   }
 }
 

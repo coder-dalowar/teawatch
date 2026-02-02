@@ -1,2 +1,294 @@
 // recent-games page ------------
 
+.recent_games_hero {
+    height: 33.2rem;
+
+    @media #{$sm} {
+        height: 25.4rem;
+    }
+}
+
+
+
+// recent_table ------------
+
+.recent_table {
+    padding-top: 6rem;
+    
+    @media #{$sm} {
+        padding-top: 4.6rem;
+    }
+
+    .recent_box {
+        background: #121212;
+        padding: 2rem 2.4rem;
+        border: 1px solid #1F1F1F;
+        margin-bottom: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        transition: 0.2s all ease;
+
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+
+        .recent_details {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+
+            .recent_game_img {
+                flex-shrink: 0;
+                border: 1px solid #353535;
+
+                img {
+                    width: 12.5rem;
+                    height: 9.8rem;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+
+            .recent_details_text {
+                p {
+                    font-family: $heeboFont;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    line-height: 160%;
+                    color: #BBB8B8;
+                }  
+                
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                }
+
+                h4 {
+                    font-family: $heeboFont;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 160%;
+                    color: #BBB8B8;
+                }
+
+                ul  {
+                    padding-top: 0.6rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    a {
+                        font-family: $heeboFont;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: #FFFFFF;
+                        background: #84151B;
+                        display: inline-block;
+                        padding: 0.2rem 0.8rem;
+                        transition: 0.2s all ease;
+
+                        &:hover {
+                            opacity: 0.85;
+                        }
+
+                        &.premium {
+                            background: #FFFFFF;
+                            color: #84151B;
+                        }
+                    }
+                }
+            }
+        }
+
+        .recent_trofy {
+            text-align: center;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 1px;
+                height: 9.8rem;
+                display: block;
+                background: #2A2A2A;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -7.5rem;
+                transition: 0.2s all ease;
+            }
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 9.8rem;
+                display: block;
+                background: #2A2A2A;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -7.5rem;
+                transition: 0.2s all ease;
+            }
+
+            h4 {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-bottom: 1.6rem;
+
+                span {
+                    direction: ltr;
+                }
+
+                img {
+                    width: 2.8rem;
+                }
+            }
+
+            p {
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 140%;
+                color: #BBB8B8;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+
+                span {
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    display: block;
+                    background: #BBB8B8;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .recent_item {
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 9.8rem;
+                display: block;
+                background: #2A2A2A;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -7.5rem;
+                transition: 0.2s all ease;
+            }
+
+            .point_box {
+                width: 21.6rem;
+                height: 4.6rem;
+                background: #0F0F0F;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 1rem;
+                margin-bottom: 0.4rem;
+                transition: 0.2s all ease;
+
+                &:last-child {
+                    margin-bottom: 0rem;
+                }
+
+                p {
+                    font-family: $heeboFont;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 160%;
+                    color: #E0CDCE;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.6rem;
+
+                    img {
+                        width: 2.2rem;
+                        height: 2.2rem;
+                        border-radius: 50%;
+                    }
+                }
+
+                span {
+                    font-family: $heeboFont;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 100%;
+                    color: #E0CDCE;
+                }
+            }
+        }
+
+        .arrow_button {
+            img {
+                width: 2.4rem;
+            }
+        }
+
+        &:hover,
+        &.active {
+            background: #1E1212;
+            border-color: #3B1315;
+
+            .point_box {
+                background: #281415;
+            }
+
+            .recent_item {
+                &::after {
+                    background: #481618;
+                }
+            }
+
+            .recent_trofy {
+                &::before,
+                &::after {
+                    background: #481618;
+                }
+            }
+        }
+    }
+}
+
+
+.recent_game_section {
+    @media #{$md} {
+        overflow: auto;
+        padding-bottom: 1rem;
+
+        .recent_table {
+            width: 90rem;
+
+            .recent_box {
+                padding-right: 2rem;
+            }
+
+            .recent_trofy {
+                &::before {
+                    right: -3.5rem;
+                }
+
+                &::after {
+                    left: -3.6rem;
+                }
+            }
+
+            .recent_item {
+                &::after {
+                    left: -3.5rem;
+                }
+            }
+        }
+    }
+}

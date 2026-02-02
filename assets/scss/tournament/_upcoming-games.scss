@@ -7,17 +7,41 @@
     padding: 6.5rem 3.4rem 9.2rem;
     position: relative;
 
+    @media #{$sm} {
+        padding: 8rem 1.5rem 9.5rem;
+    }
+
     .title_box {
         position: absolute;
         right: 3.4rem;
         top: 4.2rem;
         padding-bottom: 0;
+
+        @media #{$md} {
+            top: 2.4rem;
+            right: 2.5rem;
+        }
+
+        @media #{$sm} {
+            top: 2rem;
+            right: 1.5rem;
+        }
     }
 
     .details_btn {
         position: absolute;
         left: 6rem;
         bottom: 6rem;
+
+        @media #{$md} {
+            bottom: 3rem;
+            left: 3rem;
+        }
+
+        @media #{$sm} {
+            bottom: 1.6rem;
+            left: 1.6rem;
+        }
 
         a {
             font-size: 1.6rem;
@@ -112,10 +136,18 @@
                 font-weight: 400;
                 color: #FFFFFF;
                 text-transform: uppercase;
+
+                @media #{$md} {
+                    font-size: 1.8rem;
+                }
             }
 
             img {
                 width: 5.4rem;
+
+                @media #{$md} {
+                    width: 4.5rem;
+                }
             }
         }
 
@@ -126,6 +158,16 @@
             gap: 3.2rem;
             padding: 1.2rem 0rem 2.4rem;
 
+            @media #{$md} {
+                gap: 2.5rem;
+                padding: 1rem 0rem 2rem;
+            }
+
+            @media #{$sm} {
+                gap: 2rem;
+                padding: 1rem 0rem 1.6rem;
+            }
+
             p {
                 font-size: 4rem;
                 font-weight: 700;
@@ -135,9 +177,27 @@
                 align-items: center;
                 gap: 1.3rem;
 
+                @media #{$md} {
+                    font-size: 3rem;
+                }
+
+                @media #{$sm} {
+                    font-size: 2.4rem;
+                    gap: 1rem;
+                }
+
                 img {
                     width: 7.8rem;
+
+                    @media #{$md} {
+                        width: 5.8rem;
+                    }
+
+                    @media #{$sm} {
+                        width: 4.5rem;
+                    }
                 }
+                
             }
 
             h2 {
@@ -146,6 +206,14 @@
                 line-height: 100%;
                 letter-spacing: 0.2rem;
                 color: #FFF;
+
+                @media #{$md} {
+                    font-size: 4.5rem;
+                }
+
+                @media #{$sm} {
+                    font-size: 3.2rem;
+                }
             }
         }
 
@@ -162,11 +230,29 @@
                 justify-content: center;
                 gap: 1.3rem;
 
+                @media #{$md} {
+                    font-size: 2.4rem;
+                    gap: 1.2rem;
+                }
+
+                @media #{$sm} {
+                    font-size: 2rem;
+                    gap: 1rem;
+                }
+
                 span {
                     width: 0.2rem;
                     height: 2.6rem;
                     display: block;
                     background: #C5212B;
+
+                    @media #{$md} {
+                        height: 2.2rem;
+                    }
+
+                    @media #{$sm} {
+                        height: 2rem;
+                    }
                 }
             }
         }
@@ -180,13 +266,25 @@
 .game_schedule {
     padding-top: 6rem;
 
+    @media #{$sm} {
+        padding-top: 4.6rem;
+    }
+
     .title_box {
         padding-bottom: 3.2rem;
+
+        @media #{$sm} {
+            padding-bottom: 2.5rem;
+        }
     }
 
     .row {
         --bs-gutter-x: 2.4rem;
         --bs-gutter-y: 2rem;
+
+        @media #{$sm} {
+            --bs-gutter-x: 1.5rem;
+        } 
     }
 
     .tournament_box {
@@ -221,6 +319,11 @@
             gap: 2.4rem;
             padding: 1.2rem 0rem 2rem;
 
+            @media #{$sm} {
+                gap: 2rem;
+                padding: 1rem 0rem 1.6rem;
+            }
+
             p {
                 font-size: 3.2rem;
                 font-weight: 700;
@@ -233,12 +336,24 @@
                 img {
                     width: 5.8rem;
                 }
+
+                @media #{$sm} {
+                    font-size: 2.4rem;
+
+                    img {
+                        width: 4.4rem;
+                    }
+                }
             }
 
             h2 {
-                font-size: 3rem;
+                font-size: 4rem;
                 font-weight: 700;
                 color: #FFF;
+
+                @media #{$sm} {
+                    font-size: 3.2rem;
+                }
             }
         }
 
@@ -262,6 +377,11 @@
                     display: block;
                     background: #C01F27;
                 }
+
+                @media #{$sm} {
+                    font-size: 2rem;
+                    margin-bottom: 2.6rem;
+                }
             }
 
             a {
@@ -274,6 +394,10 @@
                 display: inline-block;
                 padding: 0.8rem 4.7rem;
                 position: relative;
+
+                @media #{$sm} {
+                    font-size: 1.8rem;
+                }
 
                 .border_tl {
                     width: 1.2rem;
@@ -339,11 +463,19 @@
 
     .title_box {
         padding-bottom: 3.2rem;
+
+        @media #{$sm} {
+            padding-bottom: 2.5rem;
+        }
     }
 
     .row {
         --bs-gutter-x: 2.4rem;
         --bs-gutter-y: 2rem;
+
+        @media #{$sm} {
+            --bs-gutter-x: 1.5rem;
+        } 
     }
 
     .tournament_box {

@@ -301,97 +301,75 @@
 
 // =================== game change custom slider ================
 {
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', () => {
 
-    const wrappers = document.querySelectorAll('.gameChange_wrap');
-    if (!wrappers.length) return;
+    document.querySelectorAll('.gameChange_wrap').forEach(wrap => {
 
-    wrappers.forEach(wrapper => {
+        const track = wrap.querySelector('.gameChange_track');
+        const down = wrap.querySelector('.up_arrow');
+        const up = wrap.querySelector('.down_arrow');
 
-        const downBtn = wrapper.querySelector('.up_arrow');
-        const upBtn = wrapper.querySelector('.down_arrow');
-        const itemBox = wrapper.querySelector('.gameChange_item');
-        const track = wrapper.querySelector('.gameChange_track');
-
-        if (!upBtn || !downBtn || !itemBox || !track) return;
-
-        const slides = Array.from(track.children);
-        const slideHeight = itemBox.offsetHeight;
-
+        let slides = [...track.children];
         let index = 1;
-        let autoplayTimer = null;
+        let busy = false;
 
-        // Clone first and last for infinite loop
-        const firstClone = slides[0].cloneNode(true);
-        const lastClone = slides[slides.length - 1].cloneNode(true);
+        // Clone for infinite loop
+        track.prepend(slides[slides.length - 1].cloneNode(true));
+        track.append(slides[0].cloneNode(true));
 
-        track.appendChild(firstClone);
-        track.insertBefore(lastClone, slides[0]);
+        slides = [...track.children];
+        const total = slides.length;
 
-        const totalSlides = track.children.length;
+        // Initial position (NO animation)
+        track.style.transition = 'none';
+        track.style.transform = `translateY(-100%)`;
+        track.offsetHeight;
+        track.style.transition = 'transform 0.4s ease';
 
-        // Initial position
-        track.style.transform = `translateY(-${slideHeight}px)`;
-
-        // Move to index
-        const moveTo = (i, animate = true) => {
-            track.style.transition = animate ? 'transform 0.4s ease' : 'none';
-            track.style.transform = `translateY(-${i * slideHeight}px)`;
+        const move = () => {
+            track.style.transform = `translateY(-${index * 100}%)`;
         };
 
-        // Move down (next image)
-        const moveDown = () => {
+        const next = () => {
+            if (busy) return;
+            busy = true;
             index++;
-            moveTo(index);
-
-            // Loop to first real slide
-            if (index === totalSlides - 1) {
-                setTimeout(() => {
-                    index = 1;
-                    moveTo(index, false);
-                }, 400);
-            }
+            move();
         };
 
-        // Move up (previous image)
-        const moveUp = () => {
+        const prev = () => {
+            if (busy) return;
+            busy = true;
             index--;
-            moveTo(index);
+            move();
+        };
 
-            // Loop to last real slide
+        track.addEventListener('transitionend', () => {
+
+            if (index === total - 1) {
+                track.style.transition = 'none';
+                index = 1;
+                move();
+            }
+
             if (index === 0) {
-                setTimeout(() => {
-                    index = totalSlides - 2;
-                    moveTo(index, false);
-                }, 400);
+                track.style.transition = 'none';
+                index = total - 2;
+                move();
             }
-        };
 
-        // Arrow events
-        upBtn.addEventListener('click', moveUp);
-        downBtn.addEventListener('click', moveDown);
+            track.offsetHeight;
+            track.style.transition = 'transform 0.4s ease';
+            busy = false;
+        });
 
-        // Autoplay every 3 seconds
-        const startAutoplay = () => {
-            stopAutoplay();
-            autoplayTimer = setInterval(moveDown, 3000);
-        };
-
-        const stopAutoplay = () => {
-            if (autoplayTimer) {
-                clearInterval(autoplayTimer);
-                autoplayTimer = null;
-            }
-        };
-
-        // Pause autoplay on hover
-        wrapper.addEventListener('mouseenter', stopAutoplay);
-        wrapper.addEventListener('mouseleave', startAutoplay);
-
-        // Initial autoplay start
-        startAutoplay();
-
+        up.addEventListener('click', prev);
+        down.addEventListener('click', next);
     });
 
   });
 }
+
+
+
+
