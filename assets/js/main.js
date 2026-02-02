@@ -372,4 +372,84 @@
 
 
 
+// =================== custom calender ================
+{
+  document.addEventListener('DOMContentLoaded', () => {
 
+    const wrapper = document.querySelector('.calendar-wrapper');
+    if (!wrapper) return;
+
+    const input = wrapper.querySelector('.calendar-input');
+    const dropdown = wrapper.querySelector('.calendar-dropdown');
+    const text = wrapper.querySelector('.calendar-text');
+    const monthYear = wrapper.querySelector('.month-year');
+    const datesBox = wrapper.querySelector('.calendar-dates');
+    const prev = wrapper.querySelector('.prev');
+    const next = wrapper.querySelector('.next');
+
+    let currentDate = new Date();
+
+    // Toggle dropdown
+    input.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Prevent dropdown close on inside click
+    dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', () => {
+        dropdown.style.display = 'none';
+    });
+
+    function renderCalendar() {
+        datesBox.innerHTML = '';
+
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
+
+        monthYear.textContent = currentDate.toLocaleDateString('en-US', {
+            month: 'long',
+            year: 'numeric'
+        });
+
+        const firstDay = new Date(year, month, 1).getDay() || 7;
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        // Empty cells
+        for (let i = 1; i < firstDay; i++) {
+            const empty = document.createElement('span');
+            empty.className = 'muted';
+            datesBox.appendChild(empty);
+        }
+
+        // Dates
+        for (let day = 1; day <= daysInMonth; day++) {
+            const span = document.createElement('span');
+            span.textContent = day;
+
+            span.addEventListener('click', () => {
+                text.textContent = `${day}/${month + 1}/${year}`;
+                dropdown.style.display = 'none';
+            });
+
+            datesBox.appendChild(span);
+        }
+    }
+
+    prev.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        renderCalendar();
+    });
+
+    next.addEventListener('click', () => {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        renderCalendar();
+    });
+
+    renderCalendar();
+  });
+}

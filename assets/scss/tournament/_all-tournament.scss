@@ -1,1 +1,419 @@
 // all tournament page ------------
+.tournament_dropdownWraper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.6rem;
+    align-items: center;
+    padding: 6rem 0rem 3.2rem;
+
+    @media #{$md} {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media #{$sm} {
+        padding-top: 5rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.clear_btn {
+    text-align: left;
+
+    button {
+        font-family: $heeboFont;
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #FFFFFF;
+        background: transparent;
+        border: none;
+        outline: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        cursor: pointer;
+        transition: 0.2s all ease;
+
+        img {
+            width: 2.4rem;
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+
+    @media #{$md} {
+        display: none;
+    }
+}
+
+
+
+// filter_wraper --------------
+
+.filter_wraper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: #F5F6FF;
+        background: #251011;
+        border: 1px solid #62171B;
+        display: inline-block;
+        padding: 0.65rem 1.4rem;
+        transition: 0.2s all ease;
+
+        &:hover,
+        &.active {
+            background: #F02731;
+            border-color: #F02731;
+        }
+    }
+
+    @media #{$md} {
+        justify-content: space-between;
+        column-gap: 0rem;
+        row-gap: 1rem;
+
+        a {
+            font-size: 1.5rem;
+            width: 15.5%;
+            display: block;
+            text-align: center;
+        }
+    }
+
+    @media #{$sm} {
+        a {
+            width: 23.5%;
+        }
+    }
+}
+
+
+
+// tournament_searchWraper --------------
+
+.tournament_searchWraper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    padding: 4.2rem 0rem 4rem;
+
+    @media #{$md} {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 2rem;
+    }
+}
+
+
+.tournament_searchBar {
+    .search_bar  {
+        input {
+            height: 4.4rem;
+        }
+
+        .border_tl {
+			width: 1rem;
+			height: 0.6rem;
+			border-top: 1px solid #A11B1B;
+			border-left: 1px solid #A11B1B;
+			position: absolute;
+			left: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_tr {
+			width: 1rem;
+			height: 0.6rem;
+			border-top: 1px solid #A11B1B;
+			border-right: 1px solid #A11B1B;
+			position: absolute;
+			right: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_bl {
+			width: 1rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #A11B1B;
+			border-left: 1px solid #A11B1B;
+			position: absolute;
+			left: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_br {
+			width: 1rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #A11B1B;
+			border-right: 1px solid #A11B1B;
+			position: absolute;
+			right: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+    }
+}
+
+.tournament_selectWraper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @media #{$md} {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .custom_select {
+        width: 17rem;
+
+        @media #{$md} {
+            width: 49%;
+        }
+
+        .select_btn {
+            .border_tl,
+            .border_bl {
+                width: 1rem;
+                height: 0.6rem;
+            }
+
+            .border_tr,
+            .border_br {
+                width: 1rem;
+                height: 0.6rem;
+                right: -0.1rem;
+            }
+
+            .short_text {
+                font-family: $heeboFont;
+                font-size: 1.2rem;
+                font-weight: 400;
+                color: #F02731;
+                position: absolute;
+                right: 1.2rem;
+                top: 0.2rem;
+            }
+        }
+
+        .short_select {
+            padding-top: 1rem;
+        }
+    }
+}
+
+
+
+// all tournament table -----------------
+
+.allTournaments_table_section {
+    @media #{$md} {
+        overflow: auto;
+    }
+
+    .allTournaments_table {
+        width: 100%;
+
+        @media #{$md} {
+            width: 110rem;
+        }
+
+        .table_row {
+            background: #0E0E0E;
+            border-bottom: 1px solid #3B1315;
+            padding: 1.2rem 0rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &:first-child {
+                background: #3B1315!important;
+                border: 1px solid #4F2B2C;
+                padding: 2rem 0rem;
+                margin-bottom: 0.8rem;
+            }
+
+            &:hover {
+                background: #141414;
+            }
+
+            .table_heading {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 120%;
+                color: #F5F6FF;
+                width: 15%;
+
+                &:first-child {
+                    width: 27%;
+                    padding-right: 4rem;
+                    justify-content: flex-start;
+                }
+
+                &:last-child {
+                    width: 13%;
+                }
+
+                img {
+                    width: 1.8rem;
+                }
+            }
+
+            .table_data {
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 160%;
+                color: #CFCFCF;
+                text-align: center;
+                width: 15%;
+
+                &:first-child {
+                    width: 27%;
+                    padding-right: 0.8rem;
+                }
+
+                &:last-child {
+                    width: 13%;
+                }
+
+                .paid {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    background: #84151B;
+                    width: 8.4rem;
+                    height: 2.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+
+                .free {
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+                    background: #373737;
+                    width: 8.4rem;
+                    height: 2.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+
+            .data_details {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+
+                .data_img {
+                    border: 1px solid #9C1C1D;
+                    flex-shrink: 0;
+                    position: relative;
+
+                    img {
+                        width: 10.5rem;
+                        height: 6.8rem;
+                        object-fit: cover;
+                    }
+
+                    span {
+                        position: absolute;
+                        right: 0.4rem;
+                        top: 0.4rem;
+                        font-family: $heeboFont;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        color: #FFFFFF;
+                        background: #37AE48;
+                        height: 1.8rem;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 0.4rem;
+                        padding: 0rem 0.5rem;
+                    }
+
+                    .ended {
+                        background: #A11B1B;
+                    }
+
+                    .live {
+                        background: #FFFFFF;
+                        color: #A11B1B;
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.4rem;
+
+                        img {
+                            width: 1rem;
+                            height: auto;
+                            object-fit: initial;
+                        }
+                    }
+                }
+
+                .data_text {
+                    text-align: right;
+
+                    ul {
+                        display: flex;
+                        align-items: center;
+                        gap: 0.6rem;
+                        
+                        li {
+
+                            span {
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                display: block;
+                                background: #FFFFFF;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    h4 {
+                        font-family: $heeboFont;
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        line-height: 160%;
+                        color: #FFFFFF;
+                    }
+
+                    p {
+                        font-family: $heeboFont;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 160%;
+                        color: #CFCFCF;
+
+                        span {
+                            color: #F02731;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -489,6 +489,268 @@ body {
   }
 }
 
+.custom_select {
+  width: 100%;
+  position: relative;
+}
+.custom_select .select_btn {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #D4D4D4;
+  width: 100%;
+  height: 4.4rem;
+  background: #262626;
+  border: 1px solid #353535;
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.custom_select .select_btn .arrow {
+  transition: 0.2s all ease;
+}
+.custom_select .select_btn .arrow img {
+  width: 2rem;
+}
+.custom_select .select_btn .border_tl {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.custom_select .select_btn .border_tr {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.custom_select .select_btn .border_bl {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.custom_select .select_btn .border_br {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.custom_select .select_btn:focus {
+  border-color: #3F1717;
+}
+.custom_select .select_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 25rem;
+  overflow: auto;
+  background: #666666;
+  border: 1px solid #7E7E7E;
+  margin-top: 1rem;
+  display: none;
+  z-index: 2026;
+}
+.custom_select .select_dropdown li {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  line-height: 132%;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #7E7E7E;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.custom_select .select_dropdown li:last-child {
+  border-bottom: none;
+}
+.custom_select .select_dropdown li:hover {
+  background: #F02731;
+  color: #FFF;
+}
+.custom_select.open .arrow {
+  transform: rotate(180deg);
+}
+.custom_select.open .select_dropdown {
+  display: block;
+}
+
+.calendar-wrapper {
+  position: relative;
+}
+.calendar-wrapper .calendar-input {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #D4D4D4;
+  width: 100%;
+  height: 4.4rem;
+  background: #262626;
+  border: 1px solid #353535;
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.calendar-wrapper .calendar-input .calendar-arrow {
+  transition: 0.2s all ease;
+}
+.calendar-wrapper .calendar-input .calendar-arrow img {
+  width: 2rem;
+}
+.calendar-wrapper .calendar-input .border_tl {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.calendar-wrapper .calendar-input .border_tr {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.calendar-wrapper .calendar-input .border_bl {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.calendar-wrapper .calendar-input .border_br {
+  width: 0.4rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.calendar-wrapper .calendar-input:focus {
+  border-color: #3F1717;
+}
+.calendar-wrapper .calendar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  background: #666666;
+  border: 1px solid #7E7E7E;
+  padding: 1.2rem 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  display: none;
+  z-index: 2030;
+}
+@media (max-width: 991px) {
+  .calendar-wrapper .calendar-dropdown {
+    padding: 1.2rem 0.6rem;
+  }
+}
+.calendar-wrapper .calendar-dropdown .calendar-header {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+.calendar-wrapper .calendar-dropdown .calendar-header .month-year {
+  font-weight: 700;
+}
+.calendar-wrapper .calendar-dropdown .calendar-header .cal-arrow {
+  font-family: "Cooperative";
+  width: 1.6rem;
+  height: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #F02731;
+  cursor: pointer;
+}
+.calendar-wrapper .calendar-dropdown .calendar-days {
+  font-family: "Heebo", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: #FEE9EA;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+.calendar-wrapper .calendar-dropdown .calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.4rem;
+}
+.calendar-wrapper .calendar-dropdown .calendar-dates span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #F2F2F2;
+  text-align: center;
+  display: inline-block;
+  padding: 0.4rem;
+  cursor: pointer;
+}
+.calendar-wrapper .calendar-dropdown .calendar-dates span:hover {
+  background: #F02731;
+  color: #FFF;
+}
+.calendar-wrapper .calendar-dropdown .calendar-dates span.muted {
+  opacity: 0.5;
+  pointer-events: none;
+}
+@media (max-width: 991px) {
+  .calendar-wrapper .calendar-dropdown .calendar-dates span {
+    padding: 0.4rem 0.1rem;
+  }
+}
+
 .header_section {
   max-width: 143.8rem;
   width: 100%;
@@ -4801,6 +5063,7 @@ body {
   color: #F5F6FF;
   line-height: 120%;
   padding: 0.6rem 1.2rem;
+  border: none;
   text-align: left;
   cursor: pointer;
   transition: 0.2s all ease;
@@ -5236,7 +5499,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 1.2rem 1.2rem;
+  padding: 1rem 1.2rem;
   border-bottom: 1px solid #7E7E7E;
   cursor: pointer;
   transition: 0.2s all ease;
@@ -5256,6 +5519,368 @@ body {
 .serachBar_wraper .search_game_dropdown.show {
   visibility: visible;
   opacity: 1;
+}
+
+.tournament_dropdownWraper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.6rem;
+  align-items: center;
+  padding: 6rem 0rem 3.2rem;
+}
+@media (max-width: 991px) {
+  .tournament_dropdownWraper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .tournament_dropdownWraper {
+    padding-top: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.clear_btn {
+  text-align: left;
+}
+.clear_btn button {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.clear_btn button img {
+  width: 2.4rem;
+}
+.clear_btn button:hover {
+  opacity: 0.85;
+}
+@media (max-width: 991px) {
+  .clear_btn {
+    display: none;
+  }
+}
+
+.filter_wraper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.filter_wraper a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  background: #251011;
+  border: 1px solid #62171B;
+  display: inline-block;
+  padding: 0.65rem 1.4rem;
+  transition: 0.2s all ease;
+}
+.filter_wraper a:hover, .filter_wraper a.active {
+  background: #F02731;
+  border-color: #F02731;
+}
+@media (max-width: 991px) {
+  .filter_wraper {
+    justify-content: space-between;
+    column-gap: 0rem;
+    row-gap: 1rem;
+  }
+  .filter_wraper a {
+    font-size: 1.5rem;
+    width: 15.5%;
+    display: block;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .filter_wraper a {
+    width: 23.5%;
+  }
+}
+
+.tournament_searchWraper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4.2rem 0rem 4rem;
+}
+@media (max-width: 991px) {
+  .tournament_searchWraper {
+    flex-direction: column-reverse;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+
+.tournament_searchBar .search_bar input {
+  height: 4.4rem;
+}
+.tournament_searchBar .search_bar .border_tl {
+  width: 1rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.tournament_searchBar .search_bar .border_tr {
+  width: 1rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.tournament_searchBar .search_bar .border_bl {
+  width: 1rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.tournament_searchBar .search_bar .border_br {
+  width: 1rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+
+.tournament_selectWraper {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 991px) {
+  .tournament_selectWraper {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+.tournament_selectWraper .custom_select {
+  width: 17rem;
+}
+@media (max-width: 991px) {
+  .tournament_selectWraper .custom_select {
+    width: 49%;
+  }
+}
+.tournament_selectWraper .custom_select .select_btn .border_tl,
+.tournament_selectWraper .custom_select .select_btn .border_bl {
+  width: 1rem;
+  height: 0.6rem;
+}
+.tournament_selectWraper .custom_select .select_btn .border_tr,
+.tournament_selectWraper .custom_select .select_btn .border_br {
+  width: 1rem;
+  height: 0.6rem;
+  right: -0.1rem;
+}
+.tournament_selectWraper .custom_select .select_btn .short_text {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #F02731;
+  position: absolute;
+  right: 1.2rem;
+  top: 0.2rem;
+}
+.tournament_selectWraper .custom_select .short_select {
+  padding-top: 1rem;
+}
+
+@media (max-width: 991px) {
+  .allTournaments_table_section {
+    overflow: auto;
+  }
+}
+.allTournaments_table_section .allTournaments_table {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  .allTournaments_table_section .allTournaments_table {
+    width: 110rem;
+  }
+}
+.allTournaments_table_section .allTournaments_table .table_row {
+  background: #0E0E0E;
+  border-bottom: 1px solid #3B1315;
+  padding: 1.2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.allTournaments_table_section .allTournaments_table .table_row:first-child {
+  background: #3B1315 !important;
+  border: 1px solid #4F2B2C;
+  padding: 2rem 0rem;
+  margin-bottom: 0.8rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row:hover {
+  background: #141414;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  width: 15%;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_heading:first-child {
+  width: 27%;
+  padding-right: 4rem;
+  justify-content: flex-start;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_heading:last-child {
+  width: 13%;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_heading img {
+  width: 1.8rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_data {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 160%;
+  color: #CFCFCF;
+  text-align: center;
+  width: 15%;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_data:first-child {
+  width: 27%;
+  padding-right: 0.8rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_data:last-child {
+  width: 13%;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_data .paid {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #84151B;
+  width: 8.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.allTournaments_table_section .allTournaments_table .table_row .table_data .free {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #373737;
+  width: 8.4rem;
+  height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img {
+  border: 1px solid #9C1C1D;
+  flex-shrink: 0;
+  position: relative;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img img {
+  width: 10.5rem;
+  height: 6.8rem;
+  object-fit: cover;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img span {
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  background: #37AE48;
+  height: 1.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0rem 0.5rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img .ended {
+  background: #A11B1B;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img .live {
+  background: #FFFFFF;
+  color: #A11B1B;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_img .live img {
+  width: 1rem;
+  height: auto;
+  object-fit: initial;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text {
+  text-align: right;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text ul {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text ul li span {
+  width: 0.5rem;
+  height: 0.5rem;
+  display: block;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 160%;
+  color: #FFFFFF;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #CFCFCF;
+}
+.allTournaments_table_section .allTournaments_table .table_row .data_details .data_text p span {
+  color: #F02731;
 }
 
 .upcoming_banner {

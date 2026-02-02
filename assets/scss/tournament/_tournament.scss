@@ -116,6 +116,7 @@
                 color: #F5F6FF;
                 line-height: 120%;
                 padding: 0.6rem 1.2rem;
+                border: none;
                 text-align: left;
                 cursor: pointer;
                 transition: 0.2s all ease;
@@ -613,7 +614,7 @@
                 display: flex;
                 align-items: center;
                 gap: 0.8rem;
-                padding: 1.2rem 1.2rem;
+                padding: 1rem 1.2rem;
                 border-bottom: 1px solid #7E7E7E;
                 cursor: pointer;
                 transition: 0.2s all ease;
