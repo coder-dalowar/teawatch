@@ -462,6 +462,10 @@ body {
 
 
 // Modal -----------
+.modal {
+	z-index: 999999;
+}
+
 .modal-dialog {
 	max-width: 83rem;
 
