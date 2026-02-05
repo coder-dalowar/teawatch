@@ -592,3 +592,249 @@
     });
   });
 }
+
+
+
+// ==================== analytics chart =================
+{
+  function createLineChart(canvasEl, dataset1, dataset2, labels) {
+    if (!canvasEl) return;
+
+    const ctx = canvasEl.getContext('2d');
+
+    // Animation state
+    let animationProgress = 0;
+    let animationDone = false;
+
+    const h = canvasEl.height || 400;
+
+    /* =====================
+       Create gradients
+    ====================== */
+    const gradient1 = ctx.createLinearGradient(0, 0, 0, h);
+    gradient1.addColorStop(0, '#A11B1B');
+    gradient1.addColorStop(1, '#A11B1B');
+
+    const gradient2 = ctx.createLinearGradient(0, 0, 0, h);
+    gradient2.addColorStop(0, '#4072EE');
+    gradient2.addColorStop(1, '#4072EE');
+
+    /* =====================
+       Chart instance
+    ====================== */
+    const chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [
+                {
+                    data: dataset1,
+                    borderColor: gradient1,
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    pointHoverRadius: 7,
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderWidth: 3,
+                    pointHoverBorderColor: '#A11B1B',
+                    fill: false
+                },
+                {
+                    data: dataset2,
+                    borderColor: gradient2,
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0,
+                    pointHoverRadius: 7,
+                    pointHoverBackgroundColor: '#fff',
+                    pointHoverBorderWidth: 3,
+                    pointHoverBorderColor: '#4072EE',
+                    fill: false
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+
+            // Chart animation configuration
+            animation: {
+                duration: 2000,
+                easing: 'linear',
+                onProgress(anim) {
+                    animationProgress = anim.currentStep / anim.numSteps;
+                },
+                onComplete() {
+                    animationProgress = 1;
+                    animationDone = true;
+                }
+            },
+
+            interaction: {
+                mode: 'nearest',
+                intersect: false
+            },
+
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    enabled: true,
+                    yAlign: 'bottom',
+                    backgroundColor: '#370B0B',
+                    bodyColor: '#FFF',
+                    bodyFont: { weight: 'bold', size: 15 },
+                    displayColors: false,
+                    padding: 10,
+                    cornerRadius: 6,
+                    caretPadding: 10,
+                    callbacks: {
+                        title: () => '',
+                        label: ctx => ctx.raw
+                    }
+                }
+            },
+
+            scales: {
+                x: {
+                    grid: { display: false },
+                    ticks: { color: '#748AA1' }
+                },
+                y: {
+                    min: 100,
+                    max: 4500,
+                    grid: { color: '#262A2E' },
+                    ticks: { display: false },
+                    border: { display: false }
+                }
+            }
+        },
+
+        plugins: [
+            /* =====================
+               Left-to-right reveal animation
+            ====================== */
+            {
+                id: 'horizontalReveal',
+                beforeDatasetsDraw(chartInstance) {
+                    if (animationDone) return;
+
+                    const { ctx, chartArea } = chartInstance;
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.rect(
+                        chartArea.left,
+                        chartArea.top,
+                        chartArea.width * animationProgress,
+                        chartArea.height
+                    );
+                    ctx.clip();
+                },
+                afterDatasetsDraw(chartInstance) {
+                    if (!animationDone) {
+                        chartInstance.ctx.restore();
+                    }
+                }
+            },
+
+            /* =====================
+               Vertical hover indicator line
+            ====================== */
+            {
+                id: 'verticalLine',
+                afterDraw(chartInstance) {
+                    if (!chartInstance.tooltip?._active?.length) return;
+
+                    const activePoint = chartInstance.tooltip._active[0].element;
+                    const x = activePoint.x;
+                    const { ctx, chartArea } = chartInstance;
+
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, chartArea.top);
+                    ctx.lineTo(x, chartArea.bottom);
+                    ctx.lineWidth = 1;
+                    ctx.strokeStyle = 'rgba(0,0,0,0.1)';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        ]
+    });
+
+    /* =====================
+       Force resize after initial render
+    ====================== */
+    setTimeout(() => {
+        animationProgress = 0;
+        animationDone = false;
+        chart.resize();
+        chart.update();
+    }, 0);
+
+    /* =====================
+       Instant dataset toggle
+    ====================== */
+    chart.toggleDataset = function (idx, btn) {
+        this.data.datasets[idx].hidden = !this.data.datasets[idx].hidden;
+        if (btn) btn.classList.toggle('hidden');
+        this.update('none');
+    };
+
+    /* =====================
+       Set default tooltip
+    ====================== */
+    chart.setDefaultTooltip = function (datasetIndex, dataIndex) {
+        setTimeout(() => {
+            this.tooltip.setActiveElements(
+                [{ datasetIndex, index: dataIndex }],
+                { x: 0, y: 0 }
+            );
+            this.update('none');
+        }, 2100);
+    };
+
+    return chart;
+  }
+
+  /* =====================
+    Usage
+  ====================== */
+
+  const labels = ['דצמ׳','נוב׳','אוק׳','ספט׳','אוג׳','יול׳','יונ׳','מאי','אפר׳','מרץ','פבר׳','ינו׳'];
+  const redData  = [1500,1200,1800,1400,1100,2200,1800,2400,2100,2300,2600,1600];
+  const blueData = [800,1800,1100,2800,2100,2300,2345,1500,2400,2500,3500,2200];
+
+  const canvas = document.getElementById('analytics_chart');
+
+  if (canvas) {
+      const chart1 = createLineChart(
+          canvas,
+          redData,
+          blueData,
+          labels
+      );
+
+      //  default tooltip ---------
+      if (chart1?.setDefaultTooltip) {
+          chart1.setDefaultTooltip(1, 6);
+      }
+
+      // Toggle buttons --------
+      const toggleRed  = document.getElementById('toggleRed');
+      const toggleBlue = document.getElementById('toggleBlue');
+
+      if (toggleRed) {
+          toggleRed.addEventListener('click', () =>
+              chart1.toggleDataset(0, toggleRed)
+          );
+      }
+
+      if (toggleBlue) {
+          toggleBlue.addEventListener('click', () =>
+              chart1.toggleDataset(1, toggleBlue)
+          );
+      }
+  }   
+
+}
+

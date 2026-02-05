@@ -463,13 +463,20 @@
                                     </div>
 
                                     <div class="graph">
+                                        <div class="main_chart">
+                                            <canvas id="analytics_chart"></canvas>
+                                        </div>
 
-
-
-                                        <img src="../../assets/img/graph.png" alt="" class="w-100">
-
-
-
+                                        <div class="controls_btn">
+                                            <button id="toggleBlue">
+                                                <span>4</span>
+                                                רצף נוכחי
+                                            </button>
+                                            <button id="toggleRed">
+                                                <span>2</span>
+                                                הרצף הארוך ביותר
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1023,7 +1030,6 @@
                     <!-- Ranking Modal end-->
 
 
-
                     <!-- games played section -->
                     <div class="gamesPlayed_section groups_section">
                         <div class="gamesPlayed_box">
@@ -1284,6 +1290,7 @@
 
     <!-- all js here -->
     <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/chart.js"></script>
     <script src="../../assets/js/swiper.min.js"></script>
     <script src="../../assets/js/main.js"></script>
 

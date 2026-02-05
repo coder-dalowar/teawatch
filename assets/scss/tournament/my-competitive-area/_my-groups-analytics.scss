@@ -16,6 +16,10 @@
         padding: 3.1rem 2.2rem 3.4rem;
         position: relative;
 
+        @media #{$sm} {
+            padding: 2.5rem 1rem;
+        }
+
         .border_tl {
 			width: 2.2rem;
 			height: 0.9rem;
@@ -62,14 +66,23 @@
 
         .analytics_title {
             position: absolute;
-            top: 3.1rem;
+            top: 2rem;
             right: 2.2rem;
+
+            @media #{$sm} {
+                right: 1.6rem;
+                top: 2rem;
+            }
 
             h3 {
                 font-size: 3.2rem;
                 font-weight: 400;
                 color: #F5F6FF;
                 line-height: 125%;
+
+                @media #{$sm} {
+                    font-size: 2.7rem;
+                }
             }
         }
 
@@ -77,8 +90,13 @@
             width: 9.2rem;
             position: absolute;
             left: 2.2rem;
-            top: 3.1rem;
+            top: 2.5rem;
             padding: 0;
+
+            @media #{$sm} {
+                left: 1.6rem;
+                top: 2rem;
+            }
 
             .custom_select {
                 width: 100%;
@@ -86,9 +104,64 @@
         }
 
         .graph {
+            padding-top: 4rem;
 
+            .main_chart {
+                width: 100%;
+                height: 26.2rem;
 
+                @media #{$sm} {
+                    height: 20rem;
+                }
+            }
 
+            .controls_btn {
+                width: 27rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1.6rem;
+                position: absolute;
+                top: 3rem;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @media #{$sm} {
+                    display: none;
+                }
+
+                button {
+                    font-family: $heeboFont;
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    letter-spacing: 0.01rem;
+                    color: #FFFFFF;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    cursor: pointer;
+
+                    span {
+                        font-size: 1.2rem;
+                        width: 2.3rem;
+                        height: 2.2rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        background: #4072EE;
+                    }
+
+                    &#toggleRed {
+                        span {
+                            background: #84151B;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -366,7 +439,11 @@
 
         @media #{$sm} {
             padding: 2rem 1.6rem;
-        }
+
+            .groups_box {
+                padding: 2.4rem 2rem;
+            }
+        }        
 
         .gamesPlayed_title {
             margin-bottom: 2.4rem;
@@ -953,3 +1030,4 @@
         }
     }
 }
+
