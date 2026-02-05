@@ -17,6 +17,7 @@
 
                 a {
                     min-width: 11.5rem;
+                    border-color: #41191B;
 
                     @media #{$sm} {
                         min-width: 10.6rem;
@@ -130,7 +131,8 @@
             padding: 1.5rem 1.5rem;
             transition: 0.2s all ease;
 
-            &:hover {
+            &:hover,
+            &.active {
                 background: #141414;
 
                 .table_data {

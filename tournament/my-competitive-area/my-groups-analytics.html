@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>teawatch</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../../assets/img/favicon.png" />
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="../../assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- header_section start -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/img/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li>
+                            <a href="#">
+                                <img src="../../assets/img/trofy.svg" alt="icon">
+                                <span> טורנירים </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../assets/img/play.svg" alt="icon">
+                                <span> גאטרים אונליין </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../assets/img/document.svg" alt="icon">
+                                <span> לוח תוצאות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../assets/img/store.svg" alt="icon">
+                                <span> חנות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="premium_btn">
+                                <img src="../../assets/img/crown.svg" alt="icon">
+                                שדרוג
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../../assets/img/chat.svg" alt="icon">
+                                <span> צ׳אט </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header_left ms-auto">
+                        <div class="admin_btn button_border">
+                            <a href="#">
+                                <span class="admin_profile">
+                                    <img src="../../assets/img/admin.png" alt="">
+                                </span>
+                                <span class="admin_text">
+                                    <h4><img src="../../assets/img/star.svg" alt=""> admin </h4>
+                                    <span> חינמי </span>
+                                </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="add_btn button_border">
+                            <a href="#">
+                                <img src="../../assets/img/add-circle.svg" alt="">
+                                <span>הארנק שלי <br> ₪4988.00 </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../../assets/img/shopping-bag.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../../assets/img/notification.svg" alt="">
+                                <span class="notify_red"></span>
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../../assets/img/logout.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+    <!-- offcanvas menu start -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <a href="#">
+                    <img src="../../assets/img/logo.svg" alt="">
+                </a>
+            </h5>
+            <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="../../assets/img/close.svg" alt="">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="admin_wraper">
+                <div class="admin_btn button_border">
+                    <a href="#">
+                        <span class="admin_profile">
+                            <img src="../../assets/img/admin.png" alt="">
+                        </span>
+                        <span class="admin_text">
+                            <h4><img src="../../assets/img/star.svg" alt=""> admin </h4>
+                            <span> חינמי </span>
+                        </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>
+
+                <div class="add_btn button_border">
+                    <a href="#">
+                        <img src="../../assets/img/add-circle.svg" alt="">
+                        <span>הארנק שלי <br> ₪4988.00 </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>                
+            </div>
+
+            <div class="offcanvas_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../../assets/img/trofy.svg" alt="icon">
+                            <span> טורנירים </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../assets/img/play.svg" alt="icon">
+                            <span> גאטרים אונליין </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../assets/img/document.svg" alt="icon">
+                            <span> לוח תוצאות </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../../assets/img/store.svg" alt="icon">
+                            <span> חנות </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas_btn">
+                <a href="#" class="premium_btn">
+                    <img src="../../assets/img/crown.svg" alt="icon">
+                    שדרוג
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </a>
+            </div>
+            
+            <div class="icon_wraper">
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../../assets/img/shopping-bag.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../../assets/img/notification.svg" alt="">
+                        <span class="notify_red"></span>
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../../assets/img/logout.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+    <!-- offcanvas menu end -->
+
+    <!-- chat_bot -->
+    <div class="chat_bot d-lg-none">
+        <a href="#">
+            <img src="../../assets/img/chat.svg" alt="icon">
+        </a>
+    </div> 
+
+
+    <main>
+
+        <div class="container">
+            <div class="main_wrapper">
+
+                <!-- sidebar -->
+                <div class="sidebar">
+                    <div class="side_item">
+                        <a href="../../index.html" class="side_btn">
+                            <img src="../../assets/img/home.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="../../tournament/tournament.html" class="side_btn active">
+                            <img src="../../assets/img/trofy.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../../assets/img/play.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../../assets/img/crown.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+
+                        <a href="#" class="side_btn">
+                            <img src="../../assets/img/settings.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- main content -->
+                <div class="main_content">
+                    <!-- menu wraper -->
+                    <div class="tabMenu_wrap">
+                        <div class="tab_links main_menuLinks">
+                            <a href="../tournament.html"> כללי </a>
+                            <a href="my-tournaments.html" class="active"> הזירה התחרותית שלי </a>
+                        </div>
+                        <div class="add_btn">
+                            <a href="#">
+                                הוספת חשבון
+                                <img src="../../assets/img/plus-sign.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="tabMenu_wrap menu_wraper2 subtabs_menu2">
+                        <div class="tab_links">
+                            <ul>
+                                <li>
+                                    <a href="my-tournaments.html">
+                                        <img src="../../assets/img/ticket.svg" alt="">
+                                        <span> הטורנירים שלי </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="groups-created.html">
+                                        <img src="../../assets/img/user-group.svg" alt="">
+                                        <span> הקבוצות שלי </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="my-groups-analytics.html" class="active">
+                                        <img src="../../assets/img/analytics.svg" alt="">
+                                        <span> הישגים וסטטיסטיקות </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="orders-and-requests.html">
+                                        <img src="../../assets/img/mail.svg" alt="">
+                                        <span> הזמנות ובקשות </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="orders-and-requests-create-group.html">
+                                        <span> צור קבוצה </span>
+                                        <img src="../../assets/img/add-circle-gray.svg" alt="" class="plus_circle">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="search_game_wraper">
+                            <div class="gameChange_wrap">
+                                <div class="gameChange_arrow">
+                                    <button type="button" class="up_arrow">
+                                        <img src="../../assets/img/up-arrow.svg" alt="">
+                                    </button>
+                                    <button type="button" class="down_arrow">
+                                        <img src="../../assets/img/down-arrow.svg" alt="">
+                                    </button>
+                                </div>
+                                <div class="gameChange_item">
+                                    <div class="gameChange_track">
+                                        <img src="../../assets/img/search-game-1.png" alt="">
+                                        <img src="../../assets/img/search-game-2.png" alt="">
+                                        <img src="../../assets/img/search-game-1.png" alt="">
+                                        <img src="../../assets/img/search-game-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="serachBar_wraper">
+                                <div class="search_bar">
+                                    <button type="button">
+                                        <img src="../../assets/img/search.svg" alt="">
+                                    </button>
+                                    <input class="search_field" type="text" placeholder=" חפש משחק ">
+                                </div>
+
+                                <div class="search_game_dropdown">
+                                    <ul>
+                                        <li>
+                                            <img src="../../assets/img/search-game-2.png" alt="">
+                                            VALORANT
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/img/search-game-1.png" alt="">
+                                            FREE FIRE
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/img/search-game-2.png" alt="">
+                                            VALORANT
+                                        </li>
+                                        <li>
+                                            <img src="../../assets/img/search-game-1.png" alt="">
+                                            FREE FIRE
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- analytics_section -->
+                    <div class="analytics_section">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="analytice_box">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="analytics_title">
+                                        <h3> פעילות השחקן </h3>
+                                    </div>
+
+                                    <div class="pagination_wraper year_select p-0">
+                                        <div class="custom_select page_select">
+                                            <button type="button" class="select_btn">
+                                                <span class="arrow">
+                                                    <img src="../../assets/img/down.svg" alt="">
+                                                </span>
+                                                <span class="selected">2026</span>                               
+                                            </button>
+                                            <ul class="select_dropdown">
+                                                <li data-value="2023">2023</li>
+                                                <li data-value="2024">2024</li>
+                                                <li data-value="2025">2025</li>
+                                                <li data-value="2026">2026</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="graph">
+
+
+
+                                        <img src="../../assets/img/graph.png" alt="" class="w-100">
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="statistics_box">
+                                    <h3> סטטיסטיקות </h3>
+                                    <ul>
+                                        <li class="active">
+                                            סה''כ ההכנסות
+                                            <span>$0.oo</span>
+                                        </li>
+                                        <li>
+                                            ניצחונות
+                                            <span>o</span>
+                                        </li>
+                                        <li>
+                                            טורנירים ששוחקו
+                                            <span>o</span>
+                                        </li>
+                                        <li>
+                                            הפסדים
+                                            <span>o</span>
+                                        </li>
+                                        <li>
+                                            המשחק הכי משוחק
+                                            <span> - </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- level section -->
+                    <div class="level_section">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="level_box">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="level_title">
+                                        <h3> סטטיסטיקות </h3>
+                                    </div>
+
+                                    <div class="counter_wraper">
+                                        <div class="counter_box">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <h4> 78% </h4>
+                                            <p> שיעור ניצחונות </p>
+                                        </div>
+                                        <div class="counter_box">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <h4>64</h4>
+                                            <p> סה''כ משחקים </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="level_box">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="level_title">
+                                        <h3> רמה נוכחית </h3>
+                                    </div>
+
+                                    <div class="progress_circle">
+                                        <svg class="circle_bar" viewBox="0 0 220 220">
+                                            <defs>
+                                                <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                    <stop offset="0%" stop-color="#FFB347" />
+                                                    <stop offset="100%" stop-color="#FF7A00" />
+                                                </linearGradient>
+                                            </defs>
+
+                                            <circle class="bg"
+                                            cx="110"
+                                            cy="110"
+                                            r="90" />
+
+                                            <circle class="progress_line"
+                                            cx="110"
+                                            cy="110"
+                                            r="90" />
+                                        </svg>
+
+                                        <div class="progress_text">01</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- games played section -->
+                    <div class="gamesPlayed_section">
+                        <div class="gamesPlayed_box">
+                            <div class="gamesPlayed_title">
+                                <h3> משחקים ששוחקו (10) </h3>
+                            </div>
+
+                            <div class="gamesPlayed_table">
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-1.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3> Call of Duty </h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-2.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3> League of legends </h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-3.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3>REALMS OF RUN</h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-1.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3> Call of Duty </h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-2.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3> League of legends </h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                                <div class="table_row">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="table_data table_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/games-table-3.png" alt="">
+                                    </div>
+
+                                    <div class="table_data">
+                                        <h3>REALMS OF RUN</h3>
+                                        <p> טורנירים </p>
+                                        <span> 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> משחקים </p>
+                                        <span> 8 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> שיעור ניצחונות </p>
+                                        <span> 98% </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> ניקוד </p>
+                                        <span> 12,907 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> רמה </p>
+                                        <span class="level2" data-bs-toggle="modal" data-bs-target="#rankingModal"> רמה 2 </span>
+                                    </div>
+
+                                    <div class="table_data">
+                                        <p> תוצאות </p>
+                                        <span class="result"> W W W W W </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div> 
+                    </div> 
+
+
+                    <!-- Ranking Modal start-->
+                    <div class="modal fade" id="rankingModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered ranking_modal">
+                            <div class="modal-content">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                                    <img src="../../assets/img/cross.svg" alt="">
+                                </span>
+                                
+                                <div class="ranking_content">
+                                    <div class="ranking_title">
+                                        <img src="../../assets/img/favorite-1.png" alt="">
+                                        <h3> דירוגי ולורנט </h3>
+                                        <p> ההדרגות משקפות את רמת השחקן, בהתבסס על הישגים וביצועים בטורנירים של Teamatch. <a href="#"> למידע נוסף </a></p>
+                                    </div>
+
+                                    <div class="ranking_proress_wraper">
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span>רמה 10</span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="2"></div>
+                                                <span> טופ 1.24% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level9"> רמה 9 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="3"></div>
+                                                <span> TOP 2.64% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level8"> רמה 8 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="24"></div>
+                                                <span> טופ 24% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level7"> רמה 7 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="34"></div>
+                                                <span> טופ 34% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level6"> רמה 6 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="44"></div>
+                                                <span> טופ 44% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level5"> רמה 5 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="50"></div>
+                                                <span> טופ 50% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level4"> רמה 4 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="70"></div>
+                                                <span> טופ 70% </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level3"> רמה 3 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="100"></div>
+                                                <span> שחקן עם לפחות 5 משחקים ששוחקו </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level2"> רמה 2 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="100"></div>
+                                                <span> שחקן עם לפחות 5 משחקים ששוחקו </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="level1"> רמה 1 </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress" data-progress="100"></div>
+                                                <span> שחקן עם לפחות 5 משחקים ששוחקו </span>
+                                            </div>
+                                        </div>
+
+                                        <div class="progress_item">
+                                            <div class="progress_level">
+                                                <span class="no_level"> אין רמה </span>
+                                            </div>
+
+                                            <div class="progress_bar">
+                                                <div class="progress progress_disabled" data-progress="100"></div>
+                                                <span> שחקן עם פחות מ־5 משחקים ששוחקו </span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ranking Modal end-->
+
+
+
+                    <!-- games played section -->
+                    <div class="gamesPlayed_section groups_section">
+                        <div class="gamesPlayed_box">
+                            <div class="gamesPlayed_title">
+                                <h3> קבוצות (02)  </h3>
+                            </div>
+
+                            <div class="groups_wraper">
+                                <div class="groups_box">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="groups_title">
+                                        <div class="groups_img">
+                                            <img src="../../assets/img/tournament-1.png" alt="">
+                                        </div>
+                                        <div class="groups_text copy_wraper">
+                                            <h4>Pookeei Gamming</h4>
+                                            <p>
+                                                מזהה קבוצה : <span class="copy_text">VR01723890</span>
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../../assets/img/copy-white.svg" alt="">
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="group_btn">
+                                        <a href="#">
+                                            ניהול קבוצה
+                                            <img src="../../assets/img/left.svg" alt="">
+
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="groups_box">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+
+                                    <div class="groups_title">
+                                        <div class="groups_img">
+                                            <img src="../../assets/img/tournament-1.png" alt="">
+                                        </div>
+                                        <div class="groups_text copy_wraper">
+                                            <h4>Pookeei Gamming</h4>
+                                            <p>
+                                                מזהה קבוצה : <span class="copy_text">VR01723890</span>
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../../assets/img/copy-white.svg" alt="">
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="group_btn">
+                                        <a href="#">
+                                            ניהול קבוצה
+                                            <img src="../../assets/img/left.svg" alt="">
+
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                    <!-- favorite games section -->
+                    <div class="gamesPlayed_section favorite_section">
+                        <div class="gamesPlayed_box">
+                            <div class="gamesPlayed_title">
+                                <h3> משחקים מועדפים (04) </h3>
+                            </div>
+
+                            <div class="favorite_wraper">
+                                <div class="favorite_item">
+                                    <div class="favorite_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/favorite-1.png" alt="">
+                                    </div>
+                                    <p> Call of Duty </p>
+                                </div>
+
+                                <div class="favorite_item">
+                                    <div class="favorite_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/favorite-2.png" alt="">
+                                    </div>
+                                    <p> Realms of Ruin </p>
+                                </div>
+
+                                <div class="favorite_item">
+                                    <div class="favorite_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/favorite-3.png" alt="">
+                                    </div>
+                                    <p> Call of Duty </p>
+                                </div>
+
+                                <div class="favorite_item">
+                                    <div class="favorite_img">
+                                        <span class="border_tl"></span>
+                                        <span class="border_tr"></span>
+                                        <span class="border_bl"></span>
+                                        <span class="border_br"></span>
+
+                                        <img src="../../assets/img/favorite-4.png" alt="">
+                                    </div>
+                                    <p> league of legends </p>
+                                </div>
+
+                                <div class="favorite_item add_game">
+                                    <button type="button">
+                                        <span class="favorite_img">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <img src="../../assets/img/plus-red.svg" alt="">
+                                        </span>
+                                        <p>הוספת משחק</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+
+                    <!-- join_section -->
+                    <div class="join_section">
+                        <div class="join_text">
+                            <h3>
+                                <img src="../../assets/img/red-rborder.png" alt="">
+                                מוכן לשחק?
+                                <img src="../../assets/img/red-lborder.png" alt="">
+                            </h3>
+                            <p> צור קבוצה והצטרף לטורניר הבא </p>
+                            <a href="#">
+                                התחל עכשיו
+                                <img src="../../assets/img/left.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- footer_section -->
+                    <div class="footer_section">
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+
+                        <div class="footer_wrapper">
+                            <div class="footer_item">
+                                <div class="footer_logo">
+                                    <a href="#">
+                                        <img src="../../assets/img/logo.svg" alt="">
+                                    </a>
+                                </div>
+                                <p> פלטפורמת טורנירים מקצועית לקהילת הגיימינג </p>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/tiktok.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/youtube.svg" alt="youtube">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/instagram.svg" alt="instagram">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/discord.svg" alt="discord">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/twitter.svg" alt="twitter">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="../../assets/img/facebook.svg" alt="facebook">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum2">
+                                <h4> קישורים מהירים </h4>
+                                <ul>
+                                    <li><a href="#"> טורנירים </a></li>
+                                    <li><a href="#"> קבוצות </a></li>
+                                    <li><a href="#"> לוח תוצאות </a></li>
+                                    <li><a href="#"> בלוג </a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum3">
+                                <h4> מידע </h4>
+                                <ul>
+                                    <li><a href="#"> צור קשר </a></li>
+                                    <li><a href="#"> תנאי שימוש </a></li>
+                                    <li><a href="#"> מדיניות פרטיות </a></li>
+                                </ul>
+                            </div>
+                            <div class="footer_text footer_colum4">
+                                <h4> קהילה </h4>
+                                <ul>
+                                    <li><a href="#"> חומרי קהילה </a></li>
+                                    <li><a href="#"> Discord </a></li>
+                                    <li><a href="#"> Twitch </a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="copyright_item text-center">
+                            <p>&copy; 2025 TeaMatch. כל הזכויות שמורות.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- all js here -->
+    <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/swiper.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>

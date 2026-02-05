@@ -53,5 +53,17 @@
 
 @import 'tournament/_rating';
 
-@import 'tournament/_my-tournaments';
+
+
+// My competitive Area  -----------
+
+@import 'tournament/my-competitive-area/_my-tournaments';
+
+@import 'tournament/my-competitive-area/_groups-created';
+
+@import 'tournament/my-competitive-area/_my-groups-analytics';
+
+@import 'tournament/my-competitive-area/_orders-and-requests';
+
+@import 'tournament/my-competitive-area/_orders-and-requests-create-group';
 

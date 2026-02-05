@@ -230,6 +230,20 @@
                     }
                 }
             }
+
+            &:last-child {
+                &.active {
+                    &::after {
+                        @media #{$sm} {
+                            right: 52%;
+                        }
+
+                        @media #{$xs} {
+                            right: 21%;
+                        }
+                    }
+                }
+            }
         }
     }
 

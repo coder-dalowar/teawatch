@@ -842,4 +842,23 @@ body {
 			}
 		}
 	}
+
+	&.open {
+		.calendar-arrow {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+
+// copy clipboard --------
+.copy_btn {
+	img {
+		width: 2rem;
+	}
+
+	&.copied {
+		opacity: 0.6;
+		pointer-events: none;
+	}
 }

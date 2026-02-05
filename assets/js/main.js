@@ -144,14 +144,33 @@
 
 // ================= copy clipboard ================= 
 {
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".copy_btn a").forEach(btn => {
-      btn.addEventListener("click", e => {
+  document.addEventListener("DOMContentLoaded", function () {
+    const wrappers = document.querySelectorAll(".copy_wraper");
+
+    if (!wrappers.length) return;
+
+    wrappers.forEach(function (wrapper) {
+      const copyBtn = wrapper.querySelector(".copy_btn");
+      const copyText = wrapper.querySelector(".copy_text");
+
+      if (!copyBtn || !copyText) return;
+
+      copyBtn.addEventListener("click", function (e) {
         e.preventDefault();
-        const text = btn.closest(".invite_wraper").querySelector(".invite_text h4 a").innerText.trim();
-        navigator.clipboard.writeText(text);
-        btn.classList.add("copied");
-        setTimeout(() => btn.classList.remove("copied"), 800);
+
+        const textToCopy = copyText.innerText.trim();
+        if (!textToCopy) return;
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+              copyBtn.classList.add("copied");
+              setTimeout(() => copyBtn.classList.remove("copied"), 800);
+            })
+            .catch(() => {
+              // silent fail, no console noise
+            });
+        }
       });
     });
   });
@@ -372,84 +391,204 @@
 
 
 
-// =================== custom calender ================
+// ==================== custom calender =================
 {
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', function () {
 
-    const wrapper = document.querySelector('.calendar-wrapper');
-    if (!wrapper) return;
+    const calendars = document.querySelectorAll('.calendar-wrapper');
+    if (!calendars.length) return;
 
-    const input = wrapper.querySelector('.calendar-input');
-    const dropdown = wrapper.querySelector('.calendar-dropdown');
-    const text = wrapper.querySelector('.calendar-text');
-    const monthYear = wrapper.querySelector('.month-year');
-    const datesBox = wrapper.querySelector('.calendar-dates');
-    const prev = wrapper.querySelector('.prev');
-    const next = wrapper.querySelector('.next');
+    calendars.forEach(calendar => {
 
-    let currentDate = new Date();
+        const input     = calendar.querySelector('.calendar-input');
+        const dropdown  = calendar.querySelector('.calendar-dropdown');
+        const text      = calendar.querySelector('.calendar-text');
+        const monthYear = calendar.querySelector('.month-year');
+        const datesBox  = calendar.querySelector('.calendar-dates');
+        const prevBtn   = calendar.querySelector('.prev');
+        const nextBtn   = calendar.querySelector('.next');
 
-    // Toggle dropdown
-    input.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-    });
+        if (!input || !dropdown) return;
 
-    // Prevent dropdown close on inside click
-    dropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
+        let currentDate = new Date();
 
-    // Close on outside click
-    document.addEventListener('click', () => {
-        dropdown.style.display = 'none';
-    });
+        /* =========================
+           TOGGLE CALENDAR
+        ==========================*/
+        input.addEventListener('click', function (e) {
+            e.stopPropagation();
 
-    function renderCalendar() {
-        datesBox.innerHTML = '';
+            const isOpen = calendar.classList.contains('open');
 
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
-
-        monthYear.textContent = currentDate.toLocaleDateString('en-US', {
-            month: 'long',
-            year: 'numeric'
-        });
-
-        const firstDay = new Date(year, month, 1).getDay() || 7;
-        const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-        // Empty cells
-        for (let i = 1; i < firstDay; i++) {
-            const empty = document.createElement('span');
-            empty.className = 'muted';
-            datesBox.appendChild(empty);
-        }
-
-        // Dates
-        for (let day = 1; day <= daysInMonth; day++) {
-            const span = document.createElement('span');
-            span.textContent = day;
-
-            span.addEventListener('click', () => {
-                text.textContent = `${day}/${month + 1}/${year}`;
-                dropdown.style.display = 'none';
+            // -------------------------
+            // CLOSE OTHER DROPDOWNS
+            // -------------------------
+            // Close all other calendars
+            calendars.forEach(cal => {
+                if (cal !== calendar) {
+                    cal.classList.remove('open');
+                    const dd = cal.querySelector('.calendar-dropdown');
+                    if (dd) dd.style.display = 'none';
+                }
             });
 
-            datesBox.appendChild(span);
+            // Close all custom selects
+            document.querySelectorAll('.custom_select').forEach(sel => sel.classList.remove('open'));
+
+            // Close all search dropdowns
+            document.querySelectorAll('.search_game_dropdown').forEach(dd => dd.classList.remove('show'));
+
+            // -------------------------
+            // TOGGLE CURRENT CALENDAR
+            // -------------------------
+            if (!isOpen) {
+                calendar.classList.add('open');
+                dropdown.style.display = 'block';
+            } else {
+                calendar.classList.remove('open');
+                dropdown.style.display = 'none';
+            }
+        });
+
+        /* Prevent dropdown click from closing */
+        dropdown.addEventListener('click', function (e) {
+            e.stopPropagation();
+        });
+
+        /* =========================
+           RENDER CALENDAR
+        ==========================*/
+        function renderCalendar() {
+            datesBox.innerHTML = '';
+
+            const year  = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            monthYear.textContent = currentDate.toLocaleDateString('en-US', {
+                month: 'long',
+                year: 'numeric'
+            });
+
+            const firstDay  = new Date(year, month, 1).getDay() || 7; // start from Monday
+            const totalDays = new Date(year, month + 1, 0).getDate();
+
+            // Empty spans for previous month's days
+            for (let i = 1; i < firstDay; i++) {
+                datesBox.appendChild(document.createElement('span'));
+            }
+
+            // Render days
+            for (let d = 1; d <= totalDays; d++) {
+                const day = document.createElement('span');
+                day.textContent = d;
+
+                day.addEventListener('click', function () {
+                    text.textContent = `${d}/${month + 1}/${year}`;
+                    // Close calendar after selection
+                    calendar.classList.remove('open');
+                    dropdown.style.display = 'none';
+                });
+
+                datesBox.appendChild(day);
+            }
         }
-    }
 
-    prev.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
+        /* Month navigation */
+        prevBtn && prevBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+
+        nextBtn && nextBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+
         renderCalendar();
     });
 
-    next.addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
+    /* =========================
+       OUTSIDE CLICK CLOSE
+    ==========================*/
+    document.addEventListener('click', function () {
+        calendars.forEach(calendar => {
+            calendar.classList.remove('open');
+            const dropdown = calendar.querySelector('.calendar-dropdown');
+            if (dropdown) dropdown.style.display = 'none';
+        });
     });
 
-    renderCalendar();
+  });
+  
+}
+
+
+
+// ==================== progressbar functionalify =================
+{
+  document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('rankingModal');
+
+    // Exit safely if the modal does not exist on this page
+    if (!modal) return;
+
+    // Animate progress bars when the modal is fully shown
+    modal.addEventListener('shown.bs.modal', () => {
+        animateProgressBars(modal);
+    });
+
+    // reset progress when modal is closed
+    modal.addEventListener('hidden.bs.modal', () => {
+        resetProgressBars(modal);
+    });
+  });
+
+  function animateProgressBars(scope) {
+      const bars = scope.querySelectorAll('.progress');
+
+      bars.forEach((bar, index) => {
+          const value = Number(bar.dataset.progress);
+
+          // data-progress is missing or invalid
+          if (!Number.isFinite(value)) return;
+
+          // Reset width before animating (important for re-open)
+          bar.style.width = '0%';
+
+          // Small stagger for smoother visual flow
+          setTimeout(() => {
+              bar.style.width = `${value}%`;
+          }, index * 150);
+      });
+  }
+
+  function resetProgressBars(scope) {
+      const bars = scope.querySelectorAll('.progress');
+
+      bars.forEach(bar => {
+          bar.style.width = '0%';
+      });
+  }
+}
+
+
+
+// ==================== circle progressbar functionalify =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".progress_circle").forEach(function (wrap) {
+      const circle = wrap.querySelector(".progress_line");
+      if (!circle) return;
+
+      const radius = 90;
+      const circumference = 2 * Math.PI * radius;
+      const percent = 75;
+
+      circle.style.strokeDasharray = circumference;
+      circle.style.strokeDashoffset =
+        circumference - (percent / 100) * circumference;
+    });
   });
 }

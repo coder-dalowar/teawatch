@@ -1,0 +1,28 @@
+// orders-and-requests-create-group page ------------
+
+.createGroup_section {
+    border-top: 1px solid #521518;
+    padding-bottom: 7rem;
+
+    .logo_upload {
+        span {
+            border-radius: 50%;
+        }
+    }
+
+    .select_btn {
+        .border_tl,
+        .border_tr,
+        .border_bl,
+        .border_br {
+            width: 0.8rem;
+            height: 0.6rem;
+            border-color: #a11b1b;
+        }
+
+    }
+
+    @media #{$sm} {
+        padding-bottom: 6rem;
+    }
+}

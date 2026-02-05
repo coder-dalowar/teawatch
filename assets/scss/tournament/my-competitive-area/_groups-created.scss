@@ -1,0 +1,225 @@
+// groups-created page ------------
+
+.groups_section {
+    padding-bottom: 6rem;
+    
+    .groups_wraper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.4rem;
+
+        @media #{$md} {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr;
+        }
+
+        .groups_box {
+            background: #000000;
+            border: 1px solid #191919;
+            padding: 2.4rem 2.4rem;
+            position: relative;
+
+            .border_tl {
+                width: 1.8rem;
+                height: 0.8rem;
+                border-top: 1px solid #B13238;
+                border-left: 1px solid #B13238;
+                position: absolute;
+                left: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_tr {
+                width: 1.8rem;
+                height: 0.8rem;
+                border-top: 1px solid #B13238;
+                border-right: 1px solid #B13238;
+                position: absolute;
+                right: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 1.8rem;
+                height: 0.8rem;
+                border-bottom: 1px solid #B13238;
+                border-left: 1px solid #B13238;
+                position: absolute;
+                left: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 1.8rem;
+                height: 0.8rem;
+                border-bottom: 1px solid #B13238;
+                border-right: 1px solid #B13238;
+                position: absolute;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .groups_title {
+                display: flex;
+                align-items: center;
+                gap: 1.4rem;
+
+                .groups_img {
+                    flex-shrink: 0;
+
+                    img {
+                        width: 7.2rem;
+                    }
+                }
+
+                .groups_text {
+                    h4 {
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        color: #FFFFFF;
+                        line-height: 140%;
+                        margin-bottom: 0.4rem;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        color: #CCCCCC;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.6rem;
+
+                        span {
+                            font-family: $heeboFont;
+                        }
+
+                        .copy_btn {
+                            background: transparent;
+                            border: none;
+                            outline: none;
+                            padding: 0;
+
+                            img {
+                                width: 2.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .group_list {
+                background: #0E0E0E;
+                padding: 1.6rem 1.6rem;
+                margin: 1.4rem 0rem 1.6rem;
+
+                ul {
+                    li {
+                        font-size: 2rem;
+                        font-weight: 400;
+                        line-height: 150%;
+                        color: #FFFFFF;
+                        display: flex;
+                        align-items: center;
+                        gap: 0.5rem;
+                        margin-bottom: 0.8rem;
+
+                        &:last-child {
+                            margin-bottom: 0rem;
+                        }
+
+                        img {
+                            width: 2.4rem;
+                        }
+
+                        span {
+                            font-family: $heeboFont;
+                            font-weight: 500;
+                            color: #CFCFCF;
+                            display: inline-block;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .group_btn {
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: #F5F6FF;
+                    background: #281415;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 1.2rem 1.6rem;
+                    position: relative;
+                    transition: 0.2s all ease;
+
+                    img {
+                        width: 2rem;
+                    }
+
+                    .border_tl {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-top: 1px solid #FFFFFF;
+                        border-left: 1px solid #FFFFFF;
+                        position: absolute;
+                        left: -0.05rem;
+                        top: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_tr {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-top: 1px solid #FFFFFF;
+                        border-right: 1px solid #FFFFFF;
+                        position: absolute;
+                        right: -0.05rem;
+                        top: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_bl {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-bottom: 1px solid #FFFFFF;
+                        border-left: 1px solid #FFFFFF;
+                        position: absolute;
+                        left: -0.05rem;
+                        bottom: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_br {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-bottom: 1px solid #FFFFFF;
+                        border-right: 1px solid #FFFFFF;
+                        position: absolute;
+                        right: -0.05rem;
+                        bottom: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    &:hover {
+                        span {
+                            border-color: #F14139;
+                            transform: scale(1.28);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
