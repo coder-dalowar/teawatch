@@ -144,6 +144,16 @@
                 }
             }
 
+            &:hover {
+                .table_data {
+                    &:first-child {
+                        background: linear-gradient(to right bottom, #FDAC33, #DE5709)!important;
+                        -webkit-background-clip: text!important;;
+                        -webkit-text-fill-color: transparent!important;;
+                    }
+                }
+            }
+
             &:first-child {
                 background: #260F0F;
                 padding: 2rem 1.5rem;
@@ -270,6 +280,26 @@
                     display: inline-block;
                     padding: 0rem 0.7rem;
                     border-radius: 5rem;
+                }
+            }
+
+            &:nth-child(3) {
+                .table_data {
+                    &:first-child {
+                       background: linear-gradient(to right bottom, #F5F6FF, #808080);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+            }
+
+            &:nth-child(4) {
+                .table_data {
+                    &:first-child {
+                        background: linear-gradient(to right bottom, #B85523, #B85523);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
                 }
             }
         }

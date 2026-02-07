@@ -766,6 +766,55 @@ body {
   pointer-events: none;
 }
 
+.custom_checkBox {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.custom_checkBox .form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  display: block;
+  border-radius: 0.3rem;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+.custom_checkBox .form-check-input:focus {
+  border-color: #FFF;
+  outline: 0;
+  box-shadow: none;
+}
+.custom_checkBox .form-check-input:checked[type=checkbox] {
+  background-image: url(../img/check-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0.8rem;
+  background-color: transparent;
+  border-color: #FFF;
+}
+.custom_checkBox label {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: right;
+  cursor: pointer;
+  margin: 0;
+}
+.custom_checkBox label img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
 .header_section {
   max-width: 143.8rem;
   width: 100%;
@@ -3385,6 +3434,150 @@ body {
   }
 }
 
+.profile_fixed {
+  max-width: 18rem;
+  width: 100%;
+  margin-left: auto;
+  position: fixed;
+  bottom: 0.5rem;
+  right: calc((100% - 143rem) / 2);
+  z-index: 1024;
+}
+.profile_fixed .profile_box a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: linear-gradient(to bottom, #080808, #1E0405);
+  border: 1px solid #2F0507;
+  padding: 1.2rem 1.4rem;
+}
+.profile_fixed .profile_box a .profile_img {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  background: #FBA1A9;
+  border: 1px solid #FF5B63;
+  border-radius: 50%;
+}
+.profile_fixed .profile_box a .profile_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile_fixed .profile_box a .profile_text p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 120%;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.profile_fixed .profile_box a .profile_text p img {
+  width: 1.3rem;
+}
+.profile_fixed .profile_box a .profile_text h4 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profile_fixed .profile_box a .profile_text h4 span {
+  background: #FF000C;
+  display: inline-block;
+  padding: 0.2rem 0.3rem;
+  border-radius: 0.3rem;
+}
+.profile_fixed .subscription_box {
+  background: linear-gradient(to bottom, #080808, #240305);
+  border: 1px solid #340406;
+  padding: 1.6rem 1rem 1.4rem 1.2rem;
+  position: relative;
+  margin-top: 1.2rem;
+  text-align: center;
+}
+.profile_fixed .subscription_box img {
+  width: 2rem;
+  position: absolute;
+  left: 1.4rem;
+  top: 0.1rem;
+}
+.profile_fixed .subscription_box p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.profile_fixed .subscription_box h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: #F02731;
+  margin: 0.8rem 0rem;
+}
+.profile_fixed .subscription_box a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  background: #F02731;
+  border: 1px solid #F23D46;
+  display: block;
+  text-align: center;
+  padding: 0.8rem 1.2rem;
+  position: relative;
+  margin-top: 1.4rem;
+  transition: 0.2s all ease;
+}
+.profile_fixed .subscription_box a .border_tl {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.profile_fixed .subscription_box a .border_tr {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.profile_fixed .subscription_box a .border_bl {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.profile_fixed .subscription_box a .border_br {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.profile_fixed .subscription_box a:hover span {
+  border-color: #EF9A75;
+  transform: scale(1.2);
+}
+
 .signup_form_section {
   width: 100%;
   min-height: 100vh;
@@ -4961,6 +5154,150 @@ body {
   padding: 0.6rem 0rem 3rem !important;
 }
 
+.checklist_select {
+  width: 100%;
+  position: relative;
+}
+.checklist_select .checklist_btn {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #D4D4D4;
+  width: 100%;
+  height: 4.4rem;
+  background: #262626;
+  border: 1px solid #353535;
+  padding-left: 1rem;
+  padding-right: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.checklist_select .checklist_btn .arrow {
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_btn .arrow img {
+  width: 2rem;
+  margin: 0;
+}
+.checklist_select .checklist_btn .selected {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.checklist_select .checklist_btn .selected_item {
+  background: #666666;
+  padding: 0.15rem 0.5rem;
+  margin-left: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+}
+.checklist_select .checklist_btn img {
+  width: 1.4rem;
+  height: 1.4rem;
+  object-fit: cover;
+  margin-left: 0.6rem;
+}
+.checklist_select .checklist_btn .border_tl {
+  width: 0.8rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_btn .border_tr {
+  width: 0.8rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_btn .border_bl {
+  width: 0.8rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_btn .border_br {
+  width: 0.8rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_btn:focus {
+  border-color: #3F1717;
+}
+.checklist_select .checklist_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 25rem;
+  overflow: auto;
+  background: #666666;
+  border: 1px solid #7E7E7E;
+  margin-top: 1rem;
+  display: none;
+  z-index: 2026;
+}
+.checklist_select .checklist_dropdown li {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  line-height: 132%;
+  padding: 0rem 1.2rem;
+  border-bottom: 1px solid #7E7E7E;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_dropdown li:last-child {
+  border-bottom: none;
+}
+.checklist_select .checklist_dropdown li:hover {
+  background: #F02731;
+  color: #FFF;
+}
+.checklist_select .checklist_dropdown li .custom_checkBox label {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+}
+.checklist_select .checklist_dropdown li .custom_checkBox label img {
+  margin-left: 0.5rem;
+}
+.checklist_select.open .arrow {
+  transform: rotate(180deg);
+}
+.checklist_select.open .checklist_dropdown {
+  display: block;
+}
+
 .news_pt60 {
   padding-top: 6rem;
 }
@@ -5425,7 +5762,9 @@ body {
 }
 .gameChange_wrap .gameChange_arrow button img {
   width: 2.4rem;
-  transition: 0.4s all ease;
+}
+.gameChange_wrap .gameChange_arrow button.active img {
+  filter: brightness(0) saturate(100%) invert(31%) sepia(99%) saturate(5925%) hue-rotate(345deg) brightness(96%) contrast(102%);
 }
 .gameChange_wrap .gameChange_item {
   width: 5.6rem;
@@ -5537,6 +5876,40 @@ body {
 .serachBar_wraper .search_game_dropdown.show {
   visibility: visible;
   opacity: 1;
+}
+
+.flash_blankNews_section {
+  padding-bottom: 4rem;
+}
+
+.news_blankBox {
+  width: 100%;
+  min-height: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .news_blankBox {
+    min-height: 30rem;
+  }
+}
+.news_blankBox img {
+  width: 6rem;
+}
+.news_blankBox p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #F5F5F5;
+  margin-top: 1.6rem;
+}
+@media (max-width: 767px) {
+  .news_blankBox p {
+    font-size: 2rem;
+  }
 }
 
 .tournament_dropdownWraper {
@@ -5905,6 +6278,31 @@ body {
 }
 .allTournaments_table_section .allTournaments_table .table_row .data_details .data_text p span {
   color: #F02731;
+}
+
+.blank_row {
+  width: 100%;
+  min-height: 35rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.blank_row img {
+  width: 6rem;
+}
+.blank_row p {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 130%;
+  color: #F5F5F5;
+  margin-top: 1.6rem;
+}
+@media (max-width: 767px) {
+  .blank_row p {
+    font-size: 2rem;
+  }
 }
 
 .upcoming_banner {
@@ -6520,6 +6918,10 @@ body {
   }
 }
 
+.blank_banner {
+  min-height: 18rem;
+}
+
 .recent_games_hero {
   height: 33.2rem;
 }
@@ -6871,6 +7273,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.ratings_table_section .ratings_table .table_row:hover .table_data:first-child {
+  background: linear-gradient(to right bottom, #FDAC33, #DE5709) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
 .ratings_table_section .ratings_table .table_row:first-child {
   background: #260F0F;
   padding: 2rem 1.5rem;
@@ -6985,6 +7392,16 @@ body {
   display: inline-block;
   padding: 0rem 0.7rem;
   border-radius: 5rem;
+}
+.ratings_table_section .ratings_table .table_row:nth-child(3) .table_data:first-child {
+  background: linear-gradient(to right bottom, #F5F6FF, #808080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ratings_table_section .ratings_table .table_row:nth-child(4) .table_data:first-child {
+  background: linear-gradient(to right bottom, #B85523, #B85523);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 991px) {
   .ratings_table_section .group_table {

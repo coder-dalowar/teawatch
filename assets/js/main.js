@@ -382,8 +382,22 @@
             busy = false;
         });
 
-        up.addEventListener('click', prev);
-        down.addEventListener('click', next);
+        up.addEventListener('click', () => {
+            prev();
+
+            // Active class control
+            up.classList.add('active');
+            down.classList.remove('active');
+        });
+
+        down.addEventListener('click', () => {
+            next();
+
+            // Active class control
+            down.classList.add('active');
+            up.classList.remove('active');
+        });
+
     });
 
   });
@@ -838,3 +852,87 @@
 
 }
 
+
+
+// ==================== checklist_select with dropdown functionality =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+
+    document.querySelectorAll(".checklist_select").forEach(function (select) {
+
+        const btn = select.querySelector(".checklist_btn");
+        const dropdown = select.querySelector(".checklist_dropdown");
+        const selectedWrap = select.querySelector(".selected");
+
+        if (!btn || !dropdown || !selectedWrap) return;
+
+        // Toggle dropdown
+        btn.addEventListener("click", function (e) {
+            e.stopPropagation();
+
+            // Close all other checklist selects
+            document.querySelectorAll(".checklist_select.open").forEach(function (item) {
+                if (item !== select) {
+                    item.classList.remove("open");
+                }
+            });
+
+            // Toggle current one
+            select.classList.toggle("open");
+        });
+
+
+        // Prevent closing when clicking inside dropdown
+        dropdown.addEventListener("click", function (e) {
+            e.stopPropagation();
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", function (e) {
+            if (!select.contains(e.target)) {
+                select.classList.remove("open");
+            }
+        });
+
+        // Checkbox change handler
+        select.querySelectorAll("input[type='checkbox']").forEach(function (checkbox) {
+
+            checkbox.addEventListener("change", function () {
+
+                const checkedItems = select.querySelectorAll("input[type='checkbox']:checked");
+
+                if (!checkedItems.length) {
+                    selectedWrap.innerHTML = " בחר את המשחק שלך ";
+                    return;
+                }
+
+                let html = "";
+
+                checkedItems.forEach(function (item) {
+
+                    const label = select.querySelector("label[for='" + item.id + "']");
+                    if (!label) return;
+
+                    const img = label.querySelector("img");
+                    const text = label.childNodes[label.childNodes.length - 1].textContent.trim();
+
+                    html += '<span class="selected_item">';
+
+                    if (img) {
+                        html += '<img src="' + img.src + '" alt="">';
+                    }
+
+                    html += text + '</span>';
+                });
+
+                selectedWrap.innerHTML = html;
+
+            });
+
+        });
+
+    });
+
+  });
+
+}

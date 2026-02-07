@@ -520,7 +520,12 @@
 
             img {
                 width: 2.4rem;
-                transition: 0.4s all ease;
+            }
+
+            &.active {
+                img {
+                    filter: brightness(0) saturate(100%) invert(31%) sepia(99%) saturate(5925%) hue-rotate(345deg) brightness(96%) contrast(102%);
+                }
             }
         }
     }
@@ -657,3 +662,41 @@
     }
 }
 
+
+
+
+// news and updates blank -----------------
+
+.flash_blankNews_section {
+    padding-bottom: 4rem;
+}
+
+.news_blankBox {
+    width: 100%;
+    min-height: 42rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @media #{$sm} {
+        min-height: 30rem;
+    }
+
+    img {
+        width: 6rem;
+    }
+
+    p {
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 130%;
+        color: #F5F5F5;
+        margin-top: 1.6rem;
+
+        @media #{$sm} {
+            font-size: 2rem;
+        }
+    }
+}

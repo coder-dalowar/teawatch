@@ -365,13 +365,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="orders-and-requests.html">
+                                    <a href="orders-and-requests.html" class="active">
                                         <img src="../../assets/img/mail.svg" alt="">
                                         <span> הזמנות ובקשות </span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="orders-and-requests-create-group.html" class="active">
+                                    <a href="orders-and-requests-create-group.html">
                                         <span> צור קבוצה </span>
                                         <img src="../../assets/img/add-circle-gray.svg" alt="" class="plus_circle">
                                     </a>
@@ -431,211 +431,45 @@
                         </div>
                     </div>
 
-                    <!-- create group section -->
-                    <div class="createGroup_section team_section">
-                        <div class="team_title">
-                            <h2> יצירת קבוצה </h2>
-                            <p> בנו את הצוות שלכם והתכוננו לתחרות. </p>
+                    <!-- hero section -->
+                    <div class="hero_section recent_games_hero"></div>
+
+                    <!-- orders_section -->
+                    <div class="orders_section">
+                        <div class="orders_box">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <div class="orders_title">
+                                <h2> הזמנות שקיבלתי (00) </h2>
+                            </div>
+
+                            <div class="pending_item">
+                                <img src="../../assets/img/document-validation.svg" alt="">
+                                <h4> אין בקשות ממתינות </h4>
+                                <p> כשקיבלת הזמנה להצטרף לקבוצה, היא תופיע כאן </p>
+                            </div>
+                        </div>
+
+                        <div class="orders_box">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <div class="orders_title">
+                                <h2> הזמנות ששלחתי (00) </h2>
+                            </div>
+
+                            <div class="pending_item">
+                                <img src="../../assets/img/document-validation.svg" alt="">
+                                <h4>אין הזמנות ממתינות</h4>
+                                <p> כששלחת הזמנה לשחקן להצטרף לקבוצה, היא תופיע כאן </p>
+                            </div>
                         </div>
                         
-                        <div class="team_wrapper">
-                            <div class="upload_wrapper">
-                                <div class="upload-box w-100" id="uploadBox">
-                                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
-                                    <div class="upload-content" id="uploadContent">
-                                        <div class="logo_upload">
-                                            <span>
-                                                <img src="../../assets/img/upload.svg" alt="">
-                                            </span>
-                                            <p> העלה את הלוגו שלך </p>
-                                        </div>
-                                        <div class="cover_photo_upload">
-                                           <p> העלה תמונת קאבר </p>
-                                            <img src="../../assets/img/upload-white.svg" alt="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="team_content">
-                                <form action="#" method="post">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> שם הקבוצה <span>*</span></label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                        type="text" placeholder="הזן את שם הקבוצה שלך" required>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> טאג <span>*</span></label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                        type="text" placeholder="הזן טאג" required>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> קטגוריית משחק <span>*</span></label>
-                                                <div class="checklist_select">
-                                                    <button type="button" class="checklist_btn">
-                                                        <span class="selected"> בחר את המשחק שלך </span>
-                                                        <span class="arrow">
-                                                            <img src="../../assets/img/down.svg" alt="">
-                                                        </span>
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>                                
-                                                    </button>
-                                                    <ul class="checklist_dropdown">
-                                                        <li data-value=" דוטה 2 ">
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check1">
-                                                                <label for="check1">
-                                                                    <img src="../../assets/img/favorite-4.png" alt="">
-                                                                     דוטה 2
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li data-value="הירוז אוף דה סטורם">
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check2">
-                                                                <label for="check2">
-                                                                    <img src="../../assets/img/favorite-4.png" alt="">
-                                                                    הירוז אוף דה סטורם
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li data-value="סמייט">
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check3">
-                                                                <label for="check3">
-                                                                    <img src="../../assets/img/favorite-4.png" alt="">
-                                                                    סמייט
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li data-value="הירוז אוף ניורת׳">
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check4">
-                                                                <label for="check4">
-                                                                    <img src="../../assets/img/favorite-4.png" alt="">
-                                                                    הירוז אוף ניורת׳
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li data-value="בטלרייט">
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check5">
-                                                                <label for="check5">
-                                                                    <img src="../../assets/img/favorite-4.png" alt="">
-                                                                    בטלרייט
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input_item">
-                                                <label> קישור לאתר </label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                        type="text" placeholder="הוסף אתר">
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input_item">
-                                                <label> אימייל הקבוצה </label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                        type="tel" placeholder="הזן את האימייל של הקבוצה שלך">
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input_item">
-                                                <label> תיאור </label>
-                                                <div class="input_wrap textarea_wrap">
-                                                    <textarea class="form_field" placeholder="כתוב על הקבוצה שלך"></textarea>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="team_item">
-                                                <h4> רשתות חברתיות </h4>
-                                                <div class="social_item">
-                                                    <a href="#" class="social_box">
-                                                        <img src="../../assets/img/plus-sign-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../../assets/img/twitter-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../../assets/img/instagram-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../../assets/img/facebook-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                </div>
-                                                <div class="save_btn mt-4 pt-3">
-                                                    <a href="team-invite.html" class="button button_red">
-                                                            שמור
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                </div>
-                                            </div>                                              
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
                     </div>
 
                     <!-- join_section -->
