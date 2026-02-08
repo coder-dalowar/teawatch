@@ -56,5 +56,9 @@
 
 .innerTab_links {
     padding: 5rem 0rem 5.2rem;
+
+    @media #{$sm} {
+        padding: 4rem 0rem 3rem;
+    }
 }
 

@@ -863,6 +863,7 @@
         const btn = select.querySelector(".checklist_btn");
         const dropdown = select.querySelector(".checklist_dropdown");
         const selectedWrap = select.querySelector(".selected");
+        const clearBtn = select.querySelector(".clear_allBtn button");
 
         if (!btn || !dropdown || !selectedWrap) return;
 
@@ -870,69 +871,117 @@
         btn.addEventListener("click", function (e) {
             e.stopPropagation();
 
-            // Close all other checklist selects
             document.querySelectorAll(".checklist_select.open").forEach(function (item) {
                 if (item !== select) {
                     item.classList.remove("open");
                 }
             });
 
-            // Toggle current one
             select.classList.toggle("open");
         });
 
-
-        // Prevent closing when clicking inside dropdown
         dropdown.addEventListener("click", function (e) {
             e.stopPropagation();
         });
 
-        // Close when clicking outside
         document.addEventListener("click", function (e) {
             if (!select.contains(e.target)) {
                 select.classList.remove("open");
             }
         });
 
-        // Checkbox change handler
-        select.querySelectorAll("input[type='checkbox']").forEach(function (checkbox) {
+        // -------------------------
+        // MAIN UPDATE FUNCTION
+        // -------------------------
 
-            checkbox.addEventListener("change", function () {
+        function updateSelection() {
 
-                const checkedItems = select.querySelectorAll("input[type='checkbox']:checked");
+            const checkedItems = select.querySelectorAll("input[type='checkbox']:checked");
+            const allCheckbox = select.querySelectorAll("input[type='checkbox']");
+            const allLi = select.querySelectorAll(".checklist_dropdown li:not(.clear_allBtn)");
 
-                if (!checkedItems.length) {
-                    selectedWrap.innerHTML = " בחר את המשחק שלך ";
-                    return;
-                }
+            // Remove checked class from all
+            allLi.forEach(li => li.classList.remove("checked"));
 
-                let html = "";
+            if (!checkedItems.length) {
+                selectedWrap.innerHTML = " בחר את המשחק שלך ";
+                if (clearBtn) clearBtn.disabled = true;
+                return;
+            }
 
-                checkedItems.forEach(function (item) {
+            if (clearBtn) clearBtn.disabled = false;
 
-                    const label = select.querySelector("label[for='" + item.id + "']");
-                    if (!label) return;
+            let html = "";
 
-                    const img = label.querySelector("img");
-                    const text = label.childNodes[label.childNodes.length - 1].textContent.trim();
+            checkedItems.forEach(function (item) {
 
-                    html += '<span class="selected_item">';
+                const label = select.querySelector("label[for='" + item.id + "']");
+                if (!label) return;
 
-                    if (img) {
-                        html += '<img src="' + img.src + '" alt="">';
-                    }
+                const img = label.querySelector("img");
+                const text = label.textContent.trim();
+                const li = item.closest("li");
 
-                    html += text + '</span>';
-                });
+                if (li) li.classList.add("checked");
 
-                selectedWrap.innerHTML = html;
-
+                html += `
+                    <span class="selected_item" data-id="${item.id}">
+                        <span class="remove_item">&times;</span>
+                        ${img ? `<img src="${img.src}" alt="">` : ""}
+                        ${text}
+                    </span>
+                `;
             });
 
+            selectedWrap.innerHTML = html;
+        }
+
+        // Checkbox change
+        select.querySelectorAll("input[type='checkbox']").forEach(function (checkbox) {
+            checkbox.addEventListener("change", updateSelection);
         });
+
+        // -------------------------
+        // REMOVE ITEM FROM BUTTON
+        // -------------------------
+        selectedWrap.addEventListener("click", function (e) {
+
+            if (!e.target.classList.contains("remove_item")) return;
+
+            e.stopPropagation(); // prevent dropdown toggle
+
+            const itemSpan = e.target.closest(".selected_item");
+            const id = itemSpan.getAttribute("data-id");
+            const checkbox = select.querySelector("#" + id);
+
+            if (checkbox) {
+                checkbox.checked = false;
+            }
+
+            updateSelection();
+        });
+
+
+        // -------------------------
+        // CLEAR BUTTON
+        // -------------------------
+        if (clearBtn) {
+
+            clearBtn.disabled = true;
+
+            clearBtn.addEventListener("click", function () {
+
+                select.querySelectorAll("input[type='checkbox']").forEach(function (checkbox) {
+                    checkbox.checked = false;
+                });
+
+                updateSelection();
+            });
+        }
 
     });
 
   });
-
 }
+
+

@@ -5173,6 +5173,22 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #C7222E #1D1D1D;
+}
+.checklist_select .checklist_btn::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 1rem;
+}
+.checklist_select .checklist_btn::-webkit-scrollbar-track {
+  background: #1D1D1D;
+  border-radius: 1rem;
+}
+.checklist_select .checklist_btn::-webkit-scrollbar-thumb {
+  background: #C7222E;
+  border-radius: 1rem;
 }
 .checklist_select .checklist_btn .arrow {
   transition: 0.2s all ease;
@@ -5184,12 +5200,6 @@ body {
 .checklist_select .checklist_btn .selected {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
 }
 .checklist_select .checklist_btn .selected_item {
   background: #666666;
@@ -5197,12 +5207,19 @@ body {
   margin-left: 0.2rem;
   display: inline-flex;
   align-items: center;
+  gap: 0.6rem;
+  position: relative;
+  white-space: nowrap;
+}
+.checklist_select .checklist_btn .selected_item .remove_item {
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 .checklist_select .checklist_btn img {
   width: 1.4rem;
   height: 1.4rem;
   object-fit: cover;
-  margin-left: 0.6rem;
 }
 .checklist_select .checklist_btn .border_tl {
   width: 0.8rem;
@@ -5252,7 +5269,7 @@ body {
   top: 100%;
   left: 0;
   width: 100%;
-  max-height: 25rem;
+  max-height: 30rem;
   overflow: auto;
   background: #666666;
   border: 1px solid #7E7E7E;
@@ -5275,7 +5292,7 @@ body {
 .checklist_select .checklist_dropdown li:last-child {
   border-bottom: none;
 }
-.checklist_select .checklist_dropdown li:hover {
+.checklist_select .checklist_dropdown li:hover, .checklist_select .checklist_dropdown li.checked {
   background: #F02731;
   color: #FFF;
 }
@@ -5290,6 +5307,32 @@ body {
 }
 .checklist_select .checklist_dropdown li .custom_checkBox label img {
   margin-left: 0.5rem;
+}
+.checklist_select .checklist_dropdown .clear_allBtn {
+  padding: 0;
+}
+.checklist_select .checklist_dropdown .clear_allBtn:hover {
+  opacity: 0.85;
+}
+.checklist_select .checklist_dropdown .clear_allBtn button {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 132%;
+  background: #F02731;
+  color: #FFF;
+  padding: 1.2rem 1.2rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.checklist_select .checklist_dropdown .clear_allBtn button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .checklist_select.open .arrow {
   transform: rotate(180deg);
@@ -5456,6 +5499,9 @@ body {
   transition: 0.2s all ease;
   position: relative;
 }
+.tabMenu_wrap .tab_links a img {
+  width: 1.6rem;
+}
 @media (max-width: 767px) {
   .tabMenu_wrap .tab_links a {
     font-size: 1.5rem;
@@ -5463,13 +5509,8 @@ body {
     height: 5rem;
     padding: 0.8rem 1.8rem;
   }
-}
-.tabMenu_wrap .tab_links a img {
-  width: 1.6rem;
-}
-@media (max-width: 767px) {
   .tabMenu_wrap .tab_links a img {
-    display: none;
+    width: 1.5rem;
   }
 }
 .tabMenu_wrap .tab_links a:hover {
@@ -5498,6 +5539,7 @@ body {
 @media (max-width: 767px) {
   .tabMenu_wrap .main_menuLinks a.active::after {
     right: 66%;
+    height: 3.4rem;
   }
 }
 @media (max-width: 575px) {
@@ -5600,8 +5642,9 @@ body {
 }
 @media (max-width: 767px) {
   .menu_wraper2 {
-    gap: 3.5rem;
+    gap: 2.5rem;
     padding-bottom: 4.5rem;
+    padding-top: 0rem;
   }
 }
 @media (max-width: 767px) {
@@ -5618,8 +5661,26 @@ body {
 }
 @media (max-width: 767px) {
   .menu_wraper2 .tab_links ul {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #F02731 #1D1D1D;
+  }
+  .menu_wraper2 .tab_links ul::-webkit-scrollbar {
+    width: 0.4rem;
+    border-radius: 1rem;
+  }
+  .menu_wraper2 .tab_links ul::-webkit-scrollbar-track {
+    background: #1D1D1D;
+    border-radius: 1rem;
+  }
+  .menu_wraper2 .tab_links ul::-webkit-scrollbar-thumb {
+    background: #F02731;
+    border-radius: 1rem;
+  }
+  .menu_wraper2 .tab_links ul {
+    padding-top: 5.6rem;
+    padding-bottom: 2rem;
   }
 }
 .menu_wraper2 .tab_links ul::before {
@@ -5635,12 +5696,12 @@ body {
 }
 @media (max-width: 767px) {
   .menu_wraper2 .tab_links ul::before {
-    width: 80%;
-    left: 50%;
+    display: none;
   }
 }
 .menu_wraper2 .tab_links ul li {
   position: relative;
+  white-space: nowrap;
 }
 .menu_wraper2 .tab_links ul li::before {
   content: "";
@@ -5678,22 +5739,25 @@ body {
 .menu_wraper2 .tab_links a {
   background: #212121;
   border-color: #373737;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .menu_wraper2 .tab_links a {
     min-width: 100%;
     text-align: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
   }
-}
-@media (max-width: 767px) {
-  .menu_wraper2 .tab_links a span {
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
+  .menu_wraper2 .tab_links a::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    background: #262626;
+    position: absolute;
+    top: -2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .menu_wraper2 .tab_links a::after {
@@ -7178,6 +7242,14 @@ body {
   .ratingsTab_wraper .tab_links ul li a {
     min-width: 10.6rem;
   }
+  .ratingsTab_wraper .tab_links ul li a::before {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .ratingsTab_wraper .tab_links ul {
+    padding-top: 0rem;
+  }
 }
 .ratingsTab_wraper .pagination_wraper {
   padding: 0;
@@ -7212,7 +7284,7 @@ body {
 @media (max-width: 767px) {
   .ratingsTab_wraper {
     column-gap: 1rem;
-    row-gap: 3.5rem;
+    row-gap: 2rem;
   }
   .ratingsTab_wraper .tab_links {
     width: auto;
@@ -7450,6 +7522,11 @@ body {
 
 .innerTab_links {
   padding: 5rem 0rem 5.2rem;
+}
+@media (max-width: 767px) {
+  .innerTab_links {
+    padding: 4rem 0rem 3rem;
+  }
 }
 
 .groups_section {

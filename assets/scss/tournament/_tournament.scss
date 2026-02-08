@@ -177,18 +177,18 @@
             transition: 0.2s all ease;
             position: relative;
 
+            img {
+                width: 1.6rem;
+            }
+
             @media #{$sm} {
                 font-size: 1.5rem;
                 min-width: 7.5rem;
                 height: 5rem;
                 padding: 0.8rem 1.8rem;
-            }
 
-            img {
-                width: 1.6rem;
-
-                @media #{$sm} {
-                    display: none;
+                img {
+                    width: 1.5rem;
                 }
             }
 
@@ -223,6 +223,7 @@
 
                     @media #{$sm} {
                         right: 66%;
+                        height: 3.4rem;
                     }
 
                     @media #{$xs} {
@@ -342,8 +343,9 @@
     }
 
     @media #{$sm} {
-        gap: 3.5rem;
+        gap: 2.5rem;
         padding-bottom: 4.5rem;
+        padding-top: 0rem;
     }
 
     .tab_links {
@@ -360,8 +362,28 @@
             position: relative;
 
             @media #{$sm} {
-                display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: thin;
+                scrollbar-color: #F02731 #1D1D1D;
+
+                &::-webkit-scrollbar {
+                    width: 0.4rem;
+                    border-radius: 1rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #1D1D1D;
+                    border-radius: 1rem;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #F02731;
+                    border-radius: 1rem;
+                }
+
+                padding-top: 5.6rem;
+                padding-bottom: 2rem;
             }
 
             &::before {
@@ -376,13 +398,13 @@
                 transform: translateX(-50%);
 
                 @media #{$sm} {
-                    width: 80%;
-                    left: 50%;
+                    display: none;
                 }
             }
 
             li {
                 position: relative;
+                white-space: nowrap;
 
                 &::before {
                     content: "";
@@ -429,21 +451,24 @@
         a {
             background: #212121;
             border-color: #373737;
+            white-space: nowrap;
 
             @media #{$sm} {
                 min-width: 100%;
                 text-align: center;
-                padding-left: 0.5rem;
-                padding-right: 0.5rem;
-            }
+                padding-left: 0.8rem;
+                padding-right: 0.8rem;
 
-            span {
-                @media #{$sm} {
-                    display: -webkit-box;
-                    -webkit-line-clamp: 1;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    -webkit-box-orient: vertical; 
+                &::before {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    display: block;
+                    background: #262626;
+                    position: absolute;
+                    top: -2.5rem;
+                    left: 50%;
+                    transform: translateX(-50%);
                 }
             }
 
