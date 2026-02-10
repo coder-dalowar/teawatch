@@ -973,3 +973,100 @@
 }
 
 
+
+
+// ==================== chat functionality =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+
+    function isMobile() {
+      return window.innerWidth <= 991;
+    }
+
+    /* ---------------------------------
+      1️⃣  Default Active Tab Handle
+    -----------------------------------*/
+    function handleActiveTab() {
+      if (!isMobile()) return;
+
+      const activePane = document.querySelector(".tab-pane.active");
+      if (!activePane) return;
+
+      document.querySelectorAll(".chat_mainBox").forEach(function (box) {
+        box.classList.remove("show");
+      });
+
+      const chatBox = activePane.querySelector(".chat_mainBox");
+      if (chatBox) {
+        chatBox.classList.add("show");
+      }
+    }
+
+    handleActiveTab();
+
+
+    /* ---------------------------------
+      2️⃣  Bootstrap Tab Change
+    -----------------------------------*/
+    const tabTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
+
+    tabTriggers.forEach(function (tab) {
+
+      tab.addEventListener("shown.bs.tab", function (event) {
+
+        if (!isMobile()) return;
+
+        const targetSelector = event.target.getAttribute("data-bs-target");
+        if (!targetSelector) return;
+
+        const activePane = document.querySelector(targetSelector);
+        if (!activePane) return;
+
+        document.querySelectorAll(".chat_mainBox").forEach(function (box) {
+          box.classList.remove("show");
+        });
+
+        const chatBox = activePane.querySelector(".chat_mainBox");
+        if (chatBox) {
+          chatBox.classList.add("show");
+        }
+
+      });
+
+
+      /* ---------------------------------
+        3️⃣  Click On Already Active Tab
+      -----------------------------------*/
+      tab.addEventListener("click", function () {
+
+        if (!isMobile()) return;
+
+        if (this.classList.contains("active")) {
+          handleActiveTab();
+        }
+
+      });
+
+    });
+
+
+    /* ---------------------------------
+      4️⃣  Close Button
+    -----------------------------------*/
+    document.querySelectorAll(".close_btn").forEach(function (btn) {
+
+      btn.addEventListener("click", function () {
+
+        if (!isMobile()) return;
+
+        const parentChatBox = this.closest(".chat_mainBox");
+        if (parentChatBox) {
+          parentChatBox.classList.remove("show");
+        }
+
+      });
+
+    });
+
+  });
+}

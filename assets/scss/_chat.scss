@@ -496,6 +496,10 @@
                                 }
                             }
                         }
+
+                        @media #{$md} {
+                            display: none;
+                        }
                     }
 
                     .chat_mainBox {
@@ -505,7 +509,40 @@
                         flex-direction: column;
                         padding: 1.4rem 2rem 3rem;
 
+                        @media #{$md} {
+                            background: #121212;
+                            max-width: 70rem;
+                            width: 100%;
+                            margin-left: auto;
+                            margin-right: auto;
+                            position: fixed;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 100vh;
+                            padding-bottom: 10rem!important;
+                            z-index: 1025;
+                            display: none;
+
+                            &.show {
+                                display: block;
+                            }
+
+                            .close_btn {
+                                position: absolute;
+                                top: 2.4rem;
+                                left: 1.5rem;
+                                cursor: pointer;
+                                opacity: 0.8;
+
+                                img {
+                                    width: 2.4rem;
+                                }
+                            }
+                        }
+
                         @media #{$sm} {
+                            max-width: 51rem;
                             padding: 1.4rem 1.5rem 2.5rem;
                         }
 
@@ -515,6 +552,10 @@
                             display: flex;
                             align-items: center;
                             gap: 0.8rem;
+
+                             @media #{$md} {
+                                padding-left: 4rem;
+                             }
 
                             img {
                                 width: 2rem;
@@ -538,11 +579,6 @@
 
                             &::-webkit-scrollbar {
                                 display: none;          
-                            }
-
-                            @media #{$sm} {
-                                padding-left: 0rem;
-                                padding-right: 0rem;
                             }
 
                             .chat_text {
@@ -690,6 +726,15 @@
                                     }
                                 }
                             }
+
+                            @media #{$md} {
+                                max-width: 100%;
+                                padding-top: 1rem;
+
+                                .chat_input {
+                                    max-width: 100%;
+                                }
+                            }
                         }                        
                     }
                 }
@@ -804,4 +849,5 @@
         }        
     }
 }
+
 
