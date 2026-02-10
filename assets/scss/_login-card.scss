@@ -173,10 +173,11 @@
                     position: relative;
                     margin-bottom: 1.6rem;
                     border: 1px solid #3A1212;
-
+                    transition: 0.2s all ease;
 
                     img {
                         width: 100%;
+                        transition: 0.2s all ease;
                     }
 
                     .border_tl {
@@ -230,13 +231,14 @@
                     line-height: 1.30;
                     color: #ffffff;
                     text-transform: uppercase;
+                    transition: 0.2s all ease;
 
                     @media #{$sm} {
                         font-size: 2rem;
                     }
                 }
 
-                &.active {
+                &:hover {
                     .card_img {
                         border-color: #F02731;
                         position: relative;

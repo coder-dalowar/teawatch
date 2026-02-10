@@ -4,11 +4,11 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 6.5rem 3.4rem 9.2rem;
+    padding: 6.5rem 3.4rem 11rem;
     position: relative;
 
     @media #{$sm} {
-        padding: 8rem 1.5rem 9.5rem;
+        padding: 8rem 1.5rem 10rem;
     }
 
     .title_box {
@@ -30,17 +30,12 @@
 
     .details_btn {
         position: absolute;
-        left: 6rem;
-        bottom: 6rem;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4rem;
 
         @media #{$md} {
-            bottom: 3rem;
-            left: 3rem;
-        }
-
-        @media #{$sm} {
-            bottom: 1.6rem;
-            left: 1.6rem;
+            bottom: 3.2rem;
         }
 
         a {
@@ -156,7 +151,7 @@
             align-items: center;
             justify-content: center;
             gap: 3.2rem;
-            padding: 1.2rem 0rem 2.4rem;
+            padding: 1.2rem 0rem 2rem;
 
             @media #{$md} {
                 gap: 2.5rem;

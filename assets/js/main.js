@@ -78,18 +78,6 @@
 
 
 
-// ================= image border focus =================   
-{
-  document.querySelectorAll('.login_card').forEach(card => {
-    card.addEventListener('click', (e) => {
-      e.preventDefault(); 
-      card.classList.toggle('active');
-    });
-  });
-}
-
-
-
 // ================= box border focus =================   
 {
   const items = document.querySelectorAll('.signup_team_item');

@@ -275,8 +275,8 @@
 
     <main>
 
-        <!-- team section start -->
-        <section class="team_section">
+        <!-- chat section start -->
+        <section class="chat_section">
             <div class="container">
                 <div class="main_wrapper">
                     <!-- sidebar -->
@@ -326,246 +326,297 @@
 
                     <!-- main content -->
                     <div class="main_content">
-                        <div class="team_title">
-                            <a href="#">
-                                <img src="../assets/img/right.svg" alt="">
-                                <span> חזרה </span>
-                            </a>
-                            <h2> יצירת קבוצה </h2>
-                            <p> בנו את הצוות שלכם והתכוננו לתחרות. </p>
-                        </div>
-                        <div class="team_wrapper">
-                            <div class="upload_wrapper">
-                                <div class="upload-box w-100" id="uploadBox">
-                                    <input type="file" id="fileInput" accept="image/*" style="display: none;">
-                                    <div class="upload-content" id="uploadContent">
-                                        <div class="logo_upload">
-                                            <span>
-                                                <img src="../assets/img/upload.svg" alt="">
-                                            </span>
-                                            <p> העלה את הלוגו שלך </p>
+                        <div class="chat_wraper">
+                            <!-- chat user -->
+                            <div class="chat_user">
+                                <div class="user_title">
+                                    <h2>צ'אט</h2>
+                                </div>
+
+                                <div class="user_box nav nav-tabs" role="tablist">
+                                    <div class="user_item nav-link active" data-bs-toggle="tab" data-bs-target="#tab1">
+                                        <div class="user_img">
+                                            <span></span>
+                                            <img src="../assets/img/orders-game.png" alt="">
                                         </div>
-                                        <div class="cover_photo_upload">
-                                            <p> העלה תמונת קאבר </p>
-                                            <img src="../assets/img/upload-white.svg" alt="">
+                                        <div class="user_text">
+                                            <h4> עמית </h4>
+                                            <p>You: Hi Less than ...</p>
+                                        </div>
+                                    </div>
+                                    <div class="user_item nav-link" data-bs-toggle="tab" data-bs-target="#tab2">
+                                        <div class="user_img">
+                                            <span></span>
+                                            <img src="../assets/img/orders-game.png" alt="">
+                                        </div>
+                                        <div class="user_text">
+                                            <h4> עמית </h4>
+                                            <p>You: Hi Less than ...</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
-                            <div class="team_content">
-                                <form action="#" method="post">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> שם הקבוצה <span>*</span></label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                     type="text" placeholder="הזן את שם הקבוצה שלך" required>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
+
+                            <!-- tab-content -->
+                            <div class="chat_content tab-content">
+                                <div class="tab-pane active" id="tab1" role="tabpanel">
+                                    <div class="content_wraper">
+                                        <!-- chat body -->
+                                        <div class="chat_body">
+                                            <div class="chat_heading">
+                                                <div class="chat_heading_img">
+                                                    <img src="../assets/img/orders-game.png" alt="">
+                                                </div>
+                                                <div class="chat_heading_text">
+                                                    <h4>PatateTWH1</h4>
+                                                    <p><span></span> לא מקוון</p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> טאג <span>*</span></label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                     type="text" placeholder="הזן טאג" required>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
+
+                                            <div class="chat_mainBox">
+                                                <div class="alert_item">
+                                                    <img src="../assets/img/alert.svg" alt="">
+                                                    <p>לעולם אל תשתף את הסיסמה שלך או פרטים רגישים אחרים בצ׳אט.</p>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="input_item">
-                                                <label> קטגוריית משחק <span>*</span></label>
-                                                <div class="checklist_select">
-                                                    <button type="button" class="checklist_btn">
-                                                        <span class="selected"> בחר את המשחק שלך </span>
-                                                        <span class="arrow">
-                                                            <img src="../assets/img/down.svg" alt="">
-                                                        </span>
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>                                
+
+                                                <div class="chat_panel">
+                                                    <div class="chat_text">
+                                                        <p>HI, HOW ARE YOU</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>HI</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, HOW ARE YOU</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>HI</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, HOW ARE YOU</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>HI</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, HOW ARE YOU</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>HI</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, HOW ARE YOU</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="chatField_wrap">
+                                                    <button type="button">
+                                                        <img src="../assets/img/image-add.svg" alt="">
                                                     </button>
-                                                    <ul class="checklist_dropdown">
-                                                        <li>
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check1">
-                                                                <label for="check1">
-                                                                    <img src="../assets/img/favorite-4.png" alt="">
-                                                                     דוטה 2
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check2">
-                                                                <label for="check2">
-                                                                    <img src="../assets/img/favorite-4.png" alt="">
-                                                                    הירוז אוף דה סטורם
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check3">
-                                                                <label for="check3">
-                                                                    <img src="../assets/img/favorite-4.png" alt="">
-                                                                    סמייט
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check4">
-                                                                <label for="check4">
-                                                                    <img src="../assets/img/favorite-4.png" alt="">
-                                                                    הירוז אוף ניורת׳
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li>
-                                                            <div class="custom_checkBox">
-                                                                <input class="form-check-input" type="checkbox" id="check5">
-                                                                <label for="check5">
-                                                                    <img src="../assets/img/favorite-4.png" alt="">
-                                                                    בטלרייט
-                                                                </label>
-                                                            </div>
-                                                        </li>
-                                                        <li class="clear_allBtn">
-                                                            <button type="button"> נקה הכל </button>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input_item">
-                                                <label> קישור לאתר </label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                     type="text" placeholder="הוסף אתר">
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input_item">
-                                                <label> אימייל הקבוצה </label>
-                                                <div class="input_wrap">
-                                                    <input class="form_field"
-                                                     type="tel" placeholder="הזן את האימייל של הקבוצה שלך">
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input_item">
-                                                <label> תיאור </label>
-                                                <div class="input_wrap textarea_wrap">
-                                                    <textarea class="form_field" placeholder="כתוב על הקבוצה שלך"></textarea>
-                                                    <span class="border_tl"></span>
-                                                    <span class="border_tr"></span>
-                                                    <span class="border_bl"></span>
-                                                    <span class="border_br"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="team_item">
-                                                <h4> רשתות חברתיות </h4>
-                                                <div class="social_item">
-                                                    <a href="#" class="social_box">
-                                                        <img src="../assets/img/plus-sign-2.svg" alt="">
+                                                    <div class="chat_input">
                                                         <span class="border_tl"></span>
                                                         <span class="border_tr"></span>
                                                         <span class="border_bl"></span>
                                                         <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../assets/img/twitter-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../assets/img/instagram-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#" class="social_box">
-                                                        <img src="../assets/img/facebook-2.svg" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                </div>
 
-                                                <!-- <h4> לוגו ממומן </h4>
-                                                <div class="sponsor_item">
-                                                    <a href="#">
-                                                        <img src="../assets/img/sponsor-1.png" alt="" class="sponsor1">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#">
-                                                        <img src="../assets/img/sponsor-2.png" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                    <a href="#">
-                                                        <img src="../assets/img/sponsor-2.png" alt="">
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
-                                                </div> -->
-
-                                                <div class="save_btn mt-4 pt-3">
-                                                    <a href="team-invite.html" class="button button_red">
-                                                         שמור
-                                                        <span class="border_tl"></span>
-                                                        <span class="border_tr"></span>
-                                                        <span class="border_bl"></span>
-                                                        <span class="border_br"></span>
-                                                    </a>
+                                                        <input type="text" placeholder="Aa">
+                                                    </div>
+                                                    <button type="button">
+                                                        <img src="../assets/img/sent.svg" alt="">
+                                                    </button>
                                                 </div>
-                                            </div>                                              
+                                            </div>
                                         </div>
+
+                                        <!-- chat user details -->
+                                        <div class="chat_details">
+                                            <div class="chat_profile">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                                <h4>PatateTWH1</h4>
+                                                <p><span></span> לא מקוון</p>
+                                            </div>
+
+                                            <div class="profile_options">
+                                                <h4>אפשרויות</h4>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/share.svg" alt="">
+                                                            שתף
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/user-profile.svg" alt="">
+                                                            צפה בפרופיל
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/add-team.svg" alt="">
+                                                            הזמן לקבוצה
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/user-add.svg" alt="">
+                                                            הוסף חבר
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> 
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+
+                                <div class="tab-pane" id="tab2" role="tabpanel">
+                                    <div class="content_wraper">
+                                        <!-- chat body -->
+                                        <div class="chat_body">
+                                            <div class="chat_heading">
+                                                <div class="chat_heading_img">
+                                                    <img src="../assets/img/orders-game.png" alt="">
+                                                </div>
+                                                <div class="chat_heading_text">
+                                                    <h4>PatateTWH1</h4>
+                                                    <p><span></span> לא מקוון</p>
+                                                </div>
+                                            </div>
+
+                                            <div class="chat_mainBox">
+                                                <div class="alert_item">
+                                                    <img src="../assets/img/alert.svg" alt="">
+                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                </div>
+
+                                                <div class="chat_panel">
+                                                    <div class="chat_text">
+                                                        <p>HI, how is going</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>Hlw</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, how is going</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>Hlw</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, how is going</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>Hlw</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, how is going</p>
+                                                    </div>
+                                                    <div class="chat_item">
+                                                        <div class="chat_text">
+                                                            <p>Hlw</p>
+                                                        </div>
+                                                        <img src="../assets/img/orders-game.png" alt="">
+                                                    </div>
+
+                                                    <div class="chat_text">
+                                                        <p>HI, how is going</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="chatField_wrap">
+                                                    <button type="button">
+                                                        <img src="../assets/img/image-add.svg" alt="">
+                                                    </button>
+                                                    <div class="chat_input">
+                                                        <span class="border_tl"></span>
+                                                        <span class="border_tr"></span>
+                                                        <span class="border_bl"></span>
+                                                        <span class="border_br"></span>
+
+                                                        <input type="text" placeholder="Aa">
+                                                    </div>
+                                                    <button type="button">
+                                                        <img src="../assets/img/sent.svg" alt="">
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- chat user details -->
+                                        <div class="chat_details">
+                                            <div class="chat_profile">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                                <h4>PatateTWH1</h4>
+                                                <p><span></span> לא מקוון</p>
+                                            </div>
+
+                                            <div class="profile_options">
+                                                <h4>אפשרויות</h4>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/share.svg" alt="">
+                                                            שתף
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/user-profile.svg" alt="">
+                                                            צפה בפרופיל
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/add-team.svg" alt="">
+                                                            הזמן לקבוצה
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">
+                                                            <img src="../assets/img/user-add.svg" alt="">
+                                                            הוסף חבר
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                            </div>  
                         </div>
                     </div>
                 </div>
             </div>
         </section> 
-        <!-- team section end -->
+        <!-- chat section end -->
 
     </main>
 
