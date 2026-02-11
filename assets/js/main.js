@@ -979,6 +979,9 @@
 {
   document.addEventListener("DOMContentLoaded", function () {
 
+    const chatWrapper = document.querySelector(".chat_wraper");
+    if (!chatWrapper) return;
+
     function isMobile() {
       return window.innerWidth <= 991;
     }
@@ -1005,9 +1008,11 @@
     }
 
     /* -------------------------
-      Default active on load
+     FIX: Remove auto show on load (Mobile)
     --------------------------*/
-    openActiveChat();
+    if (isMobile()) {
+      removeAllShows();
+    }
 
 
     /* -------------------------
@@ -1081,12 +1086,10 @@
         const details = this.closest(".chat_details");
         const body = this.closest(".chat_body");
 
-        // If close inside chat_details
         if (details) {
           details.classList.remove("show");
         }
 
-        // If close inside chat_body
         if (body) {
           body.classList.remove("show");
 
@@ -1102,6 +1105,7 @@
       });
 
     });
-
+    
   });
+  
 }

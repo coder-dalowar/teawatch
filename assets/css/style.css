@@ -2108,6 +2108,14 @@ body {
 .chat_section .chat_wraper .chat_user .user_box .user_item:hover, .chat_section .chat_wraper .chat_user .user_box .user_item.active {
   background: #1E1212;
 }
+@media (max-width: 991px) {
+  .chat_section .chat_wraper .chat_user .user_box .user_item.active {
+    background: transparent;
+  }
+  .chat_section .chat_wraper .chat_user .user_box .user_item:hover {
+    background: #1E1212;
+  }
+}
 .chat_section .chat_wraper .chat_user .user_box .user_item .user_img {
   width: 3.5rem;
   height: 3.2rem;
@@ -2556,6 +2564,7 @@ body {
 @media (max-width: 991px) {
   .chat_section .chat_wraper .chat_content .content_wraper .chat_details .profile_options {
     height: auto;
+    padding-right: 3rem;
   }
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_details .profile_options h4 {

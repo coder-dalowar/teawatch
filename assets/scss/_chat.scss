@@ -377,6 +377,16 @@
                         background: #1E1212;
                     }
 
+                    @media #{$md} {
+                        &.active {
+                            background: transparent;
+                        }
+
+                        &:hover {
+                            background: #1E1212;
+                        }
+                    }
+
                     .user_img {
                         width: 3.5rem;
                         height: 3.2rem;
@@ -874,6 +884,7 @@
 
                         @media #{$md} {
                             height: auto;
+                            padding-right: 3rem;
                         }
 
                         h4 {
@@ -922,5 +933,4 @@
         padding: 0;
     }
 }
-
 
