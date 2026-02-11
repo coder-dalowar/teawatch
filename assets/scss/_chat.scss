@@ -1,13 +1,29 @@
 // chat Modal -------------------
+#chatBox {
+    width: 100%;
+    position: fixed;
+    bottom: 0rem;
+    z-index: 1024;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    @media #{$md} {
+        display: none!important;
+    }
+}
+
 .chat_modal {
     max-width: 33.5rem;
+    width: 100%;
     margin-left: auto;
-    margin-right: auto;
 
     .modal-content {
         background: #080808;
         border: 1px solid #322222;
-        padding: 3.2rem 1.6rem;
+        padding: 2rem 1.6rem 3.2rem;
         position: relative;
         box-shadow: -4.5rem -1.4rem 17rem rgba(255, 26, 26, 0.12) inset;
 

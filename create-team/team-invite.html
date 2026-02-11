@@ -73,7 +73,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#chatModal">
+                            <a href="#" data-target="#chatBox">
                                 <img src="../assets/img/chat.svg" alt="icon">
                                 <span> צ׳אט </span>
                             </a>
@@ -261,15 +261,84 @@
                 </div>
             </div> 
 
+            <div class="profile_fixed">
+                <div class="profile_box">
+                    <a href="#">
+                        <div class="profile_img">
+                            <img src="../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="profile_text">
+                            <p>
+                                <img src="../assets/img/star.svg" alt="">
+                                admin
+                            </p>
+                            <h4>
+                                <span>פרימיום</span>
+                                מחובר
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subscription_box">
+                    <img src="../assets/img/primium-badge.svg" alt="">
+                    <p> עם מנוי פרימיום </p>
+                    <h4> כל ניצחון יכול להפוך לכסף </h4>
+                    <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+                    <a href="#">
+                        שדרג עכשיו
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </a>
+                </div>
+            </div> 
+
         </div>
     </div>
     <!-- offcanvas menu end -->
 
     <!-- chat_bot -->
-    <div class="chat_bot d-lg-none" data-bs-toggle="modal" data-bs-target="#chatModal">
-        <a href="#">
+    <div class="chat_bot d-lg-none">
+        <a href="../chat/chat.html">
             <img src="../assets/img/chat.svg" alt="icon">
         </a>
+    </div> 
+
+    <!-- profile fixed -->
+    <div class="profile_fixed d-none d-lg-block">
+        <div class="profile_box">
+            <a href="#">
+                <div class="profile_img">
+                    <img src="../assets/img/profile.png" alt="">
+                </div>
+                <div class="profile_text">
+                    <p>
+                        <img src="../assets/img/star.svg" alt="">
+                        admin
+                    </p>
+                    <h4>
+                        <span>פרימיום</span>
+                        מחובר
+                    </h4>
+                </div>
+            </a>
+        </div>
+
+        <div class="subscription_box">
+            <img src="../assets/img/primium-badge.svg" alt="">
+            <p> עם מנוי פרימיום </p>
+            <h4> כל ניצחון יכול להפוך לכסף </h4>
+            <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+            <a href="#">
+                שדרג עכשיו
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </a>
+        </div>
     </div> 
 
 
@@ -540,62 +609,64 @@
 
 
     <!-- Chat Modal start -->
-    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered chat_modal">
-            <div class="modal-content">
-                <span class="border_tl"></span>
-                <span class="border_tr"></span>
-                <span class="border_bl"></span>
-                <span class="border_br"></span>
+    <div id="chatBox">
+        <div class="container">
+            <div class="chat_modal">
+                <div class="modal-content">
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
 
-                <div class="chatModal_heading">
-                    <div class="chatModal_heading_item">
-                        <div class="chatModal_heading_img">
-                            <img src="../assets/img/game-modal.png" alt="">
+                    <div class="chatModal_heading">
+                        <div class="chatModal_heading_item">
+                            <div class="chatModal_heading_img">
+                                <img src="../assets/img/game-modal.png" alt="">
+                            </div>
+                            <div class="chatModal_heading_text">
+                                <h4>PatateTWH1</h4>
+                                <p><span></span> לא מקוון</p>
+                            </div>
                         </div>
-                        <div class="chatModal_heading_text">
-                            <h4>PatateTWH1</h4>
-                            <p><span></span> לא מקוון</p>
+
+                        <div class="chatModal_button">
+                            <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="../assets/img/cross.svg" alt="">
+                            </span>
+
+                            <a href="../chat/chat.html">
+                                <img src="../assets/img/expand.svg" alt="">
+                            </a>
                         </div>
                     </div>
 
-                    <div class="chatModal_button">
-                        <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
-                            <img src="../assets/img/cross.svg" alt="">
-                        </span>
-
-                        <a href="../chat/chat.html">
-                            <img src="../assets/img/expand.svg" alt="">
-                        </a>
+                    <div class="alert_item">
+                        <img src="../assets/img/alert.svg" alt="">
+                        <p> לעולם אל תשתף את הסיסמה שלך או פרטים רגישים אחרים בצ׳אט. </p>
                     </div>
-                </div>
 
-                <div class="alert_item">
-                    <img src="../assets/img/alert.svg" alt="">
-                    <p> לעולם אל תשתף את הסיסמה שלך או פרטים רגישים אחרים בצ׳אט. </p>
-                </div>
-
-                <div class="message_item">
-                    <img src="../assets/img/message.svg" alt="">
-                    <h4>היה הראשון לכתוב</h4>
-                    <p>זהו ממש תחילתו של הצ׳אט הזה.</p>
-                </div>
-
-                <div class="message_wrap">
-                    <button type="button">
-                        <img src="../assets/img/image-add-gray.svg" alt="">
-                    </button>
-                    <div class="message_field">
-                        <span class="border_tl"></span>
-                        <span class="border_tr"></span>
-                        <span class="border_bl"></span>
-                        <span class="border_br"></span>
-
-                        <input type="text" placeholder="Aa">
+                    <div class="message_item">
+                        <img src="../assets/img/message.svg" alt="">
+                        <h4>היה הראשון לכתוב</h4>
+                        <p>זהו ממש תחילתו של הצ׳אט הזה.</p>
                     </div>
-                    <button type="button">
-                        <img src="../assets/img/sent-gray.svg" alt="">
-                    </button>
+
+                    <div class="message_wrap">
+                        <button type="button">
+                            <img src="../assets/img/image-add-gray.svg" alt="">
+                        </button>
+                        <div class="message_field">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <input type="text" placeholder="Aa">
+                        </div>
+                        <button type="button">
+                            <img src="../assets/img/sent-gray.svg" alt="">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>

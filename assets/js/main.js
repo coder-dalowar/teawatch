@@ -1107,5 +1107,31 @@
     });
     
   });
-  
+
+}
+
+
+
+// ==================== chat box =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+    const chatBox = document.getElementById("chatBox");
+    if (!chatBox) return; 
+
+    const toggleBtns = document.querySelectorAll('[data-target="#chatBox"]');
+    const closeBtn = chatBox.querySelector(".close_btn");
+
+    // Toggle chatBox on button click
+    toggleBtns.forEach(btn => {
+        btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            chatBox.classList.toggle("show");
+        });
+    });
+
+    // Close button inside chat_modal
+    closeBtn.addEventListener("click", function () {
+        chatBox.classList.remove("show");
+    });
+  });
 }

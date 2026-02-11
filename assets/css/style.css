@@ -1243,6 +1243,7 @@ body {
   background: #0E0E0E;
   width: 32rem !important;
   border-left: 1px solid #460C0F !important;
+  padding-bottom: 10.2rem;
 }
 .offcanvas .offcanvas-header {
   display: flex;
@@ -1319,6 +1320,21 @@ body {
   padding: 0rem;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #C52029 #1D1D1D;
+}
+.offcanvas .offcanvas-body::-webkit-scrollbar {
+  width: 0.8rem;
+  border-radius: 2rem;
+}
+.offcanvas .offcanvas-body::-webkit-scrollbar-track {
+  background: #1D1D1D;
+  border-radius: 2rem;
+}
+.offcanvas .offcanvas-body::-webkit-scrollbar-thumb {
+  background: #C52029;
+  border-radius: 2rem;
 }
 .offcanvas .offcanvas_menu {
   padding: 2rem 2rem 2.5rem;
@@ -1431,7 +1447,6 @@ body {
   justify-content: center;
   gap: 1.5rem;
   padding: 3rem 2rem 3.2rem;
-  margin-top: auto;
 }
 
 .chat_bot {
@@ -1775,15 +1790,31 @@ body {
   direction: ltr;
 }
 
+#chatBox {
+  width: 100%;
+  position: fixed;
+  bottom: 0rem;
+  z-index: 1024;
+  display: none;
+}
+#chatBox.show {
+  display: block;
+}
+@media (max-width: 991px) {
+  #chatBox {
+    display: none !important;
+  }
+}
+
 .chat_modal {
   max-width: 33.5rem;
+  width: 100%;
   margin-left: auto;
-  margin-right: auto;
 }
 .chat_modal .modal-content {
   background: #080808;
   border: 1px solid #322222;
-  padding: 3.2rem 1.6rem;
+  padding: 2rem 1.6rem 3.2rem;
   position: relative;
   box-shadow: -4.5rem -1.4rem 17rem rgba(255, 26, 26, 0.12) inset;
 }
@@ -4453,6 +4484,16 @@ body {
 .profile_fixed .subscription_box a:hover span {
   border-color: #EF9A75;
   transform: scale(1.2);
+}
+
+.offcanvas-body .profile_fixed {
+  max-width: 18rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: static;
+  top: initial;
+  right: initial;
 }
 
 .signup_form_section {

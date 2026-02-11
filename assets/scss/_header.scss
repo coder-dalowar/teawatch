@@ -440,6 +440,7 @@
     background: #0E0E0E;
     width: 32rem!important;
     border-left: 1px solid #460C0F!important;
+    padding-bottom: 10.2rem;
 
     .offcanvas-header {
         display: flex;
@@ -529,6 +530,24 @@
         padding: 0rem;
         display: flex;
         flex-direction: column;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #C52029 #1D1D1D;
+
+        &::-webkit-scrollbar {
+            width: 0.8rem;
+            border-radius: 2rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #1D1D1D;
+            border-radius: 2rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #C52029;
+            border-radius: 2rem;
+        }
     }
 
     .offcanvas_menu {
@@ -657,7 +676,6 @@
     justify-content: center;
     gap: 1.5rem;
     padding: 3rem 2rem 3.2rem;
-    margin-top: auto;
 }
 
 
