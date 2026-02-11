@@ -983,31 +983,36 @@
       return window.innerWidth <= 991;
     }
 
-    /* ---------------------------------
-      1️⃣  Default Active Tab Handle
-    -----------------------------------*/
-    function handleActiveTab() {
+    function removeAllShows() {
+      document.querySelectorAll(".chat_body, .chat_details")
+        .forEach(function (el) {
+          el.classList.remove("show");
+        });
+    }
+
+    function openActiveChat() {
       if (!isMobile()) return;
 
       const activePane = document.querySelector(".tab-pane.active");
       if (!activePane) return;
 
-      document.querySelectorAll(".chat_mainBox").forEach(function (box) {
-        box.classList.remove("show");
-      });
+      removeAllShows();
 
-      const chatBox = activePane.querySelector(".chat_mainBox");
-      if (chatBox) {
-        chatBox.classList.add("show");
+      const chatBody = activePane.querySelector(".chat_body");
+      if (chatBody) {
+        chatBody.classList.add("show");
       }
     }
 
-    handleActiveTab();
+    /* -------------------------
+      Default active on load
+    --------------------------*/
+    openActiveChat();
 
 
-    /* ---------------------------------
-      2️⃣  Bootstrap Tab Change
-    -----------------------------------*/
+    /* -------------------------
+      Bootstrap tab change
+    --------------------------*/
     const tabTriggers = document.querySelectorAll('[data-bs-toggle="tab"]');
 
     tabTriggers.forEach(function (tab) {
@@ -1022,27 +1027,41 @@
         const activePane = document.querySelector(targetSelector);
         if (!activePane) return;
 
-        document.querySelectorAll(".chat_mainBox").forEach(function (box) {
-          box.classList.remove("show");
-        });
+        removeAllShows();
 
-        const chatBox = activePane.querySelector(".chat_mainBox");
-        if (chatBox) {
-          chatBox.classList.add("show");
+        const chatBody = activePane.querySelector(".chat_body");
+        if (chatBody) {
+          chatBody.classList.add("show");
         }
 
       });
 
-
-      /* ---------------------------------
-        3️⃣  Click On Already Active Tab
-      -----------------------------------*/
+      // click on already active tab
       tab.addEventListener("click", function () {
+        if (!isMobile()) return;
+        if (this.classList.contains("active")) {
+          openActiveChat();
+        }
+      });
+
+    });
+
+
+    /* -------------------------
+      chat_heading → show details
+    --------------------------*/
+    document.querySelectorAll(".chat_heading").forEach(function (heading) {
+
+      heading.addEventListener("click", function () {
 
         if (!isMobile()) return;
 
-        if (this.classList.contains("active")) {
-          handleActiveTab();
+        const tabPane = this.closest(".tab-pane");
+        if (!tabPane) return;
+
+        const details = tabPane.querySelector(".chat_details");
+        if (details) {
+          details.classList.add("show");
         }
 
       });
@@ -1050,18 +1069,34 @@
     });
 
 
-    /* ---------------------------------
-      4️⃣  Close Button
-    -----------------------------------*/
+    /* -------------------------
+      Close Buttons Logic
+    --------------------------*/
     document.querySelectorAll(".close_btn").forEach(function (btn) {
 
       btn.addEventListener("click", function () {
 
         if (!isMobile()) return;
 
-        const parentChatBox = this.closest(".chat_mainBox");
-        if (parentChatBox) {
-          parentChatBox.classList.remove("show");
+        const details = this.closest(".chat_details");
+        const body = this.closest(".chat_body");
+
+        // If close inside chat_details
+        if (details) {
+          details.classList.remove("show");
+        }
+
+        // If close inside chat_body
+        if (body) {
+          body.classList.remove("show");
+
+          const parentPane = body.closest(".tab-pane");
+          if (parentPane) {
+            const detailsBox = parentPane.querySelector(".chat_details");
+            if (detailsBox) {
+              detailsBox.classList.remove("show");
+            }
+          }
         }
 
       });
