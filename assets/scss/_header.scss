@@ -578,6 +578,7 @@
 
     .offcanvas_btn {
         text-align: center;
+        display: none;
 
         a {
             font-size: 1.6rem;
@@ -675,7 +676,7 @@
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    padding: 3rem 2rem 3.2rem;
+    padding: 1rem 2rem 3.2rem;
 }
 
 

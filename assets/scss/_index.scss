@@ -2175,12 +2175,16 @@
 
 .offcanvas-body {
     .profile_fixed {
-        max-width: 18rem;
+        max-width: 100%;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
         position: static;
         top: initial;
         right: initial;
+
+        .profile_box {
+            display: none;
+        }
     }
 }

@@ -1359,6 +1359,7 @@ body {
 }
 .offcanvas .offcanvas_btn {
   text-align: center;
+  display: none;
 }
 .offcanvas .offcanvas_btn a {
   font-size: 1.6rem;
@@ -1446,7 +1447,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  padding: 3rem 2rem 3.2rem;
+  padding: 1rem 2rem 3.2rem;
 }
 
 .chat_bot {
@@ -4487,13 +4488,16 @@ body {
 }
 
 .offcanvas-body .profile_fixed {
-  max-width: 18rem;
+  max-width: 100%;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: static;
   top: initial;
   right: initial;
+}
+.offcanvas-body .profile_fixed .profile_box {
+  display: none;
 }
 
 .signup_form_section {
