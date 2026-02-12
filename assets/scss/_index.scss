@@ -2186,5 +2186,23 @@
         .profile_box {
             display: none;
         }
+
+        .subscription_box {
+            p {
+                font-size: 1.6rem;
+
+                br {
+                    display: none;
+                }
+            }
+
+            h4 {
+                font-size: 2rem;
+            }
+
+            a {
+                font-size: 1.8rem;
+            }
+        }
     }
 }

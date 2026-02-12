@@ -1243,7 +1243,7 @@ body {
   background: #0E0E0E;
   width: 32rem !important;
   border-left: 1px solid #460C0F !important;
-  padding-bottom: 10.2rem;
+  padding-bottom: 11rem;
 }
 .offcanvas .offcanvas-header {
   display: flex;
@@ -4498,6 +4498,18 @@ body {
 }
 .offcanvas-body .profile_fixed .profile_box {
   display: none;
+}
+.offcanvas-body .profile_fixed .subscription_box p {
+  font-size: 1.6rem;
+}
+.offcanvas-body .profile_fixed .subscription_box p br {
+  display: none;
+}
+.offcanvas-body .profile_fixed .subscription_box h4 {
+  font-size: 2rem;
+}
+.offcanvas-body .profile_fixed .subscription_box a {
+  font-size: 1.8rem;
 }
 
 .signup_form_section {
