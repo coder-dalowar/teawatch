@@ -4499,6 +4499,12 @@ body {
 .offcanvas-body .profile_fixed .profile_box {
   display: none;
 }
+.offcanvas-body .profile_fixed .subscription_box {
+  padding: 1.8rem 1.5rem;
+}
+.offcanvas-body .profile_fixed .subscription_box img {
+  width: 2.4rem;
+}
 .offcanvas-body .profile_fixed .subscription_box p {
   font-size: 1.6rem;
 }
