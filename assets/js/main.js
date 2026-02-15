@@ -974,7 +974,6 @@
 
 
 
-
 // ==================== chat functionality =================
 {
   document.addEventListener("DOMContentLoaded", function () {
@@ -1135,3 +1134,50 @@
     });
   });
 }
+
+
+
+// ================== maneger_dropdown =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const dotButtons = document.querySelectorAll(".dot_btn");
+
+    dotButtons.forEach(function (btn) {
+
+        const trigger = btn.querySelector("a");
+        if (!trigger) return;
+
+        trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            // Close other dropdowns
+            dotButtons.forEach(function (otherBtn) {
+                if (otherBtn !== btn) {
+                    otherBtn.classList.remove("active");
+                }
+            });
+
+            // Toggle current dropdown
+            btn.classList.toggle("active");
+        });
+
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function (e) {
+        if (!e.target.closest(".dot_btn")) {
+            dotButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+        }
+    });
+
+  }); 
+}
+
+
+
+
+
+
