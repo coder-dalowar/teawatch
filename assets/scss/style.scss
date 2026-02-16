@@ -71,6 +71,10 @@
 
 
 
-// Before join tournament ----------------
+// tournament-join ----------------
 
 @import 'tournament-join/_before-join-tournament';
+
+@import 'tournament-join/_after-join-tournament';
+
+@import 'tournament-join/_overview';

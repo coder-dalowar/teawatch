@@ -9949,11 +9949,30 @@ body {
   }
 }
 
-.joinTournament_title {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
+.joinTournament_header {
+  background: transparent;
+  position: relative;
 }
+.joinTournament_header::after {
+  content: "";
+  width: 100%;
+  height: 32.5rem;
+  display: block;
+  background-image: url("../img/join-tournament-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.joinTournament_header .admin_btn,
+.joinTournament_header .add_btn,
+.joinTournament_header .icon_btn {
+  background: #080808;
+}
+
 .joinTournament_title p {
   display: flex;
   align-items: center;
@@ -9967,6 +9986,9 @@ body {
   border-radius: 50%;
   margin: 0 1.3rem;
 }
+.joinTournament_title .join_titleText p {
+  letter-spacing: 0.01rem;
+}
 .joinTournament_title .join_titleText a {
   font-family: "Heebo", sans-serif;
   font-size: 1.2rem;
@@ -9975,6 +9997,11 @@ body {
   background: #2FAA54;
   display: inline-block;
   padding: 0.2rem 1.3rem;
+}
+@media (max-width: 767px) {
+  .joinTournament_title .join_titleText h2 {
+    font-size: 3.75rem;
+  }
 }
 .joinTournament_title .join_btn a {
   font-family: "Cooperative";
@@ -9992,6 +10019,13 @@ body {
   border: 1px solid #F46B4F;
   box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
   position: relative;
+}
+@media (max-width: 767px) {
+  .joinTournament_title .join_btn a {
+    font-size: 1.5rem;
+    width: 14rem;
+    height: 3.6rem;
+  }
 }
 .joinTournament_title .join_btn a img {
   width: 2rem;
@@ -10047,68 +10081,62 @@ body {
   padding: 1.6rem 0rem 4rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+@media (max-width: 991px) {
+  .join_links {
+    align-items: flex-start;
+  }
+}
+@media (max-width: 767px) {
+  .join_links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
 .join_links ul {
   display: flex;
   align-items: center;
   gap: 1.2rem;
 }
+@media (max-width: 991px) {
+  .join_links ul {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+}
 .join_links ul li a {
   font-size: 1.6rem;
   font-weight: 400;
   color: #FFFFFF;
-  background: #281415;
-  display: inline-block;
-  padding: 0.9rem 4rem;
+  width: 13.8rem;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.2rem 1rem;
   position: relative;
-  transition: 0.2s all ease;
-  clip-path: polygon(10% 0, 100% 0, 100% 50%, 90% 100%, 0 100%, 0% 50%);
-}
-.join_links ul li a .border_tl {
-  width: 1.2rem;
-  height: 0.5rem;
-  border-top: 1px solid #A11B1B;
-  border-left: 1px solid #A11B1B;
-  position: absolute;
-  left: -0.05rem;
-  top: -0.05rem;
-  transition: 0.2s all ease;
-  transform: rotate(15deg);
-}
-.join_links ul li a .border_tr {
-  width: 0.6rem;
-  height: 0.5rem;
-  border-top: 1px solid #A11B1B;
-  border-right: 1px solid #A11B1B;
-  position: absolute;
-  right: -0.05rem;
-  top: -0.05rem;
-  transition: 0.2s all ease;
-}
-.join_links ul li a .border_bl {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-bottom: 1px solid #A11B1B;
-  border-left: 1px solid #A11B1B;
-  position: absolute;
-  left: -0.05rem;
-  bottom: -0.05rem;
-  transition: 0.2s all ease;
-}
-.join_links ul li a .border_br {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-bottom: 1px solid #A11B1B;
-  border-right: 1px solid #A11B1B;
-  position: absolute;
-  right: -0.05rem;
-  bottom: -0.05rem;
+  background-image: url("../img/joint-links-shape.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
   transition: 0.2s all ease;
 }
 .join_links ul li a:hover, .join_links ul li a.active {
-  background: #A11B1B;
+  background-image: url("../img/joint-links-shape-active.svg");
 }
-.join_links ul li a:hover span, .join_links ul li a.active span {
-  border-color: #FFF;
+@media (max-width: 991px) {
+  .join_links ul li a {
+    width: 13rem;
+    height: 3.6rem;
+  }
+}
+@media (max-width: 767px) {
+  .join_links ul li a {
+    width: 11rem;
+    height: 3.8rem;
+    font-size: 1.5rem;
+  }
 }
 .join_links button {
   font-family: "Heebo", sans-serif;
@@ -10179,11 +10207,26 @@ body {
   gap: 2.4rem;
   padding: 4.2rem 0rem;
 }
+@media (max-width: 991px) {
+  .joinTournament_wraper {
+    flex-direction: column;
+  }
+}
 .joinTournament_wraper .joint_details {
   width: 72%;
 }
+@media (max-width: 991px) {
+  .joinTournament_wraper .joint_details {
+    width: 100%;
+  }
+}
 .joinTournament_wraper .joint_groups {
   width: 28%;
+}
+@media (max-width: 991px) {
+  .joinTournament_wraper .joint_groups {
+    width: 100%;
+  }
 }
 
 .joint_title {
@@ -10221,6 +10264,13 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.4rem;
   padding-top: 2rem;
+}
+@media (max-width: 767px) {
+  .jointCard_wraper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    column-gap: 1.5rem;
+  }
 }
 .jointCard_wraper .joint_card {
   background: #080808;
@@ -10298,11 +10348,21 @@ body {
 .jointCard_wraper .joint_card .joint_cardImg img {
   width: 3.2rem;
 }
+@media (max-width: 991px) {
+  .jointCard_wraper .joint_card .joint_cardImg img {
+    width: 2.6rem;
+  }
+}
 .jointCard_wraper .joint_card .joint_cardGame {
   border: 1px solid #480F0F;
 }
 .jointCard_wraper .joint_card .joint_cardGame img {
   width: 4rem;
+}
+@media (max-width: 991px) {
+  .jointCard_wraper .joint_card .joint_cardGame img {
+    width: 3.5rem;
+  }
 }
 
 .jointdetails_wraper {
@@ -10315,6 +10375,13 @@ body {
   align-items: center;
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .jointdetails_wraper .discord_comunityBox {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
 .jointdetails_wraper .discord_comunityBox .discord_comunityText {
   max-width: 54rem;
   width: 100%;
@@ -10326,6 +10393,11 @@ body {
   width: 5.6rem;
   flex-shrink: 0;
 }
+@media (max-width: 991px) {
+  .jointdetails_wraper .discord_comunityBox .discord_comunityText img {
+    width: 5rem;
+  }
+}
 .jointdetails_wraper .discord_comunityBox .discord_comunityText p {
   font-family: "Heebo", sans-serif;
   font-size: 2rem;
@@ -10334,8 +10406,19 @@ body {
   letter-spacing: initial;
   color: #FFFFFF;
 }
+@media (max-width: 991px) {
+  .jointdetails_wraper .discord_comunityBox .discord_comunityText p {
+    font-size: 1.8rem;
+  }
+}
 .jointdetails_wraper .discord_comunityBox .discord_comunityBtn {
   flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .jointdetails_wraper .discord_comunityBox .discord_comunityBtn {
+    text-align: center;
+    margin: 0 auto;
+  }
 }
 .jointdetails_wraper .discord_comunityBox .discord_comunityBtn a {
   font-family: "Cooperative";
@@ -10440,6 +10523,11 @@ body {
   font-weight: 700;
   line-height: 125%;
   color: #F5F5F5;
+}
+@media (max-width: 767px) {
+  .jointdetails_wraper .jointDetails_heading h3 {
+    font-size: 2.5rem;
+  }
 }
 .jointdetails_wraper .maneger_item {
   padding-top: 2.4rem;
@@ -10608,6 +10696,7 @@ body {
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+  z-index: 9;
 }
 
 .joint_groupBox {
@@ -10887,8 +10976,23 @@ body {
   transform: scale(1.25);
 }
 
-.live_stream img {
+.live_stream {
+  height: 20rem;
+  position: relative;
+}
+@media (max-width: 991px) {
+  .live_stream {
+    height: 35rem;
+  }
+}
+@media (max-width: 767px) {
+  .live_stream {
+    height: 25rem;
+  }
+}
+.live_stream iframe {
   width: 100%;
+  height: 100%;
 }
 
 .database_wraper .database_item {
@@ -10959,6 +11063,568 @@ body {
 .settings_wraper .settings_item p .green {
   background: #1FE93C;
   border-color: rgba(31, 233, 60, 0.3);
+}
+
+.jointmodal_body {
+  padding: 5.5rem 4rem;
+}
+@media (max-width: 767px) {
+  .jointmodal_body {
+    padding: 3.6rem 2rem;
+  }
+}
+.jointmodal_body .jointmodal_btn {
+  padding-top: 4rem;
+  border-top: 1px solid #370E10;
+}
+.jointmodal_body .jointmodal_btn a {
+  font-family: "Cooperative";
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  display: inline-block;
+  padding: 0.8rem 4rem;
+  text-align: center;
+  background: #F02731;
+  border: 1px solid #F46B4F;
+  box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
+  position: relative;
+}
+.jointmodal_body .jointmodal_btn a .border_tl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.jointmodal_body .jointmodal_btn a .border_tr {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.jointmodal_body .jointmodal_btn a .border_bl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.jointmodal_body .jointmodal_btn a .border_br {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.jointmodal_body .jointmodal_btn a:hover span {
+  transform: scale(1.25);
+}
+.jointmodal_body .jointmodal_btn .disable {
+  background: #1E0E0E;
+  color: #675D60;
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  cursor: no-drop;
+  pointer-events: none;
+}
+.jointmodal_body .jointmodal_btn .disable span {
+  border-color: #888484;
+}
+
+.jointmodal_title p {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 1.2rem;
+}
+@media (max-width: 767px) {
+  .jointmodal_title p {
+    font-size: 1.8rem;
+  }
+}
+
+.addaccount_wrap {
+  padding-top: 4rem;
+  padding-bottom: 4.2rem;
+}
+.addaccount_wrap .addaccount_item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.addaccount_wrap .addaccount_item .addaccount_icon {
+  flex-shrink: 0;
+}
+.addaccount_wrap .addaccount_item .addaccount_icon a {
+  width: 4.8rem;
+  height: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3E1617;
+  border: 1px solid #614546;
+}
+.addaccount_wrap .addaccount_item .addaccount_icon a img {
+  width: 2.1rem;
+}
+.addaccount_wrap .addaccount_item .addaccount_text h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.4rem;
+}
+.addaccount_wrap .addaccount_item .addaccount_text p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.7);
+}
+.addaccount_wrap .addaccount_btn {
+  padding-top: 2.4rem;
+}
+.addaccount_wrap .addaccount_btn a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  background: #F02731;
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  transition: 0.2s all ease;
+}
+.addaccount_wrap .addaccount_btn a:hover {
+  opacity: 0.85;
+}
+
+.addgame_wraper {
+  padding: 4rem 0rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.addgame_wraper .addgame_item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.addgame_wraper .addgame_item .addgame_img {
+  width: 5.4rem;
+  height: 5rem;
+  border: 1px solid #A31B1C;
+  flex-shrink: 0;
+}
+.addgame_wraper .addgame_item .addgame_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.addgame_wraper .addgame_item .addgame_text p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.addgame_wraper .addgame_item .addgame_text p img {
+  width: 1.4rem;
+}
+.addgame_wraper .dot_btn {
+  position: relative;
+}
+.addgame_wraper .dot_btn img {
+  width: 2.4rem;
+}
+.addgame_wraper .dot_btn .maneger_dropdown {
+  width: 19.3rem;
+  background: #000000;
+  padding: 1.2rem 0rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.7rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(1.5rem);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+  pointer-events: none;
+}
+.addgame_wraper .dot_btn .maneger_dropdown .border_tl {
+  width: 1.2rem;
+  height: 0.6rem;
+  border-top: 1px solid #F02731;
+  border-left: 1px solid #F02731;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.addgame_wraper .dot_btn .maneger_dropdown .border_tr {
+  width: 1.2rem;
+  height: 0.6rem;
+  border-top: 1px solid #F02731;
+  border-right: 1px solid #F02731;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.addgame_wraper .dot_btn .maneger_dropdown .border_bl {
+  width: 1.2rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #F02731;
+  border-left: 1px solid #F02731;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.addgame_wraper .dot_btn .maneger_dropdown .border_br {
+  width: 1.2rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #F02731;
+  border-right: 1px solid #F02731;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.addgame_wraper .dot_btn .maneger_dropdown a {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 2rem;
+  transition: 0.2s all ease;
+}
+.addgame_wraper .dot_btn .maneger_dropdown a img {
+  width: 2rem;
+}
+.addgame_wraper .dot_btn .maneger_dropdown a:hover {
+  color: #FFF;
+}
+.addgame_wraper .dot_btn.active .maneger_dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+  z-index: 9;
+}
+
+.remove_modal {
+  max-width: 54rem;
+}
+.remove_modal .removemodal_body {
+  padding: 4rem 4rem;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .remove_modal .removemodal_body {
+    padding: 3rem 2rem;
+  }
+}
+.remove_modal .removemodal_body .removemodal_title {
+  text-align: center;
+}
+.remove_modal .removemodal_body .removemodal_title h3 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 125%;
+  color: #F5F5F5;
+  margin-bottom: 3.2rem;
+}
+@media (max-width: 767px) {
+  .remove_modal .removemodal_body .removemodal_title h3 {
+    font-size: 2.6rem;
+  }
+}
+.remove_modal .removemodal_body .removemodal_title p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+}
+.remove_modal .removemodal_body .removemodal_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+  padding-top: 4rem;
+}
+.remove_modal .removemodal_body .removemodal_button a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #FFF;
+  background: #292222;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 15.4rem;
+  height: 3.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  transition: 0.2s all ease;
+}
+.remove_modal .removemodal_body .removemodal_button a .border_tl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.remove_modal .removemodal_body .removemodal_button a .border_tr {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.remove_modal .removemodal_body .removemodal_button a .border_bl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.remove_modal .removemodal_body .removemodal_button a .border_br {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.remove_modal .removemodal_body .removemodal_button a.active {
+  background: #F02731;
+  color: #F5F6FF;
+}
+.remove_modal .removemodal_body .removemodal_button a.active span {
+  transform: scale(1.25);
+}
+.remove_modal .removemodal_body .removemodal_button a:hover {
+  background: #F02731;
+  color: #F5F6FF;
+  opacity: 0.85;
+}
+.remove_modal .removemodal_body .removemodal_button a:hover span {
+  transform: scale(1.25);
+}
+
+.successRegister_wrap {
+  padding: 4rem 0rem;
+}
+.successRegister_wrap .registM_wrap {
+  max-width: 38.7rem;
+  width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 1.4rem;
+  margin-bottom: 3rem;
+}
+.successRegister_wrap .registM_wrap .checkmark_icon {
+  flex-shrink: 0;
+}
+.successRegister_wrap .registM_wrap .checkmark_icon img {
+  width: 3.2rem;
+}
+.successRegister_wrap .timeM_btn {
+  text-align: center;
+}
+.successRegister_wrap .timeM_btn button {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8);
+  background: #212121;
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem 2rem;
+  position: relative;
+}
+.successRegister_wrap .timeM_btn button img {
+  width: 2rem;
+}
+.successRegister_wrap .timeM_btn button .border_tl {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.successRegister_wrap .timeM_btn button .border_tr {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.successRegister_wrap .timeM_btn button .border_bl {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.successRegister_wrap .timeM_btn button .border_br {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.successRegister_wrap .timeM_btn button:hover span {
+  transform: scale(1.25);
+}
+
+.joinTournament_title .logout_btn a {
+  background: rgba(240, 39, 49, 0.2);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+}
+
+.info_box {
+  background: #080808;
+  padding: 2rem 2rem;
+  margin-top: 4rem;
+}
+@media (max-width: 767px) {
+  .info_box {
+    margin-top: 2.5rem;
+  }
+}
+.info_box .info_bar {
+  background: #0C63D4;
+  border: 1px solid rgba(246, 153, 41, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+}
+.info_box .info_bar img {
+  width: 2rem;
+}
+.info_box .info_bar p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 160%;
+  color: #FFF;
+}
+.info_box .infoBox_item {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 575px) {
+  .info_box .infoBox_item {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.info_box .infoBox_item .infoBox_game {
+  width: 5.4rem;
+  height: 5rem;
+  border: 1px solid #671112;
+  position: relative;
+}
+.info_box .infoBox_item .infoBox_game .premium_badge {
+  width: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+.info_box .infoBox_item .infoBox_game .game {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.info_box .infoBox_item .infoBox_game span {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  background: #37AE48;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.4rem;
+  bottom: -0.4rem;
+}
+.info_box .infoBox_item .infoBox_button {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1.6rem;
+}
+.info_box .infoBox_item .infoBox_button a {
+  width: 12.4rem;
+  gap: 0.7rem;
+}
+.info_box .infoBox_item .infoBox_button .disabled a {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

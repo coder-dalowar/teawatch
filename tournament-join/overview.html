@@ -260,6 +260,41 @@
                     </a>
                 </div>
             </div> 
+
+            <div class="profile_fixed">
+                <div class="profile_box">
+                    <a href="#">
+                        <div class="profile_img">
+                            <img src="../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="profile_text">
+                            <p>
+                                <img src="../assets/img/star.svg" alt="">
+                                admin
+                            </p>
+                            <h4>
+                                <span>פרימיום</span>
+                                מחובר
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subscription_box">
+                    <img src="../assets/img/primium-badge.svg" alt="">
+                    <p> עם מנוי פרימיום </p>
+                    <h4> כל ניצחון יכול להפוך לכסף </h4>
+                    <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+                    <a href="#">
+                        שדרג עכשיו
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </a>
+                </div>
+            </div> 
+
         </div>
     </div>
     <!-- offcanvas menu end -->
@@ -269,6 +304,41 @@
         <a href="../chat/chat.html">
             <img src="../assets/img/chat.svg" alt="icon">
         </a>
+    </div> 
+
+    <!-- profile fixed -->
+    <div class="profile_fixed d-none d-lg-block">
+        <div class="profile_box">
+            <a href="#">
+                <div class="profile_img">
+                    <img src="../assets/img/profile.png" alt="">
+                </div>
+                <div class="profile_text">
+                    <p>
+                        <img src="../assets/img/star.svg" alt="">
+                        admin
+                    </p>
+                    <h4>
+                        <span>פרימיום</span>
+                        מחובר
+                    </h4>
+                </div>
+            </a>
+        </div>
+
+        <div class="subscription_box">
+            <img src="../assets/img/primium-badge.svg" alt="">
+            <p> עם מנוי פרימיום </p>
+            <h4> כל ניצחון יכול להפוך לכסף </h4>
+            <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+            <a href="#">
+                שדרג עכשיו
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </a>
+        </div>
     </div> 
 
 
@@ -329,14 +399,15 @@
                             <div class="join_titleText">
                                 <h2> twilight ravens | 4 x 4 | call of duty </h2>
                                 <p> יום ד׳, 12 בדצמבר, 16:00 GMT+2  <span></span> כ־5 שעות </p>
+                                
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div>
                                         <a href="#"> פתוח </a>
                                     </div>
-                                    <div class="join_btn"> 
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal1">
-                                            הצטרף לטורניר
-                                            <img src="../assets/img/plus-sign.svg" alt="">
+                                    <div class="join_btn logout_btn"> 
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
+                                            צא מהטורניר
+                                            <img src="../assets/img/logout-solid.svg" alt="">
 
                                             <span class="border_tl"></span>
                                             <span class="border_tr"></span>
@@ -377,6 +448,46 @@
                                 <span class="border_br"></span>
                             </button>
                         </div>
+
+                        <!-- info_box -->
+                        <div class="info_box">
+                            <div class="info_bar">
+                                <img src="../assets/img/info-white.svg" alt="">
+                                <p>ממתין לאישור מוכנות. שלב האישור ייפתח ב-16:15, 27.01.2026.</p>
+                            </div>
+
+                            <div class="infoBox_item">
+                                <div class="infoBox_game">
+                                    <img src="../assets/img/primium-badge.svg" alt="" class="premium_badge">
+                                    <img src="../assets/img/orders-game.png" alt="" class="game">
+                                    <span></span>
+                                </div>
+                                <div class="infoBox_button joinTournament_title">
+                                    <div class="join_btn logout_btn"> 
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
+                                            צא מהטורניר
+                                            <img src="../assets/img/logout-solid.svg" alt="">
+
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </a>
+                                    </div>
+                                    <div class="join_btn disabled"> 
+                                        <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal1">
+                                            לדף המשחק
+                                            <img src="../assets/img/square-arrow-up-left.svg" alt="">
+
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
 
                         <!-- joinTournament_wraper -->
                         <div class="joinTournament_wraper">
@@ -858,7 +969,7 @@
             </div>
         </section> 
         <!-- before join tournament section end -->
-
+         
     </main>
 
 
@@ -928,125 +1039,8 @@
     <!-- Chat Modal end -->
 
 
-    <!-- before join tournament modal1 -->
-    <div class="modal fade" id="joinTModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered ranking_modal">
-            <div class="modal-content">
-                <span class="border_tl"></span>
-                <span class="border_tr"></span>
-                <span class="border_bl"></span>
-                <span class="border_br"></span>
-                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="../assets/img/cross.svg" alt="">
-                </span>
-
-                <div class="jointmodal_body">
-                    <div class="jointmodal_title">
-                        <h3 class="title_xl">השלם פעולות</h3>
-                        <p>יש לך פעולות להשלים לפני שתוכל להמשיך.</p>
-                    </div>
-
-                    <div class="addaccount_wrap">
-                        <div class="addaccount_item">
-                            <div class="addaccount_icon">
-                                <a href="#">
-                                    <img src="../assets/img/plus-sign.svg" alt="">
-                                </a>
-                            </div>
-                            <div class="addaccount_text">
-                                <h4>הוסף חשבון משחק</h4>
-                                <p>אין חשבון Valorant</p>
-                            </div>
-                        </div>
-
-                        <div class="addaccount_btn">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal2">הוסף חשבון משחק</a>
-                        </div>
-                    </div>
-
-                    <div class="jointmodal_btn text-end">
-                        <a href="#" class="disable">
-                            הצטרף לטורניר
-
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- before join tournament modal2 -->
-    <div class="modal fade" id="joinTModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered ranking_modal">
-            <div class="modal-content">
-                <span class="border_tl"></span>
-                <span class="border_tr"></span>
-                <span class="border_bl"></span>
-                <span class="border_br"></span>
-                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="../assets/img/cross.svg" alt="">
-                </span>
-
-                <div class="jointmodal_body">
-                    <div class="jointmodal_title">
-                        <h3 class="title_xl"> המשתמש נוסף בהצלחה </h3>
-                        <p>עכשיו אפשר להצטרף לטורניר.</p>
-                    </div>
-
-                    <div class="addgame_wraper">
-                        <div class="addgame_item">
-                            <div class="addgame_img">
-                                <img src="../assets/img/game-modal.png" alt="">
-                            </div>
-                            <div class="addgame_text">
-                                <p> Twitch.tv/exod1asun <img src="../assets/img/primium-badge.svg" alt=""></p>
-                            </div>
-                        </div>
-
-                        <div class="dot_btn">
-                            <a href="#">
-                                <img src="../assets/img/dot.svg" alt="">
-                            </a>
-
-                            <div class="maneger_dropdown">
-                                <span class="border_tl"></span>
-                                <span class="border_tr"></span>
-                                <span class="border_bl"></span>
-                                <span class="border_br"></span>
-
-                                <ul>
-                                    <li>
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal3">
-                                            <img src="../assets/img/cross-red.svg" alt="">
-                                            הסרה
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="jointmodal_btn text-end">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal4">
-                            הצטרף לטורניר
-
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- before join tournament modal3 -->
-    <div class="modal fade" id="joinTModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- exit tournament modal -->
+    <div class="modal fade" id="exitTModal" tabindex="-1" aria-labelledby="exitTModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ranking_modal remove_modal">
             <div class="modal-content">
                 <span class="border_tl"></span>
@@ -1059,13 +1053,13 @@
 
                 <div class="removemodal_body">
                     <div class="removemodal_title">
-                        <h3>הסרת משתמש</h3>
-                        <p>האם ברצונך להסיר את המשתמש?</p>
+                        <h3> יציאה מהטורניר </h3>
+                       <p>האם ברצונך לצאת מהטורניר?</p>
                     </div>
 
                     <div class="removemodal_button">
                         <a href="#" class="active">
-                            הסר
+                             יציאה
                             <span class="border_tl"></span>
                             <span class="border_tr"></span>
                             <span class="border_bl"></span>
@@ -1073,62 +1067,6 @@
                         </a>
                         <a href="#" data-bs-dismiss="modal" aria-label="Close">
                             ביטול
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- before join tournament modal4 -->
-    <div class="modal fade" id="joinTModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered ranking_modal">
-            <div class="modal-content">
-                <span class="border_tl"></span>
-                <span class="border_tr"></span>
-                <span class="border_bl"></span>
-                <span class="border_br"></span>
-                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="../assets/img/cross.svg" alt="">
-                </span>
-
-                <div class="jointmodal_body">
-                    <div class="jointmodal_title text-center">
-                        <h3 class="title_xl">נירשמת לטורניר בהצלחה!</h3>
-                    </div>
-
-                    <div class="addaccount_wrap successRegister_wrap">
-                        <div class="addaccount_item registM_wrap">
-                            <div class="checkmark_icon">
-                                <img src="../assets/img/checkmark-circle.svg" alt="">
-                            </div>
-                            <div class="addaccount_text">
-                                <h4>לא לשכוח ללחוץ על כפתור "אני מוכן"</h4>
-                                <p>עליך לאשר הגעה כדי לשחק בטורניר. האפשרות לאישור הגעה תיפתח בעוד:</p>
-                            </div>
-                        </div>
-
-                        <div class="timeM_btn">
-                            <button type="button">
-                                <img src="../assets/img/clock-red.svg" alt="">
-                                23:44:32
-
-                                <span class="border_tl"></span>
-                                <span class="border_tr"></span>
-                                <span class="border_bl"></span>
-                                <span class="border_br"></span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="jointmodal_btn text-center">
-                        <a href="#">
-                            הבנתי
-
                             <span class="border_tl"></span>
                             <span class="border_tr"></span>
                             <span class="border_bl"></span>
