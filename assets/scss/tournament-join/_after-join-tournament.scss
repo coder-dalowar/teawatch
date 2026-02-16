@@ -17,6 +17,51 @@
     background: #080808;
     padding: 2rem 2rem;
     margin-top: 4rem;
+    position: relative;
+
+    .border_tl {
+        width: 1rem;
+        height: 0.8rem;
+        border-top: 1px solid #651418;
+        border-left: 1px solid #651418;
+        position: absolute;
+        left: -0.05rem;
+        top: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 1rem;
+        height: 0.8rem;
+        border-top: 1px solid #651418;
+        border-right: 1px solid #651418;
+        position: absolute;
+        right: -0.05rem;
+        top: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+        width: 1rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #651418;
+        border-left: 1px solid #651418;
+        position: absolute;
+        left: -0.05rem;
+        bottom: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+        width: 1rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #651418;
+        border-right: 1px solid #651418;
+        position: absolute;
+        right: -0.05rem;
+        bottom: -0.05rem;
+        transition: 0.2s all ease;
+    }
 
     @media #{$sm} {
         margin-top: 2.5rem;

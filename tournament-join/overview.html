@@ -401,8 +401,8 @@
                                 <p> יום ד׳, 12 בדצמבר, 16:00 GMT+2  <span></span> כ־5 שעות </p>
                                 
                                 <div class="d-flex align-items-center justify-content-between">
-                                    <div>
-                                        <a href="#"> פתוח </a>
+                                    <div class="status">
+                                        <span class="ended">הסתיים</span>
                                     </div>
                                     <div class="join_btn logout_btn"> 
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
@@ -451,32 +451,26 @@
 
                         <!-- info_box -->
                         <div class="info_box">
-                            <div class="info_bar">
-                                <img src="../assets/img/info-white.svg" alt="">
-                                <p>ממתין לאישור מוכנות. שלב האישור ייפתח ב-16:15, 27.01.2026.</p>
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <div class="info_bar info_barGreen">
+                                <img src="../assets/img/checkmark-circle.svg" alt="">
+                                <p>סיימת במקום ה-5!</p>
                             </div>
 
-                            <div class="infoBox_item">
+                            <div class="infoBox_item flex-row">
                                 <div class="infoBox_game">
                                     <img src="../assets/img/primium-badge.svg" alt="" class="premium_badge">
                                     <img src="../assets/img/orders-game.png" alt="" class="game">
                                     <span></span>
                                 </div>
                                 <div class="infoBox_button joinTournament_title">
-                                    <div class="join_btn logout_btn"> 
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
-                                            צא מהטורניר
-                                            <img src="../assets/img/logout-solid.svg" alt="">
-
-                                            <span class="border_tl"></span>
-                                            <span class="border_tr"></span>
-                                            <span class="border_bl"></span>
-                                            <span class="border_br"></span>
-                                        </a>
-                                    </div>
-                                    <div class="join_btn disabled"> 
-                                        <a href="#" data-bs-toggle="modal" data-bs-target="#joinTModal1">
-                                            לדף המשחק
+                                    <div class="join_btn"> 
+                                        <a href="#">
+                                            לעץ הטורניר
                                             <img src="../assets/img/square-arrow-up-left.svg" alt="">
 
                                             <span class="border_tl"></span>
@@ -484,6 +478,137 @@
                                             <span class="border_bl"></span>
                                             <span class="border_br"></span>
                                         </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <!-- tournament overview wraper -->
+                        <div class="tournament_overview_wraper">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="overview_box">
+                                        <div class="right_shape">
+                                            <img src="../assets/img/tournament_shape-right.png" alt="">
+                                            <img src="../assets/img/tournament_shape-right.png" alt="">
+                                        </div>
+
+                                        <div class="left_shape">
+                                            <img src="../assets/img/tournament_shape-left.png" alt="">
+                                            <img src="../assets/img/tournament_shape-left.png" alt="">
+                                        </div>
+
+                                        <div class="status">
+                                            <span>הפסד טכני</span>
+                                        </div>
+
+                                        <div class="overview_title">
+                                            <span>הסתיים</span>
+                                            <h3>
+                                                <img src="../assets/img/tournament_right-line.png" alt="">
+                                                מס' משחק 1
+                                                <img src="../assets/img/tournament_left-line.png" alt="">
+                                            </h3>
+                                            <p>
+                                                שלב 1 • רבע הגמר
+                                                <span></span>
+                                                לפני 8 ימים
+                                            </p>
+                                        </div>
+
+                                        <div class="overview_gameBox">
+                                            <div class="overview_gameItem">
+                                                <div class="overview_gameImg">
+                                                    <img src="../assets/img/tournament-2.png" alt="">
+                                                </div>
+                                                <div class="overview_gameText">
+                                                    <p>הפסד</p>
+                                                    <h4>רייג'קלאן</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="overview_gamePoint">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="overview_gameBox mb-0">
+                                            <div class="overview_gameItem">
+                                                <div class="overview_gameImg">
+                                                    <img src="../assets/img/tournament-1.png" alt="">
+                                                </div>
+                                                <div class="overview_gameText">
+                                                    <p class="green">ניצחון</p>
+                                                    <h4>רייג'קלאן</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="overview_gamePoint">
+                                                <h4>1</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="overview_box greenBox">
+                                        <div class="right_shape">
+                                            <img src="../assets/img/tournament_shape-right.png" alt="">
+                                            <img src="../assets/img/tournament_shape-right.png" alt="">
+                                        </div>
+
+                                        <div class="left_shape">
+                                            <img src="../assets/img/tournament_shape-left.png" alt="">
+                                            <img src="../assets/img/tournament_shape-left.png" alt="">
+                                        </div>
+                                        
+                                        <div class="status">
+                                            <span>המשחק הבא:</span>
+                                        </div>
+
+                                        <div class="overview_title">
+                                            <span>בהמתנה</span>
+                                            <h3>
+                                                <img src="../assets/img/tournament_right-line.png" alt="">
+                                                מס' משחק 2
+                                                <img src="../assets/img/tournament_left-line.png" alt="">
+                                            </h3>
+                                            <p>
+                                                שלב 1 • רבע הגמר
+                                                <span></span>
+                                                לפני 8 ימים
+                                            </p>
+                                        </div>
+
+                                        <div class="overview_gameBox">
+                                            <div class="overview_gameItem">
+                                                <div class="overview_gameImg">
+                                                    <img src="../assets/img/tournament-2.png" alt="">
+                                                </div>
+                                                <div class="overview_gameText">
+                                                    <h4>רייג'קלאן</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="overview_gamePoint">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="overview_gameBox mb-0">
+                                            <div class="overview_gameItem">
+                                                <div class="overview_gameImg">
+                                                    <img src="../assets/img/tournament-1.png" alt="">
+                                                </div>
+                                                <div class="overview_gameText">
+                                                    <h4>רייג'קלאן</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="overview_gamePoint">
+                                                <h4>0</h4>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

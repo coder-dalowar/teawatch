@@ -9998,6 +9998,18 @@ body {
   display: inline-block;
   padding: 0.2rem 1.3rem;
 }
+.joinTournament_title .join_titleText .status span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFF;
+  background: #2FAA54;
+  display: inline-block;
+  padding: 0.2rem 1.3rem;
+}
+.joinTournament_title .join_titleText .status span.ended {
+  background: #A11B1B;
+}
 @media (max-width: 767px) {
   .joinTournament_title .join_titleText h2 {
     font-size: 3.75rem;
@@ -11547,6 +11559,47 @@ body {
   background: #080808;
   padding: 2rem 2rem;
   margin-top: 4rem;
+  position: relative;
+}
+.info_box .border_tl {
+  width: 1rem;
+  height: 0.8rem;
+  border-top: 1px solid #651418;
+  border-left: 1px solid #651418;
+  position: absolute;
+  left: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.info_box .border_tr {
+  width: 1rem;
+  height: 0.8rem;
+  border-top: 1px solid #651418;
+  border-right: 1px solid #651418;
+  position: absolute;
+  right: -0.05rem;
+  top: -0.05rem;
+  transition: 0.2s all ease;
+}
+.info_box .border_bl {
+  width: 1rem;
+  height: 0.8rem;
+  border-bottom: 1px solid #651418;
+  border-left: 1px solid #651418;
+  position: absolute;
+  left: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
+}
+.info_box .border_br {
+  width: 1rem;
+  height: 0.8rem;
+  border-bottom: 1px solid #651418;
+  border-right: 1px solid #651418;
+  position: absolute;
+  right: -0.05rem;
+  bottom: -0.05rem;
+  transition: 0.2s all ease;
 }
 @media (max-width: 767px) {
   .info_box {
@@ -11625,6 +11678,164 @@ body {
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+.info_box .info_barGreen {
+  background: #37AE48;
+  border-color: rgba(55, 174, 72, 0.2);
+}
+
+.tournament_overview_wraper {
+  padding: 5.6rem 0rem 1.6rem;
+}
+@media (max-width: 767px) {
+  .tournament_overview_wraper {
+    padding: 4rem 0rem 0rem;
+  }
+}
+.tournament_overview_wraper .row {
+  --bs-gutter-x: 2rem;
+  --bs-gutter-y: 2.4;
+}
+.tournament_overview_wraper .overview_box {
+  background: #121212;
+  border: 1px solid rgba(240, 39, 49, 0.1);
+  padding: 2.4rem 2.4rem;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .tournament_overview_wraper .overview_box {
+    padding: 2rem 1.8rem;
+  }
+}
+.tournament_overview_wraper .overview_box .right_shape img {
+  width: 5.6rem;
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+}
+.tournament_overview_wraper .overview_box .right_shape img:last-child {
+  top: 48%;
+}
+.tournament_overview_wraper .overview_box .left_shape img {
+  width: 5.6rem;
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+.tournament_overview_wraper .overview_box .left_shape img:last-child {
+  top: 48%;
+}
+.tournament_overview_wraper .overview_box .status span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: initial;
+  color: #F02731;
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  padding: 0rem 0.5rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 9;
+}
+.tournament_overview_wraper .overview_box .overview_title {
+  text-align: center;
+}
+.tournament_overview_wraper .overview_box .overview_title span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: initial;
+  color: #FFF;
+  background: #A11B1B;
+  display: inline-block;
+  padding: 0rem 0.5rem;
+}
+.tournament_overview_wraper .overview_box .overview_title h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 3.2rem;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 1.8rem 0rem;
+}
+.tournament_overview_wraper .overview_box .overview_title h3 img {
+  width: 4rem;
+}
+.tournament_overview_wraper .overview_box .overview_title p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.8rem;
+}
+.tournament_overview_wraper .overview_box .overview_title p span {
+  width: 1px;
+  height: 1.2rem;
+  background: #F02731;
+  display: block;
+  padding: 0;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox {
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin-bottom: 0.2rem;
+  position: relative;
+  z-index: 9;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gameItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gameItem .overview_gameImg img {
+  width: 3.3rem;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gameItem .overview_gameText p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 100%;
+  color: #F02731;
+  margin-bottom: 0.4rem;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gameItem .overview_gameText p.green {
+  color: #37AE48;
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gameItem .overview_gameText h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.tournament_overview_wraper .overview_box .overview_gameBox .overview_gamePoint h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.tournament_overview_wraper .overview_box.greenBox {
+  border-color: rgba(55, 174, 72, 0.1);
+}
+.tournament_overview_wraper .overview_box.greenBox .status span {
+  color: #37AE48;
+}
+.tournament_overview_wraper .overview_box.greenBox .overview_title span {
+  background: #2FAA54;
+}
+.tournament_overview_wraper .overview_box.greenBox .overview_title p span {
+  background: #F02731;
 }
 
 /*# sourceMappingURL=style.css.map */
