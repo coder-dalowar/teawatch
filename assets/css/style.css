@@ -10913,26 +10913,229 @@ body {
 }
 
 .conversation_box {
-  background-image: url("../img/conversation _bg.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 30rem;
+  padding: 1.6rem 1.2rem 1.6rem 1.6rem;
+  position: relative;
+}
+.conversation_box .chat_box .chat_heading {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #360E10;
+}
+.conversation_box .chat_box .chat_heading .chat_heading_img {
+  width: 5.2rem;
+  height: 4.8rem;
+  border: 1px solid #9B1A1B;
+}
+.conversation_box .chat_box .chat_heading .chat_heading_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conversation_box .chat_box .chat_heading .chat_heading_text h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.8);
+}
+.conversation_box .chat_box .chat_heading .expand_btn {
+  margin-right: auto;
+}
+.conversation_box .chat_box .chat_heading .expand_btn img {
+  width: 1.4rem;
+}
+.conversation_box .chat_box .chat_panelWraper {
+  padding: 1.6rem 0rem;
+  direction: ltr;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel {
+  height: 19rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #300808 #170909;
+  padding-right: 1.2rem;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 2rem;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel::-webkit-scrollbar-track {
+  background: #170909;
+  border-radius: 2rem;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel::-webkit-scrollbar-thumb {
+  background: #300808;
+  border-radius: 2rem;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_text {
+  background: #210A0A;
+  padding: 0.4rem 1rem;
+  border-radius: 1.6rem 1.6rem 0rem 1.6rem;
+  display: inline-block;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_text p {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 160%;
+  text-transform: uppercase;
+  letter-spacing: initial;
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  justify-content: flex-end;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_item .chat_text {
+  border-radius: 1.6rem 1.6rem 1.6rem 0rem;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_item img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border: 1px solid #9B1A1A;
+  border-radius: 50%;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_item2 {
+  margin-right: auto;
+  justify-content: flex-start;
+}
+.conversation_box .chat_box .chat_panelWraper .chat_panel .chat_item2 .chat_text {
+  background: #171717;
+}
+.conversation_box .chat_box .chatField_wrap {
+  background: #080808;
+  margin-top: auto;
+  z-index: 9;
+  position: relative;
+}
+.conversation_box .chat_box .chatField_wrap::before {
+  content: "";
+  width: 100%;
+  height: 3.5rem;
+  display: block;
+  background: linear-gradient(to bottom, transparent, #000);
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  flex-shrink: 0;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item button img {
+  width: 2rem;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input {
+  width: 100%;
+  position: relative;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input .border_tl {
+  width: 0.5rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input .border_tr {
+  width: 0.5rem;
+  height: 0.6rem;
+  border-top: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input .border_bl {
+  width: 0.5rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-left: 1px solid #A11B1B;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input .border_br {
+  width: 0.5rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #A11B1B;
+  border-right: 1px solid #A11B1B;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input:focus {
+  border-color: #3F1717;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input input {
+  width: 100%;
+  height: 3.7rem;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.5rem 1.2rem;
+  text-align: right;
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  outline: none;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+.conversation_box .chat_box .chatField_wrap .chatField_item .chat_input input:focus {
+  border-color: #400E10;
+}
+.conversation_box .conversation_overlay {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(0.7rem);
+  -webkit-backdrop-filter: blur(0.7rem);
+  position: absolute;
+  inset: 0;
+  z-index: 10;
 }
-.conversation_box img {
+.conversation_box .conversation_overlay img {
   width: 3.2rem;
 }
-.conversation_box p {
+.conversation_box .conversation_overlay p {
   font-size: 1.4rem;
   font-weight: 400;
   color: #FFF;
   margin: 0.8rem 0rem 1.2rem;
 }
-.conversation_box a {
+.conversation_box .conversation_overlay a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 120%;
@@ -10948,7 +11151,7 @@ body {
   box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
   position: relative;
 }
-.conversation_box a .border_tl {
+.conversation_box .conversation_overlay a .border_tl {
   width: 0.6rem;
   height: 0.5rem;
   border-top: 1px solid #FFFFFF;
@@ -10958,7 +11161,7 @@ body {
   top: -0.1rem;
   transition: 0.2s all ease;
 }
-.conversation_box a .border_tr {
+.conversation_box .conversation_overlay a .border_tr {
   width: 0.6rem;
   height: 0.5rem;
   border-top: 1px solid #FFFFFF;
@@ -10968,7 +11171,7 @@ body {
   top: -0.1rem;
   transition: 0.2s all ease;
 }
-.conversation_box a .border_bl {
+.conversation_box .conversation_overlay a .border_bl {
   width: 0.6rem;
   height: 0.5rem;
   border-bottom: 1px solid #FFFFFF;
@@ -10978,7 +11181,7 @@ body {
   bottom: -0.1rem;
   transition: 0.2s all ease;
 }
-.conversation_box a .border_br {
+.conversation_box .conversation_overlay a .border_br {
   width: 0.6rem;
   height: 0.5rem;
   border-bottom: 1px solid #FFFFFF;
@@ -10988,7 +11191,7 @@ body {
   bottom: -0.1rem;
   transition: 0.2s all ease;
 }
-.conversation_box a:hover span {
+.conversation_box .conversation_overlay a:hover span {
   transform: scale(1.25);
 }
 

@@ -1107,93 +1107,335 @@
 // conversation_box----------------
 
 .conversation_box {
-    background-image: url('../img/conversation _bg.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 30rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    padding: 1.6rem 1.2rem 1.6rem 1.6rem;
+    position: relative;
 
-    img {
-        width: 3.2rem;
+    .chat_box {
+        .chat_heading {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding-bottom: 1.6rem;
+            border-bottom: 1px solid #360E10;
+
+            .chat_heading_img {
+                width: 5.2rem;
+                height: 4.8rem;
+                border: 1px solid #9B1A1B;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .chat_heading_text {
+                h4 {
+                    font-family: $heeboFont;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 160%;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+            }
+
+            .expand_btn {
+                margin-right: auto;
+
+                img {
+                    width: 1.4rem;
+                }
+            }
+        }
+
+        .chat_panelWraper {
+            padding: 1.6rem 0rem;
+            direction: ltr;
+
+            .chat_panel {
+                height: 19rem;
+                overflow: auto;
+                scrollbar-width: thin;
+                scrollbar-color: #300808 #170909;
+                padding-right: 1.2rem;
+
+                &::-webkit-scrollbar {
+                    width: 0.4rem;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #170909;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #300808;
+                    border-radius: 2rem;
+                }
+
+                .chat_text {
+                    background: #210A0A;
+                    padding: 0.4rem 1rem;
+                    border-radius: 1.6rem 1.6rem 0rem 1.6rem;
+                    display: inline-block;
+
+                    p {
+                        font-family: $heeboFont;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        line-height: 160%;
+                        text-transform: uppercase;
+                        letter-spacing: initial;
+                        color: rgba(255, 255, 255, 0.8);
+                        display: inline-block;
+                    }
+                }
+
+                .chat_item {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    margin-bottom: 1rem;
+                    margin-left: auto;
+                    justify-content: flex-end;
+
+                    .chat_text {
+                        border-radius: 1.6rem 1.6rem 1.6rem 0rem;
+                    }
+
+                    img {
+                        width: 3rem;
+                        height: 3rem;
+                        object-fit: cover;
+                        border: 1px solid #9B1A1A;
+                        border-radius: 50%;
+                    }                               
+                }
+
+                .chat_item2 {
+                    margin-right: auto;
+                    justify-content: flex-start;
+
+                    .chat_text {
+                        background: #171717;
+                    }
+                }
+            }
+        }
+
+        .chatField_wrap {
+            background: #080808;
+            margin-top: auto;
+            z-index: 9;
+            position: relative;
+
+            &::before {
+                content: "";
+                width: 100%;
+                height: 3.5rem;
+                display: block;
+                background: linear-gradient(to bottom, transparent, #000);
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                
+            }
+
+            .chatField_item {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.8rem;
+
+                button {
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    padding: 0;
+                    flex-shrink: 0;
+
+                    img {
+                        width: 2rem;
+                    }
+                }
+
+                .chat_input {
+                    width: 100%;
+                    position: relative;
+
+                    .border_tl {
+                        width: 0.5rem;
+                        height: 0.6rem;
+                        border-top: 1px solid #A11B1B;
+                        border-left: 1px solid #A11B1B;
+                        position: absolute;
+                        left: -0.1rem;
+                        top: -0.1rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_tr {
+                        width: 0.5rem;
+                        height: 0.6rem;
+                        border-top: 1px solid #A11B1B;
+                        border-right: 1px solid #A11B1B;
+                        position: absolute;
+                        right: -0.1rem;
+                        top: -0.1rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_bl {
+                        width: 0.5rem;
+                        height: 0.6rem;
+                        border-bottom: 1px solid #A11B1B;
+                        border-left: 1px solid #A11B1B;
+                        position: absolute;
+                        left: -0.1rem;
+                        bottom: -0.1rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_br {
+                        width: 0.5rem;
+                        height: 0.6rem;
+                        border-bottom: 1px solid #A11B1B;
+                        border-right: 1px solid #A11B1B;
+                        position: absolute;
+                        right: -0.1rem;
+                        bottom: -0.1rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    &:focus {
+                        border-color: #3F1717;
+                    }
+
+                    input {
+                        width: 100%;
+                        height: 3.7rem;
+                        display: block;
+                        background: rgba(255, 255, 255, 0.10);
+                        border: 1px solid rgba(255, 255, 255, 0.16);
+                        padding: 0.5rem 1.2rem;
+                        text-align: right;
+                        font-family: $heeboFont;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        color: rgba(255, 255, 255, 0.8);
+                        outline: none;
+
+                        &::placeholder {
+                            color: rgba(255, 255, 255, 0.8);
+                            opacity: 1;
+                        }
+
+                        &:focus {
+                            border-color: #400E10;
+                        }
+                    }
+                }
+            }
+        } 
     }
 
-    p {
-        font-size: 1.4rem;
-        font-weight: 400;
-        color: #FFF;
-        margin: 0.8rem 0rem 1.2rem;
-    }
-
-    a {
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 120%;
-        color: #F5F6FF;
-        width: 15.4rem;
-        height: 3.7rem;
+    .conversation_overlay {
+        width: 100%;
+        height: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        background: #F02731;
-        border: 1px solid #F46B4F;
-        box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
-        position: relative;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(0.7rem);
+        -webkit-backdrop-filter: blur(0.7rem);
+        position: absolute;
+        inset: 0;
+        z-index: 10;
 
-        .border_tl {
-            width: 0.6rem;
-            height: 0.5rem;
-            border-top: 1px solid #FFFFFF;
-            border-left: 1px solid #FFFFFF;
-            position: absolute;
-            left: -0.1rem;
-            top: -0.1rem;
-            transition: 0.2s all ease;
+        img {
+            width: 3.2rem;
         }
 
-        .border_tr {
-            width: 0.6rem;
-            height: 0.5rem;
-            border-top: 1px solid #FFFFFF;
-            border-right: 1px solid #FFFFFF;
-            position: absolute;
-            right: -0.1rem;
-            top: -0.1rem;
-            transition: 0.2s all ease;
+        p {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #FFF;
+            margin: 0.8rem 0rem 1.2rem;
         }
 
-        .border_bl {
-            width: 0.6rem;
-            height: 0.5rem;
-            border-bottom: 1px solid #FFFFFF;
-            border-left: 1px solid #FFFFFF;
-            position: absolute;
-            left: -0.1rem;
-            bottom: -0.1rem;
-            transition: 0.2s all ease;
-        }
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 120%;
+            color: #F5F6FF;
+            width: 15.4rem;
+            height: 3.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #F02731;
+            border: 1px solid #F46B4F;
+            box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
+            position: relative;
 
-        .border_br {
-            width: 0.6rem;
-            height: 0.5rem;
-            border-bottom: 1px solid #FFFFFF;
-            border-right: 1px solid #FFFFFF;
-            position: absolute;
-            right: -0.1rem;
-            bottom: -0.1rem;
-            transition: 0.2s all ease;
-        }
+            .border_tl {
+                width: 0.6rem;
+                height: 0.5rem;
+                border-top: 1px solid #FFFFFF;
+                border-left: 1px solid #FFFFFF;
+                position: absolute;
+                left: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
 
-        &:hover {
-            span {
-                transform: scale(1.25);
+            .border_tr {
+                width: 0.6rem;
+                height: 0.5rem;
+                border-top: 1px solid #FFFFFF;
+                border-right: 1px solid #FFFFFF;
+                position: absolute;
+                right: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 0.6rem;
+                height: 0.5rem;
+                border-bottom: 1px solid #FFFFFF;
+                border-left: 1px solid #FFFFFF;
+                position: absolute;
+                left: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 0.6rem;
+                height: 0.5rem;
+                border-bottom: 1px solid #FFFFFF;
+                border-right: 1px solid #FFFFFF;
+                position: absolute;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            &:hover {
+                span {
+                    transform: scale(1.25);
+                }
             }
         }
     }
+
 }
 
 
