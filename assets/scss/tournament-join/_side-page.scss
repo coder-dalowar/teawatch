@@ -1,0 +1,92 @@
+// side page ----------------
+
+.selected_map {
+    padding-top: 3rem;
+    text-align: center;
+
+    h4 {
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+
+    .selected_mapImg {
+        max-width: 26.8rem;
+        width: 100%0;
+        border: 1px solid #661616;
+        padding: 0.2rem 0.2rem;
+        margin: 1.2rem auto 1.6rem;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            transition: 0.25s all ease;
+        }
+
+        &:hover {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+.attack_card {
+    span {
+        border-color: #A11B1B!important;
+    }
+
+    .team_overlay {
+        background: transparent!important;
+
+        span {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.6rem;
+            color: #FFF;
+            background: #A11B1B;
+            display: inline-block;
+            padding: 0rem 1.5rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%)!important;
+            top: 0;
+        }
+
+        &.selected {
+            background: rgba(55, 174, 72, 0.6)!important;
+        }
+    }
+}
+
+.defend_card {
+    span {
+        border-color: #A11B1B!important;
+    }
+
+    .team_overlay {
+        background: transparent!important;
+
+        span {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 130%;
+            letter-spacing: 0.6rem;
+            color: #FFF;
+            background: #281415;
+            display: inline-block;
+            padding: 0rem 2.2rem;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%)!important;
+            top: 0;
+        }
+
+        &.selected {
+            background: rgba(55, 174, 72, 0.6)!important;
+        }
+    }
+}

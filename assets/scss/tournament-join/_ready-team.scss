@@ -1,0 +1,723 @@
+// ready team page -----------------
+
+.readyTeam_header {
+    background-image: url('../img/header-shape-2.png');
+
+    &::after {
+        height: 30.2rem;
+    }
+}
+
+.readyTeam_sidebar {
+    .side_item {
+        &::after {
+            background-image: url('../img/sidebar-shape-2.png')!important;
+            transform: rotate(1deg);
+            top: -0.2rem!important;
+        }
+    }
+}
+
+.readyTeam_hero {
+    padding-top: 2.5rem;
+    padding-bottom: 6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    position: relative;
+
+    @media #{$sm} {
+        padding-top: 1rem;
+        padding-bottom: 4rem;
+    }
+
+    .back_btn {
+        position: absolute;
+        right: 0;
+
+        a {
+            font-family: $heeboFont;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 150%;
+            letter-spacing: initial;
+            color: #F9F9FF;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+
+            img {
+                width: 2.4rem;
+            }
+
+            span {
+                text-decoration: underline;
+            }
+        }
+
+        @media #{$sm} {
+            position: static;
+            margin-bottom: 1rem;
+
+            a {
+                font-size: 1.8rem;
+
+                img {
+                    width: 2.1rem;
+                }
+            }
+        }
+    }
+
+    .live_btn {
+        text-align: center;
+        padding-top: 0.8rem;
+
+        a {
+            font-family: $heeboFont;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 160%;
+            color: #A11B1B;
+            background: #FFFFFF;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0rem 1.4rem;
+
+            img {
+                width: 2rem;
+            }
+
+            @media #{$sm} {
+                font-size: 1.75rem;
+
+                img {
+                    width: 1.85rem;
+                }
+            }
+        }
+    }
+
+    .readyTeam_heroTitle {
+        max-width: 67rem;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 2.2rem 0rem 1.6rem;
+
+        h2 {
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            font-family: $heeboFont;
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 150%;
+            letter-spacing: initial;
+            color: rgba(255, 255, 255, 0.80);
+            margin-bottom: 0.4rem;
+
+            span {
+                color: #F02731;
+            }
+
+            @media #{$sm} {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .readyTeam_heroGame {
+        max-width: 57rem;
+        width: 100%;
+        background: #150B0B;
+        margin: 0 auto;
+        padding: 2rem 1.6rem;
+        position: relative;
+        box-shadow: -4.5rem -1.4rem 5.44rem rgba(255, 26, 26, 0.12) inset;
+
+        @media #{$sm} {
+            padding: 2rem 1rem;
+        }
+
+        .border_tl {
+			width: 1.2rem;
+			height: 0.6rem;
+			border-top: 1px solid #F02731;
+			border-left: 1px solid #F02731;
+			position: absolute;
+			left: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_tr {
+			width: 1.2rem;
+			height: 0.6rem;
+			border-top: 1px solid #F02731;
+			border-right: 1px solid #F02731;
+			position: absolute;
+			right: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_bl {
+			width: 1.2rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #F02731;
+			border-left: 1px solid #F02731;
+			position: absolute;
+			left: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_br {
+			width: 1.2rem;
+			height: 0.6rem;
+			border-bottom: 1px solid #F02731;
+			border-right: 1px solid #F02731;
+			position: absolute;
+			right: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+        .readyTeam_heroGame_wraper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .readyTeam_heroGame_item {
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+
+                @media #{$sm} {
+                    gap: 0.5rem;
+                }
+
+                img {
+                    width: 5.9rem;
+
+                    @media #{$sm} {
+                        width: 4.2rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    line-height: 100%;
+                    color: rgba(255, 255, 255, 0.80);
+
+                    @media #{$sm} {
+                        font-size: 1.6rem;
+                    }
+                }   
+            }
+
+            .readyTeam_heroGame_text {
+                h3 {
+                    font-size: 4rem;
+                    font-weight: 700;
+                    line-height: 100%;
+                    background:linear-gradient(
+                        to bottom,
+                        #F21F1F 0%,
+                        #360B0B 50%,
+                        #F21F1F 100%
+                    );
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
+
+                    @media #{$sm} {
+                        font-size: 3.2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// readyTeam_timer ---------------
+
+.readyTeam_timer {
+    padding: 6rem 0rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+    text-align: center;
+
+    @media #{$sm} {
+        padding: 4rem 0rem;
+    }
+
+    h4 {
+        font-family: $heeboFont;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 150%;
+        color: rgba(255, 255, 255, 0.80);
+
+        @media #{$sm} {
+            font-size: 1.8rem;
+        }
+    }
+
+    .timer_wraper {
+        width: 12rem;
+        height: 12rem;
+        margin: 3.2rem auto 4.2rem;
+        position: relative;
+
+        .timer {
+           width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            background: radial-gradient(circle at center, #000 60%, #000 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            .progress-ring {
+                transform: rotate(0deg); 
+                transform-origin: 50% 50%;
+                stroke-linecap: round;
+                transition: stroke-dashoffset 1s linear;
+            }
+
+            .time {
+                font-size: 3.2rem;
+                font-weight: 400;
+                line-height: 140%;
+                color: #FFFFFF;
+                position: absolute;
+            }
+        }
+    }
+
+    p {
+        font-family: $heeboFont;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 160%;
+        color: rgba(255, 255, 255, 0.80);
+    }
+}
+
+
+//  readyTeam_button -----------
+
+.readyTeam_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    padding: 4rem 0rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        min-width: 12rem;
+        height: 3.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-image: url('../img/button-shape.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+
+        &:hover {
+            background-image: url('../img/button-selected-shape.png');
+        }
+
+        &.selected {
+            background-image: url('../img/button-selected-shape.png');
+            color: #FFFFFF;
+        }
+
+        &.active {
+            background-image: url('../img/button-active-shape.png');
+        }
+
+        &:first-child {
+            min-width: 14rem;
+        }
+    }
+
+    span {
+        width: 7rem;
+        height: 0.7rem;
+        display: block;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0) 100%);
+        border-radius: 5rem;
+
+        &.active_shape {
+            background: linear-gradient(to right, rgba(255, 13, 18, 0) 0%, rgba(255, 13, 18, 0.8) 50%, rgba(255, 13, 18, 0) 100%);
+        }
+    }
+
+    @media #{$sm} {
+        padding: 3rem 0rem;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+
+// readyTeam_section ---------------
+
+.readyTeam_section {
+    padding-top: 4.2rem;
+    padding-bottom: 1.4rem;
+
+    @media #{$sm} {
+        padding-top: 3.2rem;
+    }
+}
+
+.readyTeam_title {
+    h3 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 125%;
+        color: #F5F5F5;
+        display: flex;
+        align-items: center;
+        gap: 1.6rem;
+
+        img {
+            width: 5.8rem;
+        }
+
+        @media #{$sm} {
+            font-size: 2.6rem;
+            gap: 1.2rem;
+
+            img {
+                width: 5rem;
+            }
+        }
+    }
+}
+
+.readyTeam_wraper {
+    padding-top: 4.2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1.6rem;
+
+    @media #{$md} {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media #{$sm} {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 3rem;
+    }
+
+    @media #{$xs} {
+        grid-template-columns: 1fr;
+    }
+
+    .readyTeam_card {
+        position: relative;
+        background: rgba(40, 20, 21, 0.5);
+        border: 1px solid rgba(112, 8, 13, 0.20);
+        min-height: 33.3rem;
+
+        .readyTeam_cardImg {
+            img {
+                width: 100%;
+            }
+
+            span {
+                position: absolute;
+                top: 0rem;
+                right: 1.8rem;
+
+                img {
+                    width: 2.6rem;
+                }
+            }
+
+            a {
+                position: absolute;
+                top: 1.2rem;
+                left: 1.2rem;
+
+                img {
+                    width: 3rem;
+                }
+            }
+        }
+
+        .readyTeam_cardItem {
+            background: #000000;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 1.2rem 1.2rem;
+
+            .readyTeam_cardText {   
+                h4 {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: #FFFFFF;
+                    margin-bottom: 0.5rem;
+
+                    &.gradient_text {
+                        background: linear-gradient(
+                            to left,
+                            #DE5709 0%,
+                            #E46912 21%,
+                            #F69929 64%,
+                            #FDAC33 80%
+                        );
+
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        color: transparent;
+                    }
+                }
+
+                p {
+                    font-size: 1.4rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: rgba(255, 255, 255, 0.80);
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+
+                    button {
+                        background: transparent;
+                        border: none;
+                        outline: none;
+                        padding: 0;
+
+                        img {
+                            width: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            .readyTeam_cardLabel {
+                span {
+                    font-family: $heeboFont;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    color: #F02731;
+                    background: #000000;
+                    border: 1px solid rgba(255, 26, 26, 0.20);
+                    display: inline-block;
+                    padding: 0.1rem 0.8rem;
+                    border-radius: 5rem;
+                }
+            }
+        }
+
+        .readyTeam_cardBtn {
+            background: #000000;
+            padding: 0rem 1.2rem 1.2rem;
+
+            a {
+                font-size: 1.6rem;
+                font-weight: 400;
+                line-height: 120%;
+                color: #F5F6FF;
+                width: 100%;
+                height: 3.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+                text-align: center;
+                background: #F02731;
+                border: 1px solid #F46B4F;
+                box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
+                position: relative;
+                transition: 0.2s all ease;
+
+                img {
+                    width: 1.6rem;
+                }
+                
+                .border_tl {
+                    width: 0.6rem;
+                    height: 0.5rem;
+                    border-top: 1px solid #FFFFFF;
+                    border-left: 1px solid #FFFFFF;
+                    position: absolute;
+                    left: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_tr {
+                    width: 0.6rem;
+                    height: 0.5rem;
+                    border-top: 1px solid #FFFFFF;
+                    border-right: 1px solid #FFFFFF;
+                    position: absolute;
+                    right: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bl {
+                    width: 0.6rem;
+                    height: 0.5rem;
+                    border-bottom: 1px solid #FFFFFF;
+                    border-left: 1px solid #FFFFFF;
+                    position: absolute;
+                    left: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_br {
+                    width: 0.6rem;
+                    height: 0.5rem;
+                    border-bottom: 1px solid #FFFFFF;
+                    border-right: 1px solid #FFFFFF;
+                    position: absolute;
+                    right: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                &:hover {
+                    span {
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+
+        &.green_card {
+            border: 1px solid rgba(55, 174, 72, 0.20);
+
+            .readyTeam_cardBtn {
+                a {
+                    background: #37AE48;
+                    border-color: #84BD5C;
+                }
+            }
+        }
+
+        &.empty_card {
+            background: #000000;
+            border: 1px solid #281415;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            .join_btn {
+                a {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: #F9F9FF;
+                    display: inline-block;
+                    background: #121212;
+                    padding: 0.7rem 1.2rem;
+                    text-align: center;
+                    position: relative;
+                    transition: 0.2s all ease;
+
+                    img {
+                        width: 2rem;
+                        margin-right: 0.4rem;
+                    }
+
+                    .border_tl {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-top: 1px solid #595959;
+                        border-left: 1px solid #595959;
+                        position: absolute;
+                        left: -0.05rem;
+                        top: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_tr {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-top: 1px solid #595959;
+                        border-right: 1px solid #595959;
+                        position: absolute;
+                        right: -0.05rem;
+                        top: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_bl {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-bottom: 1px solid #595959;
+                        border-left: 1px solid #595959;
+                        position: absolute;
+                        left: -0.05rem;
+                        bottom: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    .border_br {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        border-bottom: 1px solid #595959;
+                        border-right: 1px solid #595959;
+                        position: absolute;
+                        right: -0.05rem;
+                        bottom: -0.05rem;
+                        transition: 0.2s all ease;
+                    }
+
+                    &:hover {
+                        span {
+                            transform: scale(1.3);
+                        }
+                    }
+                }
+            }
+
+            .empty_text {
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}
+
+
+.readyTeam_section2 {
+    padding-bottom: 10rem;
+
+    @media #{$md} {
+        padding-bottom: 5rem;
+    }
+}

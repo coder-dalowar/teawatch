@@ -1,0 +1,1063 @@
+// report score page ----------------------
+
+.how_playBtn {
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: #F9F9FF;
+        background: #DA232D;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1.2rem 2rem;
+        position: relative;
+        transition: 0.2s all ease;
+        box-shadow: 0rem 0.2rem 1.77rem 0rem rgba(249, 204, 97, 0.54) inset;
+
+        img {
+            width: 2rem;
+        }
+
+        .border_tl {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-top: 1px solid #FDEABE;
+            border-left: 1px solid #FDEABE;
+            position: absolute;
+            left: -0.05rem;
+            top: -0.05rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tr {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-top: 1px solid #FDEABE;
+            border-right: 1px solid #FDEABE;
+            position: absolute;
+            right: -0.05rem;
+            top: -0.05rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bl {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-bottom: 1px solid #FDEABE;
+            border-left: 1px solid #FDEABE;
+            position: absolute;
+            left: -0.05rem;
+            bottom: -0.05rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_br {
+            width: 0.5rem;
+            height: 0.5rem;
+            border-bottom: 1px solid #FDEABE;
+            border-right: 1px solid #FDEABE;
+            position: absolute;
+            right: -0.05rem;
+            bottom: -0.05rem;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            span {
+                transform: scale(1.3);
+            }
+        }
+    }
+}
+
+
+// reportScore_chat -----------
+
+.reportScore_chat {
+    padding-top: 2rem;
+
+    .chat_body {
+        max-width: 100%!important;
+        display: block!important;
+        position: initial!important;
+        transform: initial!important;
+
+        .chat_mainBox {
+            @media #{$sm} {
+                padding-left: 0.8rem!important;
+                padding-right: 0.8rem!important;
+            }
+        }
+    }
+
+    .chatField_wrap {
+        .chatField_item {
+            max-width: 100%!important;
+
+            .chat_input {
+                max-width: 100%!important;
+
+                input {
+                    height: 8.3rem!important;
+
+                    @media #{$sm} {
+                        height: 4.5rem!important;
+                    }
+                }
+            }
+
+            .send_btn {
+                width: 9.2rem;
+                height: 8.3rem;
+                background: #DA232D!important;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                flex-shrink: 0;
+
+                img {
+                    width: 3rem!important;
+                }
+
+                @media #{$sm} {
+                    width: 5rem!important;
+                    height: 4.5rem!important;
+
+                    img {
+                        width: 2rem!important;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+.reportScore_section {
+    .main_wrapper {
+        @media #{$md} {
+            padding-bottom: 0rem;
+        }
+    }
+}
+
+
+// step modal ----------------
+.stepModal_body {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    .jointmodal_title {
+        img {
+            width: 10rem;
+            display: block;
+            margin: 0 auto;
+        }
+
+        h3 {
+            max-width: 37.2rem;
+            width: 100%;
+            margin: 1.6rem auto 4rem;
+            text-align: center;
+
+            @media #{$sm} {
+                max-width: 31.2rem;
+            }
+        }
+    }
+
+    .stepModal_wraper {
+        position: relative;
+
+        .stepModal_item {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            position: relative;
+            padding-bottom: 3.2rem;
+
+            @media #{$sm} {
+                gap: 1.5rem;
+            }
+
+            &::after {
+                content: "";
+                width: 1px;
+                height: 100%;
+                display: block;
+                background: #453A3A;
+                position: absolute;
+                right: 2.7rem;
+                top: 0;
+
+                @media #{$sm} {
+                    right: 2rem;
+                }
+            }
+
+            &:last-child {
+                padding-bottom: 0rem;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            .stepModal_number {
+                flex-shrink: 0;
+                width: 5.4rem;
+                height: 5.4rem;
+                background: #080808;
+                border: 1px solid #F02731;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                box-shadow: 0.3rem 0.3rem 1.86rem 0rem rgba(255, 26, 26, 0.40)inset;
+                position: relative;
+                z-index: 9;
+
+                @media #{$sm} {
+                    width: 4rem;
+                    height: 4rem;
+                }
+
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: #FFFFFF;
+
+                    @media #{$sm} {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+
+            .stepModal_text {
+                width: 100%;
+
+                .stepModal_heading {
+                    h4 {
+                        font-size: 2.4rem;
+                        font-weight: 400;
+                        line-height: 130%;
+                        color: #FFF;
+                        margin-bottom: 0.8rem;
+                    }
+
+                    p {
+                        font-family: $heeboFont;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 160%;
+                        letter-spacing: initial;
+                        color: rgba(255, 255, 255, 0.70);
+                        margin-bottom: 1.5rem;
+                        max-width: 43.7rem;
+                        width: 100%;
+
+                        &:last-child {
+                            margin-bottom: 0rem;
+                        }
+                    }
+
+                    h5 {
+                        font-family: $heeboFont;
+                        font-size: 1.4rem;
+                        font-weight: 400;
+                        line-height: 160%;
+                        letter-spacing: initial;
+                        color: rgb(255, 255, 255);
+                        margin-bottom: 0.8rem;
+                    }
+                }
+
+                .stepModal_innerTextRow {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 1.2rem;
+                    padding-top: 2.4rem;
+
+                    .stepModal_innerText {
+                        text-align: center;
+
+                        p {
+                            font-family: $heeboFont;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            line-height: 160%;
+                            letter-spacing: initial;
+                            color: rgba(245, 246, 255, 0.80);
+                            margin-bottom: 1.2rem;
+                        }
+
+                        h4 {
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                            line-height: 120%;
+                            color: #F5F6FF;
+                            margin-bottom: 0.8rem;
+                        }
+
+                        span {
+                            font-family: $heeboFont;
+                            font-size: 1.4rem;
+                            font-weight: 400;
+                            line-height: 160%;
+                            letter-spacing: initial;
+                            color: #F02731;
+                        }
+                    }
+                }
+
+                .stepModal_profileWrap {
+                    padding-top: 2.4rem;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 1.2rem;
+
+                    .stepModal_profileItem {
+                        h3 {
+                            font-family: $heeboFont;
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            line-height: 160%;
+                            color: #FFFFFF;
+                            margin-bottom: 0.8rem;
+                        }
+
+                        .stepModal_profileBox {
+                            background: #130D0E;
+                            padding: 0.8rem 0.8rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 0.8rem;
+                            position: relative;
+
+                            .border_tl {
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                border-top: 1px solid #A11B1B;
+                                border-left: 1px solid #A11B1B;
+                                position: absolute;
+                                left: -0.05rem;
+                                top: -0.05rem;
+                                transition: 0.2s all ease;
+                            }
+
+                            .border_tr {
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                border-top: 1px solid #A11B1B;
+                                border-right: 1px solid #A11B1B;
+                                position: absolute;
+                                right: -0.05rem;
+                                top: -0.05rem;
+                                transition: 0.2s all ease;
+                            }
+
+                            .border_bl {
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                border-bottom: 1px solid #A11B1B;
+                                border-left: 1px solid #A11B1B;
+                                position: absolute;
+                                left: -0.05rem;
+                                bottom: -0.05rem;
+                                transition: 0.2s all ease;
+                            }
+
+                            .border_br {
+                                width: 0.5rem;
+                                height: 0.5rem;
+                                border-bottom: 1px solid #A11B1B;
+                                border-right: 1px solid #A11B1B;
+                                position: absolute;
+                                right: -0.05rem;
+                                bottom: -0.05rem;
+                                transition: 0.2s all ease;
+                            }
+
+                            .stepModal_profileImg {
+                                flex-shrink: 0;
+                                border: 1px solid #9C1A1B;
+
+                                img {
+                                    width: 4.6rem;
+                                    height: 4.2rem;
+                                    object-fit: cover;
+                                }
+                            }
+
+                            .stepModal_profileText {
+                                h4 {
+                                    font-family: $heeboFont;
+                                    font-size: 1.6rem;
+                                    font-weight: 500;
+                                    line-height: 160%;
+                                    color: rgba(255, 255, 255, 0.80);
+                                    margin-bottom: 0.2rem;
+                                }
+
+                                p {
+                                    font-family: $heeboFont;
+                                    font-size: 1.4rem;
+                                    font-weight: 400;
+                                    line-height: 160%;
+                                    color: rgba(255, 255, 255, 0.70);
+                                }
+                            }
+
+                            .stepModal_profileCopy {
+                                display: block;
+                                margin-right: auto;
+
+                                button {
+                                    background: transparent;
+                                    border: none;
+                                    outline: none;
+                                    padding: 0;
+
+                                    img {
+                                        width: 2rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    @media #{$sm} {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+// report-score-2 page ---------------
+
+.scoreResult_formSection {
+    max-width: 82rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0rem;
+
+    .scoreResult_box {
+        background: #140E0E;
+        border: 1px solid #2B0F0F;
+        padding: 2rem 2rem;
+    }
+}
+
+
+.scoreResult_gameWraper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2.4rem;
+
+    @media #{$sm} {
+        grid-template-columns: 1fr;
+    }
+
+    .scoreResult_gameBox {
+        background-color: #000000;
+        background-image: url('../img/scoreResult_game-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: 1px solid #191919;
+        padding: 2.4rem 2.4rem;
+        position: relative;
+        text-align: center;
+
+        .border_tl {
+            width: 1.6rem;
+            height: 0.8rem;
+            border-top: 1px solid #B13238;
+            border-left: 1px solid #B13238;
+            position: absolute;
+            left: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tr {
+            width: 1.6rem;
+            height: 0.8rem;
+            border-top: 1px solid #B13238;
+            border-right: 1px solid #B13238;
+            position: absolute;
+            right: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bl {
+            width: 1.6rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #B13238;
+            border-left: 1px solid #B13238;
+            position: absolute;
+            left: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_br {
+            width: 1.6rem;
+            height: 0.8rem;
+            border-bottom: 1px solid #B13238;
+            border-right: 1px solid #B13238;
+            position: absolute;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .scoreResult_gameImg {
+            width: 9.9rem;
+            height: 9rem;
+            background: #000000;
+            border: 1px solid #9B1A1A;
+            padding: 0.9rem;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .scoreResult_gameTitle {
+            padding: 1.2rem 0rem 3.2rem;
+            text-align: center;
+
+            h4 {
+                font-size: 2.4rem;
+                font-weight: 700;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.80);
+                margin-bottom: 0.3rem;
+            }
+
+            p {
+                font-family: $heeboFont;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 130%;
+                letter-spacing: initial;
+                color: rgba(255, 255, 255, 0.70);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 0.6rem;
+
+                img {
+                    width: 1.5rem;
+                }
+            }
+        }
+
+        .scoreResult_gameText {
+            text-align: center;
+
+            p {
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 160%;
+                letter-spacing: initial;
+                color: rgba(255, 255, 255, 0.80);
+                text-align: center;
+            }
+        }
+
+        .scoreResult_gameBtn {
+            padding-top: 1.8rem;
+            a {
+                font-family: $heeboFont;
+                font-size: 1.4rem;
+                font-weight: 400;
+                letter-spacing: initial;
+                color: rgba(255, 255, 255, 0.80);
+                width: 100%;
+                height: 4.4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                background: #121212;
+                border: 1px solid #292929;
+                position: relative;
+
+                .border_tl {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #A11B1B;
+                    border-left: 1px solid #A11B1B;
+                    position: absolute;
+                    left: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_tr {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-top: 1px solid #A11B1B;
+                    border-right: 1px solid #A11B1B;
+                    position: absolute;
+                    right: -0.1rem;
+                    top: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_bl {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #A11B1B;
+                    border-left: 1px solid #A11B1B;
+                    position: absolute;
+                    left: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                .border_br {
+                    width: 1rem;
+                    height: 0.6rem;
+                    border-bottom: 1px solid #A11B1B;
+                    border-right: 1px solid #A11B1B;
+                    position: absolute;
+                    right: -0.1rem;
+                    bottom: -0.1rem;
+                    transition: 0.2s all ease;
+                }
+
+                &:hover {
+                    span {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// scoreResult_title ------
+.scoreResult_title {
+    margin-bottom: 1.6rem;
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 140%;
+        color: #FFF;
+    }
+}
+
+
+.scoreResult_upload {
+    background: #080808;
+    position: relative;
+
+    .border_tl {
+        width: 2.2rem;
+        height: 1rem;
+        border-top: 1px solid #AA1E25;
+        border-left: 1px solid #AA1E25;
+        position: absolute;
+        left: -0.05rem;
+        top: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 2.2rem;
+        height: 1rem;
+        border-top: 1px solid #AA1E25;
+        border-right: 1px solid #AA1E25;
+        position: absolute;
+        right: -0.05rem;
+        top: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+        width: 2.2rem;
+        height: 1rem;
+        border-bottom: 1px solid #AA1E25;
+        border-left: 1px solid #AA1E25;
+        position: absolute;
+        left: -0.05rem;
+        bottom: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+        width: 2.2rem;
+        height: 1rem;
+        border-bottom: 1px solid #AA1E25;
+        border-right: 1px solid #AA1E25;
+        position: absolute;
+        right: -0.05rem;
+        bottom: -0.05rem;
+        transition: 0.2s all ease;
+    }
+
+    .upload-content {
+        background: #080808;
+    }
+
+    .scoreResult_uploadfield {
+        width: 100%;
+        padding: 1.5rem 0rem;
+        text-align: center;
+
+        img {
+            width: 6rem;
+        }
+
+        p {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 130%;
+            color: #F5F6FF;
+            margin-top: 3.2rem;
+        }
+    }
+}
+
+.or_item {
+    padding: 2.4rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+
+    p {
+        font-family: $heeboFont;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 160%;
+        color: #FFF;
+    }
+
+    img {
+        width: 11.6rem;
+    }
+}
+
+.scoreResult_input {
+    background: #121212;
+    border: 1px solid #302B2B;
+    position: relative;
+
+    .border_tl {
+        width: 2.2rem;
+        height: 0.6rem;
+        border-top: 1px solid #A11B1B;
+        border-left: 1px solid #A11B1B;
+        position: absolute;
+        left: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 2.2rem;
+        height: 0.6rem;
+        border-top: 1px solid #A11B1B;
+        border-right: 1px solid #A11B1B;
+        position: absolute;
+        right: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+       width: 2.2rem;
+        height: 0.6rem;
+        border-bottom: 1px solid #A11B1B;
+        border-left: 1px solid #A11B1B;
+        position: absolute;
+        left: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+       width: 2.2rem;
+        height: 0.6rem;
+        border-bottom: 1px solid #A11B1B;
+        border-right: 1px solid #A11B1B;
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    input {
+        font-family: $heeboFont;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.80);
+        width: 100%;
+        height: 4.6rem;
+        display: block;
+        text-align: center;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 0.2rem 2rem;
+        
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.80);
+            opacity: 1;;
+        }
+    }
+}
+
+
+// scoreResult_notes -----------
+
+.scoreResult_notes {
+    background: #121212;
+    border: 1px solid #302B2B;
+    position: relative;
+
+    .border_tl {
+        width: 1.4rem;
+        height: 1.6rem;
+        border-top: 1px solid #A11B1B;
+        border-left: 1px solid #A11B1B;
+        position: absolute;
+        left: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 1.4rem;
+        height: 1.6rem;
+        border-top: 1px solid #A11B1B;
+        border-right: 1px solid #A11B1B;
+        position: absolute;
+        right: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+        width: 1.4rem;
+        height: 1.6rem;
+        border-bottom: 1px solid #A11B1B;
+        border-left: 1px solid #A11B1B;
+        position: absolute;
+        left: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+        width: 1.4rem;
+        height: 1.6rem;
+        border-bottom: 1px solid #A11B1B;
+        border-right: 1px solid #A11B1B;
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    textarea {
+        font-family: $heeboFont;
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.80);
+        width: 100%;
+        height: 14.8rem;
+        display: block;
+        text-align: right;
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 1.2rem 1.2rem;
+        
+        &::placeholder {
+            color: rgba(255, 255, 255, 0.80);
+            opacity: 1;;
+        }
+    }
+}
+
+// report_button ---------
+.report_button {
+    padding-top: 4rem;
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: #F5F6FF;
+        background: #F02731;
+        width: 100%;
+        height: 3.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #F46B4F;
+        position: relative;
+        box-shadow: 0rem 0.2rem 1.77rem 0rem rgba(249, 204, 97, 0.54)inset;
+        transition: 0.2s all ease;
+
+        .border_tl {
+            width: 1.4rem;
+            height: 0.6rem;
+            border-top: 1px solid #FFF;
+            border-left: 1px solid #FFF;
+            position: absolute;
+            left: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tr {
+            width: 1.4rem;
+            height: 0.6rem;
+            border-top: 1px solid #FFF;
+            border-right: 1px solid #FFF;
+            position: absolute;
+            right: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bl {
+            width: 1.4rem;
+            height: 0.6rem;
+            border-bottom: 1px solid #FFF;
+            border-left: 1px solid #FFF;
+            position: absolute;
+            left: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_br {
+            width: 1.4rem;
+            height: 0.6rem;
+            border-bottom: 1px solid #FFF;
+            border-right: 1px solid #FFF;
+            position: absolute;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            opacity: 0.9;
+
+            span {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+
+// report_scorep4 ----------
+
+.report_scorep4 {
+    h4 {
+        color: #FFF;
+    }
+
+    a {
+        background: transparent;
+        border: none;
+        padding: 0rem;
+        box-shadow: none;
+        color: #F02731;
+        text-decoration: underline;
+    }
+}
+
+.report_scorep4_info {
+    background: #231312;
+    border: 1px solid #4F1414;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 5rem;
+
+    @media #{$sm} {
+        margin-bottom: 4rem;
+    }
+
+    img {
+        width: 2rem;
+    }
+
+    p {
+        font-family: $heeboFont;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: initial;
+        color: rgba(255, 255, 255, 0.70);
+    }
+}
+
+.report_end {
+    text-align: center;
+
+    span {
+        font-family: $heeboFont;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 160%;
+        color: #FFF;
+        background: #A11B1B;
+        display: inline-block;
+        padding: 0.1rem 1.4rem;
+    }
+}
+
+.result_confirmed {
+    background: #37AE48;
+}
+
+
+.report_scorep3text{
+    .victory {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #37AE48;
+        margin-bottom: 0.4rem;
+        text-align: left;
+        display: block;
+    }
+}       
+
+.report_scorep3text {
+    .loss {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #F02731;
+        margin-bottom: 0.4rem;
+        display: block;
+    }
+}

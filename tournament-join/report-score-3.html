@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>teawatch</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/img/favicon.png" />
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- header_section start -->
+    <header class="header_section joinTournament_header readyTeam_header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto">
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/trofy.svg" alt="icon">
+                                <span> טורנירים </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/play.svg" alt="icon">
+                                <span> גאטרים אונליין </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/document.svg" alt="icon">
+                                <span> לוח תוצאות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/store.svg" alt="icon">
+                                <span> חנות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="premium_btn">
+                                <img src="../assets/img/crown.svg" alt="icon">
+                                שדרוג
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-target="#chatBox">
+                                <img src="../assets/img/chat.svg" alt="icon">
+                                <span> צ׳אט </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header_left ms-auto">
+                        <div class="admin_btn button_border">
+                            <a href="#">
+                                <span class="admin_profile">
+                                    <img src="../assets/img/admin.png" alt="">
+                                </span>
+                                <span class="admin_text">
+                                    <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                                    <span> חינמי </span>
+                                </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="add_btn button_border">
+                            <a href="#">
+                                <img src="../assets/img/add-circle.svg" alt="">
+                                <span>הארנק שלי <br> ₪4988.00 </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/shopping-bag.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/notification.svg" alt="">
+                                <span class="notify_red"></span>
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/logout.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+    <!-- offcanvas menu start -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <a href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+            </h5>
+            <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="../assets/img/close.svg" alt="">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="admin_wraper">
+                <div class="admin_btn button_border">
+                    <a href="#">
+                        <span class="admin_profile">
+                            <img src="../assets/img/admin.png" alt="">
+                        </span>
+                        <span class="admin_text">
+                            <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                            <span> חינמי </span>
+                        </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>
+
+                <div class="add_btn button_border">
+                    <a href="#">
+                        <img src="../assets/img/add-circle.svg" alt="">
+                        <span>הארנק שלי <br> ₪4988.00 </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>                
+            </div>
+
+            <div class="offcanvas_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/trofy.svg" alt="icon">
+                            <span> טורנירים </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/play.svg" alt="icon">
+                            <span> גאטרים אונליין </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/document.svg" alt="icon">
+                            <span> לוח תוצאות </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/store.svg" alt="icon">
+                            <span> חנות </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas_btn">
+                <a href="#" class="premium_btn">
+                    <img src="../assets/img/crown.svg" alt="icon">
+                    שדרוג
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </a>
+            </div>
+            
+            <div class="icon_wraper">
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/shopping-bag.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/notification.svg" alt="">
+                        <span class="notify_red"></span>
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/logout.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+            </div> 
+
+            <div class="profile_fixed">
+                <div class="profile_box">
+                    <a href="#">
+                        <div class="profile_img">
+                            <img src="../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="profile_text">
+                            <p>
+                                <img src="../assets/img/star.svg" alt="">
+                                admin
+                            </p>
+                            <h4>
+                                <span>פרימיום</span>
+                                מחובר
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subscription_box">
+                    <img src="../assets/img/primium-badge.svg" alt="">
+                    <p> עם מנוי פרימיום </p>
+                    <h4> כל ניצחון יכול להפוך לכסף </h4>
+                    <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+                    <a href="#">
+                        שדרג עכשיו
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </a>
+                </div>
+            </div> 
+
+        </div>
+    </div>
+    <!-- offcanvas menu end -->
+
+    <!-- chat_bot -->
+    <!-- <div class="chat_bot d-lg-none">
+        <a href="../chat/chat.html">
+            <img src="../assets/img/chat.svg" alt="icon">
+        </a>
+    </div>  -->
+
+    <!-- profile fixed -->
+    <div class="profile_fixed d-none d-lg-block">
+        <div class="profile_box">
+            <a href="#">
+                <div class="profile_img">
+                    <img src="../assets/img/profile.png" alt="">
+                </div>
+                <div class="profile_text">
+                    <p>
+                        <img src="../assets/img/star.svg" alt="">
+                        admin
+                    </p>
+                    <h4>
+                        <span>פרימיום</span>
+                        מחובר
+                    </h4>
+                </div>
+            </a>
+        </div>
+
+        <div class="subscription_box">
+            <img src="../assets/img/primium-badge.svg" alt="">
+            <p> עם מנוי פרימיום </p>
+            <h4> כל ניצחון יכול להפוך לכסף </h4>
+            <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+            <a href="#">
+                שדרג עכשיו
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </a>
+        </div>
+    </div> 
+
+
+    <main>
+
+        <!-- reportScore_section start -->
+        <section class="before_joinTournament team_section">
+            <div class="container">
+                <div class="main_wrapper">
+                    <!-- sidebar -->
+                    <div class="sidebar readyTeam_sidebar">
+                        <div class="side_item">
+                            <a href="../index.html" class="side_btn">
+                                <img src="../assets/img/home.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+
+                            <a href="../tournament/tournament.html" class="side_btn active">
+                                <img src="../assets/img/trofy.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+
+                            <a href="#" class="side_btn">
+                                <img src="../assets/img/play.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+
+                            <a href="#" class="side_btn">
+                                <img src="../assets/img/crown.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+
+                            <a href="#" class="side_btn">
+                                <img src="../assets/img/settings.svg" alt="">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- main content -->
+                    <div class="main_content">
+                        <div class="readyTeam_hero">
+                            <div class="back_btn">
+                                <a href="#">
+                                    <img src="../assets/img/right.svg" alt="">
+                                    <span>חזרה לדף הטורניר</span>
+                                </a>
+                            </div>
+
+                            <div class="ended report_end">
+                                <span>הסתיים</span>
+                            </div>
+
+                            <div class="readyTeam_heroTitle">
+                                <h2 class="title_xl">מס' משחק 4</h2>
+                                <p>המשחק הזה הוא חלק מ־ <span> FINAL ZT MAIN LEAGUE WINTER 5×5 </span> – מס' משחק 1</p>
+                                <p>שלב 1 • גמר</p>
+                            </div>
+
+                            <div class="readyTeam_heroGame">
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                                <div class="readyTeam_heroGame_wraper">
+                                    <div class="readyTeam_heroGame_item">
+                                        <img src="../assets/img/tournament-1.png" alt="">
+                                        <div class="report_scorep3text">
+                                            <span class="loss">הפסד</span>
+                                            <p>רייג'קלאן</p>
+                                        </div>
+                                    </div>
+                                    <div class="readyTeam_heroGame_text">
+                                        <h3 dir="ltr">10 - 01</h3>
+                                    </div>
+                                    <div class="readyTeam_heroGame_item">
+                                        <div class="report_scorep3text">
+                                            <span class="victory">ניצחון</span>
+                                            <p>רייג'קלאן</p>
+                                        </div>
+                                        <img src="../assets/img/tournament-2.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- readyTeam_timer -->
+                        <div class="readyTeam_timer">
+                            <div class="report_scorep4_info result_confirmed">
+                                <img src="../assets/img/checkmark-circle.svg" alt="">
+                                <p>התוצאה אושרה! קיימת הסכמה בין שתי הקבוצות. המערכת מעבירה אתכם כעת לעמוד עץ הטורניר לעדכון התקדמות הטורניר.</p>
+                            </div>
+
+                           <div class="how_playBtn">
+                                <a href="#">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                    לעץ הטורניר
+                                    <img src="../assets/img/left.svg" alt="">
+                                </a>
+                           </div>
+                        </div>
+
+                        <!-- readyTeam_button -->
+                        <div class="readyTeam_button">
+                            <a href="#" class="selected"> אישור מוכנות </a>
+                            <span class="active_shape"></span>
+                            <a href="#" class="selected">בחירת קבוצה מתחילה</a>
+                            <span class="active_shape"></span>
+                            <a href="#" class="selected">חסימת מפות</a>
+                            <span class="active_shape"></span>
+                            <a href="#" class="selected">בחירת צד</a>
+                            <span class="active_shape"></span>
+                            <a href="#" class="active">דיווח תוצאה</a>
+                        </div> 
+
+
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- reportScore_section end -->
+         
+    </main>
+
+
+    <!-- Chat Modal start -->
+    <div id="chatBox">
+        <div class="container">
+            <div class="chat_modal">
+                <div class="modal-content">
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+
+                    <div class="chatModal_heading">
+                        <div class="chatModal_heading_item">
+                            <div class="chatModal_heading_img">
+                                <img src="../assets/img/game-modal.png" alt="">
+                            </div>
+                            <div class="chatModal_heading_text">
+                                <h4>PatateTWH1</h4>
+                                <p><span></span> לא מקוון</p>
+                            </div>
+                        </div>
+
+                        <div class="chatModal_button">
+                            <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="../assets/img/cross.svg" alt="">
+                            </span>
+
+                            <a href="../chat/chat.html">
+                                <img src="../assets/img/expand.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="alert_item">
+                        <img src="../assets/img/alert.svg" alt="">
+                        <p> לעולם אל תשתף את הסיסמה שלך או פרטים רגישים אחרים בצ׳אט. </p>
+                    </div>
+
+                    <div class="message_item">
+                        <img src="../assets/img/message.svg" alt="">
+                        <h4>היה הראשון לכתוב</h4>
+                        <p>זהו ממש תחילתו של הצ׳אט הזה.</p>
+                    </div>
+
+                    <div class="message_wrap">
+                        <button type="button">
+                            <img src="../assets/img/image-add-gray.svg" alt="">
+                        </button>
+                        <div class="message_field">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <input type="text" placeholder="Aa">
+                        </div>
+                        <button type="button">
+                            <img src="../assets/img/sent-gray.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chat Modal end -->
+
+    <!-- game step modal -->
+    <div class="modal fade" id="stepModal" tabindex="-1" aria-labelledby="stepModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ranking_modal">
+            <div class="modal-content">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../assets/img/cross.svg" alt="">
+                </span>
+
+                <div class="jointmodal_body stepModal_body">
+                    <div class="jointmodal_title text-center">
+                        <img src="../assets/img/favorite-1.png" alt="">
+                        <h3 class="title_xl"> עקוב אחר השלבים כדי להתחיל את המשחק </h3>
+                    </div>
+
+                    <div class="stepModal_wraper">
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>1</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>צור לובי</h4>
+                                    <p>השחקן שמשמאל (Shono) צריך ליצור לובי ב-Call of Duty</p>
+                                </div>
+
+                                <div class="stepModal_innerTextRow">
+                                    <div class="stepModal_innerText">
+                                        <p>השתמש בוטו</p>
+                                        <h4>פועל</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>הטלת מטבע</p>
+                                        <h4>כבוי</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>וטו צד</p>
+                                        <h4>8</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>מאגר מפות</p>
+                                        <h4>1.בינד</h4>
+                                        <h4>2.הייבן</h4>
+                                        <h4>3.אסנט</h4>
+                                        <span>הצג הכול (6)</span>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>מצב משחק</p>
+                                        <h4>רגיל</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>הארכה</p>
+                                        <h4>פועל</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>2</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>הזמן</h4>
+                                    <p>הוסיפו זה את זה כחברים ב-Call of Duty</p>
+                                    <h5> ‏Snop צריך להזמין את nolyp ללובי. חשבונות המשחק שלכם מוצגים </h5>
+                                </div>
+
+                                <div class="stepModal_profileWrap">
+                                    <div class="stepModal_profileItem">
+                                        <h3>ShonP</h3>
+                                        <div class="stepModal_profileBox copy_wraper">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <div class="stepModal_profileImg">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                            </div>
+                                            <div class="stepModal_profileText">
+                                                <h4>PatateTWH1</h4>
+                                                <p class="copy_text">קפטן</p>
+                                            </div>
+                                            <div class="stepModal_profileCopy">
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../assets/img/copy.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepModal_profileItem">
+                                        <h3>Bonluyp</h3>
+                                        <div class="stepModal_profileBox copy_wraper">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <div class="stepModal_profileImg">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                            </div>
+                                            <div class="stepModal_profileText">
+                                                <h4>PatateTWH1</h4>
+                                                <p class="copy_text">קפטן</p>
+                                            </div>
+                                            <div class="stepModal_profileCopy">
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../assets/img/copy.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>3</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>התחל משחק</h4>
+                                    <p> כאשר כולם הצטרפו ללובי, ‏Shonp יכול להתחיל את המשחק. </p>
+                                    <p>צלם צילום מסך של תוצאות המשחק ושמור אותו למקרה שתידרש הוכחה עקב דיווחים שונים של שחקנים.</p>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>4</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>דווח תוצאות</h4>
+                                    <p> לאחר סיום המשחק, חזור ללובי של Challengermode כדי לדווח על <br> התוצאות שלך. </p>
+                                </div>                                
+                            </div>
+                        </div>
+
+                    </div>                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- all js here -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

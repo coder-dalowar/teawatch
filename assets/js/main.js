@@ -1178,6 +1178,122 @@
 
 
 
+// ================== circle progress with timer =================
+{
+  (function () {
+    "use strict";
+
+    function initTimers() {
+      var wrappers = document.querySelectorAll(".timer_wraper");
+      if (!wrappers.length) return;
+
+      wrappers.forEach(function (wrapper) {
+        var circle = wrapper.querySelector(".progress-ring");
+        var display = wrapper.querySelector(".time");
+        if (!circle || !display) return;
+
+        var duration = parseInt(wrapper.getAttribute("data-duration"), 10);
+        if (!duration || duration <= 0) return;
+
+        var radius = circle.r.baseVal.value;
+        var circumference = 2 * Math.PI * radius;
+
+        circle.style.strokeDasharray = circumference;
+
+        var timeLeft = duration;
+
+        function update() {
+          var minutes = Math.floor(timeLeft / 60);
+          var seconds = timeLeft % 60;
+
+          display.textContent =
+            (minutes < 10 ? "0" + minutes : minutes) +
+            ":" +
+            (seconds < 10 ? "0" + seconds : seconds);
+
+          var progress = timeLeft / duration;
+
+          //  Animate from right and expand symmetrically
+          var offset = circumference * (1 - progress);
+          circle.style.strokeDashoffset = offset / 2; // symmetric
+
+          if (timeLeft === 0) {
+            clearInterval(interval);
+          }
+
+          timeLeft--;
+        }
+
+        update();
+        var interval = setInterval(update, 1000);
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTimers);
+    } else {
+      initTimers();
+    }
+  })();
+}
+
+
+
+// ================== tean selected toggle =================
+{
+  (function () {
+    "use strict";
+
+    function initTeamSelection() {
+      var boxes = document.querySelectorAll(".startTeam_box");
+      if (!boxes.length) return; 
+
+      boxes.forEach(function (box) {
+        box.addEventListener("click", function () {
+          var overlay = box.querySelector(".team_overlay");
+          if (!overlay) return;
+
+          overlay.classList.toggle("selected");
+        });
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTeamSelection);
+    } else {
+      initTeamSelection();
+    }
+  })();
+}
+
+
+
+// ================== map selected toggle =================
+{
+  (function () {
+    "use strict";
+
+    function initTeamSelection() {
+      var boxes = document.querySelectorAll(".mapSelect_box");
+      if (!boxes.length) return; 
+
+      boxes.forEach(function (box) {
+        box.addEventListener("click", function () {
+          var overlay = box.querySelector(".mapSelect_overlay");
+          if (!overlay) return;
+
+          overlay.classList.toggle("selected");
+        });
+      });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initTeamSelection);
+    } else {
+      initTeamSelection();
+    }
+  })();
+}
 
 
 
