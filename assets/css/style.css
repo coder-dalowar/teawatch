@@ -10628,13 +10628,14 @@ body {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.54);
 }
-.jointdetails_wraper .maneger_box .dot_btn {
+
+.dot_btn {
   position: relative;
 }
-.jointdetails_wraper .maneger_box .dot_btn img {
+.dot_btn img {
   width: 2.4rem;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown {
+.dot_btn .maneger_dropdown {
   width: 19.3rem;
   background: #000000;
   padding: 1.2rem 0rem;
@@ -10648,7 +10649,7 @@ body {
   transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
   pointer-events: none;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown .border_tl {
+.dot_btn .maneger_dropdown .border_tl {
   width: 1.2rem;
   height: 0.6rem;
   border-top: 1px solid #F02731;
@@ -10658,7 +10659,7 @@ body {
   top: -0.05rem;
   transition: 0.2s all ease;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown .border_tr {
+.dot_btn .maneger_dropdown .border_tr {
   width: 1.2rem;
   height: 0.6rem;
   border-top: 1px solid #F02731;
@@ -10668,7 +10669,7 @@ body {
   top: -0.05rem;
   transition: 0.2s all ease;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown .border_bl {
+.dot_btn .maneger_dropdown .border_bl {
   width: 1.2rem;
   height: 0.6rem;
   border-bottom: 1px solid #F02731;
@@ -10678,7 +10679,7 @@ body {
   bottom: -0.05rem;
   transition: 0.2s all ease;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown .border_br {
+.dot_btn .maneger_dropdown .border_br {
   width: 1.2rem;
   height: 0.6rem;
   border-bottom: 1px solid #F02731;
@@ -10688,7 +10689,7 @@ body {
   bottom: -0.05rem;
   transition: 0.2s all ease;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown a {
+.dot_btn .maneger_dropdown a {
   font-family: "Heebo", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
@@ -10700,14 +10701,14 @@ body {
   padding: 0.8rem 2rem;
   transition: 0.2s all ease;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown a img {
+.dot_btn .maneger_dropdown a img {
   width: 2rem;
 }
-.jointdetails_wraper .maneger_box .dot_btn .maneger_dropdown a:hover {
+.dot_btn .maneger_dropdown a:hover {
   color: #FFF;
   background: #F02731;
 }
-.jointdetails_wraper .maneger_box .dot_btn.active .maneger_dropdown {
+.dot_btn.active .maneger_dropdown {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -12440,21 +12441,24 @@ body {
 .readyTeam_wraper .readyTeam_card .readyTeam_cardImg img {
   width: 100%;
 }
-.readyTeam_wraper .readyTeam_card .readyTeam_cardImg span {
+.readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge {
   position: absolute;
   top: 0rem;
   right: 1.8rem;
 }
-.readyTeam_wraper .readyTeam_card .readyTeam_cardImg span img {
+.readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge img {
   width: 2.6rem;
 }
-.readyTeam_wraper .readyTeam_card .readyTeam_cardImg a {
+.readyTeam_wraper .readyTeam_card .readyTeam_cardImg .dot_btn {
   position: absolute;
   top: 1.2rem;
   left: 1.2rem;
 }
-.readyTeam_wraper .readyTeam_card .readyTeam_cardImg a img {
+.readyTeam_wraper .readyTeam_card .readyTeam_cardImg .dot_btn img {
   width: 3rem;
+}
+.readyTeam_wraper .readyTeam_card .readyTeam_cardImg .dot_btn .maneger_dropdown a img {
+  width: 2rem;
 }
 .readyTeam_wraper .readyTeam_card .readyTeam_cardItem {
   background: #000000;

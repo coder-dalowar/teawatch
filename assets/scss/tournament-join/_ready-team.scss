@@ -444,7 +444,7 @@
                 width: 100%;
             }
 
-            span {
+            .badge {
                 position: absolute;
                 top: 0rem;
                 right: 1.8rem;
@@ -454,13 +454,21 @@
                 }
             }
 
-            a {
+            .dot_btn {
                 position: absolute;
                 top: 1.2rem;
                 left: 1.2rem;
 
                 img {
                     width: 3rem;
+                }
+
+                .maneger_dropdown {
+                    a {
+                        img {
+                            width: 2rem;
+                        }
+                    }
                 }
             }
         }
