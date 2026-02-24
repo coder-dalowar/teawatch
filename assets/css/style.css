@@ -12118,7 +12118,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0rem 1.4rem;
+  padding: 0rem 1.32rem;
 }
 .readyTeam_hero .live_btn a img {
   width: 2rem;
@@ -12150,7 +12150,7 @@ body {
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 0.4rem;
 }
-.readyTeam_hero .readyTeam_heroTitle p span {
+.readyTeam_hero .readyTeam_heroTitle p a {
   color: #F02731;
 }
 @media (max-width: 767px) {
@@ -12444,7 +12444,8 @@ body {
 .readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge {
   position: absolute;
   top: 0rem;
-  right: 1.8rem;
+  right: 0.8rem;
+  padding-top: 0;
 }
 .readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge img {
   width: 2.6rem;
