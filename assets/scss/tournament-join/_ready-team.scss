@@ -88,10 +88,12 @@
             }
 
             @media #{$sm} {
-                font-size: 1.75rem;
+                font-size: 2.5rem;
+                line-height: 132%;
+                gap: 0.7rem;
 
                 img {
-                    width: 1.85rem;
+                    width: 2.8rem;
                 }
             }
         }

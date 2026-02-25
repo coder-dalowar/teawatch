@@ -12124,10 +12124,12 @@ body {
 }
 @media (max-width: 767px) {
   .readyTeam_hero .live_btn a {
-    font-size: 1.75rem;
+    font-size: 2.5rem;
+    line-height: 132%;
+    gap: 0.7rem;
   }
   .readyTeam_hero .live_btn a img {
-    width: 1.85rem;
+    width: 2.8rem;
   }
 }
 .readyTeam_hero .readyTeam_heroTitle {
