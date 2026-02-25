@@ -2185,7 +2185,6 @@ body {
   line-height: 160%;
   letter-spacing: initial;
   color: rgba(255, 255, 255, 0.7);
-  direction: ltr;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   overflow: hidden;
@@ -12110,18 +12109,18 @@ body {
 }
 .readyTeam_hero .live_btn a {
   font-family: "Heebo", sans-serif;
-  font-size: 2rem;
+  font-size: 3.5rem;
   font-weight: 400;
-  line-height: 160%;
+  line-height: 120%;
   color: #A11B1B;
   background: #FFFFFF;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.8rem;
   padding: 0rem 1.32rem;
 }
 .readyTeam_hero .live_btn a img {
-  width: 2rem;
+  width: 4rem;
 }
 @media (max-width: 767px) {
   .readyTeam_hero .live_btn a {
@@ -12443,9 +12442,9 @@ body {
 }
 .readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge {
   position: absolute;
-  top: 0rem;
-  right: 0.8rem;
-  padding-top: 0;
+  top: -1px;
+  right: 1.6rem;
+  padding: 0;
 }
 .readyTeam_wraper .readyTeam_card .readyTeam_cardImg .badge img {
   width: 2.6rem;
