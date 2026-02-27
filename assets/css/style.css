@@ -869,7 +869,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   background: #0D0D0D;
-  background-image: url(../img/header-line.png);
+  background-image: url(../img/header-shape-2.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
@@ -2656,15 +2656,15 @@ body {
 }
 .main_wrapper .sidebar .side_item::after {
   content: "";
-  width: 100%;
+  width: 105%;
   height: 66rem;
   display: block;
-  background-image: url(../img/sidebar-line.png);
+  background-image: url(../img/sidebar-shape-2.png);
   background-repeat: no-repeat;
   background-position: right;
   background-size: 60% 100%;
   position: absolute;
-  right: -34%;
+  right: -36.5%;
   top: 0.5rem;
 }
 .main_wrapper .sidebar .side_item .side_btn {
@@ -12054,7 +12054,7 @@ body {
 
 .readyTeam_sidebar .side_item::after {
   background-image: url("../img/sidebar-shape-2.png") !important;
-  transform: rotate(1deg);
+  transform: rotate(0.4deg);
   top: -0.2rem !important;
 }
 
@@ -12131,6 +12131,13 @@ body {
   .readyTeam_hero .live_btn a img {
     width: 2.8rem;
   }
+}
+.readyTeam_hero .live_btn2 {
+  text-align: center;
+  padding-top: 0.8rem;
+}
+.readyTeam_hero .live_btn2 img {
+  width: 7rem;
 }
 .readyTeam_hero .readyTeam_heroTitle {
   max-width: 67rem;

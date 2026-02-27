@@ -12,7 +12,7 @@
     .side_item {
         &::after {
             background-image: url('../img/sidebar-shape-2.png')!important;
-            transform: rotate(1deg);
+            transform: rotate(0.4deg);
             top: -0.2rem!important;
         }
     }
@@ -96,6 +96,15 @@
                     width: 2.8rem;
                 }
             }
+        }
+    }
+
+    .live_btn2 {
+        text-align: center;
+        padding-top: 0.8rem;
+        
+        img {
+            width: 7rem;
         }
     }
 
