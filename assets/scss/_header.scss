@@ -9,6 +9,7 @@
     background-position: center;
     background-size: 100% 100%;
     padding: 2rem 0rem 3rem;
+    position: relative;
 
     .navbar-brand {
         img {
@@ -113,7 +114,7 @@
     .header_left {
         display: flex;
         align-items: center;
-        gap: 1.6rem;
+        gap: 1.4rem;
     }
 
     .navbar-toggler {
@@ -222,6 +223,23 @@
                 outline: none; 
             }
         }
+    }
+
+    &::before {
+        content: "";
+        width: 1000%;
+        height: 1rem;
+        display: block;
+        background: #0B0B0B;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -0.5rem;
+    }
+
+    .container {
+        position: relative;
+        z-index: 9;
     }
 
 }

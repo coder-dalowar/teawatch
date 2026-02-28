@@ -18,6 +18,7 @@
 /* ---------------- Basic css ------------------ */
 html {
   font-size: 0.694vw;
+  overflow-x: hidden;
 }
 @media (min-width: 1450px) {
   html {
@@ -97,6 +98,7 @@ body {
   letter-spacing: 0.06rem;
   color: #FFF;
   background: #0E0E0E;
+  overflow-x: hidden;
 }
 
 .container {
@@ -863,6 +865,119 @@ body {
   }
 }
 
+.language_dropdown {
+  position: relative;
+}
+.language_dropdown .lang-toggle {
+  width: 5rem;
+  height: 5.2rem;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0rem;
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-toggle img {
+  width: 2.4rem;
+  height: 1.75rem;
+  object-fit: cover;
+}
+.language_dropdown .lang-toggle .border_tl {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: 1px solid #6E6E6E;
+  border-left: 1px solid #6E6E6E;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-toggle .border_tr {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: 1px solid #6E6E6E;
+  border-right: 1px solid #6E6E6E;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-toggle .border_bl {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-bottom: 1px solid #6E6E6E;
+  border-left: 1px solid #6E6E6E;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-toggle .border_br {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-bottom: 1px solid #6E6E6E;
+  border-right: 1px solid #6E6E6E;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-toggle:hover {
+  background: #323232;
+}
+.language_dropdown .lang-toggle:hover span {
+  border-color: #FFF;
+}
+.language_dropdown .lang-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 14.5rem;
+  max-height: 20rem;
+  list-style: none;
+  background: #666666;
+  border: 1px solid #7E7E7E;
+  margin-top: 1rem;
+  display: none;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+  z-index: 1025;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.language_dropdown .lang-menu::-webkit-scrollbar {
+  display: none;
+}
+.language_dropdown .lang-menu.active {
+  display: block;
+}
+.language_dropdown .lang-menu li {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #E0E0E0;
+  line-height: 132%;
+  padding: 1rem 1.2rem;
+  border-bottom: 1px solid #7E7E7E;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.2s all ease;
+}
+.language_dropdown .lang-menu li:last-child {
+  border-bottom: none;
+}
+.language_dropdown .lang-menu li:hover {
+  background: #F02731;
+  color: #FFF;
+}
+.language_dropdown .lang-menu li img {
+  width: 2rem;
+  height: 1.45rem;
+  object-fit: cover;
+}
+
 .header_section {
   max-width: 143.8rem;
   width: 100%;
@@ -874,6 +989,7 @@ body {
   background-position: center;
   background-size: 100% 100%;
   padding: 2rem 0rem 3rem;
+  position: relative;
 }
 .header_section .navbar-brand img {
   width: 16.1rem;
@@ -961,7 +1077,7 @@ body {
 .header_section .header_left {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
+  gap: 1.4rem;
 }
 .header_section .navbar-toggler {
   width: 4rem;
@@ -1059,6 +1175,21 @@ body {
   position: absolute;
   bottom: -0.9rem;
   outline: none;
+}
+.header_section::before {
+  content: "";
+  width: 1000%;
+  height: 1rem;
+  display: block;
+  background: #0B0B0B;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -0.5rem;
+}
+.header_section .container {
+  position: relative;
+  z-index: 9;
 }
 
 .admin_btn a {
