@@ -1288,15 +1288,25 @@ body {
 .add_btn a {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 .add_btn a img {
   width: 3.4rem;
 }
-.add_btn a span {
+.add_btn a p {
   font-size: 1.2rem;
   font-weight: 400;
   color: #FFFFFF;
+}
+.add_btn a p span {
+  color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+.add_btn a p span .text_color {
+  color: #F02731;
+  display: inline-block;
+  margin: 0;
 }
 
 .icon_btn a {
