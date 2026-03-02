@@ -350,11 +350,11 @@
     <!-- offcanvas menu end -->
 
     <!-- chat_bot -->
-    <div class="chat_bot d-lg-none">
+    <!-- <div class="chat_bot d-lg-none">
         <a href="../chat/chat.html">
             <img src="../assets/img/chat.svg" alt="icon">
         </a>
-    </div> 
+    </div>  -->
 
     <!-- profile fixed -->
     <div class="profile_fixed d-none d-lg-block">
@@ -394,7 +394,7 @@
 
     <main>
 
-        <!-- ready team section start -->
+        <!-- reportScore_section start -->
         <section class="before_joinTournament team_section">
             <div class="container">
                 <div class="main_wrapper">
@@ -453,17 +453,8 @@
                                 </a>
                             </div>
 
-                            <!-- <div class="live_btn">
-                                <a href="#">
-                                    <img src="../assets/img/wifi.svg" alt="">
-                                    חי
-                                </a>
-                            </div> -->
-
-                            <div class="live_btn2">
-                                <a href="#">
-                                    <img src="../assets/img/live-btn.png" alt="">
-                                </a>
+                            <div class="ended report_end">
+                                <span>הסתיים</span>
                             </div>
 
                             <div class="readyTeam_heroTitle">
@@ -480,56 +471,42 @@
                                 <div class="readyTeam_heroGame_wraper">
                                     <div class="readyTeam_heroGame_item">
                                         <img src="../assets/img/tournament-1.png" alt="">
-                                        <p>רייג'קלאן</p>
+                                        <div class="report_scorep3text">
+                                            <span class="loss">הפסד</span>
+                                            <p>רייג'קלאן</p>
+                                        </div>
                                     </div>
                                     <div class="readyTeam_heroGame_text">
-                                        <h3>00 - 00</h3>
+                                        <h3 dir="ltr">10 - 01</h3>
                                     </div>
                                     <div class="readyTeam_heroGame_item">
-                                        <p>רייג'קלאן</p>
+                                        <div class="report_scorep3text">
+                                            <span class="victory">ניצחון</span>
+                                            <p>רייג'קלאן</p>
+                                        </div>
                                         <img src="../assets/img/tournament-2.png" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- selected map -->
-                        <div class="selected_map">
-                            <h4>מפה נבחרה:</h4>
-                            <div class="selected_mapImg">
-                                <img src="../assets/img/selected-map.png" alt="">
-                            </div>
-                            <h4>Map Name</h4>
-                        </div> 
-
                         <!-- readyTeam_timer -->
-                        <div class="readyTeam_timer mapselect_timer pt-3">
-                            <div class="timer_wraper" data-duration="60">
-                                <div class="timer">
-                                    <svg width="120" height="120" viewBox="0 0 120 120">
-                                    <defs>
-                                        <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" stop-color="#F02731"/>
-                                        <stop offset="100%" stop-color="#0E0304"/>
-                                        </linearGradient>
-                                    </defs>
-
-                                    <circle
-                                        class="progress-ring"
-                                        stroke="url(#ringGradient)"
-                                        stroke-width="2"
-                                        fill="transparent"
-                                        r="59"
-                                        cx="60"
-                                        cy="60"
-                                    />
-                                    </svg>
-
-                                    <div class="time">01:00</div>
-                                </div>
+                        <div class="readyTeam_timer">
+                            <div class="report_scorep4_info result_confirmed">
+                                <img src="../assets/img/checkmark-circle.svg" alt="">
+                                <p>החלטת אדמין: הניצחון הוענק לקבוצת [שם הקבוצה]. הטורניר ממשיך לשלב הבא.</p>
                             </div>
 
-                           <h4 class="text_color2"> תורך לבחור צד </h4>
+                           <div class="how_playBtn">
+                                <a href="#">
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                    לעץ הטורניר
+                                    <img src="../assets/img/left.svg" alt="">
+                                </a>
+                           </div>
                         </div>
 
                         <!-- readyTeam_button -->
@@ -540,61 +517,17 @@
                             <span class="active_shape"></span>
                             <a href="#" class="selected">חסימת מפות</a>
                             <span class="active_shape"></span>
-                            <a href="#" class="active">בחירת צד</a>
-                            <span></span>
-                            <a href="#">דיווח תוצאה</a>
+                            <a href="#" class="selected">בחירת צד</a>
+                            <span class="active_shape"></span>
+                            <a href="#" class="active">דיווח תוצאה</a>
                         </div> 
 
-                        <!-- startTeam_section -->
-                        <div class="startTeam_section">
-                            <div class="startTeam_wraper">
-                                <div class="startTeam_card attack_card">
-                                    <div class="startTeam_box">
-                                        <span class="border_tl"></span>
-                                        <span class="border_tr"></span>
-                                        <span class="border_bl"></span>
-                                        <span class="border_br"></span>
-
-                                        <div class="team_banner">
-                                            <img src="../assets/img/attack.png" alt="">
-
-                                            <div class="team_overlay">
-                                                <span>התקפה</span>
-                                            </div>
-                                        </div>                                        
-                                    </div>
-                                    <div class="startTeam_text">
-                                        <h4>התקפה</h4>
-                                    </div>
-                                </div>
-
-                                <div class="startTeam_card defend_card">
-                                    <div class="startTeam_box">
-                                        <span class="border_tl"></span>
-                                        <span class="border_tr"></span>
-                                        <span class="border_bl"></span>
-                                        <span class="border_br"></span>
-
-                                        <div class="team_banner">
-                                            <img src="../assets/img/defend.png" alt="">
-
-                                            <div class="team_overlay">
-                                                <span>הגנה</span>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                    <div class="startTeam_text">
-                                        <h4>הגנה</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
             </div>
         </section> 
-        <!-- ready team section end -->
+        <!-- reportScore_section end -->
          
     </main>
 
@@ -664,10 +597,9 @@
     </div>
     <!-- Chat Modal end -->
 
-
-    <!-- exit tournament modal -->
-    <div class="modal fade" id="exitTModal" tabindex="-1" aria-labelledby="exitTModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered ranking_modal remove_modal">
+    <!-- game step modal -->
+    <div class="modal fade" id="stepModal" tabindex="-1" aria-labelledby="stepModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ranking_modal">
             <div class="modal-content">
                 <span class="border_tl"></span>
                 <span class="border_tr"></span>
@@ -677,28 +609,145 @@
                     <img src="../assets/img/cross.svg" alt="">
                 </span>
 
-                <div class="removemodal_body">
-                    <div class="removemodal_title">
-                        <h3> יציאה מהטורניר </h3>
-                       <p>האם ברצונך לצאת מהטורניר?</p>
+                <div class="jointmodal_body stepModal_body">
+                    <div class="jointmodal_title text-center">
+                        <img src="../assets/img/favorite-1.png" alt="">
+                        <h3 class="title_xl"> עקוב אחר השלבים כדי להתחיל את המשחק </h3>
                     </div>
 
-                    <div class="removemodal_button">
-                        <a href="#" class="active">
-                             יציאה
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
-                        <a href="#" data-bs-dismiss="modal" aria-label="Close">
-                            ביטול
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
-                    </div>
+                    <div class="stepModal_wraper">
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>1</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>צור לובי</h4>
+                                    <p>השחקן שמשמאל (Shono) צריך ליצור לובי ב-Call of Duty</p>
+                                </div>
+
+                                <div class="stepModal_innerTextRow">
+                                    <div class="stepModal_innerText">
+                                        <p>השתמש בוטו</p>
+                                        <h4>פועל</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>הטלת מטבע</p>
+                                        <h4>כבוי</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>וטו צד</p>
+                                        <h4>8</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>מאגר מפות</p>
+                                        <h4>1.בינד</h4>
+                                        <h4>2.הייבן</h4>
+                                        <h4>3.אסנט</h4>
+                                        <span>הצג הכול (6)</span>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>מצב משחק</p>
+                                        <h4>רגיל</h4>
+                                    </div>
+                                    <div class="stepModal_innerText">
+                                        <p>הארכה</p>
+                                        <h4>פועל</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>2</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>הזמן</h4>
+                                    <p>הוסיפו זה את זה כחברים ב-Call of Duty</p>
+                                    <h5> ‏Snop צריך להזמין את nolyp ללובי. חשבונות המשחק שלכם מוצגים </h5>
+                                </div>
+
+                                <div class="stepModal_profileWrap">
+                                    <div class="stepModal_profileItem">
+                                        <h3>ShonP</h3>
+                                        <div class="stepModal_profileBox copy_wraper">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <div class="stepModal_profileImg">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                            </div>
+                                            <div class="stepModal_profileText">
+                                                <h4>PatateTWH1</h4>
+                                                <p class="copy_text">קפטן</p>
+                                            </div>
+                                            <div class="stepModal_profileCopy">
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../assets/img/copy.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="stepModal_profileItem">
+                                        <h3>Bonluyp</h3>
+                                        <div class="stepModal_profileBox copy_wraper">
+                                            <span class="border_tl"></span>
+                                            <span class="border_tr"></span>
+                                            <span class="border_bl"></span>
+                                            <span class="border_br"></span>
+
+                                            <div class="stepModal_profileImg">
+                                                <img src="../assets/img/orders-game.png" alt="">
+                                            </div>
+                                            <div class="stepModal_profileText">
+                                                <h4>PatateTWH1</h4>
+                                                <p class="copy_text">קפטן</p>
+                                            </div>
+                                            <div class="stepModal_profileCopy">
+                                                <button type="button" class="copy_btn">
+                                                    <img src="../assets/img/copy.svg" alt="">
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>3</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>התחל משחק</h4>
+                                    <p> כאשר כולם הצטרפו ללובי, ‏Shonp יכול להתחיל את המשחק. </p>
+                                    <p>צלם צילום מסך של תוצאות המשחק ושמור אותו למקרה שתידרש הוכחה עקב דיווחים שונים של שחקנים.</p>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="stepModal_item">
+                            <div class="stepModal_number">
+                                <h3>4</h3>
+                            </div>
+
+                            <div class="stepModal_text">
+                                <div class="stepModal_heading">
+                                    <h4>דווח תוצאות</h4>
+                                    <p> לאחר סיום המשחק, חזור ללובי של Challengermode כדי לדווח על <br> התוצאות שלך. </p>
+                                </div>                                
+                            </div>
+                        </div>
+
+                    </div>                  
                 </div>
             </div>
         </div>

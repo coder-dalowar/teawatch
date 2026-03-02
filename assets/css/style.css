@@ -1293,20 +1293,15 @@ body {
 .add_btn a img {
   width: 3.4rem;
 }
-.add_btn a p {
+.add_btn a span {
   font-size: 1.2rem;
   font-weight: 400;
   color: #FFFFFF;
 }
-.add_btn a p span {
-  color: rgba(255, 255, 255, 0.6);
-  display: inline-block;
-  margin-top: 0.2rem;
-}
-.add_btn a p span .text_color {
+.add_btn a span .text_color {
   color: #F02731;
   display: inline-block;
-  margin: 0;
+  margin-top: 0.3rem;
 }
 
 .icon_btn a {
@@ -4487,9 +4482,9 @@ body {
   max-width: 18rem;
   width: 100%;
   margin-left: auto;
-  position: fixed;
-  top: 67.5rem;
-  right: calc((100% - 143rem) / 2);
+  position: absolute;
+  top: 67.8rem;
+  right: calc((100% - 143.8rem) / 2);
   z-index: 1024;
 }
 .profile_fixed .profile_box a {
@@ -14236,6 +14231,9 @@ body {
 
 .result_confirmed {
   background: #37AE48;
+}
+.result_confirmed p {
+  color: #FFF;
 }
 
 .report_scorep3text .victory {
