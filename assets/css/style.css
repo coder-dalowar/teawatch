@@ -2217,6 +2217,7 @@ body {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #A01A20 #1B0D0D;
+    direction: ltr;
   }
   .chat_section .chat_wraper .chat_user::-webkit-scrollbar {
     width: 0.8rem;
@@ -2249,6 +2250,7 @@ body {
 @media (max-width: 991px) {
   .chat_section .chat_wraper .chat_user .user_title {
     height: 7.5rem;
+    direction: rtl;
   }
 }
 .chat_section .chat_wraper .chat_user .user_box {
@@ -2261,6 +2263,7 @@ body {
   padding: 1.6rem 1.6rem;
   scrollbar-width: thin;
   scrollbar-color: #A01A20 #1B0D0D;
+  direction: ltr;
 }
 .chat_section .chat_wraper .chat_user .user_box::-webkit-scrollbar {
   width: 0.8rem;
@@ -2277,6 +2280,7 @@ body {
 @media (max-width: 991px) {
   .chat_section .chat_wraper .chat_user .user_box {
     height: auto;
+    direction: ltr;
   }
 }
 .chat_section .chat_wraper .chat_user .user_box .user_item {
@@ -2290,6 +2294,7 @@ body {
   border: none;
   border-radius: 0rem;
   transition: 0.2s all ease;
+  direction: rtl;
 }
 .chat_section .chat_wraper .chat_user .user_box .user_item:hover, .chat_section .chat_wraper .chat_user .user_box .user_item.active {
   background: #1E1212;
@@ -2463,6 +2468,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 1.4rem 2rem 2rem;
+  direction: ltr;
 }
 @media (max-width: 991px) {
   .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox {
@@ -2477,6 +2483,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  direction: rtl;
+  padding-right: 2.2rem;
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .alert_item img {
   width: 2rem;
@@ -2490,11 +2498,11 @@ body {
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel {
   padding: 1.8rem 0.4rem;
-  margin-left: -2rem;
-  padding-left: 2rem;
+  padding-right: 2.2rem;
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: #A01A20 #1B0D0D;
+  direction: ltr;
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel::-webkit-scrollbar {
   width: 0.8rem;
@@ -2508,16 +2516,8 @@ body {
   background: #A01A20;
   border-radius: 2rem;
 }
-@media (max-width: 575px) {
-  .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel {
-    margin-left: -1rem;
-  }
-}
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel .chat_text {
-  background: #2A1313;
-  padding: 1rem 2rem;
-  border-radius: 1.6rem 1.6rem 0rem 1.6rem;
-  display: inline-block;
+  direction: rtl;
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel .chat_text p {
   font-family: "Heebo", sans-serif;
@@ -2526,6 +2526,9 @@ body {
   line-height: 160%;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
+  background: #2A1313;
+  padding: 1rem 2rem;
+  border-radius: 1.6rem 1.6rem 0rem 1.6rem;
   display: inline-block;
 }
 @media (max-width: 767px) {
@@ -2539,8 +2542,9 @@ body {
   justify-content: flex-end;
   gap: 0.8rem;
   margin: 0.4rem 0rem 1rem;
+  direction: rtl;
 }
-.chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel .chat_item .chat_text {
+.chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel .chat_item .chat_text p {
   border-radius: 1.6rem 1.6rem 1.6rem 0rem;
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chat_panel .chat_item img {
@@ -2561,6 +2565,7 @@ body {
   padding-top: 1rem;
   z-index: 9;
   position: relative;
+  direction: rtl;
 }
 .chat_section .chat_wraper .chat_content .content_wraper .chat_body .chat_mainBox .chatField_wrap::before {
   content: "";
@@ -13432,8 +13437,8 @@ body {
 }
 @media (max-width: 767px) {
   .reportScore_chat .chat_body .chat_mainBox {
-    padding-left: 0rem !important;
-    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    padding-right: 0rem !important;
   }
 }
 .reportScore_chat .chatField_wrap .chatField_item {

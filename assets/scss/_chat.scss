@@ -330,6 +330,7 @@
                 overflow: auto;
                 scrollbar-width: thin;
                 scrollbar-color: #A01A20 #1B0D0D;
+                direction: ltr;
 
                 &::-webkit-scrollbar {
                     width: 0.8rem;
@@ -365,6 +366,7 @@
 
                 @media #{$md} {
                     height: 7.5rem;
+                    direction: rtl;
                 }
             }
 
@@ -378,6 +380,7 @@
                 padding: 1.6rem 1.6rem;
                 scrollbar-width: thin;
                 scrollbar-color: #A01A20 #1B0D0D;
+                direction: ltr;
 
                 &::-webkit-scrollbar {
                     width: 0.8rem;
@@ -396,6 +399,7 @@
 
                 @media #{$md} {
                     height: auto;
+                    direction: ltr;
                 }
 
                 .user_item {
@@ -409,6 +413,7 @@
                     border: none;
                     border-radius: 0rem;
                     transition: 0.2s all ease;
+                    direction: rtl;
 
                     &:hover,
                     &.active {
@@ -604,6 +609,7 @@
                         display: flex;
                         flex-direction: column;
                         padding: 1.4rem 2rem 2rem;
+                        direction: ltr;
 
                         @media #{$md} {
                             padding-top: 0rem;
@@ -617,6 +623,8 @@
                             display: flex;
                             align-items: center;
                             gap: 0.8rem;
+                            direction: rtl;
+                            padding-right: 2.2rem;
 
                             img {
                                 width: 2rem;
@@ -633,11 +641,11 @@
 
                         .chat_panel {
                             padding: 1.8rem 0.4rem;
-                            margin-left: -2rem;
-                            padding-left: 2rem;
+                            padding-right: 2.2rem;
                             overflow: auto;
                             scrollbar-width: thin;
                             scrollbar-color: #A01A20 #1B0D0D;
+                            direction: ltr;
 
                             &::-webkit-scrollbar {
                                 width: 0.8rem;
@@ -654,16 +662,9 @@
                                 border-radius: 2rem;
                             }
 
-                            @media #{$xs} {
-                                margin-left: -1rem;
-                            }
-
                             .chat_text {
-                                background: #2A1313;
-                                padding: 1rem 2rem;
-                                border-radius: 1.6rem 1.6rem 0rem 1.6rem;
-                                display: inline-block;
-
+                                direction: rtl;
+                                
                                 p {
                                     font-family: $heeboFont;
                                     font-size: 1.6rem;
@@ -671,6 +672,9 @@
                                     line-height: 160%;
                                     text-transform: uppercase;
                                     color: rgba(255, 255, 255, 0.8);
+                                    background: #2A1313;
+                                    padding: 1rem 2rem;
+                                    border-radius: 1.6rem 1.6rem 0rem 1.6rem;
                                     display: inline-block;
 
                                     @media #{$sm} {
@@ -685,9 +689,12 @@
                                 justify-content: flex-end;
                                 gap: 0.8rem;
                                 margin: 0.4rem 0rem 1rem;
+                                direction: rtl;
 
                                 .chat_text {
-                                    border-radius: 1.6rem 1.6rem 1.6rem 0rem;
+                                    p {
+                                        border-radius: 1.6rem 1.6rem 1.6rem 0rem;
+                                    }
                                 }
 
                                 img {
@@ -710,6 +717,7 @@
                             padding-top: 1rem;
                             z-index: 9;
                             position: relative;
+                            direction: rtl;
 
                             &::before {
                                 content: "";

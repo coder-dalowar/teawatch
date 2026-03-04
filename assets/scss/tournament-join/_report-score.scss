@@ -86,8 +86,8 @@
 
         .chat_mainBox {
             @media #{$sm} {
-                padding-left: 0rem!important;
-                padding-right: 1rem!important;
+                padding-left: 1rem!important;
+                padding-right: 0rem!important;
             }
         }
     }
