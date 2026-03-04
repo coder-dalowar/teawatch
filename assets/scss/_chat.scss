@@ -328,11 +328,22 @@
                 width: 100%;
                 height: calc(100vh - 22rem);
                 overflow: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
+                scrollbar-width: thin;
+                scrollbar-color: #A01A20 #1B0D0D;
 
                 &::-webkit-scrollbar {
-                    display: none;          
+                    width: 0.8rem;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #1B0D0D;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #A01A20;
+                    border-radius: 2rem;
                 }
             }
 
@@ -365,11 +376,22 @@
                 overflow: auto;
                 display: block;
                 padding: 1.6rem 1.6rem;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
+                scrollbar-width: thin;
+                scrollbar-color: #A01A20 #1B0D0D;
 
                 &::-webkit-scrollbar {
-                    display: none;          
+                    width: 0.8rem;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-track {
+                    background: #1B0D0D;
+                    border-radius: 2rem;
+                }
+
+                &::-webkit-scrollbar-thumb {
+                    background: #A01A20;
+                    border-radius: 2rem;
                 }
 
                 @media #{$md} {
@@ -611,12 +633,29 @@
 
                         .chat_panel {
                             padding: 1.8rem 0.4rem;
+                            margin-left: -2rem;
+                            padding-left: 2rem;
                             overflow: auto;
-                            scrollbar-width: none;
-                            -ms-overflow-style: none;
+                            scrollbar-width: thin;
+                            scrollbar-color: #A01A20 #1B0D0D;
 
                             &::-webkit-scrollbar {
-                                display: none;          
+                                width: 0.8rem;
+                                border-radius: 2rem;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: #1B0D0D;
+                                border-radius: 2rem;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: #A01A20;
+                                border-radius: 2rem;
+                            }
+
+                            @media #{$xs} {
+                                margin-left: -1rem;
                             }
 
                             .chat_text {
