@@ -1,0 +1,247 @@
+// brackets page start ====================
+
+.brackets_grid {
+    padding: 4rem 0rem 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.6rem;
+
+    @media #{$md} {
+        padding: 3rem 0rem;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media #{$sm} {
+        padding: 2.5rem 0rem;
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+
+    .brackets_box {
+        background: #1E1212;
+        padding: 2rem 1.5rem;
+        text-align: center;
+
+        h4 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            line-height: 130%;
+            color: #FFF;
+            margin-bottom: 0.8rem;
+        }
+
+        p {
+            font-family: $heeboFont;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 160%;
+            color: #E0CDCE;
+        }
+    }
+}
+
+
+// brackets_roadmap -----------------
+
+.brackets_roadmap {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    padding-bottom: 4.2rem;
+
+    @media #{$md} {
+        overflow-x: scroll;
+    }
+}
+
+.brackets_roadmap_heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+    margin-top: 2.4rem;
+
+    span {
+        font-family: $heeboFont;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: initial;
+        color: #E0CDCE;
+        background: #281415;
+        display: inline-block;
+        padding: 0.2rem 1.1rem;
+
+        &.ended {
+            background: #A11B1B;
+            padding: 0.2rem 0.75rem;
+        }
+
+        &.waiting_green {
+            background: #37AE48;
+        }
+    }
+
+    img {
+       width: 4.5rem; 
+    }
+
+    p {
+        font-family: $heeboFont;
+        font-size: 1.2rem;
+        font-weight: 400;
+        letter-spacing: initial;
+        color: #E0CDCE;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+
+        img {
+            width: 1.6rem;
+        }
+    }
+}
+
+.brackets_roadmap_box {
+    width: 21.6rem;
+    background: #281415;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 0.8rem;
+    margin-bottom: 0.2rem;
+
+    p {
+        font-family: $heeboFont;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: initial;
+        color: #E0CDCE;
+    }
+
+    .brackets_roadmap_boxItem {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+
+        img {
+            width: 2.2rem;
+            height: 2.2rem;
+            border-radius: 50%;
+        }
+    }
+}
+
+.brackets_roadmap_column2 {
+    .brackets_roadmap_heading {
+        margin-top: 16rem;
+    }
+}
+
+.brackets_roadmap_column3 {
+    .brackets_roadmap_heading {
+        margin-top: 43rem;
+    }
+}
+
+.brackets_roadmap_item {
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 5rem;
+        height: 56%;
+        display: block;
+        background: transparent;
+        border: 0.2rem solid #3E3E3E;
+        border-radius: 2rem 0rem 0rem 2rem;
+        border-right: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 100%;
+    }
+
+    &::before {
+        content: "";
+        width: 5rem;
+        height: 0.2rem;
+        display: block;
+        background: #3E3E3E;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -10rem;
+    }
+}
+
+.brackets_roadmap_column2 {
+    .brackets_roadmap_item {
+        &::after {
+            height: 70%;
+        }
+    }
+}
+
+.brackets_roadmap_column3 {
+    .brackets_roadmap_item {
+        &::after {
+            height: 82%;
+        }
+    }
+}
+
+.brackets_roadmap_column4 {
+    .brackets_roadmap_item {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.brackets_roadmap2 {
+    .brackets_roadmap_heading {
+        span {
+            font-weight: 700;
+        }
+    }
+
+    .brackets_roadmap_box {
+        p {
+            font-weight: 700;
+        }
+    }
+}
+
+
+// brackets_pagination ------------------
+
+.brackets_pagination {
+    padding: 3.2rem 0;
+    border-top: 1px solid #262626;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .screen_btn {
+        a {
+            font-family: $heeboFont;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: initial;
+            color: #E0CDCE;
+            background: #281415;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.5rem 1rem;
+
+            img {
+                width: 2.4rem;
+            }
+        }
+    }
+}
+

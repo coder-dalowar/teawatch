@@ -1,1 +1,117 @@
 // results page start -----------------
+
+.joinTournament_title {
+    .results_live {
+        a {
+            padding: 0;
+            background: transparent;
+
+            img {
+                width: 4rem;
+            }
+        }
+    }
+}
+
+.resultsdt_table {
+    padding: 2rem 0rem;
+
+    .resultsdt_thead {
+        padding: 2rem 1.4rem 1.2rem;
+        border-bottom: 1px solid #3B1315;
+        display: flex;
+        align-items: center;
+
+        h4 {
+            font-family: $heeboFont;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 160%;
+            color: #FFFFFF;
+
+            &:first-child {
+                width: 10.8rem;
+
+                @media #{$sm} {
+                    width: 7.5rem;
+                }
+
+                @media #{$xs} {
+                    width: 6.5rem;
+                }
+            }
+
+            &:last-child {
+                margin-right: auto;
+            }
+        }
+    }
+
+    .resultsdt_tbody {
+        padding: 2rem 1.2rem 1.2rem;
+        border-bottom: 1px solid #3B1315;
+        display: flex;
+        align-items: center;
+
+        .resultsdt_data1 {
+            width: 10.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+
+            @media #{$sm} {
+                width: 7.5rem;
+            }
+
+            @media #{$xs} {
+                width: 6.5rem;
+            }
+
+            img {
+                width: 2rem;
+            }
+
+            h4 {
+                font-family: $heeboFont;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .resultsdt_data_item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            img {
+                width: 2.8rem;
+                height: 2.8rem;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            p {
+                font-family: $heeboFont;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        .resultsdt_data_text {
+            margin-right: auto;
+            
+            p {
+                font-family: $heeboFont;
+                font-size: 1.4rem;
+                font-weight: 400;
+                line-height: 160%;
+                color: rgba(255, 255, 255, 0.8);
+                direction: ltr;
+            }
+        }
+    }
+}
