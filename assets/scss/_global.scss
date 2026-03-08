@@ -1110,4 +1110,34 @@ body {
 }
 
 
+// return_btn --------------
+.return_btn {
+	margin-bottom: 1.8rem;
 
+	a {
+		font-family: $heeboFont;
+		font-size: 2rem;
+		font-weight: 500;
+		line-height: 150%;
+		color: #F9F9FF;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.6rem;
+
+		img {
+			width: 2.4rem;
+		}
+	}
+
+	@media #{$md} {
+		margin-bottom: 1rem;
+		
+		a {
+			font-size: 1.8rem;
+
+			img {
+				width: 2.1rem;
+			}
+		}
+	}
+}

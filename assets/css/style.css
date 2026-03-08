@@ -978,6 +978,34 @@ body {
   object-fit: cover;
 }
 
+.return_btn {
+  margin-bottom: 1.8rem;
+}
+.return_btn a {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #F9F9FF;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.return_btn a img {
+  width: 2.4rem;
+}
+@media (max-width: 991px) {
+  .return_btn {
+    margin-bottom: 1rem;
+  }
+  .return_btn a {
+    font-size: 1.8rem;
+  }
+  .return_btn a img {
+    width: 2.1rem;
+  }
+}
+
 .header_section {
   max-width: 143.8rem;
   width: 100%;
@@ -10154,6 +10182,7 @@ body {
 .joinTournament_title p {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 1.4rem;
 }
 .joinTournament_title p span {
@@ -14736,6 +14765,37 @@ body {
   .lineup_gameBar .lineup_gameItem .abrasive {
     font-size: 1.4rem;
   }
+}
+
+.teamDetails_section {
+  padding: 3.2rem 0rem 10rem;
+}
+@media (max-width: 991px) {
+  .teamDetails_section {
+    padding: 2.4rem 0rem 6rem;
+  }
+}
+.teamDetails_section .serachBar_wraper {
+  width: 33rem;
+}
+@media (max-width: 991px) {
+  .teamDetails_section .serachBar_wraper {
+    width: 28rem;
+  }
+}
+
+.teamD_titles {
+  margin-top: 3.2rem;
+}
+.teamD_titles .title_xl {
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 125%;
+  color: #FFFFFF;
+  padding-right: 2rem;
+}
+.teamD_titles .title_xl ::after {
+  height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
