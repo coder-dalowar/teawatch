@@ -15000,7 +15000,21 @@ body {
 }
 @media (max-width: 991px) {
   .brackets_roadmap {
-    overflow-x: scroll;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #A01A20 #1B0D0D;
+  }
+  .brackets_roadmap::-webkit-scrollbar {
+    width: 0.8rem;
+    border-radius: 2rem;
+  }
+  .brackets_roadmap::-webkit-scrollbar-track {
+    background: #1B0D0D;
+    border-radius: 2rem;
+  }
+  .brackets_roadmap::-webkit-scrollbar-thumb {
+    background: #A01A20;
+    border-radius: 2rem;
   }
 }
 
