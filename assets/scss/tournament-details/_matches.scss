@@ -55,21 +55,6 @@
     align-items: center;
     justify-content: space-between;
 
-    span {
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 120%;
-        color: #F5F6FF;
-        display: inline-block;
-        padding: 0.8rem 4.1rem;
-
-        @media #{$sm} {
-            font-size: 1.45rem;
-            padding-left: 2.5rem;
-            padding-right: 2.5rem;
-        }
-    }
-
     a {
         font-size: 1.6rem;
         font-weight: 400;
@@ -78,9 +63,13 @@
         display: inline-block;
         padding: 0.7rem 10rem;
         position: relative;
-        background: #F02731;
-        border: 1px solid #F23D46;
+        background: transparent;
+        border: 1px solid transparent;
         transition: 0.2s all ease;
+
+        @media #{$md} {
+            padding: 0.7rem 6rem;
+        }
 
         @media #{$sm} {
             font-size: 1.45rem;
@@ -88,8 +77,10 @@
             padding-right: 3.6rem;
         }
 
-        span {
-            padding: 0;
+        @media #{$xs} {
+            font-size: 1.4rem;
+            padding-left: 3.2rem;
+            padding-right: 3.2rem;
         }
 
         .border_tl {
@@ -101,6 +92,7 @@
 			left: -0.1rem;
 			top: -0.1rem;
 			transition: 0.2s all ease;
+            opacity: 0;
 		}
 
 		.border_tr {
@@ -112,6 +104,7 @@
 			right: -0.1rem;
 			top: -0.1rem;
 			transition: 0.2s all ease;
+            opacity: 0;
 		}
 
 		.border_bl {
@@ -123,6 +116,7 @@
 			left: -0.1rem;
 			bottom: -0.1rem;
 			transition: 0.2s all ease;
+            opacity: 0;
 		}
 
 		.border_br {
@@ -134,11 +128,15 @@
 			right: -0.1rem;
 			bottom: -0.1rem;
 			transition: 0.2s all ease;
+            opacity: 0;
 		}
 
-        &:hover {
+        &.active {
+            background: #F23D46;
+            border-color: #F23D46;
+
             span {
-                transform: scale(1.25);
+                opacity: 1;
             }
         }
     }
@@ -192,10 +190,14 @@
                 display: block;
                 background: rgba(255, 255, 255, 0.2);
                 position: absolute;
-                left: 0rem;
+                left: -1.5rem;
                 top: 50%;
                 transform: translateY(-50%);
                 transition: 0.2s all ease;
+
+                @media #{$md} {
+                    left: -0.8rem;
+                }
             }
 
             span {
@@ -454,12 +456,11 @@
 .lineup_gameBar {
     display: flex;
     align-items: center;
-    gap: 1.6rem;
     padding-bottom: 10rem;
 
     @media #{$sm} {
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 1.5rem;
         padding-bottom: 6rem;
     }
 
@@ -467,12 +468,13 @@
         display: flex;
         align-items: center;
         gap: 1.2rem;
-        padding-bottom: 1.6rem;
+        border-bottom: 1px solid transparent;
+        padding: 0rem 1.5rem 1.5rem;
+        transition: 0.2s all ease;
 
-        &:first-child {
+        &:hover {
             background: linear-gradient(to bottom, rgba(240, 39, 49, 0) 0%, rgba(240, 39, 49, 0.30) 100%);
-            border-bottom: 1px solid #C12028;
-            padding: 0rem 1.6rem 1.6rem;
+            border-color: #C12028;
         }
 
         p {

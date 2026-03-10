@@ -220,29 +220,39 @@
 
 // =================== custom select dropdown ================
 {
-  document.querySelectorAll(".custom_select").forEach(select => {
-    const btn = select.querySelector(".select_btn");
-    const dropdown = select.querySelector(".select_dropdown");
-    const selected = select.querySelector(".selected");
+  document.addEventListener("click", function (e) {
 
-    btn.addEventListener("click", () => {
-      select.classList.toggle("open");
-    });
+    const allSelects = document.querySelectorAll(".custom_select");
+    const clickedSelect = e.target.closest(".custom_select");
 
-    dropdown.querySelectorAll("li").forEach(option => {
-      option.addEventListener("click", () => {
-        selected.textContent = option.textContent;
-        dropdown.querySelectorAll("li").forEach(li => li.classList.remove("active"));
-        option.classList.add("active");
-        select.classList.remove("open");
-      });
-    });
-
-    document.addEventListener("click", e => {
-      if (!select.contains(e.target)) {
+    // Close all dropdowns first
+    allSelects.forEach(select => {
+      if (select !== clickedSelect) {
         select.classList.remove("open");
       }
     });
+
+    // If select button clicked
+    if (e.target.closest(".select_btn")) {
+      const select = e.target.closest(".custom_select");
+      select.classList.toggle("open");
+    }
+
+    // If option clicked
+    if (e.target.closest(".select_dropdown li")) {
+      const option = e.target.closest("li");
+      const select = option.closest(".custom_select");
+      const selected = select.querySelector(".selected");
+
+      // image + text copy
+      selected.innerHTML = option.innerHTML;
+
+      select.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+      option.classList.add("active");
+
+      select.classList.remove("open");
+    }
+
   });
 }
 
@@ -1379,5 +1389,26 @@
       });
     });
 
+  });
+}
+
+
+
+// ================== mathes_heading toggle =================
+{
+  document.addEventListener("DOMContentLoaded", function () {
+    const headings = document.querySelectorAll(".mathes_heading a");
+
+    headings.forEach(function (item) {
+      item.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        headings.forEach(function (link) {
+          link.classList.remove("active");
+        });
+
+        this.classList.add("active");
+      });
+    });
   });
 }

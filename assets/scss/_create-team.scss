@@ -667,7 +667,7 @@
         border: 1px solid #7E7E7E;
         margin-top: 1rem;
         display: none;
-        z-index: 2026;
+        z-index: 2030;
 
         li {
             font-family: $heeboFont;
@@ -750,4 +750,16 @@
     }
 }
 
+
+
+//  country select --------------
+
+.country_select {
+    img {
+        width: 1.8rem;
+        height: 1.3rem;
+        object-fit: cover;
+        margin-left: 0.4rem;
+    }
+}
 
