@@ -98,7 +98,6 @@ body {
   letter-spacing: 0.06rem;
   color: #FFF;
   background: #0E0E0E;
-  overflow-x: hidden;
 }
 
 .container {
@@ -1017,7 +1016,9 @@ body {
   background-position: center;
   background-size: 100% 100%;
   padding: 2rem 0rem 3rem;
-  position: relative;
+  position: sticky !important;
+  top: 0;
+  z-index: 2026;
 }
 .header_section .navbar-brand img {
   width: 16.1rem;
@@ -1204,18 +1205,8 @@ body {
   bottom: -0.9rem;
   outline: none;
 }
-.header_section::before {
-  content: "";
-  width: 1000%;
-  height: 1rem;
-  display: block;
-  background: #0B0B0B;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -0.5rem;
-}
-.header_section .container {
+.header_section .container,
+.header_section .container-fluid {
   position: relative;
   z-index: 9;
 }
@@ -1326,6 +1317,9 @@ body {
   font-weight: 400;
   color: #FFFFFF;
 }
+.add_btn a span .gray_text {
+  color: rgba(255, 255, 255, 0.6);
+}
 .add_btn a span .text_color {
   color: #F02731;
   display: inline-block;
@@ -1408,6 +1402,7 @@ body {
   width: 32rem !important;
   border-left: 1px solid #460C0F !important;
   padding-bottom: 11rem;
+  z-index: 9999;
 }
 .offcanvas .offcanvas-header {
   display: flex;
@@ -1749,6 +1744,54 @@ body {
 }
 .header_button a.active span {
   border-color: #FDEABD;
+}
+
+.header_sectionv2 {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  position: sticky;
+  top: 0;
+  background-image: url("../img/header-shape.png");
+  padding: 2rem 0rem 2.6rem;
+}
+@media (max-width: 991px) {
+  .header_sectionv2 {
+    padding: 1.6rem 0rem 2rem;
+  }
+}
+.header_sectionv2 .container-fluid {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+@media (min-width: 1200px) and (max-width: 1449px) {
+  .header_sectionv2 .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header_sectionv2 .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 991px) {
+  .header_sectionv2 .container-fluid {
+    max-width: 74rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .header_sectionv2 .container-fluid {
+    max-width: 55rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.header_sectionv2 .container-fluid .navbar-nav {
+  margin-right: 4rem;
 }
 
 .footer_section {
@@ -2848,7 +2891,7 @@ body {
   text-align: center;
   position: sticky;
   display: block;
-  top: 0;
+  top: 11.2rem;
 }
 .main_wrapper .sidebar .side_item {
   padding-top: 7rem;
@@ -4549,7 +4592,7 @@ body {
   max-width: 18rem;
   width: 100%;
   margin-left: auto;
-  position: absolute;
+  position: fixed;
   top: 67.8rem;
   right: calc((100% - 143.8rem) / 2);
   z-index: 1024;
@@ -4718,6 +4761,47 @@ body {
 }
 .offcanvas-body .profile_fixed .subscription_box a {
   font-size: 1.8rem;
+}
+
+.main_wrapperv2 .main_content {
+  margin-right: auto;
+}
+.main_wrapperv2 .sidebar_v2 {
+  width: 14rem;
+  height: 100%;
+  padding-right: 7rem;
+  position: fixed;
+  right: 0;
+  top: 9rem;
+}
+.main_wrapperv2 .sidebar_v2 .side_item::after {
+  width: 10.3rem;
+  height: 65rem;
+  background-image: url("../img/sidebar-shape.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  right: 0;
+  top: 0rem;
+}
+@media (max-width: 991px) {
+  .main_wrapperv2 .sidebar_v2 {
+    width: 100%;
+    height: initial;
+    top: initial;
+    padding-right: 0rem;
+  }
+}
+@media (max-width: 767px) {
+  .main_wrapperv2 .sidebar_v2 {
+    padding-right: 2rem;
+  }
+}
+
+.profile_fixedv2 {
+  position: fixed;
+  right: 0;
+  bottom: 1rem;
 }
 
 .signup_form_section {

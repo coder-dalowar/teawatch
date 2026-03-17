@@ -1,3 +1,26 @@
+// // ================= offcanvas =================
+// {
+//   document.addEventListener("DOMContentLoaded", function () {
+
+//     const offcanvas = document.getElementById("offcanvasExample");
+
+//     if (!offcanvas) return;
+
+//     offcanvas.addEventListener("show.bs.offcanvas", function () {
+//         document.body.style.overflow = "hidden";
+//         document.documentElement.style.overflow = "hidden";
+//     });
+
+//     offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+//         document.body.style.overflow = "";
+//         document.documentElement.style.overflow = "";
+//     });
+
+//   });
+// }
+
+
+
 // ================= hero_slider =================
 {
   var swiper = new Swiper(".hero_slider", {

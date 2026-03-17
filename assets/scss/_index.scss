@@ -9,7 +9,7 @@
         text-align: center;
         position: sticky;
         display: block;
-        top: 0;
+        top: 11.2rem;
 
         .side_item {
             padding-top: 7rem;
@@ -2009,7 +2009,7 @@
     max-width: 18rem;
     width: 100%;
     margin-left: auto;
-    position: absolute;
+    position: fixed;
     top: 67.8rem;
     right: calc((100% - 143.8rem) / 2);
     z-index: 1024;
@@ -2212,3 +2212,54 @@
         }
     }
 }
+
+
+
+// sidebar_v2 -----------
+.main_wrapperv2 {
+    .main_content {
+        margin-right: auto;
+    }
+
+    .sidebar_v2 {
+        width: 14rem;
+        height: 100%;
+        padding-right: 7rem;
+        position: fixed;
+        right: 0;
+        top: 9rem;
+        
+        .side_item::after {
+            width: 10.3rem;
+            height: 65rem;
+            background-image: url('../img/sidebar-shape.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 100% 100%;
+            right: 0;
+            top: 0rem;
+            
+        }
+
+        @media #{$md} {
+            width: 100%;
+            height: initial;
+            top: initial;
+            padding-right: 0rem;
+        }
+
+        @media #{$sm} {
+            padding-right: 2rem;
+        }
+    }
+}
+
+
+.profile_fixedv2 {
+    position: fixed;
+    right: 0;
+    bottom: 1rem;
+}
+
+
+

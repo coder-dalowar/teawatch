@@ -9,7 +9,9 @@
     background-position: center;
     background-size: 100% 100%;
     padding: 2rem 0rem 3rem;
-    position: relative;
+    position: sticky!important;
+    top: 0;
+    z-index: 2026;
 
     .navbar-brand {
         img {
@@ -225,19 +227,20 @@
         }
     }
 
-    &::before {
-        content: "";
-        width: 1000%;
-        height: 1rem;
-        display: block;
-        background: #0B0B0B;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        top: -0.5rem;
-    }
+    // &::before {
+    //     content: "";
+    //     width: 1000%;
+    //     height: 1rem;
+    //     display: block;
+    //     background: #0B0B0B;
+    //     position: absolute;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     top: -0.5rem;
+    // }
 
-    .container {
+    .container,
+    .container-fluid {
         position: relative;
         z-index: 9;
     }
@@ -368,6 +371,10 @@
             font-weight: 400;
             color: #FFFFFF;
 
+            .gray_text {
+                color: rgba(255, 255, 255, 0.6);
+            }
+
             .text_color {
                 color: #F02731;
                 display: inline-block;
@@ -465,6 +472,7 @@
     width: 32rem!important;
     border-left: 1px solid #460C0F!important;
     padding-bottom: 11rem;
+    z-index: 9999;
 
     .offcanvas-header {
         display: flex;
@@ -853,6 +861,54 @@
             span {
                 border-color: #FDEABD;
             }
+        }
+    }
+}
+
+
+
+//  header_sectionv2 --------------
+.header_sectionv2 {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    position: sticky;
+    top: 0;
+    background-image: url('../img/header-shape.png');
+    padding: 2rem 0rem 2.6rem;
+
+    @media #{$md} {
+        padding: 1.6rem 0rem 2rem;
+    }
+
+    .container-fluid {
+        padding-left: 6rem;
+        padding-right: 6rem;
+
+        @media #{$xl} {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        @media #{$lg} {
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        @media #{$md} {
+            max-width: 74rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        @media #{$sm} {
+            max-width: 55rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .navbar-nav {
+            margin-right: 4rem;
         }
     }
 }
