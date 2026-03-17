@@ -1,16 +1,38 @@
 // Main Wrapper ----------------------
+.main_body {
+    padding-top: 10.8rem;
+
+    @media #{$md} {
+        padding-top: 9.1rem;
+    }
+}
+
 .main_wrapper {
     display: flex;
     align-items: flex-start;
 
     .sidebar {
-        width: 12.3%;
-        flex-shrink: 0;
-        text-align: center;
-        position: sticky;
+        width: 14rem;
+        height: 100%;
         display: block;
-        top: 11.2rem;
+        text-align: center;
+        flex-shrink: 0;        
+        padding-right: 7rem;
+        position: fixed;
+        right: 0;
+        top: 9rem;
 
+        @media #{$md} {
+            width: 100%;
+            height: initial;
+            top: initial;
+            padding-right: 0rem;
+        }
+
+        @media #{$sm} {
+            padding-right: 2rem;
+        }
+        
         .side_item {
             padding-top: 7rem;
             padding-bottom: 8rem;
@@ -20,16 +42,17 @@
 
             &::after {
                 content: "";
-                width: 105%;
-                height: 66rem;
+                width: 10.3rem;
+                height: 65rem;
                 display: block;
-                background-image: url(../img/sidebar-shape-2.png);
+                background-image: url('../img/sidebar-shape.png');
                 background-repeat: no-repeat;
-                background-position: right;
-                background-size: 60% 100%;
+                background-position: center;
+                background-size: 100% 100%;
                 position: absolute;
-                right: -36.5%;
-                top: 0.5rem;
+                right: 0;
+                top: 0rem;
+                
             }
 
             .side_btn {
@@ -125,6 +148,7 @@
     .main_content {
         padding-top: 2rem;
         width: 87.7%;
+        margin-right: auto;
     }
 
 
@@ -2010,9 +2034,9 @@
     width: 100%;
     margin-left: auto;
     position: fixed;
-    top: 67.8rem;
-    right: calc((100% - 143.8rem) / 2);
-    z-index: 1024;
+    right: 0;
+    bottom: 1rem;
+    z-index: 1024;   
 
     .profile_box {
         a {
@@ -2212,54 +2236,4 @@
         }
     }
 }
-
-
-
-// sidebar_v2 -----------
-.main_wrapperv2 {
-    .main_content {
-        margin-right: auto;
-    }
-
-    .sidebar_v2 {
-        width: 14rem;
-        height: 100%;
-        padding-right: 7rem;
-        position: fixed;
-        right: 0;
-        top: 9rem;
-        
-        .side_item::after {
-            width: 10.3rem;
-            height: 65rem;
-            background-image: url('../img/sidebar-shape.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-            right: 0;
-            top: 0rem;
-            
-        }
-
-        @media #{$md} {
-            width: 100%;
-            height: initial;
-            top: initial;
-            padding-right: 0rem;
-        }
-
-        @media #{$sm} {
-            padding-right: 2rem;
-        }
-    }
-}
-
-
-.profile_fixedv2 {
-    position: fixed;
-    right: 0;
-    bottom: 1rem;
-}
-
-
 

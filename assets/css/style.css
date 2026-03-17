@@ -870,7 +870,7 @@ body {
 .language_dropdown .lang-toggle {
   width: 5rem;
   height: 5.2rem;
-  background: none;
+  background: #080808;
   border: none;
   outline: none;
   padding: 0rem;
@@ -1006,19 +1006,55 @@ body {
 }
 
 .header_section {
-  max-width: 143.8rem;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   background: #0D0D0D;
-  background-image: url(../img/header-shape-2.png);
+  display: block;
+  background-image: url("../img/header-shape.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100% 100%;
-  padding: 2rem 0rem 3rem;
-  position: sticky !important;
+  padding: 2rem 0rem 2.6rem;
+  position: fixed;
   top: 0;
   z-index: 2026;
+}
+@media (max-width: 991px) {
+  .header_section {
+    padding: 1.6rem 0rem 2rem;
+  }
+}
+.header_section .container-fluid {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+@media (min-width: 1200px) and (max-width: 1449px) {
+  .header_section .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header_section .container-fluid {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+@media (max-width: 991px) {
+  .header_section .container-fluid {
+    max-width: 74rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .header_section .container-fluid {
+    max-width: 55rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.header_section .container-fluid .navbar-nav {
+  margin-right: 4rem;
 }
 .header_section .navbar-brand img {
   width: 16.1rem;
@@ -1211,6 +1247,9 @@ body {
   z-index: 9;
 }
 
+.admin_btn {
+  background: #080808;
+}
 .admin_btn a {
   display: inline-flex;
   align-items: center;
@@ -1304,6 +1343,9 @@ body {
   border-color: #FFF;
 }
 
+.add_btn {
+  background: #080808;
+}
 .add_btn a {
   display: flex;
   align-items: center;
@@ -1326,6 +1368,9 @@ body {
   margin-top: 0.3rem;
 }
 
+.icon_btn {
+  background: #080808;
+}
 .icon_btn a {
   width: 5rem;
   height: 5.2rem;
@@ -1746,52 +1791,45 @@ body {
   border-color: #FDEABD;
 }
 
-.header_sectionv2 {
-  max-width: 100%;
+.tournament_joinBanner::after {
+  content: "";
   width: 100%;
+  height: 30rem;
   display: block;
-  position: sticky;
+  background-image: url("../img/tournament-join-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
   top: 0;
-  background-image: url("../img/header-shape.png");
-  padding: 2rem 0rem 2.6rem;
+  left: 0;
+  z-index: -1;
 }
 @media (max-width: 991px) {
-  .header_sectionv2 {
-    padding: 1.6rem 0rem 2rem;
+  .tournament_joinBanner::after {
+    height: 28rem;
+    background-size: cover;
   }
 }
-.header_sectionv2 .container-fluid {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-@media (min-width: 1200px) and (max-width: 1449px) {
-  .header_sectionv2 .container-fluid {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  .header_sectionv2 .container-fluid {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
+
+.admin_headerBanner::after {
+  content: "";
+  width: 100%;
+  height: 34rem;
+  display: block;
+  background-image: url("../img/admin-header-banner.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 991px) {
-  .header_sectionv2 .container-fluid {
-    max-width: 74rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .admin_headerBanner::after {
+    height: 30rem;
+    background-size: cover;
   }
-}
-@media (max-width: 767px) {
-  .header_sectionv2 .container-fluid {
-    max-width: 55rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-.header_sectionv2 .container-fluid .navbar-nav {
-  margin-right: 4rem;
 }
 
 .footer_section {
@@ -2538,7 +2576,7 @@ body {
   height: calc(100vh - 25rem);
   display: flex;
   flex-direction: column;
-  padding: 1.4rem 2rem 2rem;
+  padding: 1.4rem 2rem 1.5rem;
   direction: ltr;
 }
 @media (max-width: 991px) {
@@ -2881,17 +2919,42 @@ body {
   }
 }
 
+.main_body {
+  padding-top: 10.8rem;
+}
+@media (max-width: 991px) {
+  .main_body {
+    padding-top: 9.1rem;
+  }
+}
+
 .main_wrapper {
   display: flex;
   align-items: flex-start;
 }
 .main_wrapper .sidebar {
-  width: 12.3%;
-  flex-shrink: 0;
-  text-align: center;
-  position: sticky;
+  width: 14rem;
+  height: 100%;
   display: block;
-  top: 11.2rem;
+  text-align: center;
+  flex-shrink: 0;
+  padding-right: 7rem;
+  position: fixed;
+  right: 0;
+  top: 9rem;
+}
+@media (max-width: 991px) {
+  .main_wrapper .sidebar {
+    width: 100%;
+    height: initial;
+    top: initial;
+    padding-right: 0rem;
+  }
+}
+@media (max-width: 767px) {
+  .main_wrapper .sidebar {
+    padding-right: 2rem;
+  }
 }
 .main_wrapper .sidebar .side_item {
   padding-top: 7rem;
@@ -2902,16 +2965,16 @@ body {
 }
 .main_wrapper .sidebar .side_item::after {
   content: "";
-  width: 105%;
-  height: 66rem;
+  width: 10.3rem;
+  height: 65rem;
   display: block;
-  background-image: url(../img/sidebar-shape-2.png);
+  background-image: url("../img/sidebar-shape.png");
   background-repeat: no-repeat;
-  background-position: right;
-  background-size: 60% 100%;
+  background-position: center;
+  background-size: 100% 100%;
   position: absolute;
-  right: -36.5%;
-  top: 0.5rem;
+  right: 0;
+  top: 0rem;
 }
 .main_wrapper .sidebar .side_item .side_btn {
   width: 7rem;
@@ -2997,6 +3060,7 @@ body {
 .main_wrapper .main_content {
   padding-top: 2rem;
   width: 87.7%;
+  margin-right: auto;
 }
 @media (max-width: 991px) {
   .main_wrapper {
@@ -4593,8 +4657,8 @@ body {
   width: 100%;
   margin-left: auto;
   position: fixed;
-  top: 67.8rem;
-  right: calc((100% - 143.8rem) / 2);
+  right: 0;
+  bottom: 1rem;
   z-index: 1024;
 }
 .profile_fixed .profile_box a {
@@ -4763,47 +4827,6 @@ body {
   font-size: 1.8rem;
 }
 
-.main_wrapperv2 .main_content {
-  margin-right: auto;
-}
-.main_wrapperv2 .sidebar_v2 {
-  width: 14rem;
-  height: 100%;
-  padding-right: 7rem;
-  position: fixed;
-  right: 0;
-  top: 9rem;
-}
-.main_wrapperv2 .sidebar_v2 .side_item::after {
-  width: 10.3rem;
-  height: 65rem;
-  background-image: url("../img/sidebar-shape.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-  right: 0;
-  top: 0rem;
-}
-@media (max-width: 991px) {
-  .main_wrapperv2 .sidebar_v2 {
-    width: 100%;
-    height: initial;
-    top: initial;
-    padding-right: 0rem;
-  }
-}
-@media (max-width: 767px) {
-  .main_wrapperv2 .sidebar_v2 {
-    padding-right: 2rem;
-  }
-}
-
-.profile_fixedv2 {
-  position: fixed;
-  right: 0;
-  bottom: 1rem;
-}
-
 .signup_form_section {
   width: 100%;
   min-height: 100vh;
@@ -4811,7 +4834,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 8.5rem 0;
+  padding: 5rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -5207,7 +5230,7 @@ body {
 }
 
 .login_form_section {
-  padding: 12rem 0;
+  padding: 6rem 0 5rem;
 }
 @media (max-width: 991px) {
   .login_form_section {
@@ -9100,7 +9123,7 @@ body {
   text-align: center;
   background: #4072EE;
 }
-.analytics_section .analytice_box .graph .controls_btn button#toggleRed span {
+.analytics_section .analytice_box .graph .controls_btn button.toggleRed span {
   background: #84151B;
 }
 .analytics_section .statistics_box {
@@ -9361,6 +9384,20 @@ body {
   .gamesPlayed_section .gamesPlayed_table_wraper {
     overflow: auto;
     padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #F02731 #1D1D1D;
+  }
+  .gamesPlayed_section .gamesPlayed_table_wraper::-webkit-scrollbar {
+    width: 0.8rem;
+    border-radius: 2rem;
+  }
+  .gamesPlayed_section .gamesPlayed_table_wraper::-webkit-scrollbar-track {
+    background: #1D1D1D;
+    border-radius: 2rem;
+  }
+  .gamesPlayed_section .gamesPlayed_table_wraper::-webkit-scrollbar-thumb {
+    background: #F02731;
+    border-radius: 2rem;
   }
 }
 .gamesPlayed_section .gamesPlayed_table_wraper .gamesPlayed_table {
@@ -10244,30 +10281,6 @@ body {
 
 .before_joinTournament {
   padding-top: 0rem;
-}
-
-.joinTournament_header {
-  background-color: transparent;
-  position: relative;
-}
-.joinTournament_header::after {
-  content: "";
-  width: 100%;
-  height: 31rem;
-  display: block;
-  background-image: url("../img/join-tournament-banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.joinTournament_header .admin_btn,
-.joinTournament_header .add_btn,
-.joinTournament_header .icon_btn {
-  background: #080808;
 }
 
 .joinTournament_title p {
@@ -12338,19 +12351,6 @@ body {
 }
 .tournament_overview_wraper .overview_box.greenBox .overview_title p span {
   background: #F02731;
-}
-
-.readyTeam_header {
-  background-image: url("../img/header-shape-2.png");
-}
-.readyTeam_header::after {
-  height: 30.2rem;
-}
-
-.readyTeam_sidebar .side_item::after {
-  background-image: url("../img/sidebar-shape-2.png") !important;
-  transform: rotate(0.4deg);
-  top: -0.2rem !important;
 }
 
 .readyTeam_hero {
@@ -15268,6 +15268,206 @@ body {
 }
 .brackets_pagination .screen_btn a img {
   width: 2.4rem;
+}
+
+.client_section {
+  padding: 7.5rem 0rem 4.4rem;
+}
+.client_section .client_box {
+  max-width: 31.2rem;
+  width: 100%;
+  margin: 0 auto;
+  background: #080808;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem 3.8rem 2.4rem;
+  position: relative;
+}
+.client_section .client_box .border_tl {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 1px solid rgba(240, 39, 49, 0.4);
+  border-left: 1px solid rgba(240, 39, 49, 0.4);
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .border_tr {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-top: 1px solid rgba(240, 39, 49, 0.4);
+  border-right: 1px solid rgba(240, 39, 49, 0.4);
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .border_bl {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-bottom: 1px solid rgba(240, 39, 49, 0.4);
+  border-left: 1px solid rgba(240, 39, 49, 0.4);
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .border_br {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-bottom: 1px solid rgba(240, 39, 49, 0.4);
+  border-right: 1px solid rgba(240, 39, 49, 0.4);
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .label {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #F02731;
+  background: rgba(161, 27, 27, 0.1);
+  border: 1px solid rgba(161, 27, 27, 0.5);
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  border-radius: 5rem;
+  position: absolute;
+  top: 2rem;
+  right: 1.2rem;
+}
+.client_section .client_box .client_img {
+  width: 10.5rem;
+  margin: 0 auto;
+  position: relative;
+}
+.client_section .client_box .client_img img {
+  width: 10.5rem;
+}
+.client_section .client_box .client_img a {
+  position: absolute;
+  bottom: -0.1rem;
+  right: -0.1rem;
+}
+.client_section .client_box .client_img a img {
+  width: 2.4rem;
+}
+.client_section .client_box .client_title {
+  padding: 1.6rem 0rem 0.8rem;
+  text-align: center;
+}
+.client_section .client_box .client_title h4 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: #FFF;
+}
+.client_section .client_box .offline_btn {
+  text-align: center;
+}
+.client_section .client_box .offline_btn span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 130%;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(218, 17, 17, 0.1);
+  border: 1px solid rgba(218, 17, 17, 0.5);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 5rem;
+  position: relative;
+}
+.client_section .client_box .offline_btn span::before {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+  background: #DA1111;
+  border: 1px solid rgba(218, 17, 17, 0.3);
+  border-radius: 50%;
+}
+.client_section .client_box .social_icon {
+  padding: 1.6rem 0rem 2.4rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.client_section .client_box .social_icon img {
+  width: 2.4rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .social_icon img:hover {
+  opacity: 0.85;
+}
+.client_section .client_box .client_boxBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.client_section .client_box .client_boxBtn a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  background: #212121;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 11.1rem;
+  display: inline-block;
+  text-align: center;
+  padding: 0.8rem 1.5rem;
+  position: relative;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .client_boxBtn a .border_tl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .client_boxBtn a .border_tr {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-top: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .client_boxBtn a .border_bl {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFF;
+  border-left: 1px solid #FFF;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .client_boxBtn a .border_br {
+  width: 0.6rem;
+  height: 0.5rem;
+  border-bottom: 1px solid #FFF;
+  border-right: 1px solid #FFF;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.client_section .client_box .client_boxBtn a:hover, .client_section .client_box .client_boxBtn a.active {
+  background: #F02731;
+  box-shadow: 0rem 0.2rem 1.7rem rgba(249, 204, 97, 0.54) inset;
 }
 
 /*# sourceMappingURL=style.css.map */

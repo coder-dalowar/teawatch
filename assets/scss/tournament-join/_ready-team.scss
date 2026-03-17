@@ -1,23 +1,4 @@
 // ready team page -----------------
-
-.readyTeam_header {
-    background-image: url('../img/header-shape-2.png');
-
-    &::after {
-        height: 30.2rem;
-    }
-}
-
-.readyTeam_sidebar {
-    .side_item {
-        &::after {
-            background-image: url('../img/sidebar-shape-2.png')!important;
-            transform: rotate(0.4deg);
-            top: -0.2rem!important;
-        }
-    }
-}
-
 .readyTeam_hero {
     padding-top: 2.5rem;
     padding-bottom: 6rem;

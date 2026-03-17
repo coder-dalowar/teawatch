@@ -155,7 +155,7 @@
                         background: #4072EE;
                     }
 
-                    &#toggleRed {
+                    &.toggleRed {
                         span {
                             background: #84151B;
                         }
@@ -465,6 +465,23 @@
         @media #{$md} {
             overflow: auto;
             padding-bottom: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: #F02731 #1D1D1D;
+            
+            &::-webkit-scrollbar {
+                width: 0.8rem;
+                border-radius: 2rem;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: #1D1D1D;
+                border-radius: 2rem;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background: #F02731;
+                border-radius: 2rem;
+            }
         }
 
         .gamesPlayed_table {

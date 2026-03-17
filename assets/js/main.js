@@ -839,9 +839,12 @@
   const redData  = [1500,1200,1800,1400,1100,2200,1800,2400,2100,2300,2600,1600];
   const blueData = [800,1800,1100,2800,2100,2300,2345,1500,2400,2500,3500,2200];
 
-  const canvas = document.getElementById('analytics_chart');
+  document.querySelectorAll('.graph').forEach(graph => {
 
-  if (canvas) {
+      const canvas = graph.querySelector('.analytics_chart');
+
+      if (!canvas) return;
+
       const chart1 = createLineChart(
           canvas,
           redData,
@@ -855,8 +858,8 @@
       }
 
       // Toggle buttons --------
-      const toggleRed  = document.getElementById('toggleRed');
-      const toggleBlue = document.getElementById('toggleBlue');
+      const toggleRed  = graph.querySelector('.toggleRed');
+      const toggleBlue = graph.querySelector('.toggleBlue');
 
       if (toggleRed) {
           toggleRed.addEventListener('click', () =>
@@ -869,7 +872,8 @@
               chart1.toggleDataset(1, toggleBlue)
           );
       }
-  }   
+
+  });
 
 }
 
@@ -1435,3 +1439,10 @@
     });
   });
 }
+
+
+
+
+
+
+
