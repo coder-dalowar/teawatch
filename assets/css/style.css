@@ -16988,4 +16988,215 @@ body {
   border-radius: 5rem;
 }
 
+.manage_modal {
+  max-width: 65rem;
+}
+.manage_modal .removemodal_title h3 {
+  font-size: 4.8rem !important;
+}
+@media (max-width: 767px) {
+  .manage_modal .removemodal_title h3 {
+    font-size: 3.2rem !important;
+  }
+}
+.manage_modal .removemodal_button {
+  padding-top: 2.4rem !important;
+}
+.manage_modal .removemodal_button a {
+  width: 48% !important;
+}
+
+.manage_tablinks ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.manage_tablinks ul li {
+  width: 50%;
+}
+.manage_tablinks ul .nav-link {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #FFF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #541113;
+}
+.manage_tablinks ul .nav-link:hover {
+  border-color: #FF2933;
+}
+.manage_tablinks ul .nav-link.active {
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 26, 26, 0.3));
+  border-color: #FF2933;
+  color: #FFF;
+}
+.manage_tablinks ul .nav-link img {
+  width: 1.8rem;
+}
+
+.manage_tabcontent {
+  padding-top: 3.2rem;
+}
+
+.mange_tabheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mange_tabheading h5 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 155%;
+  color: #FFF;
+  margin: 0;
+}
+
+.manage_friendBox {
+  background: #140E0E;
+  border: 1px solid rgba(240, 39, 49, 0.2);
+  padding: 1.6rem 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.6rem;
+}
+.manage_friendBox .manage_friendItem {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.manage_friendBox .manage_friendItem img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.manage_friendBox .manage_friendItem p {
+  font-family: "Heebo", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #F9F9FF;
+}
+.manage_friendBox .manage_friendLeft span {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #FFF;
+  background: #FF1A1A;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+}
+.manage_friendBox .manage_friendLeft img {
+  width: 1.8rem;
+}
+
+.manage_searchbar {
+  padding: 1.6rem 0rem 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+.manage_searchbar .manage_searchBtn {
+  flex-shrink: 0;
+}
+.manage_searchbar .manage_searchBtn a {
+  width: 11.1rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: #F5F6FF;
+  background: #F02731;
+  box-shadow: 0rem 0.2rem 1.7rem 0rem rgba(249, 204, 97, 0.54) inset;
+  position: relative;
+}
+.manage_searchbar .manage_searchBtn a .border_tl {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.manage_searchbar .manage_searchBtn a .border_tr {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  top: -0.1rem;
+  transition: 0.2s all ease;
+}
+.manage_searchbar .manage_searchBtn a .border_bl {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  position: absolute;
+  left: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.manage_searchbar .manage_searchBtn a .border_br {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-bottom: 1px solid #FFFFFF;
+  border-right: 1px solid #FFFFFF;
+  position: absolute;
+  right: -0.1rem;
+  bottom: -0.1rem;
+  transition: 0.2s all ease;
+}
+.manage_searchbar .manage_searchBtn a:hover span {
+  transform: scale(1.25);
+}
+.manage_searchbar .manage_searchBox {
+  width: 100%;
+}
+.manage_searchbar .manage_searchBox .input_wrap span {
+  width: 0.8rem;
+  height: 0.6rem;
+}
+
+.friend_headingText {
+  padding-bottom: 1.6rem;
+  text-align: right;
+}
+.friend_headingText h4 {
+  font-family: "Heebo", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: #FFF;
+  text-align: right;
+}
+
+.manage_tabcontent .invite_btn .button span {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-color: #FFF;
+}
+.manage_tabcontent .invite_btn .button.cancel_btn {
+  background: #281415;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
 /*# sourceMappingURL=style.css.map */
