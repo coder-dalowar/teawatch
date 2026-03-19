@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>teawatch</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="../assets/img/favicon.png" />
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.rtl.css" />
+    <link rel="stylesheet" href="../assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body>
+
+    <!-- header_section start -->
+    <header class="header_section">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+
+                <div class="d-flex align-items-center">
+                    <div class="profile_toggle d-lg-none">
+                        <button type="button">
+                            <img src="../assets/img/client.png" alt="">
+
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </button>
+                    </div>
+
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </button>
+                </div>
+                
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/trofy.svg" alt="icon">
+                                <span> טורנירים </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/play.svg" alt="icon">
+                                <span> גאטרים אונליין </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/document.svg" alt="icon">
+                                <span> לוח תוצאות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../assets/img/store.svg" alt="icon">
+                                <span> חנות </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="premium_btn">
+                                <img src="../assets/img/crown.svg" alt="icon">
+                                שדרוג
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../chat/chat.html" data-target="#chatBox">
+                                <img src="../assets/img/chat.svg" alt="icon">
+                                <span> צ׳אט </span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="header_left ms-auto">
+                        <div class="admin_btn button_border">
+                            <a href="#">
+                                <span class="admin_profile">
+                                    <img src="../assets/img/admin.png" alt="">
+                                </span>
+                                <span class="admin_text">
+                                    <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                                    <span> חינמי </span>
+                                </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="add_btn button_border">
+                            <a href="#">
+                                <img src="../assets/img/points.png" alt="">
+                                <span>
+                                    הארנק שלי <br>
+                                    <span class="text_color">420</span>
+                                    <span class="gray_text"> מטבעות </span>
+                                </span>
+                            </a>
+                            <span class="border_topLeft"></span>
+                            <span class="border_topRight"></span>
+                            <span class="border_bottomLeft"></span>
+                            <span class="border_bottomRight"></span>
+                        </div>
+
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/shopping-bag.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/notification.svg" alt="">
+                                <span class="notify_red"></span>
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        <div class="icon_btn">
+                            <a href="#">
+                                <img src="../assets/img/logout.svg" alt="">
+                                <span class="border_topLeft"></span>
+                                <span class="border_topRight"></span>
+                                <span class="border_bottomLeft"></span>
+                                <span class="border_bottomRight"></span>
+                            </a>
+                        </div>
+                        
+                        <!-- language dropdown -->
+                        <div class="language_dropdown" data-default="he">
+                            <button class="lang-toggle" type="button" aria-expanded="false">
+                                <img src="../assets/img/he-flag.png" alt="Hebrew">
+
+                                <span class="border_tl"></span>
+                                <span class="border_tr"></span>
+                                <span class="border_bl"></span>
+                                <span class="border_br"></span>
+                            </button>
+
+                            <ul class="lang-menu">
+                                <li data-lang="he" data-flag="../assets/img/he-flag.png">
+                                    <img src="../assets/img/he-flag.png" alt="Hebrew">
+                                    <span>Hebrew</span>
+                                </li>
+                                <li data-lang="en" data-flag="../assets/img/uk-flag.png">
+                                    <img src="../assets/img/uk-flag.png" alt="English">
+                                    <span>English (UK)</span>
+                                </li>
+                            </ul>
+                        </div> 
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+    <!-- offcanvas menu start -->
+    <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+        aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <a href="#">
+                    <img src="../assets/img/logo.svg" alt="">
+                </a>
+            </h5>
+            <button type="button" class="text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="../assets/img/close.svg" alt="">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="admin_wraper">
+                <div class="admin_btn button_border">
+                    <a href="#">
+                        <span class="admin_profile">
+                            <img src="../assets/img/admin.png" alt="">
+                        </span>
+                        <span class="admin_text">
+                            <h4><img src="../assets/img/star.svg" alt=""> admin </h4>
+                            <span> חינמי </span>
+                        </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>
+
+                <div class="add_btn button_border">
+                    <a href="#">
+                        <img src="../assets/img/points.png" alt="">
+                        <span>
+                            הארנק שלי <br>
+                            <span class="text_color">420</span>
+                            <span class="gray_text"> מטבעות </span>
+                        </span>
+                    </a>
+                    <span class="border_topLeft"></span>
+                    <span class="border_topRight"></span>
+                    <span class="border_bottomLeft"></span>
+                    <span class="border_bottomRight"></span>
+                </div>                
+            </div>
+
+            <div class="offcanvas_menu">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/trofy.svg" alt="icon">
+                            <span> טורנירים </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/play.svg" alt="icon">
+                            <span> גאטרים אונליין </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/document.svg" alt="icon">
+                            <span> לוח תוצאות </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="../assets/img/store.svg" alt="icon">
+                            <span> חנות </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas_btn">
+                <a href="#" class="premium_btn">
+                    <img src="../assets/img/crown.svg" alt="icon">
+                    שדרוג
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+                </a>
+            </div>
+            
+            <div class="icon_wraper">
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/shopping-bag.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/notification.svg" alt="">
+                        <span class="notify_red"></span>
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+                <div class="icon_btn">
+                    <a href="#">
+                        <img src="../assets/img/logout.svg" alt="">
+                        <span class="border_topLeft"></span>
+                        <span class="border_topRight"></span>
+                        <span class="border_bottomLeft"></span>
+                        <span class="border_bottomRight"></span>
+                    </a>
+                </div>
+
+                <!-- language dropdown -->
+                <div class="language_dropdown" data-default="he">
+                    <button class="lang-toggle" type="button" aria-expanded="false">
+                        <img src="../assets/img/he-flag.png" alt="Hebrew">
+
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </button>
+
+                    <ul class="lang-menu">
+                        <li data-lang="he" data-flag="../assets/img/he-flag.png">
+                            <img src="../assets/img/he-flag.png" alt="Hebrew">
+                            <span>Hebrew</span>
+                        </li>
+                        <li data-lang="en" data-flag="../assets/img/uk-flag.png">
+                            <img src="../assets/img/uk-flag.png" alt="English">
+                            <span>English (UK)</span>
+                        </li>
+                    </ul>
+                </div> 
+            </div> 
+
+            <!-- premium box -->
+            <div class="profile_fixed">
+                <div class="profile_box">
+                    <a href="#">
+                        <div class="profile_img">
+                            <img src="../assets/img/profile.png" alt="">
+                        </div>
+                        <div class="profile_text">
+                            <p>
+                                <img src="../assets/img/star.svg" alt="">
+                                admin
+                            </p>
+                            <h4>
+                                <span>פרימיום</span>
+                                מחובר
+                            </h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="subscription_box">
+                    <img src="../assets/img/primium-badge.svg" alt="">
+                    <p> עם מנוי פרימיום </p>
+                    <h4> כל ניצחון יכול להפוך לכסף </h4>
+                    <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+                    <a href="#">
+                        שדרג עכשיו
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </a>
+                </div>
+            </div> 
+            
+        </div>
+    </div>
+    <!-- offcanvas menu end -->
+
+    <!-- chat_bot -->
+    <div class="chat_bot d-lg-none">
+        <a href="../chat/chat.html">
+            <img src="../assets/img/chat.svg" alt="icon">
+        </a>
+    </div> 
+
+    <!-- profile fixed -->
+    <!-- <div class="profile_fixed admin_premiumBox d-none d-lg-block">
+        <div class="profile_box">
+            <a href="#">
+                <div class="profile_img">
+                    <img src="../assets/img/profile.png" alt="">
+                </div>
+                <div class="profile_text">
+                    <p>
+                        <img src="../assets/img/star.svg" alt="">
+                        admin
+                    </p>
+                    <h4>
+                        <span>פרימיום</span>
+                        מחובר
+                    </h4>
+                </div>
+            </a>
+        </div>
+
+        <div class="subscription_box">
+            <img src="../assets/img/primium-badge.svg" alt="">
+            <p> עם מנוי פרימיום </p>
+            <h4> כל ניצחון יכול להפוך לכסף </h4>
+            <p> הצטרפו לתחרויות על <br> פרסים כספיים </p>
+            <a href="#">
+                שדרג עכשיו
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+            </a>
+        </div>
+    </div>  -->
+
+
+    <main class="main_body admin_headerBanner">
+
+        <div class="container">
+            <div class="main_wrapper">
+
+                <!-- admin bar -->
+                <div class="admin_bar">
+                    <div class="client_box">
+                        <button type="button" class="profile_closeBtn d-lg-none">
+                            <img src="../assets/img/cross.svg" alt="">
+                        </button>
+
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+
+                        <div class="client_img">
+                            <img src="../assets/img/client.png" alt="">
+                            <a href="#">
+                                <img src="../assets/img/edit.svg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="client_title">
+                            <h4> אלון </h4>
+                        </div>
+
+                        <div class="offline_btn">
+                            <span> לא מקוון </span>
+                        </div>
+
+                        <div class="social_icon pb-0">
+                            <a href="#">
+                                <img src="../assets/img/vk.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/instagram-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/facebook-icon.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- admin_linksBox -->
+                    <div class="admin_linksBox">
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-1.svg" alt="">
+                                    דשבורד
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/points.png" alt="">
+                                    Teamatch נקודות
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-3.svg" alt="">
+                                    קבוצות
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-4.svg" alt="">
+                                    מנוי
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="active">
+                                    <img src="../assets/img/admin-icon-5.svg" alt="">
+                                    עריכת פרופיל
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-6.svg" alt="">
+                                    הגדרות משתמש
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-7.svg" alt="">
+                                    סיסמה
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-8.svg" alt="">
+                                    חיבורים
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- logout button -->
+                    <div class="admin_logout">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            התנתק
+                            <img src="../assets/img/logout-solid.svg" alt="">
+                        </a>
+                    </div> 
+
+                </div> 
+
+                <!-- main content -->
+                <div class="main_content admin_contentLeft">
+                    <!-- edit cover -->
+                    <div class="edit_cover">
+                        <a href="#">
+                            ערוך קאבר
+                            <img src="../assets/img/pencil-edit.svg" alt="">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div> 
+
+                    <!-- profileTeam_section -->
+                    <div class="profileTeam_section ps-lg-5">
+                        <div class="profile_groups">
+                            <h3> קבוצות </h3>
+                            <div class="join_btn"> 
+                                <a href="#">
+                                    יצירת קבוצה
+                                    <img src="../assets/img/plus-sign.svg" alt="">
+
+                                    <span class="border_tl"></span>
+                                    <span class="border_tr"></span>
+                                    <span class="border_bl"></span>
+                                    <span class="border_br"></span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <!-- Chat Modal start -->
+    <div id="chatBox">
+        <div class="container">
+            <div class="chat_modal">
+                <div class="modal-content">
+                    <span class="border_tl"></span>
+                    <span class="border_tr"></span>
+                    <span class="border_bl"></span>
+                    <span class="border_br"></span>
+
+                    <div class="chatModal_heading">
+                        <div class="chatModal_heading_item">
+                            <div class="chatModal_heading_img">
+                                <img src="../assets/img/game-modal.png" alt="">
+                            </div>
+                            <div class="chatModal_heading_text">
+                                <h4>PatateTWH1</h4>
+                                <p><span></span> לא מקוון</p>
+                            </div>
+                        </div>
+
+                        <div class="chatModal_button">
+                            <span class="close_btn">
+                                <img src="../assets/img/cross.svg" alt="">
+                            </span>
+
+                            <a href="../chat/chat.html">
+                                <img src="../assets/img/expand.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="alert_item">
+                        <img src="../assets/img/alert.svg" alt="">
+                        <p> לעולם אל תשתף את הסיסמה שלך או פרטים רגישים אחרים בצ׳אט. </p>
+                    </div>
+
+                    <div class="message_item">
+                        <img src="../assets/img/message.svg" alt="">
+                        <h4>היה הראשון לכתוב</h4>
+                        <p>זהו ממש תחילתו של הצ׳אט הזה.</p>
+                    </div>
+
+                    <div class="message_wrap">
+                        <button type="button">
+                            <img src="../assets/img/image-add-gray.svg" alt="">
+                        </button>
+                        <div class="message_field">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            <input type="text" placeholder="Aa">
+                        </div>
+                        <button type="button">
+                            <img src="../assets/img/sent-gray.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Chat Modal end -->
+
+    <!-- logout modal start -->
+    <div class="modal fade" id="exitTModal" tabindex="-1" aria-labelledby="exitTModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ranking_modal remove_modal">
+            <div class="modal-content">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../assets/img/cross.svg" alt="">
+                </span>
+
+                <div class="removemodal_body">
+                    <div class="removemodal_title logout_modalText">
+                        <h3> האם ברצונך להתנתק? </h3>
+                       <p> יהיה עליך להתחבר מחדש כדי לגשת לטורנירים ולקבוצות. </p>
+                    </div>
+
+                    <div class="removemodal_button">
+                        <a href="#" class="active">
+                            התנתק
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                        <a href="#" data-bs-dismiss="modal" aria-label="Close">
+                            ביטול
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- logout modal end -->
+
+    <!-- save changes modal start -->
+    <div class="modal fade" id="saveModal" tabindex="-1" aria-labelledby="saveModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ranking_modal remove_modal saveModal_dialog">
+            <div class="modal-content">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../assets/img/cross.svg" alt="">
+                </span>
+
+                <div class="removemodal_body">
+                    <div class="removemodal_title">
+                        <h3> לשמור שינויים? </h3>
+                        <p> האם ברצונך לשמור את השינויים שביצעת? פרטי הפרופיל והחשבון שלך יעודכנו. </p>
+                    </div>
+
+                    <div class="removemodal_button">
+                        <a href="#" class="active">
+                            שמירה
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                        <a href="#" data-bs-dismiss="modal" aria-label="Close">
+                            ביטול
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- save changes modal end -->
+
+    
+    <!-- all js here -->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/chart.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

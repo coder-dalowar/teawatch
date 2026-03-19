@@ -906,6 +906,7 @@
 }
 
 
+
 // tournament join banner ------------
 .tournament_joinBanner {
     &::after {
@@ -931,8 +932,32 @@
 
 
 
+// client_headerBanner banner ------------
+.client_headerBanner {
+    &::after {
+        content: "";
+        width: 100%;
+        height: 41.6rem;
+        display: block;
+        background-image: url('../img/client-header-banner.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        @media #{$md} {
+            height: 34rem;
+            background-size: cover;
+        }
+    }
+}
 
 
+
+// admin_headerBanner -------------
 .admin_headerBanner {
     &::after {
         content: "";
@@ -946,9 +971,10 @@
         position: absolute;
         top: 0;
         left: 0;
+        z-index: -1;
 
         @media #{$md} {
-            height: 30rem;
+            height: 28rem;
             background-size: cover;
         }
     }

@@ -1,0 +1,318 @@
+// transactions_section -------------------
+.transactions_section {
+    padding: 5rem 0rem 10rem;
+
+    @media #{$md} {
+        padding: 2.4rem 0rem;
+    }
+}
+
+.coins_depositBox {
+    background: #080808;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 2rem 2rem;
+
+    @media #{sm} {
+        padding: 2rem 1.5rem;
+    }
+
+    h3 {
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 125%;
+        color: #F5F6FF;
+        margin-bottom: 2.4rem;
+
+        @media #{$md} {
+            font-size: 2.4rem;
+        }
+    }
+}
+
+.coins_depositWrap {
+    background: #140E0E;
+    border: 1px solid rgba(240, 39, 49, 0.10);
+    padding: 3rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media #{$sm} {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 1.6rem;
+    }
+
+    .coins_depositText {
+        p {
+            font-family: $heeboFont;
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: initial;
+            color: rgba(255, 255, 255, 0.80);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+
+            img {
+                width: 2.4rem;
+            }
+
+            @media #{$md} {
+                font-size: 1.6rem;
+                margin-bottom: 1.6rem;
+
+                img {
+                    width: 2rem;
+                }
+            }
+        }
+
+        h4 {
+            font-size: 4rem;
+            font-weight: 400;
+            line-height: 120%;
+            color: rgba(255, 255, 255, 0.80);
+
+            @media #{$md} {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .coins_depositButton {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        a {
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 120%;
+            color: #FFF;
+            background: #212121;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            width: 28rem;
+            display: block;
+            text-align: center;
+            padding: 0.8rem 1.5rem;
+            position: relative;
+            transition: 0.2s all ease;
+            
+            .border_tl {
+                width: 1.5rem;
+                height: 0.5rem;
+                border-top: 1px solid #FFF;
+                border-left: 1px solid #FFF;
+                position: absolute;
+                left: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_tr {
+                width: 1.5rem;
+                height: 0.5rem;
+                border-top: 1px solid #FFF;
+                border-right: 1px solid #FFF;
+                position: absolute;
+                right: -0.1rem;
+                top: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_bl {
+                width: 1.5rem;
+                height: 0.5rem;
+                border-bottom: 1px solid #FFF;
+                border-left: 1px solid #FFF;
+                position: absolute;
+                left: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+            }
+
+            .border_br {
+                width: 1.5rem;
+                height: 0.5rem;
+                border-bottom: 1px solid #FFF;
+                border-right: 1px solid #FFF;
+                position: absolute;
+                right: -0.1rem;
+                bottom: -0.1rem;
+                transition: 0.2s all ease;
+		    }
+
+            &:hover,
+            &.active {
+                background: #F02731;
+                box-shadow: 0rem 0.2rem 1.7rem 0rem rgba(249, 204, 97, 0.54) inset;
+                span {
+                    transform: scale(1.25);
+                }
+            }
+
+            @media #{$md} {
+                width: 21rem;
+            }
+        }
+
+        @media #{$sm} {
+            width: 100%;
+            flex-direction: row;
+            gap: 1.5rem;
+            padding-top: 2rem;
+
+            a {
+                width: 48%;
+                font-size: 1.5rem;
+            }
+        }   
+    }
+}
+
+
+.transaction_history {
+    padding-top: 3.6rem;
+
+    .history_title {
+        display: flex;
+        align-items: center;
+        gap: 1.4rem;
+        margin-bottom: 2.4rem;
+
+        h3 {
+            font-size: 3.2rem;
+            font-weight: 400;
+            line-height: 125%;
+            color: #F5F6FF;
+            margin: 0;
+        }
+
+        img {
+            width: 4rem;
+        }
+
+        @media #{$md} {
+            gap: 1rem;
+            margin-bottom: 2rem;
+
+            h3 {
+                font-size: 2.4rem;
+            }
+
+            img {
+                width: 3rem;
+            }
+        }
+    }
+
+    .history_box {
+        background: #140E0E;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 1.6rem 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.6rem;
+
+        @media #{$sm} {
+            padding: 1.6rem 1.2rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0rem;
+        }
+
+        .history_item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+
+            .history_icon {
+                img {
+                    width: 3.1rem;
+                }
+            }
+
+            .history_text {
+                h4 {
+                    font-size: 2.4rem;
+                    font-weight: 400;
+                    line-height: 110%;
+                    color: #FFF;
+                    margin: 0;
+                }
+
+                p {
+                    font-family: $heeboFont;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    line-height: 120%;
+                    letter-spacing: initial;
+                    color: rgba(255, 255, 255, 0.70);
+                    margin-top: 0.4rem;
+                }
+            }
+
+            @media #{$md} {
+                gap: 1rem;
+
+                .history_icon {
+                    img {
+                        width: 2.6rem;
+                    }
+                }
+
+                .history_text {
+                    h4 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            @media #{$sm} {
+                .history_text {
+                    h4 {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+
+        .history_coin {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+
+            img {
+                width: 2.4rem;
+            }
+
+            p {
+               font-family: $heeboFont;
+               font-size: 2rem;
+               font-weight: 500;
+               line-height: 150%;
+               letter-spacing: initial; 
+               color: rgba(255, 255, 255, 0.80);
+               direction: ltr;
+            }
+
+            @media #{$md} {
+                img {
+                    width: 2rem;
+                }
+
+                p {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}

@@ -1442,7 +1442,98 @@
 
 
 
+// ================== profile toggle =================
+(function () {
+    "use strict";
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const toggleBtns = document.querySelectorAll(".profile_toggle");
+        const adminBars = document.querySelectorAll(".admin_bar");
+
+        if (!toggleBtns.length || !adminBars.length) return;
+
+        // Create backdrop dynamically (no HTML dependency)
+        const backdrop = document.createElement("div");
+        backdrop.className = "admin_backdrop";
+        document.body.appendChild(backdrop);
+
+        toggleBtns.forEach((btn, index) => {
+            const adminBar = adminBars[index];
+            if (!adminBar) return;
+
+            btn.addEventListener("click", function (e) {
+                e.stopPropagation();
+
+                const isOpen = adminBar.classList.contains("show");
+
+                // close all first
+                adminBars.forEach(bar => bar.classList.remove("show"));
+                backdrop.classList.remove("active");
+
+                // toggle logic
+                if (!isOpen) {
+                    adminBar.classList.add("show");
+                    backdrop.classList.add("active");
+                }
+            });
+
+            const closeBtn = adminBar.querySelector(".profile_closeBtn");
+            if (closeBtn) {
+                closeBtn.addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    adminBar.classList.remove("show");
+                    backdrop.classList.remove("active");
+                });
+            }
+        });
+
+        // Outside click
+        document.addEventListener("click", function (e) {
+            adminBars.forEach((bar, index) => {
+                const btn = toggleBtns[index];
+                if (!btn) return;
+
+                if (
+                    !bar.contains(e.target) &&
+                    !btn.contains(e.target)
+                ) {
+                    bar.classList.remove("show");
+                    backdrop.classList.remove("active");
+                }
+            });
+        });
+
+        // Backdrop click = close
+        backdrop.addEventListener("click", function () {
+            adminBars.forEach(bar => bar.classList.remove("show"));
+            backdrop.classList.remove("active");
+        });
+
+    });
+})();
 
 
 
+// ================== password toggle =================
+{
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButtons = document.querySelectorAll('.togglePassword');
 
+    toggleButtons.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const targetId = this.getAttribute('data-target');
+        const passwordField = document.getElementById(targetId);
+        const icon = this.querySelector('img');
+
+        if (passwordField.type === 'password') {
+          passwordField.type = 'text';
+          icon.src = '../assets/img/eye.svg';
+        } else {
+          passwordField.type = 'password';
+          icon.src = '../assets/img/eye-slash.svg';
+        }
+      });
+    });
+  });
+}

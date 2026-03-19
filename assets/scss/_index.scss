@@ -153,6 +153,7 @@
 
 
     @media #{$md} {
+        flex-direction: column;
         padding-bottom: 17rem;
 
         .sidebar {

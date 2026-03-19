@@ -26,16 +26,31 @@
                 <a class="navbar-brand" href="#">
                     <img src="../assets/img/logo.svg" alt="">
                 </a>
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                    <span class="hamburger-box">
-                        <span class="hamburger-inner"></span>
-                    </span>
-                    <span class="border_tl"></span>
-                    <span class="border_tr"></span>
-                    <span class="border_bl"></span>
-                    <span class="border_br"></span>
-                </button>
+
+                <div class="d-flex align-items-center">
+                    <div class="profile_toggle d-lg-none">
+                        <button type="button">
+                            <img src="../assets/img/client.png" alt="">
+
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </button>
+                    </div>
+
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+                    </button>
+                </div>
+                
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav">
                         <li>
@@ -73,7 +88,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" data-target="#chatBox">
+                            <a href="../chat/chat.html" data-target="#chatBox">
                                 <img src="../assets/img/chat.svg" alt="icon">
                                 <span> צ׳אט </span>
                             </a>
@@ -357,13 +372,13 @@
 
     <!-- chat_bot -->
     <div class="chat_bot d-lg-none">
-        <a href="chat/chat.html">
+        <a href="../chat/chat.html">
             <img src="../assets/img/chat.svg" alt="icon">
         </a>
     </div> 
 
     <!-- profile fixed -->
-    <div class="profile_fixed d-none d-lg-block">
+    <!-- <div class="profile_fixed admin_premiumBox d-none d-lg-block">
         <div class="profile_box">
             <a href="#">
                 <div class="profile_img">
@@ -395,118 +410,144 @@
                 <span class="border_br"></span>
             </a>
         </div>
-    </div> 
+    </div>  -->
 
 
-    <main class="main_body">
+    <main class="main_body admin_headerBanner">
 
         <div class="container">
             <div class="main_wrapper">
 
-                <!-- sidebar -->
-                <div class="sidebar">
-                    <div class="side_item">
-                        <a href="../index.html" class="side_btn">
-                            <img src="../assets/img/home.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
+                <!-- admin bar -->
+                <div class="admin_bar">
+                    <div class="client_box">
+                        <button type="button" class="profile_closeBtn d-lg-none">
+                            <img src="../assets/img/cross.svg" alt="">
+                        </button>
+                        
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
 
-                        <a href="../tournament/tournament.html" class="side_btn active">
-                            <img src="../assets/img/trofy.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
+                        <div class="client_img">
+                            <img src="../assets/img/client.png" alt="">
+                            <a href="#">
+                                <img src="../assets/img/edit.svg" alt="">
+                            </a>
+                        </div>
 
-                        <a href="#" class="side_btn">
-                            <img src="../assets/img/play.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
+                        <div class="client_title">
+                            <h4> אלון </h4>
+                        </div>
 
-                        <a href="#" class="side_btn">
-                            <img src="../assets/img/crown.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
+                        <div class="offline_btn">
+                            <span> לא מקוון </span>
+                        </div>
 
-                        <a href="#" class="side_btn">
-                            <img src="../assets/img/settings.svg" alt="">
-                            <span class="border_tl"></span>
-                            <span class="border_tr"></span>
-                            <span class="border_bl"></span>
-                            <span class="border_br"></span>
-                        </a>
+                        <div class="social_icon pb-0">
+                            <a href="#">
+                                <img src="../assets/img/vk.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/instagram-icon.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="../assets/img/facebook-icon.svg" alt="">
+                            </a>
+                        </div>
                     </div>
-                </div>
+
+                    <!-- admin_linksBox -->
+                    <div class="admin_linksBox">
+                        <span class="border_tl"></span>
+                        <span class="border_tr"></span>
+                        <span class="border_bl"></span>
+                        <span class="border_br"></span>
+
+                        <ul>
+                            <li>
+                                <a href="#" class="active">
+                                    <img src="../assets/img/admin-icon-1.svg" alt="">
+                                    דשבורד
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/points.png" alt="">
+                                    Teamatch נקודות
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-3.svg" alt="">
+                                    קבוצות
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-4.svg" alt="">
+                                    מנוי
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-5.svg" alt="">
+                                    עריכת פרופיל
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-6.svg" alt="">
+                                    הגדרות משתמש
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-7.svg" alt="">
+                                    סיסמה
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="../assets/img/admin-icon-8.svg" alt="">
+                                    חיבורים
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- logout button -->
+                    <div class="admin_logout">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exitTModal">
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+
+                            התנתק
+                            <img src="../assets/img/logout-solid.svg" alt="">
+                        </a>
+                    </div> 
+
+                </div> 
 
                 <!-- main content -->
-                <div class="main_content">
-                    <!-- client_section -->
-                    <div class="client_section">
-                        <div class="client_box">
+                <div class="main_content admin_contentLeft">
+                    <!-- edit cover -->
+                    <div class="edit_cover">
+                        <a href="#">
+                            ערוך קאבר
+                            <img src="../assets/img/pencil-edit.svg" alt="">
                             <span class="border_tl"></span>
                             <span class="border_tr"></span>
                             <span class="border_bl"></span>
                             <span class="border_br"></span>
-
-                            <span class="label"> רמה 1 </span>
-                            <div class="client_img">
-                                <img src="../assets/img/client.png" alt="">
-                                <a href="#">
-                                    <img src="../assets/img/edit.svg" alt="">
-                                </a>
-                            </div>
-
-                           <div class="client_title">
-                                <h4> אלון </h4>
-                           </div>
-
-                           <div class="offline_btn">
-                                <span> לא מקוון </span>
-                           </div>
-
-                           <div class="social_icon">
-                                <a href="#">
-                                    <img src="../assets/img/vk.svg" alt="">
-                                </a>
-                                <a href="#">
-                                    <img src="../assets/img/instagram-icon.svg" alt="">
-                                </a>
-                                <a href="#">
-                                    <img src="../assets/img/facebook-icon.svg" alt="">
-                                </a>
-                           </div>
-
-                           <div class="client_boxBtn">
-                                <a href="#" class="active">
-                                     הוסף חבר 
-                                    <span class="border_tl"></span>
-                                    <span class="border_tr"></span>
-                                    <span class="border_bl"></span>
-                                    <span class="border_br"></span>
-                                    </a>
-                                <a href="#">
-                                     הודעה 
-                                    <span class="border_tl"></span>
-                                    <span class="border_tr"></span>
-                                    <span class="border_bl"></span>
-                                    <span class="border_br"></span>
-                                </a>
-                           </div>
-                        </div>
+                        </a>
                     </div> 
 
                     <!-- analytics_section -->
-                    <div class="analytics_section">
+                    <div class="analytics_section admin_analytics">
                         <div class="row">
                             <div class="col-lg-8">
                                 <div class="analytice_box">
@@ -1257,85 +1298,6 @@
                         </div> 
                     </div> 
 
-                    <!-- footer_section -->
-                    <div class="footer_section mt-3">
-                        <span class="border_tl"></span>
-                        <span class="border_tr"></span>
-                        <span class="border_bl"></span>
-                        <span class="border_br"></span>
-
-                        <div class="footer_wrapper">
-                            <div class="footer_item">
-                                <div class="footer_logo">
-                                    <a href="#">
-                                        <img src="../assets/img/logo.svg" alt="">
-                                    </a>
-                                </div>
-                                <p> פלטפורמת טורנירים מקצועית לקהילת הגיימינג </p>
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/tiktok.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/youtube.svg" alt="youtube">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/instagram.svg" alt="instagram">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/discord.svg" alt="discord">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/twitter.svg" alt="twitter">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img src="../assets/img/facebook.svg" alt="facebook">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="footer_text footer_colum2">
-                                <h4> קישורים מהירים </h4>
-                                <ul>
-                                    <li><a href="#"> טורנירים </a></li>
-                                    <li><a href="#"> קבוצות </a></li>
-                                    <li><a href="#"> לוח תוצאות </a></li>
-                                    <li><a href="#"> בלוג </a></li>
-                                </ul>
-                            </div>
-                            <div class="footer_text footer_colum3">
-                                <h4> מידע </h4>
-                                <ul>
-                                    <li><a href="#"> צור קשר </a></li>
-                                    <li><a href="#"> תנאי שימוש </a></li>
-                                    <li><a href="#"> מדיניות פרטיות </a></li>
-                                </ul>
-                            </div>
-                            <div class="footer_text footer_colum4">
-                                <h4> קהילה </h4>
-                                <ul>
-                                    <li><a href="#"> חומרי קהילה </a></li>
-                                    <li><a href="#"> Discord </a></li>
-                                    <li><a href="#"> Twitch </a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="copyright_item text-center">
-                            <p>&copy; 2025 TeaMatch. כל הזכויות שמורות.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1369,7 +1331,7 @@
                                 <img src="../assets/img/cross.svg" alt="">
                             </span>
 
-                            <a href="chat/chat.html">
+                            <a href="../chat/chat.html">
                                 <img src="../assets/img/expand.svg" alt="">
                             </a>
                         </div>
@@ -1407,6 +1369,45 @@
         </div>
     </div>
     <!-- Chat Modal end -->
+
+    <!-- exit tournament modal -->
+    <div class="modal fade" id="exitTModal" tabindex="-1" aria-labelledby="exitTModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ranking_modal remove_modal">
+            <div class="modal-content">
+                <span class="border_tl"></span>
+                <span class="border_tr"></span>
+                <span class="border_bl"></span>
+                <span class="border_br"></span>
+                <span class="close_btn" data-bs-dismiss="modal" aria-label="Close">
+                    <img src="../assets/img/cross.svg" alt="">
+                </span>
+
+                <div class="removemodal_body">
+                    <div class="removemodal_title logout_modalText">
+                        <h3> האם ברצונך להתנתק? </h3>
+                       <p> יהיה עליך להתחבר מחדש כדי לגשת לטורנירים ולקבוצות. </p>
+                    </div>
+
+                    <div class="removemodal_button">
+                        <a href="#" class="active">
+                            התנתק
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                        <a href="#" data-bs-dismiss="modal" aria-label="Close">
+                            ביטול
+                            <span class="border_tl"></span>
+                            <span class="border_tr"></span>
+                            <span class="border_bl"></span>
+                            <span class="border_br"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
     <!-- all js here -->

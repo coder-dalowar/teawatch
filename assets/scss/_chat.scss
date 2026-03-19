@@ -13,6 +13,10 @@
     @media #{$md} {
         display: none!important;
     }
+
+    @media screen and (min-width: 1800px) {
+        right: -18rem;
+    }
 }
 
 .chat_modal {

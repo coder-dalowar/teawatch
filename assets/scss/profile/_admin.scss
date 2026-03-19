@@ -1,2 +1,441 @@
 // admin page ------------------
+.edit_cover {
+    padding: 12rem 0rem 4.8rem;
+    text-align: left;
+
+    @media #{$md} {
+        padding: 10rem 0rem 3.2rem;
+    }
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 120%;
+        color: #FFFFFF;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        background: #212121;
+        padding: 1.2rem 2rem;
+        position: relative;
+        transition: 0.2s all ease;
+
+        img {
+            width: 2rem;
+        }
+
+        .border_tl {
+			width: 0.5rem;
+			height: 0.5rem;
+			border-top: 1px solid #FFF;
+			border-left: 1px solid #FFF;
+			position: absolute;
+			left: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_tr {
+			width: 0.5rem;
+			height: 0.5rem;
+			border-top: 1px solid #FFF;
+			border-right: 1px solid #FFF;
+			position: absolute;
+			right: -0.05rem;
+			top: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_bl {
+			width: 0.5rem;
+			height: 0.5rem;
+			border-bottom: 1px solid #FFF;
+			border-left: 1px solid #FFF;
+			position: absolute;
+			left: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+		.border_br {
+			width: 0.5rem;
+			height: 0.5rem;
+			border-bottom: 1px solid #FFF;
+			border-right: 1px solid #FFF;
+			position: absolute;
+			right: -0.05rem;
+			bottom: -0.05rem;
+			transition: 0.2s all ease;
+		}
+
+        &:hover {
+            span {
+                transform: scale(1.25);
+            }
+        }
+    }
+}
+
+.admin_analytics {
+    padding-top: 3rem;
+
+    .analytics_title {
+        h3 {
+            font-size: 2rem!important;
+        }
+    }
+}
+
+
+// admin_premiumBox -------------
+.admin_premiumBox {
+    right: 4.5rem;
+    display: none;
+}
+
+
+// admin_bar -------------------
+.admin_bar {
+    max-width: 31rem;
+    width: 100%;
+    display: block;
+    flex-shrink: 0;
+    padding-top: 7rem;
+    position: sticky;
+    top: 5rem;
+
+    @media #{$md} {
+        background: #080808;
+        max-width: 32rem;
+        width: 100%;
+        height: 100%;
+        padding-top: 0rem;
+        padding-bottom: 5rem;
+        padding-left: 1rem;
+        position: fixed;
+        top: 9.5rem;
+        left: -110%;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 99;
+        transition: 0.3s all ease;
+        overflow: auto;
+        scrollbar-width: thin;
+        scrollbar-color: #F02731 #1D1D1D;
+
+        &::-webkit-scrollbar {
+            width: 0.8rem;
+            border-radius: 2rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #1D1D1D;
+            border-radius: 2rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #F02731;
+            border-radius: 2rem;
+        }
+
+        &.show {
+            visibility: visible;
+            opacity: 1;
+            left: 0.5rem;
+        }
+    }
+}
+
+.admin_contentLeft {
+    max-width: 99rem;
+    width: 100%;
+
+    @media #{$md} {
+        max-width: 100%;
+    }
+}
+
+
+
+// admin_linksBox ----------------
+
+.admin_linksBox {
+    background: #080808;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    padding: 1.8rem 1.8rem;
+    position: relative;
+
+    .border_tl {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-top: 1px solid rgba(240, 39, 49, 0.4);
+        border-left: 1px solid rgba(240, 39, 49, 0.4);
+        position: absolute;
+        left: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-top: 1px solid rgba(240, 39, 49, 0.4);
+        border-right: 1px solid rgba(240, 39, 49, 0.4);
+        position: absolute;
+        right: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-bottom: 1px solid rgba(240, 39, 49, 0.4);
+        border-left: 1px solid rgba(240, 39, 49, 0.4);
+        position: absolute;
+        left: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+        width: 1.2rem;
+        height: 1.2rem;
+        border-bottom: 1px solid rgba(240, 39, 49, 0.4);
+        border-right: 1px solid rgba(240, 39, 49, 0.4);
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    ul {
+        li {
+            a {
+                font-size: 1.6rem;
+                font-weight: 400;
+                color: #FFFFFF;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                gap: 0.8rem;
+                padding: 1.9rem 1rem;
+                border-bottom: 1px solid rgba(240, 39, 49, 0.20);
+                transition: 0.2s all ease;
+
+                img {
+                    width: 2.4rem;
+                }
+
+                &:hover,
+                &.active {
+                    background: linear-gradient(to bottom, rgba(255, 26, 26, 0) 0%, rgba(255, 26, 26, 0.30) 100%);
+                    border-color: rgba(240, 39, 49, 0.40);
+                }
+            }
+
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}
+
+
+// logout button --------------
+.admin_logout {
+    padding-top: 2.4rem;
+    padding-bottom: 10rem;
+
+    a {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: #FFF;
+        background: #000;
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1.6rem 2rem;
+        position: relative;
+        transition: 0.2s all ease;
+
+        img {
+            width: 2rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tl {
+            width: 2.4rem;
+            height: 1rem;
+            border-top: 1px solid rgba(240, 39, 49, 0.7);
+            border-left: 1px solid rgba(240, 39, 49, 0.7);
+            position: absolute;
+            left: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_tr {
+            width: 2.4rem;
+            height: 1rem;
+            border-top: 1px solid rgba(240, 39, 49, 0.7);
+            border-right: 1px solid rgba(240, 39, 49, 0.7);
+            position: absolute;
+            right: -0.1rem;
+            top: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_bl {
+            width: 2.4rem;
+            height: 1rem;
+            border-bottom: 1px solid rgba(240, 39, 49, 0.7);
+            border-left: 1px solid rgba(240, 39, 49, 0.7);
+            position: absolute;
+            left: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        .border_br {
+            width: 2.4rem;
+            height: 1rem;
+            border-bottom: 1px solid rgba(240, 39, 49, 0.7);
+            border-right: 1px solid rgba(240, 39, 49, 0.7);
+            position: absolute;
+            right: -0.1rem;
+            bottom: -0.1rem;
+            transition: 0.2s all ease;
+        }
+
+        &:hover {
+            span {
+                border-color: #F02731;
+            }
+
+            img {
+                transform: translateX(-0.5rem);
+            }
+        }
+    }
+}
+
+
+.logout_modalText p {
+    max-width: 27.2rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+// profile_toggle -----------
+.profile_toggle {
+    margin-left: 1.6rem;
+
+    button {
+        width: 4rem;
+        height: 3.6rem;
+        background: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+
+        img {
+            width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .border_tl {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-top: 1px solid #8C8681;
+        border-left: 1px solid #8C8681;
+        position: absolute;
+        left: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_tr {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-top: 1px solid #8C8681;
+        border-right: 1px solid #8C8681;
+        position: absolute;
+        right: -0.1rem;
+        top: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_bl {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #8C8681;
+        border-left: 1px solid #8C8681;
+        position: absolute;
+        left: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    .border_br {
+        width: 0.8rem;
+        height: 0.8rem;
+        border-bottom: 1px solid #8C8681;
+        border-right: 1px solid #8C8681;
+        position: absolute;
+        right: -0.1rem;
+        bottom: -0.1rem;
+        transition: 0.2s all ease;
+    }
+
+    &:hover {
+        span {
+            border-color: #FFF;
+        }
+    }
+}
+
+.profile_closeBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+
+    img {
+        width: 2.6rem;
+    }
+}
+
+
+/* Backdrop */
+.admin_backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    z-index: 9;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
 
